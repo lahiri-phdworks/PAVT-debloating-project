@@ -6,7 +6,6 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{hyperref}
-\includegraphics{graphicx}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -63,9 +62,9 @@ We propose to debloat a piece of $\textbf{C or C++ Code}$ via $\textbf{Policy Ba
 We will initially focus on the implementation, analysis and comparison of both the techniques as mentioned above and then move on to finding new sites for debloating or in figuring a better policy for the $\textbf{RL model}$ we will build. The tentative procedure for our project submission is as outlined below ($\textbf{RL}$ means $\textbf{Reinforcement Learning}$ henceforth):
 \section*{Stage 1 : Pre RL Stage :: Week 1 \& 2}
 \begin{itemize}
-    \item Start with $\textbf{LLVM IR}$ of the code and use $\textbf{Inst2Vec}$ as outlined in $\textbf{Paper 2}$ to extract feature information as outlined in the paper before $\textbf{RL stage}$
-    \item Finding more sites other than the ones listed for $\textbf{Program Specialization}$ in $\textbf{Paper 2}$.  
-    \item Understanding $\textbf{Chisel}$ \& $\textbf{Trimmer}$ Tool as implemented in $\textbf{Paper 1}$.
+    \item Start with $\textbf{LLVM IR}$ of the code and use $\textbf{Inst2Vec}$ as outlined in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2} to extract feature information as outlined in the paper before $\textbf{RL stage}$
+    \item Finding more sites other than the ones listed for $\textbf{Program Specialization}$ in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}.  
+    \item Understanding $\textbf{Chisel}$ \& $\textbf{Trimmer}$ tool as implemented in \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1} in terms of how \textbf{markov decision process} enhances \textbf{delta debugging}. This steps helps in \textbf{Stage 2}.
     \item Collect and prepare bloated code samples for analysis, this is the input to our tool infrastructure. We will explore the use of fuzzing here.  
 \end{itemize}
 
@@ -74,14 +73,15 @@ We will initially focus on the implementation, analysis and comparison of both t
 	\item Specification for debloating using \textbf{Chisel} Tool, which essentially becomes a policy for the \textbf{RL Model} to learn. 
     \item Implementing $\textbf{DeepOCCAM}$ tool from $\textbf{OCCAM}$ Tool and run or analysis. 
     \item Exploring the use of other off-the-shelf decision tree based model other than \textbf{FastDT} in \textbf{Chisel Tool} 
-    \item Compare performance with $\textbf{Chisel}$ tool of $\textbf{Paper 1}$ based on the metrics we choose before hand in $\textbf{Stage 1}$. 
+    \item Compare performance with $\textbf{Chisel}$ tool of \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1} based on the metrics we choose before hand in $\textbf{Stage 1}$. 
     \item Seeing if the metrics we choose for $\textbf{Program Specialization}$ in $\textbf{Stage 1}$ for \textbf{DeepOCCAM} are any good versus the specification for debloating in $\textbf{Chisel Tool}$.  
 \end{itemize}
 
 \section*{Stage 3 : Analysis \& Wrap Up :: Week 5}
 \begin{itemize}
+	\item Debloating can introduce new errors in the code, we write tests and run samples to check if no un-intended behavior is introduced.  
     \item We produce the results of our analysis in a systematic way and show it using a web-based interface that connects to our tool communicating over $\textbf{gRPC}$ or as a \textbf{REST API}
-    \item Finish writing the report and presentation for the $\textbf{Final Review}$. 
+    \item Finish writing the \textbf{report} and \textbf{presentation} for the $\textbf{Final Review}$. 
     \item We demonstrate a \textbf{run} of our tool to report \textbf{new sites} for better debloating. 
     \item Report the new \textbf{heuristics} and \textbf{approaches} we adopted to accomplish the same. 
 \end{itemize}
@@ -125,11 +125,9 @@ We may add a few tools later on.
     \item American Fuzzy Loop : \url{https://github.com/google/AFL}
 \end{itemize}
 
-\section*{Preliminaries}
-We have already done a preliminary analysis of the task at hand and also of both papers we shared here in the proposal. 
-
 \section*{Terms}
-Our best efforts would be to deliver all the things listed but we may get stuck at stages where we can't proceed further or trace back to change the proposal here. Any appropriate action on your part can be exercised in such scenarios. Instances where we seeked help from your side on implementation or further guidance will be appropriately mentioned in the report as well. Thanking you for giving us the opportunity to do this project.  
+We have already done a preliminary analysis of the task at hand and also of both papers we shared here in the proposal. 
+Our best efforts would be to deliver all the things listed but we may get stuck at stages where we can't proceed further. In such instances  we shall seek help from your side on implementation or further guidance, which will be appropriately mentioned in the report as well. Thanking you for giving us the opportunity to do this project.  
 
 \section*{References \& Study}
 \begin{itemize}
