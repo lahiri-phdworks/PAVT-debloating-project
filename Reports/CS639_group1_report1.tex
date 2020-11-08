@@ -1,0 +1,69 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips_adapted}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\title{CS 639A Progress Report 1}
+
+\author{
+Sumit Lahiri \\
+19111274 \\
+\And
+Group No\\
+1\\
+\And
+Amit Kumar Sharma \\
+20111012\\
+}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\usepackage{xcolor}
+
+\nipsfinalcopy
+
+
+\begin{document}
+
+\maketitle
+
+\section*{First \& Second Sprint : Brief Progress}
+We started investigating the problem in $\textbf{three splits}$ for our $\textbf{Pre-RL Stage Work}$. The most \textbf{time-consuming} part was to migrate the outdated packages used in some the tools chosen by us for delivering the project. We gained a fair idea on how $\textbf{embedding spaces}$ are use and the novelty in $\textbf{inst2vec}$ tool. We started running the $\textbf{inst2vec}$ tool to generate an embedding for our debloating sample space, like $\textbf{call-site}$ information, $\textbf{function arguments}$, $\textbf{type parameters}$ etc as described in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}. 
+
+\section*{Stage 1 : Split 1} 
+\begin{itemize}
+    \item Completed the setup for LLVM-IR generation, clang tool, \textbf{spcl/ncc (inst2vec)} tool. 
+    \item Completed the setup for $\textbf{OCCAM}$ tool, $\textbf{Chisel}$ tool \& $\textbf{Trimmer}$ tool 
+	\item We are in the middle of running the \textbf{inst2vec} tool and using the \textbf{public data-sets} available to train it. 
+\end{itemize}
+
+\section*{Stage 1 : Split 2}
+\begin{itemize}
+	\item We found \textbf{2} more features where \textbf{program debloating} may be possible. 
+	\item We understood how to write specification for the script used by \textbf{Chisel} tool as in \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1}
+\end{itemize}
+
+\section*{Stage 1 : Split 3}
+\begin{itemize}
+	\item Bloated Sample collection and preparation started. 
+\end{itemize}
+
+\end{document}
