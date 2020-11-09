@@ -46,24 +46,29 @@ Amit Kumar Sharma \\
 \maketitle
 
 \section*{First \& Second Sprint : Brief Progress}
-We started investigating the problem in $\textbf{three splits}$ for our $\textbf{Pre-RL Stage Work}$. The most \textbf{time-consuming} part was to migrate the outdated packages used in some the tools chosen by us for delivering the project. We gained a fair idea on how $\textbf{embedding spaces}$ are use and the novelty in $\textbf{inst2vec}$ tool. We started running the $\textbf{inst2vec}$ tool to generate an embedding for our debloating sample space, like $\textbf{call-site}$ information, $\textbf{function arguments}$, $\textbf{type parameters}$ etc as described in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}. 
+We started working on the \textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater}{debloating project}} in $\textbf{three splits}$ for our $\textbf{Pre-RL Stage Work}$. The most \textbf{time-consuming} part was to migrate the outdated packages used in some the tools chosen by us for delivering the project. We gained a fair idea on how $\textbf{embedding spaces}$ are used and the novelty in \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool as modelling an LLVM IR as \textbf{XFG} \& mapping to an \textbf{NLP} like \textbf{skip-gram} model. We started running the \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool to generate an embedding for our debloating \texttt{C++} sample space, like $\textbf{call-site}$ information, $\textbf{function arguments}$, $\textbf{type parameters}$ etc as described in \textbf{\href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}}. We are reporting the highlights from sprint of \textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater/commit/dd63911895cb31cdc77c9debd57090422ffb3b65}{Commit-1 01/11/2020}} to 
+\textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater/commit/8066e7b7b7fa7513e3611e3f3aee6fb72c81ea83}{Commit-22 09/11/2020}} which is \textbf{Week-1 : November 2020}.
 
 \section*{Stage 1 : Split 1} 
 \begin{itemize}
-    \item Completed the setup for LLVM-IR generation, clang tool, \textbf{spcl/ncc (inst2vec)} tool. 
-    \item Completed the setup for $\textbf{OCCAM}$ tool, $\textbf{Chisel}$ tool \& $\textbf{Trimmer}$ tool 
-	\item We are in the middle of running the \textbf{inst2vec} tool and using the \textbf{public data-sets} available to train it. 
+    \item Completed the setup for LLVM-IR generation, clang tool, \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool. 
+    \item Completed the setup for \textbf{\href{https://github.com/ashish-gehani/OCCAM}{OCCAM}} tool, \textbf{\href{http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf}{Trimmer}} tool \& \textbf{\href{https://github.com/aspire-project/chisel}{Chisel}} tool. All setup \& build related issues were \textbf{\color{red}resolved} and \textbf{\color{red}ran} once one sample example.
+	\item We are in the middle of running the \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool and using the \textbf{public data-sets} available to train it. 
+	\item We are using the pre-trained embeddings from \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} repository for the starting point for the \textbf{DeepOCCAM} tool we are developing.
 \end{itemize}
 
 \section*{Stage 1 : Split 2}
 \begin{itemize}
 	\item We found \textbf{2} more features where \textbf{program debloating} may be possible. 
-	\item We understood how to write specification for the script used by \textbf{Chisel} tool as in \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1}
+	\item We understood how to write specification for the script used by \textbf{Chisel} tool as in \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1} in terms of the three parts of the scripts namely \textbf{\texttt{compile()}}, \textbf{\texttt{desired()}} \& \texttt{\textbf{undesired()}}.
+	\item \textbf{Chisel} tool works by learning a \textbf{policy} for \textbf{delta debugging} by \textbf{reinforcement learning} which guarantees \textbf{1-minimal P*} \& $\textbf{$O(|P|^2)$}$ runtime. The abstraction is a \textbf{markov decision process} for meaningful \textbf{guidance}.
+	\item We spend time understanding how \textbf{\href{https://github.com/ashish-gehani/OCCAM}{OCCAM}} tool, \textbf{\href{http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf}{Trimmer}} tool \& \textbf{\href{https://github.com/aspire-project/chisel}{Chisel}} tool are working. 
 \end{itemize}
 
 \section*{Stage 1 : Split 3}
 \begin{itemize}
-	\item Bloated Sample collection and preparation started. 
+	\item Bloated Sample collection and preparation started, We are targetting \href{https://github.com/bitcoin/bitcoin}{bitcoin1-src} \& \href{https://github.com/ethereum/solidity}{eth-solidity}. Past experience tells that the code is most probably \textbf{bloated}. We may have to change it later to publicly available samples. 
+	\item We found this \textbf{\href{https://www.youtube.com/watch?v=hC4zIwyv1bg}{video}} useful to understand how \textbf{program debloating} can be improved using \textbf{Stochastic Optimization}, which we intend to explore as \textbf{extra work} if time permits.
 \end{itemize}
 
 \end{document}
