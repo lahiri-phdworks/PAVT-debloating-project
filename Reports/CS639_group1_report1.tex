@@ -13,6 +13,12 @@
     urlcolor=blue,
 }
 
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{azure(colorwheel)}{rgb}{0.0, 0.5, 1.0}
+\definecolor{awesome}{rgb}{1.0, 0.13, 0.32}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
+
 \title{CS 639A Progress Report 1}
 
 \author{
@@ -49,7 +55,7 @@ Amit Kumar Sharma \\
 We started working on the \textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater}{debloating project}} in $\textbf{three splits}$ for our $\textbf{Pre-RL Stage Work}$. The most \textbf{time-consuming} part was to migrate the outdated packages used in some the tools chosen by us for delivering the project. We gained a fair idea on how $\textbf{embedding spaces}$ are used and the novelty in \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool as modelling an LLVM IR as \textbf{XFG} \& mapping to an \textbf{NLP} like \textbf{skip-gram} model. We started running the \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool to generate an embedding for our debloating \texttt{C++} sample space, like $\textbf{call-site}$ information, $\textbf{function arguments}$, $\textbf{type parameters}$ etc as described in \textbf{\href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}}. We are reporting the highlights from sprint of \textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater/commit/dd63911895cb31cdc77c9debd57090422ffb3b65}{Commit-1 01/11/2020}} to 
 \textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater/commit/8066e7b7b7fa7513e3611e3f3aee6fb72c81ea83}{Commit-22 09/11/2020}} which is \textbf{Week-1 : November 2020}.
 
-\section*{Proposed Stage 1 Milestones : Pre RL Stage :: Week 1 \& 2}
+\section*{\color{azure(colorwheel)} Proposed Stage 1 Milestones : Pre RL Stage :: Week 1 \& 2}
 \begin{itemize}
 	\item Start with $\textbf{LLVM IR}$ of the code and use $\textbf{Inst2Vec}$ as outlined in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2} to extract feature information as outlined in the paper before $\textbf{RL stage}$
 	\item Finding more sites other than the ones listed for $\textbf{Program Specialization}$ in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}.  
@@ -57,17 +63,17 @@ We started working on the \textbf{\href{https://github.com/lahiri-phdworks/reinf
 	\item Collect and prepare bloated code samples for analysis, this is the input to our tool infrastructure. We will explore the use of fuzzing here.  
 \end{itemize}
 
-\textbf{\color{teal} We list below the progress on the above points that we have been able to achieve so far.}
+\textbf{\color{azure(colorwheel)} We list below the progress on the above points that we have been able to achieve so far.}
 
-\section*{Stage 1 : Split 1} 
+\section*{\color{darkmidnightblue} Stage 1 : Split 1} 
 \begin{itemize}
     \item Completed the setup for LLVM-IR generation, clang tool, \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool. 
-    \item Completed the setup for \textbf{\href{https://github.com/ashish-gehani/OCCAM}{OCCAM}} tool, \textbf{\href{http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf}{Trimmer}} tool \& \textbf{\href{https://github.com/aspire-project/chisel}{Chisel}} tool. All setup \& build related issues were \textbf{\color{teal}resolved} and \textbf{\color{teal}ran} once one sample example.
+    \item Completed the setup for \textbf{\href{https://github.com/ashish-gehani/OCCAM}{OCCAM}} tool, \textbf{\href{http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf}{Trimmer}} tool \& \textbf{\href{https://github.com/aspire-project/chisel}{Chisel}} tool. All setup \& build related issues were \textbf{\color{ao(english)}resolved} and \textbf{\color{ao(english)}ran} once one sample example.
 	\item We are in the middle of running the \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} tool and using the \textbf{public data-sets} available to train it. 
 	\item We are using the pre-trained embeddings from \textbf{\href{https://github.com/lahiri-phdworks/ncc}{inst2vec}} repository for the starting point for the \textbf{DeepOCCAM} tool we are developing.
 \end{itemize}
 
-\section*{Stage 1 : Split 2}
+\section*{\color{darkmidnightblue} Stage 1 : Split 2}
 \begin{itemize}
 	\item We found \textbf{2} more features where \textbf{program debloating} may be possible. 
 	\item We understood how to write specification for the script used by \textbf{Chisel} tool as in \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1} in terms of the three parts of the scripts namely \textbf{\texttt{compile()}}, \textbf{\texttt{desired()}} \& \texttt{\textbf{undesired()}}.
@@ -75,12 +81,15 @@ We started working on the \textbf{\href{https://github.com/lahiri-phdworks/reinf
 	\item We spend time understanding how \textbf{\href{https://github.com/ashish-gehani/OCCAM}{OCCAM}} tool, \textbf{\href{http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf}{Trimmer}} tool \& \textbf{\href{https://github.com/aspire-project/chisel}{Chisel}} tool are working.
 \end{itemize}
 
-\section*{Stage 1 : Split 3}
+\section*{\color{darkmidnightblue} Stage 1 : Split 3}
 \begin{itemize}
 	\item Bloated Sample collection and preparation started, We are targetting \href{https://github.com/bitcoin/bitcoin}{bitcoin1-src} \& \href{https://github.com/ethereum/solidity}{eth-solidity}. Past experience tells that the code is most probably \textbf{bloated}. We may have to change it later to publicly available samples. \textbf{\color{red}[This needs some more work]}.
 	\item We found this \textbf{\href{https://www.youtube.com/watch?v=hC4zIwyv1bg}{video}} useful to understand how \textbf{program debloating} can be improved using \textbf{Stochastic Optimization}, which we intend to explore as \textbf{extra work} if time permits.
 \end{itemize}
 
-We are almost \textbf{\color{teal}ready} to move to the next \textbf{Stage 2} of modelling and developing the \textbf{\color{teal} reinforcement learning model} using \textbf{PyTorch}. We intend to wrap up an left over tasks from \textbf{Stage 1} and move on to working on \textbf{Stage 2} in the next couple of days.  
+We are almost \textbf{\color{ao(english)}ready} to move to the next \textbf{Stage 2} of modelling and developing the \textbf{\color{ao(english)} reinforcement learning model} using \textbf{PyTorch}. We intend to wrap up an left over tasks from \textbf{Stage 1} and move on to working on \textbf{Stage 2} in the next couple of days. \\  \\
+Our first task now will be to start pre-processing the \textbf{\color{ao(english)} embedding output} for \textbf{\color{ao(english)} features vector} extraction \& develop the \textbf{\color{ao(english)}reinforcement learning} model hand-in-hand so that we can start analysis and see some debloated samples as a part of the \textbf{Stage 2} task. We have resorted to a \textbf{pipe-and-filter} like approach in-order to complete the project. In-sense, we take in \textbf{\color{red} bloated C++} programs and produce \textbf{\color{ao(english)} debloated C++} code, processing \textbf{stage-by-stage} where intermediate from the previous step moves to the next step for more processing. \\ 
+
+In the \textbf{Stage 2} report, we shall describe the full architecture and modelling formulation we used for \textbf{DeepOCCAM} and show some results on how it works currently. In \textbf{Stage 3} we do the full comparison and share a complete project report with \textbf{targetted features} we used and how it fairs against \textbf{Chisel} tool.  For \textbf{Stage 1}, the setup and running the tools took more than expected time. We are maintaining our progress on \textbf{\href{https://github.com/lahiri-phdworks/reinforcedlearning-debloater} {GitHub}} as a \textbf{private repository}.
 
 \end{document}
