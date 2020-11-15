@@ -16,7 +16,7 @@ A Software Debloating Package for LLVM IR Frontends, firstly on ```C``` or ```C+
 
 - Effective Program Debloating via Reinforcement Learning : [https://www.youtube.com/watch?v=8eRZKoLFakw](https://www.youtube.com/watch?v=8eRZKoLFakw)
 
-- Program debloating via stochastic optimization :[https://dl.acm.org/doi/10.1145/3377816.3381739](https://dl.acm.org/doi/10.1145/3377816.3381739)
+- Program debloating via stochastic optimization : [https://dl.acm.org/doi/10.1145/3377816.3381739](https://dl.acm.org/doi/10.1145/3377816.3381739)
 
 - Trimmer Paper : [http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf](http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf)
 
