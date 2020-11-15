@@ -36,3 +36,7 @@ A Software Debloating Package for LLVM IR Frontends, firstly on ```C``` or ```C+
 
 - OCCAM Test & Benchmarks : [https://github.com/SRI-CSL/OCCAM-Benchmarks](https://github.com/SRI-CSL/OCCAM-Benchmarks)
 
+
+## Analysis : 
+
+- Binary GSA : [https://github.com/michaelbrownuc/GadgetSetAnalyzer](https://github.com/michaelbrownuc/GadgetSetAnalyzer)
