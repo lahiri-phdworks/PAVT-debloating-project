@@ -39,4 +39,11 @@ A Software Debloating Package for LLVM IR Frontends, firstly on ```C``` or ```C+
 
 ## Analysis : 
 
+- Angr Analysis Tool : [https://docs.angr.io/introductory-errata/install](https://docs.angr.io/introductory-errata/install)
+
+- ROPGadget Tool : [https://github.com/lahiri-phdworks/ROPgadget](https://github.com/lahiri-phdworks/ROPgadget)
+
+- Gality : [https://github.com/lahiri-phdworks/gality](https://github.com/lahiri-phdworks/gality)
+
 - Binary GSA : [https://github.com/michaelbrownuc/GadgetSetAnalyzer](https://github.com/michaelbrownuc/GadgetSetAnalyzer)
+
