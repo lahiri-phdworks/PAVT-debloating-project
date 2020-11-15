@@ -2,6 +2,13 @@
 
 A Software Debloating Package for LLVM IR Frontends, firstly on ```C``` or ```C++```.
 
+## Paper 1 : 
+
+- Effective Program Debloating via Reinforcement Learning : [https://dl.acm.org/doi/10.1145/3243734.3243838](https://dl.acm.org/doi/10.1145/3243734.3243838)
+
+## Paper 2 : 
+
+- Reinforcement Learning Guided Software Debloating : [http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf](http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf)
 
 ## Project Related : 
 
