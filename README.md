@@ -20,6 +20,20 @@ A Software Debloating Package for LLVM IR Frontends, firstly on ```C``` or ```C+
 
 - Trimmer Paper : [http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf](http://www.csl.sri.com/users/gehani/papers/ASE-2018.Trimmer.pdf)
 
+## Running Dockers : 
+
+We delete the running docker after running it. To persist the docker remove the ```-rm``` flag. ```$PWD``` maps the present working directory to the folder ```/home``` or ```/folder``` in the ```running``` docker.
+
+- Pull the required docker images from the link : [https://hub.docker.com/repository/docker/prodrelworks/](https://hub.docker.com/repository/docker/prodrelworks/)
+
+- Clone the [Chisel Tool](https://github.com/lahiri-phdworks/chisel) Repository & run from the repository: ```sudo docker run --rm -it -v $PWD:/home -it prodrelworks/chisel-tool:latest```.
+
+- Clone the [OCCAM Tool](https://github.com/lahiri-phdworks/OCCAM) Repository & run from the repository: ```sudo docker run --rm -it -v $PWD:/home -it prodrelworks/occam10:latest```.
+
+- For ```inst2vec``` clone and use this repository for building. [ncc-inst2vec](https://github.com/lahiri-phdworks/ncc)
+
+- Each ```docker``` image already contains the ```benchmarks``` as shared below. 
+
 ## Tools : 
 
 - OCCAM Tool : [https://github.com/lahiri-phdworks/OCCAM](https://github.com/lahiri-phdworks/OCCAM)
