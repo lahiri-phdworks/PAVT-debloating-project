@@ -1,0 +1,127 @@
+	Printing evaluation scores to file  data/emb/eval/analogy/res_published_results_emb.txt
+------------------------------------------------------------------------------------------------------------------------
+published_results/emb.p: score summary
+------------------------------------------------------------------------------------------------------------------------
+Analogy type                                                     	  #corr answ	  #questions	  corr answ [%]
+Integer binary operations (type semantic analogy): 111720        	          96	         307	          31.27
+Floating point binary operations (type semantic analogy): 6048   	         119	         229	          51.97
+Floating point / Integer binary operations (type semantic analogy): 84	          11	          16	          68.75
+Insertelement - Extractelement operations (type): 6720           	           0	           8	              0
+Floating point ops (fast-math analogies): 216                    	          36	          43	          83.72
+Insertelement - Extractelement operations (index analogy): 2352  	           5	           6	          83.33
+Insertvalue - Extractvalue operations (index analogy): 4         	           4	           4	            100
+Bitcast x to y - y to x (inverse operations analogy): 1275       	         110	        1275	          8.627
+Arithmetic integer binary operations (inverse operations analogy): 168	           0	           4	              0
+Arithmetic flpt binary operations (inverse operations analogy): 288	           1	          12	          8.333
+Trunc - s/zext (inverse operations analogy): 91                  	          11	          91	          12.09
+Fptou/si - s/uitofp (inverse operations analogy): 6              	           2	           6	          33.33
+Inttoptr - ptrtoint (inverse operations analogy): 136            	          11	         136	          8.088
+Structure - Vector equivalents (a): 450                          	           7	           8	           87.5
+
+
+--- Starting semantic tests
+Testing category "add" ...
+Statements in category    :     44
+Statements out of category:  8,521
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+processed 30 outer stmts
+processed 35 outer stmts
+processed 40 outer stmts
+
+Score: 76.64238556998714%
+Testing category "fadd" ...
+Statements in category    :     28
+Statements out of category:  8,537
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+
+Score: 82.82422049553361%
+Testing category "sub" ...
+Statements in category    :     26
+Statements out of category:  8,539
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+
+Score: 70.26778491446485%
+Testing category "fsub" ...
+Statements in category    :     23
+Statements out of category:  8,542
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+
+Score: 86.09132461503864%
+Testing category "mul" ...
+Statements in category    :     35
+Statements out of category:  8,530
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+processed 30 outer stmts
+
+Score: 79.32322893987607%
+Testing category "fmul" ...
+Statements in category    :     31
+Statements out of category:  8,534
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+processed 30 outer stmts
+
+Score: 87.50009449866567%
+Testing category "ret" ...
+Statements in category    :     46
+Statements out of category:  8,519
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+processed 30 outer stmts
+processed 35 outer stmts
+processed 40 outer stmts
+processed 45 outer stmts
+
+Score: 71.19256586442468%
+Testing category "fdiv" ...
+Statements in category    :     15
+Statements out of category:  8,550
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+
+Score: 89.71695906432748%
+Testing category "udiv" ...
+Statements in category    :      6
+Statements out of category:  8,559
+processed 0 outer stmts
+processed 5 outer stmts
+
+Score: 74.81870935078085%
+Testing category "sdiv" ...
+Statements in category    :      6
+Statements out of category:  8,559
+processed 0 outer stmts
+processed 5 outer stmts
