@@ -125,3 +125,34 @@ Statements in category    :      6
 Statements out of category:  8,559
 processed 0 outer stmts
 processed 5 outer stmts
+
+Score: 84.08108423881295%
+Testing category "bitwise binary" ...
+Statements in category    :     86
+Statements out of category:  8,479
+processed 0 outer stmts
+processed 5 outer stmts
+processed 10 outer stmts
+processed 15 outer stmts
+processed 20 outer stmts
+processed 25 outer stmts
+processed 30 outer stmts
+processed 35 outer stmts
+processed 40 outer stmts
+processed 45 outer stmts
+processed 50 outer stmts
+processed 55 outer stmts
+processed 60 outer stmts
+processed 65 outer stmts
+processed 70 outer stmts
+processed 75 outer stmts
+processed 80 outer stmts
+processed 85 outer stmts
+
+Score: 77.5976101897518%
+
+--- Starting clustering plot
+Loading/creating labels
+Recomputing tags file
+Found 16 labels
+Plotting
