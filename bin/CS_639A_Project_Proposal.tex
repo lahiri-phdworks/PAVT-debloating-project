@@ -1,0 +1,142 @@
+\documentclass{article} % For LaTeX2e
+\usepackage{nips_adapted}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\title{CS 639A Project Proposal}
+
+\author{
+Sumit Lahiri \\
+19111274 \\
+\And
+Group No\\
+1\\
+\And
+Amit Kumar Sharma \\
+20111012\\
+}
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to \LaTeX{} to determine where to break
+% the lines. Using \AND forces a linebreak at that point. So, if \LaTeX{}
+% puts 3 of 4 authors names on the first line, and the last on the second
+% line, try using \AND instead of \And before the third author name.
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+\usepackage{xcolor}
+
+\nipsfinalcopy
+
+
+\begin{document}
+
+\maketitle
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[scale=0.3]{bloat.jpg}}
+\caption{Is my code bloated ?}
+\label{fig}
+\end{figure}
+
+\section*{Part 1 : Problem}
+$\textbf{Software bloating}$ is quite a common problem in any real world software project where the code base is plagued with LOCs that are not useful while the program runs in a given execution context, a common example being exposing too many $\textbf{redundant APIs}$, $\textbf{default configurations}$ for each context or many $\textbf{command line options}$ that are not used or never invoked in general but are still in the codebase. One primary reason for this is that it isn't possible to structure the code base before hand or to choose a strict design pattern for all components that we write. Many times code needs to be written on demand or ad-hoc basis because not all requirements are captured in the early stages of the project and that becomes the potential root cause for $\textbf{software bloating}$. $\textbf{Software bloating}$ can lead to bugs, slower code execution and even expose vulnerabilities in the code base. The current techniques used are $\textbf{manually thought}$ clever $\textbf{metrics \& heuristics}$ for identifying such $\textbf{bloat sites}$ and refactoring the code to remove them. 
+
+\section*{Part 2 : Objective \& Proposal}
+The project we are undertaking is more aligned towards \color{blue} \textbf{program analysis} \color{black}. Below we briefly explain our objective. 
+We propose to debloat a piece of $\textbf{C or C++ Code}$ via $\textbf{Policy Based Reinforcement Learning}$ using techniques and approaches as laid out in the two research papers we have selected for accomplishing the task. Both the papers have demonstrated novel techniques for debloating the codebase for a given $\textbf{C \& C++ Software}$ using $\textbf{Policy Based Reinforcement Learning}$, the \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{first paper} mentioned does this by $\textbf{Learning-Guided Delta Debugging}$  while the \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{second paper} does this by $\textbf{Guided Function Specialization}$ technique. In our project \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{(based out of Paper 2)}, we model the debloating problem as \textbf{reinforcement learning} where action would be to specialize a program or not. The state of the model will be a \textbf{vector} containing all the required details about the \textbf{specialized code}. The \textbf{reward} will be a \textbf{reduction} of the number of \textbf{instructions or code size} in the program after the program is debloated. As the model keeps learning, we expect the rewards to be improved with more inputs. 
+
+\section*{Part 3 : Procedure}
+We will initially focus on the implementation, analysis and comparison of both the techniques as mentioned above and then move on to finding new sites for debloating or in figuring a better policy for the $\textbf{RL model}$ we will build. The tentative procedure for our project submission is as outlined below ($\textbf{RL}$ means $\textbf{Reinforcement Learning}$ henceforth):
+\section*{Stage 1 : Pre RL Stage :: Week 1 \& 2}
+\begin{itemize}
+    \item Start with $\textbf{LLVM IR}$ of the code and use $\textbf{Inst2Vec}$ as outlined in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2} to extract feature information as outlined in the paper before $\textbf{RL stage}$
+    \item Finding more sites other than the ones listed for $\textbf{Program Specialization}$ in \href{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf}{Paper 2}.  
+    \item Understanding $\textbf{Chisel}$ \& $\textbf{Trimmer}$ tool as implemented in \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1} in terms of how \textbf{markov decision process} enhances \textbf{delta debugging}. This steps helps in \textbf{Stage 2}.
+    \item Collect and prepare bloated code samples for analysis, this is the input to our tool infrastructure. We will explore the use of fuzzing here.  
+\end{itemize}
+
+\section*{Stage 2 : RL Implement Stage :: Week 3 \& 4 - Mid November} 
+\begin{itemize}
+	\item Specification for debloating using \textbf{Chisel} Tool, which essentially becomes a policy for the \textbf{RL Model} to learn. 
+    \item Implementing $\textbf{DeepOCCAM}$ tool from $\textbf{OCCAM}$ Tool and run or analysis. 
+    \item Exploring the use of other off-the-shelf decision tree based model other than \textbf{FastDT} in \textbf{Chisel Tool} 
+    \item Compare performance with $\textbf{Chisel}$ tool of \href{https://dl.acm.org/doi/10.1145/3243734.3243838}{Paper 1} based on the metrics we choose before hand in $\textbf{Stage 1}$. 
+    \item Seeing if the metrics we choose for $\textbf{Program Specialization}$ in $\textbf{Stage 1}$ for \textbf{DeepOCCAM} are any good versus the specification for debloating in $\textbf{Chisel Tool}$.  
+\end{itemize}
+
+\section*{Stage 3 : Analysis \& Wrap Up :: Week 5 - End November}
+\begin{itemize}
+	\item Debloating can introduce new errors in the code, we write tests and run samples to check if no un-intended behavior is introduced.  
+    \item We produce the results of our analysis in a systematic way and show it using a web-based interface that connects to our tool communicating over $\textbf{gRPC}$ or as a \textbf{REST API}
+    \item Finish writing the \textbf{report} and \textbf{presentation} for the $\textbf{Final Review}$. 
+    \item We demonstrate a \textbf{run} of our tool to report \textbf{new sites} for better debloating. 
+    \item Report the new \textbf{heuristics} and \textbf{approaches} we adopted to accomplish the same. 
+\end{itemize}
+
+\section*{Deliverables} 
+    \begin{itemize}
+        \item A complete \textbf{comparison report} \& \textbf{project report}.
+        \item \textbf{Final Slides} for \textbf{review} \& \textbf{presentation} purpose.
+        \item \textbf{Code Repository} of our tool. (Would add a docker image for ad-hoc running).
+        \item \textbf{Sample code} files on which we ran out tools for testing and implementation purpose.  
+        \item Report on new \textbf{heuristics}, \textbf{approaches} and \textbf{sites} for software debloating.  
+        \item \textbf{Extra Task :} Explore the use of other \textbf{machine learning} techniques or approaches for better software debloat.
+        \item \textbf{Extra Task :} Run an LLVM pass which would do \textbf{debloating} using our tool. \color{blue} We wont commit it or share with LLVM repository but just integrate and run our implementation as an LLVM Pass \color{black}  
+    \end{itemize}
+
+\section*{Paper 1} \label{second}
+\begin{itemize}
+    \item \color{blue} Kihong Heo, Woosuk Lee, Pardis Pashakhanloo, and Mayur Naik. 2018.
+    Effective Program Debloating via Reinforcement Learning. In 2018 ACM
+    SIGSAC Conference on Computer and Communications Security (CCS ’18), October
+    15–19, 2018, Toronto, ON, Canada. ACM, New York, NY, USA, 15 pages. \color{black} Link :
+    \url{https://dl.acm.org/doi/10.1145/3243734.3243838}
+\end{itemize}
+
+\section*{Paper 2}
+\begin{itemize}
+    \item \color{blue} Le Van, Nham, Ashish Gehani, Arie Gurfinkel, Susmit Jha, and Jorge A. Navas. "Reinforcement Learning Guided Software Debloating.", NIPS 2019. \color{black} Link : \url{http://www.csl.sri.com/users/gehani/papers/MLSys-2019.DeepOCCAM.pdf} 
+\end{itemize}
+
+\section*{Tools}
+We may add a few tools later on.
+\begin{itemize}
+    \item Chisel Tool : \url{https://github.com/aspire-project/chisel}
+    \item OCCAM Tool : \url{https://github.com/SRI-CSL/OCCAM}
+    \item PyTorch : \url{https://pytorch.org/}
+    \item Inst2Vec : NCC Tool \url{https://github.com/lahiri-phdworks/ncc}
+    \item LLVM : \url{https://github.com/lahiri-phdworks/llvm-project}
+    \item OpenAI Gym : \url{https://github.com/lahiri-phdworks/gym}
+    \item gRPC-go Tool : \url{https://github.com/codersguild/grpc-go}
+    \item Kibana Dashboard : \url{https://www.elastic.co/downloads/kibana}
+    \item American Fuzzy Loop : \url{https://github.com/google/AFL}
+\end{itemize}
+
+\section*{Terms}
+We have already done a preliminary analysis of the task at hand and also of both papers we shared here in the proposal. 
+Our best efforts would be to deliver all the things listed but we may get stuck at stages where we can't proceed further. In such instances  we shall seek help from your side on implementation or further guidance, which will be appropriately mentioned in the report as well. Thanking you for giving us the opportunity to do this project.  
+
+\section*{References \& Study}
+\begin{itemize}
+    \item What is Software Bloat? : \url{https://en.wikipedia.org/wiki/Software_bloat}
+    \item Chisel ACM Presentation : \url{https://www.youtube.com/watch?v=8eRZKoLFakw}
+    \item IR 2 VEC : \url{https://arxiv.org/pdf/1909.06228.pdf}
+    \item Neural Code Comprehension : \url{http://www.cs.columbia.edu/~suman/gabe_slides.pdf}
+    \item Neural Code Comprehension: A Learnable Representation of Code Semantics \url{https://www.youtube.com/watch?v=8aXl53pGflU}
+    \item How LLVM Optimizes a Function : \url{https://blog.regehr.org/archives/1603}
+    \item On Software Disenchantment : \url{https://tonsky.me/blog/disenchantment/}
+\end{itemize}
+\end{document}
