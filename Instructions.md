@@ -28,15 +28,28 @@ sudo docker run --rm -it -v $PWD:/home -it prodrelworks/occam10:latest
 sudo docker run --rm -it -v $PWD:/home -it prodrelworks/chisel-tool:latest
 ```
 
-## Frequent Instructions
+## OCCAM Basic Run : 
 
 ```
 ./runbench.py --sets="portfolio.set" --slash-opts="--disable-inlining,--enable-config-prime" --cpu=60 --mem=4096
+```
 
+## Chisel Tool 
+
+```
 chisel ./test.sh file.c
+```
 
+## ROPgadgets & Metrics : 
+
+```
 ROPgadget --binary /usr/bin/whereis > /tmp/whereis.gadgets
+cd /gality
 java -cp ./bin/ gality.Program /tmp/whereis.gadgets /tmp/whereis.gadgets.metrics
+```
 
+## GadgetSetAnalyzer : 
+
+```
 python GSA.py --output_metrics --output_addresses ./samples/CHISEL/date/date-8.21 "{'Aggressive':'./samples/CHISEL/date/date-8.21.reduced'}"
 ```
