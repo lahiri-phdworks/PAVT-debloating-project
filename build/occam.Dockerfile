@@ -55,3 +55,19 @@ ENV OCCAM_HOME "/occam"
 RUN make
 RUN make install
 RUN make test
+
+RUN mkdir /metrics
+
+RUN apt-get install -y python3-dev libffi-dev build-essential virtualenvwrapper default-jre default-jdk
+RUN pip install capstone ropgadget
+
+RUN javac --help
+WORKDIR /
+RUN git clone https://github.com/michaelbrownuc/gality.git gality
+WORKDIR /gality
+RUN javac -d ./bin/ ./src/gality/Program.java
+
+WORKDIR /
+RUN git clone https://github.com/lahiri-phdworks/GadgetSetAnalyzer.git GadgetSetAnalyzer
+RUN git clone https://github.com/lahiri-phdworks/ROPgadget.git ROPgadget
+WORKDIR /metrics
