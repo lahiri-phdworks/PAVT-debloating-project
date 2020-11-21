@@ -2,6 +2,10 @@
 
 A Software Debloating Package for LLVM IR Frontends, firstly on ```C``` or ```C++```.
 
+## Rough Architecture : 
+
+![architecture.jpeg](https://raw.githubusercontent.com/lahiri-phdworks/reinforcedlearning-debloater/master/Samples/Images/architecture.jpeg)
+
 ## Paper 1 : 
 
 - Effective Program Debloating via Reinforcement Learning : [https://dl.acm.org/doi/10.1145/3243734.3243838](https://dl.acm.org/doi/10.1145/3243734.3243838)
