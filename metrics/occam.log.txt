@@ -1,0 +1,2103 @@
+>> /usr/local/bin/slash --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce --no-strip --stats --work-dir=slash readelf.manifest.constraints
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmp6a2jmy
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmp6a2jmy WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -Pcmdline-spec -Pcmdline-spec-input arguments
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -Pcmdline-spec -Pcmdline-spec-input arguments WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -o=/dev/null -Pinterface -Pinterface-output tree.01.iface
+
+GatherInterfacePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc
+External call to strcoll
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function chdir
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc
+## External calls:
+	strcoll(?,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	chdir
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -o=/dev/null -Pinterface -Pinterface-output tree.01.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface
+
+InternalizePass
+Reading file 'main.iface'...success
+Done reading.
+InternalizePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc
+Internalizing '' ExternalLinkage DefaultVisibility
+Internalizing 'usage' ExternalLinkage DefaultVisibility
+Internalizing 'printit' ExternalLinkage DefaultVisibility
+Internalizing 'psize' ExternalLinkage DefaultVisibility
+Internalizing 'xmalloc' ExternalLinkage DefaultVisibility
+Internalizing 'xrealloc' ExternalLinkage DefaultVisibility
+Internalizing 'read_dir' ExternalLinkage DefaultVisibility
+Internalizing 'patmatch' ExternalLinkage DefaultVisibility
+Internalizing 'getfulltree' ExternalLinkage DefaultVisibility
+Internalizing 'free_dir' ExternalLinkage DefaultVisibility
+Internalizing 'sizecmp' ExternalLinkage DefaultVisibility
+Internalizing 'indent' ExternalLinkage DefaultVisibility
+Internalizing 'prot' ExternalLinkage DefaultVisibility
+Internalizing 'do_date' ExternalLinkage DefaultVisibility
+Internalizing 'Ftype' ExternalLinkage DefaultVisibility
+Internalizing 'fillinfo' ExternalLinkage DefaultVisibility
+Internalizing 'r_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'emit_html_header' ExternalLinkage DefaultVisibility
+Internalizing 'html_encode' ExternalLinkage DefaultVisibility
+Internalizing 'url_encode' ExternalLinkage DefaultVisibility
+Internalizing 'htmlr_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'xml_fillinfo' ExternalLinkage DefaultVisibility
+Internalizing 'xml_indent' ExternalLinkage DefaultVisibility
+Internalizing 'xmlr_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'json_fillinfo' ExternalLinkage DefaultVisibility
+Internalizing 'json_indent' ExternalLinkage DefaultVisibility
+Internalizing 'jsonr_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'uidtoname' ExternalLinkage DefaultVisibility
+Internalizing 'gidtoname' ExternalLinkage DefaultVisibility
+Internalizing 'saveino' ExternalLinkage DefaultVisibility
+Internalizing 'findino' ExternalLinkage DefaultVisibility
+Internalizing 'split' ExternalLinkage DefaultVisibility
+Internalizing 'cmd' ExternalLinkage DefaultVisibility
+Internalizing 'color' ExternalLinkage DefaultVisibility
+Internalizing 'getcharset' ExternalLinkage DefaultVisibility
+Internalizing 'initlinedraw' ExternalLinkage DefaultVisibility
+Internalizing 'strverscmp' ExternalLinkage DefaultVisibility
+Internalizing 'pattern' ExternalLinkage DefaultVisibility
+Internalizing 'ipattern' ExternalLinkage DefaultVisibility
+Internalizing 'host' ExternalLinkage DefaultVisibility
+Internalizing 'title' ExternalLinkage DefaultVisibility
+Internalizing 'sp' ExternalLinkage DefaultVisibility
+Internalizing '_nl' ExternalLinkage DefaultVisibility
+Internalizing 'timefmt' ExternalLinkage DefaultVisibility
+Internalizing 'charset' ExternalLinkage DefaultVisibility
+Internalizing 'listdir' ExternalLinkage DefaultVisibility
+Internalizing 'cmpfunc' ExternalLinkage DefaultVisibility
+Internalizing 'outfilename' ExternalLinkage DefaultVisibility
+Internalizing 'ifmt' ExternalLinkage DefaultVisibility
+Internalizing 'fmt' ExternalLinkage DefaultVisibility
+Internalizing 'ftype' ExternalLinkage DefaultVisibility
+Internalizing 'sorts' ExternalLinkage DefaultVisibility
+Internalizing 'colorize' ExternalLinkage DefaultVisibility
+Internalizing 'ansilines' ExternalLinkage DefaultVisibility
+Internalizing 'linktargetcolor' ExternalLinkage DefaultVisibility
+Internalizing 'termmatch' ExternalLinkage DefaultVisibility
+Internalizing 'leftcode' ExternalLinkage DefaultVisibility
+Internalizing 'rightcode' ExternalLinkage DefaultVisibility
+Internalizing 'endcode' ExternalLinkage DefaultVisibility
+Internalizing 'norm_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'file_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'dir_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'link_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'fifo_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'door_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'block_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'char_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'orphan_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'sock_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'suid_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'sgid_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'stickyow_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'otherwr_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'sticky_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'exec_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'missing_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'vgacolor' ExternalLinkage DefaultVisibility
+Internalizing 'ext' ExternalLinkage DefaultVisibility
+...progress...
+Progress: internalized functions = 37 internalized globals = 41
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -disable-simplify-libcalls --disable-slp-vectorization /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.bc -o /tmp/tmpx6lwAk.bc -O3
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -disable-simplify-libcalls --disable-slp-vectorization /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.bc -o /tmp/tmpx6lwAk.bc -O3 WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /tmp/tmpIaXAkI.bc -o=/tmp/tmpYb_p04.bc -Ppeval -Ppeval-policy=onlyonce -Ppeval-opt
+
+=== Begin intra-module specialization ===
+## Running only-once specialization policy
+There are 22 functions that are called more than once and 91 functions called only once.
+...no progress...
+No specialization took place
+ === End intra-module specialization ===
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /tmp/tmpIaXAkI.bc -o=/tmp/tmpYb_p04.bc -Ppeval -Ppeval-policy=onlyonce -Ppeval-opt => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCi2abY.iface -Pinterface-entry /tmp/tmpCi2abY.iface
+
+GatherInterfacePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc
+Reading interface from '/tmp/tmpCi2abY.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fprintf
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to strlen
+External call to __lxstat
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputs
+External call to chdir
+External call to fprintf
+External call to exit
+External call to chdir
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fprintf
+External call to fwrite
+External call to fputc
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function chdir
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x2E,?)
+	fputc(0x7D,?)
+	fputc(0xA,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	nl_langinfo(0xE)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	chdir(?)
+	chdir(?)
+	getenv(S:155C9A59)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:BD9FDFE2,0x13,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	fwrite(S:DB10F6D8,0x15,0x1,?)
+	fwrite(S:2B57FE9B,0x10,0x1,?)
+	fwrite(S:485B2927,0x6,0x1,?)
+	fwrite(S:F97C647A,0x15,0x1,?)
+	fwrite(S:44529BAC,0x6,0x1,?)
+	fwrite(S:2F4D6681,0x8,0x1,?)
+	fwrite(S:97059C8,0x8,0x1,?)
+	fwrite(S:9FEC46E3,0x8,0x1,?)
+	fputs(?,?)
+	fputs(?,?)
+	fputs(?,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:E4BA312,?)
+	fprintf(?,S:2D17DF2E,?,?)
+	fprintf(?,S:2002A3BB,?,?)
+	fprintf(?,S:E555980,?)
+	fprintf(?,S:FC6B6B7,?,?)
+	fprintf(?,S:9F19B8A4,?,?,?)
+	fprintf(?,S:A77E9F09,?,?,?)
+	fprintf(?,S:3167A9D3,?)
+	fprintf(?,S:72B54C43,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:A4D689D7,?)
+	fprintf(?,S:785BD18E,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:49265B86,?,?)
+	fprintf(?,S:3EDAE52A,?,?,?)
+	fprintf(?,S:F26068F6,?,?,?)
+	fprintf(?,S:C0062162,?,?,?)
+	fprintf(?,S:BE6550F5,?,?)
+	fprintf(?,S:89EF417F,?)
+	fprintf(?,S:324BB506,?)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:BED68BA2,?,?)
+	fprintf(?,S:88192DC7,?,?)
+	fprintf(?,S:46355634,?,?,?,?)
+	fprintf(?,S:57901DBF,?,?,?,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	chdir
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCi2abY.iface -Pinterface-entry /tmp/tmpCi2abY.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCi2abY.iface -Pinterface-entry /tmp/tmpCi2abY.iface
+
+GatherInterfacePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc
+Reading interface from '/tmp/tmpCi2abY.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fprintf
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to strlen
+External call to __lxstat
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputs
+External call to chdir
+External call to fprintf
+External call to exit
+External call to chdir
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fprintf
+External call to fwrite
+External call to fputc
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function chdir
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x2E,?)
+	fputc(0x7D,?)
+	fputc(0xA,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	nl_langinfo(0xE)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	chdir(?)
+	chdir(?)
+	getenv(S:155C9A59)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:BD9FDFE2,0x13,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	fwrite(S:DB10F6D8,0x15,0x1,?)
+	fwrite(S:2B57FE9B,0x10,0x1,?)
+	fwrite(S:485B2927,0x6,0x1,?)
+	fwrite(S:F97C647A,0x15,0x1,?)
+	fwrite(S:44529BAC,0x6,0x1,?)
+	fwrite(S:2F4D6681,0x8,0x1,?)
+	fwrite(S:97059C8,0x8,0x1,?)
+	fwrite(S:9FEC46E3,0x8,0x1,?)
+	fputs(?,?)
+	fputs(?,?)
+	fputs(?,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:E4BA312,?)
+	fprintf(?,S:2D17DF2E,?,?)
+	fprintf(?,S:2002A3BB,?,?)
+	fprintf(?,S:E555980,?)
+	fprintf(?,S:FC6B6B7,?,?)
+	fprintf(?,S:9F19B8A4,?,?,?)
+	fprintf(?,S:A77E9F09,?,?,?)
+	fprintf(?,S:3167A9D3,?)
+	fprintf(?,S:72B54C43,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:A4D689D7,?)
+	fprintf(?,S:785BD18E,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:49265B86,?,?)
+	fprintf(?,S:3EDAE52A,?,?,?)
+	fprintf(?,S:F26068F6,?,?,?)
+	fprintf(?,S:C0062162,?,?,?)
+	fprintf(?,S:BE6550F5,?,?)
+	fprintf(?,S:89EF417F,?)
+	fprintf(?,S:324BB506,?)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:BED68BA2,?,?)
+	fprintf(?,S:88192DC7,?,?)
+	fprintf(?,S:46355634,?,?,?,?)
+	fprintf(?,S:57901DBF,?,?,?,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	chdir
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCi2abY.iface -Pinterface-entry /tmp/tmpCi2abY.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.bc -Pspecialize -Pspecialize-output tree.01.rw -Pspecialize-input interface_before.01.iface -Pspecialize-policy=onlyonce
+
+Reading file 'interface_before.01.iface'...success
+ === Begin inter-module specialization ===
+Read 25interface entries.
+SpecializeComponent()
+No specialization took place
+ === End inter-module specialization ===
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.bc -Pspecialize -Pspecialize-output tree.01.rw -Pspecialize-input interface_before.01.iface -Pspecialize-policy=onlyonce WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc -Prewrite
+
+InterRewriterPass()
+Done reading (0 rewrites)
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc -Prewrite => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc -o=/dev/null -Pinterface -Pinterface-output tree.02.iface
+
+GatherInterfacePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc
+External call to strcoll
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function chdir
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc
+## External calls:
+	strcoll(?,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	chdir
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc -o=/dev/null -Pinterface -Pinterface-output tree.02.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface
+
+InternalizePass
+Reading file 'main.iface'...success
+Done reading.
+InternalizePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc
+Internalizing 'gnu_getcwd' ExternalLinkage DefaultVisibility
+Internalizing 'parse_dir_colors' ExternalLinkage DefaultVisibility
+...progress...
+Progress: internalized functions = 2 internalized globals = 0
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpIpYgtZ.iface -Pinterface-entry /tmp/tmpIpYgtZ.iface
+
+GatherInterfacePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc
+Reading interface from '/tmp/tmpIpYgtZ.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fprintf
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to strlen
+External call to __lxstat
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputs
+External call to chdir
+External call to fprintf
+External call to exit
+External call to chdir
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fprintf
+External call to fwrite
+External call to fputc
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function chdir
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x2E,?)
+	fputc(0x7D,?)
+	fputc(0xA,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	nl_langinfo(0xE)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	chdir(?)
+	chdir(?)
+	getenv(S:155C9A59)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:BD9FDFE2,0x13,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	fwrite(S:DB10F6D8,0x15,0x1,?)
+	fwrite(S:2B57FE9B,0x10,0x1,?)
+	fwrite(S:485B2927,0x6,0x1,?)
+	fwrite(S:F97C647A,0x15,0x1,?)
+	fwrite(S:44529BAC,0x6,0x1,?)
+	fwrite(S:2F4D6681,0x8,0x1,?)
+	fwrite(S:97059C8,0x8,0x1,?)
+	fwrite(S:9FEC46E3,0x8,0x1,?)
+	fputs(?,?)
+	fputs(?,?)
+	fputs(?,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:E4BA312,?)
+	fprintf(?,S:2D17DF2E,?,?)
+	fprintf(?,S:2002A3BB,?,?)
+	fprintf(?,S:E555980,?)
+	fprintf(?,S:FC6B6B7,?,?)
+	fprintf(?,S:9F19B8A4,?,?,?)
+	fprintf(?,S:A77E9F09,?,?,?)
+	fprintf(?,S:3167A9D3,?)
+	fprintf(?,S:72B54C43,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:A4D689D7,?)
+	fprintf(?,S:785BD18E,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:49265B86,?,?)
+	fprintf(?,S:3EDAE52A,?,?,?)
+	fprintf(?,S:F26068F6,?,?,?)
+	fprintf(?,S:C0062162,?,?,?)
+	fprintf(?,S:BE6550F5,?,?)
+	fprintf(?,S:89EF417F,?)
+	fprintf(?,S:324BB506,?)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:BED68BA2,?,?)
+	fprintf(?,S:88192DC7,?,?)
+	fprintf(?,S:46355634,?,?,?,?)
+	fprintf(?,S:57901DBF,?,?,?,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	chdir
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpIpYgtZ.iface -Pinterface-entry /tmp/tmpIpYgtZ.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpIpYgtZ.iface -Pinterface-entry /tmp/tmpIpYgtZ.iface
+
+GatherInterfacePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc
+Reading interface from '/tmp/tmpIpYgtZ.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fprintf
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to strlen
+External call to __lxstat
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputs
+External call to chdir
+External call to fprintf
+External call to exit
+External call to chdir
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fprintf
+External call to fwrite
+External call to fputc
+External call to fputs
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fwrite
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function chdir
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x2E,?)
+	fputc(0x7D,?)
+	fputc(0xA,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	nl_langinfo(0xE)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	chdir(?)
+	chdir(?)
+	getenv(S:155C9A59)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:BD9FDFE2,0x13,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	fwrite(S:DB10F6D8,0x15,0x1,?)
+	fwrite(S:2B57FE9B,0x10,0x1,?)
+	fwrite(S:485B2927,0x6,0x1,?)
+	fwrite(S:F97C647A,0x15,0x1,?)
+	fwrite(S:44529BAC,0x6,0x1,?)
+	fwrite(S:2F4D6681,0x8,0x1,?)
+	fwrite(S:97059C8,0x8,0x1,?)
+	fwrite(S:9FEC46E3,0x8,0x1,?)
+	fputs(?,?)
+	fputs(?,?)
+	fputs(?,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:E4BA312,?)
+	fprintf(?,S:2D17DF2E,?,?)
+	fprintf(?,S:2002A3BB,?,?)
+	fprintf(?,S:E555980,?)
+	fprintf(?,S:FC6B6B7,?,?)
+	fprintf(?,S:9F19B8A4,?,?,?)
+	fprintf(?,S:A77E9F09,?,?,?)
+	fprintf(?,S:3167A9D3,?)
+	fprintf(?,S:72B54C43,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:A4D689D7,?)
+	fprintf(?,S:785BD18E,?,?)
+	fprintf(?,S:2DE35F2,?)
+	fprintf(?,S:49265B86,?,?)
+	fprintf(?,S:3EDAE52A,?,?,?)
+	fprintf(?,S:F26068F6,?,?,?)
+	fprintf(?,S:C0062162,?,?,?)
+	fprintf(?,S:BE6550F5,?,?)
+	fprintf(?,S:89EF417F,?)
+	fprintf(?,S:324BB506,?)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:BED68BA2,?,?)
+	fprintf(?,S:88192DC7,?,?)
+	fprintf(?,S:46355634,?,?,?,?)
+	fprintf(?,S:57901DBF,?,?,?,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	chdir
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpIpYgtZ.iface -Pinterface-entry /tmp/tmpIpYgtZ.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.h.bc -Pinternalize -Pinternalize-wrt-interfaces interface_after.01.iface
+
+InternalizePass
+Reading file 'interface_after.01.iface'...success
+Done reading.
+InternalizePass::runOnModule: /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc
+...no progress...
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.h.bc -Pinternalize -Pinternalize-wrt-interfaces interface_after.01.iface => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.h.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmpNi9ADt
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.h.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmpNi9ADt WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/clang++ /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.h.bc -o tree -O2
+
+EXECUTED: /usr/lib/llvm-10/bin/clang++ /home/benchmarks/examples/portfolio/tree/slash/tree.a.i.p.s.r.i.h.bc -o tree -O2 WHICH RETURNED 0
+
