@@ -58,3 +58,14 @@ java -cp ./bin/ gality.Program /tmp/whereis.gadgets /tmp/whereis.gadgets.metrics
 ```
 python GSA.py --output_metrics --output_addresses ./samples/CHISEL/date/date-8.21 "{'Aggressive':'./samples/CHISEL/date/date-8.21.reduced'}"
 ```
+
+## gRPC Server & Client Example
+
+We need to run ```occam``` seperate from ```pytorch-ml```. 
+
+- https://grpc.io/docs/languages/python/basics/
+
+```
+python route_guide_server.py
+python route_guide_client.py
+```
