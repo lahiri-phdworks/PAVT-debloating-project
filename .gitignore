@@ -105,3 +105,12 @@ dist
 *.aux
 *.out
 *.gz
+
+*.o
+*~
+*.bc
+*.so
+*.pyc
+*.so.*
+*.dylib
+*.DS_Store
