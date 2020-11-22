@@ -38,3 +38,14 @@ RUN wget https://apt.llvm.org/llvm.sh && \
     ./llvm.sh 10
 
 ENV LLVM_HOME "/usr/lib/llvm-10"
+ENV PATH "$LLVM_HOME/bin:/bin:/usr/bin:/usr/local/bin:/occam/utils/FileCheck_trusty:$GOPATH/bin:$PATH"
+
+WORKDIR /
+
+RUN apt-get install -y python3 python3-pip python3-dev libfreetype* libmysqlclient-dev
+RUN pip3 install numpy pandas keras bokeh umap networkx labm8 sklearn jinja2 absl-py tensorflow-gpu tensorflow torch torchvision ast2json uuid alive-progress gym wget werkzeug
+RUN git clone https://github.com/lahiri-phdworks/ncc.git ncc
+
+WORKDIR /ncc
+RUN rm -rf data
+RUN mkdir data

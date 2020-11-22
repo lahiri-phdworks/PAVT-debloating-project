@@ -8,10 +8,15 @@ python3 train_inst2vec.py --embeddings_file published_results/emb.p --vocabulary
 
 ## Building Dockers
 
-From ```build``` folder.
+From ```build``` folder. 
 
 ```
 sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/gadgets-metrics:latest -f metric-gadgets.Dockerfile .
+```
+### `ncc` : 
+
+```
+sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/ncc:latest -f inst2vec.Dockerfile .
 ```
 
 ## Running Dockers
