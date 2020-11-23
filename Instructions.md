@@ -23,6 +23,10 @@ sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t pr
 sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/deepoccam8:latest -f occam.Dockerfile .
 ```
 
+```
+sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/occam10:latest -f occam10.Dockerfile .
+```
+
 ## Gadgets Analysis 
 
 ```
@@ -48,12 +52,14 @@ sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t pr
 
 ## Running Dockers
 
-Maps ```$PWD (present working directory)``` to a folder ```/home``` in the docker image that runs. 
+Maps ```$PWD (present working directory)``` to a folder ```/home``` in the docker image that runs. We have ```3``` pipelines to work and produce results. 
 
 ```
 sudo docker pull prodrelworks/gadgets-metrics:latest
 sudo docker pull prodrelworks/occam10:latest
 sudo docker pull prodrelworks/chisel-tool:latest
+sudo docker pull prodrelworks/combined-tools:bionic
+sudo docker pull prodrelworks/deepoccam8:latest
 
 sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/gadgets-metrics:latest
 sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/occam10:latest
@@ -72,7 +78,13 @@ sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/combi
 From ```/chisel``` dir.
 
 ```
-chisel ./test.sh file.c
+$ sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/chisel-tool:latest
+$ cd /chisel
+```
+
+```
+$ chisel ./test/test.sh ./test/function1/function1.c
+$ chisel ./test/test.sh ./test/function0/function0.c
 ```
 
 ## ROPgadgets & Metrics : 
@@ -84,9 +96,15 @@ cd /gality && java -cp ./bin/ gality.Program /tmp/whereis.gadgets /tmp/whereis.g
 
 ## GadgetSetAnalyzer : 
 
+We need to edit a file here before we start the analsysis. 
+
 ```
+cd /GadgetSetAnalyzer
 nano src/static_analyzer/GadgetSet.py 
-# /gality/bin/
+```
+Modify line 22, gality path to ```/gality/bin/```. The below line fails but will work when the pipelines are running. 
+
+```
 python3 src/GSA.py --output_metrics --output_addresses ./samples/CHISEL/date/date-8.21.origin ./samples/CHISEL/date/date-8.21.reduced 
 ```
 
