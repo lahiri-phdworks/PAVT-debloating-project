@@ -16,11 +16,11 @@ Clone the occam tool.
 - [https://github.com/lahiri-phdworks/OCCAM-Benchmarks](https://github.com/lahiri-phdworks/OCCAM-Benchmarks)
 
 ```
-sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/debloater:bionic -f occam.Dockerfile .
+sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/combined-tools:bionic -f occam.Dockerfile .
 ```
 
 ```
-sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/occam10:latest -f occam.Dockerfile .
+sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/deepoccam8:latest -f occam.Dockerfile .
 ```
 
 ## Gadgets Analysis 
@@ -55,9 +55,10 @@ sudo docker pull prodrelworks/gadgets-metrics:latest
 sudo docker pull prodrelworks/occam10:latest
 sudo docker pull prodrelworks/chisel-tool:latest
 
-sudo docker run --rm -it -v $PWD:/home -it prodrelworks/gadgets-metrics:latest
-sudo docker run --rm -it -v $PWD:/home -it prodrelworks/occam10:latest
-sudo docker run --rm -it -v $PWD:/home -it prodrelworks/chisel-tool:latest
+sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/gadgets-metrics:latest
+sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/occam10:latest
+sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/chisel-tool:latest
+sudo docker run --rm -it -v $HOME/Documents/Project:/home -it prodrelworks/combined-tools:bionic
 ```
 
 ## OCCAM Basic Run : 
@@ -68,6 +69,8 @@ sudo docker run --rm -it -v $PWD:/home -it prodrelworks/chisel-tool:latest
 
 ## Chisel Tool 
 
+From ```/chisel``` dir.
+
 ```
 chisel ./test.sh file.c
 ```
@@ -76,14 +79,15 @@ chisel ./test.sh file.c
 
 ```
 ROPgadget --binary /usr/bin/whereis > /tmp/whereis.gadgets
-cd /gality
-java -cp ./bin/ gality.Program /tmp/whereis.gadgets /tmp/whereis.gadgets.metrics
+cd /gality && java -cp ./bin/ gality.Program /tmp/whereis.gadgets /tmp/whereis.gadgets.metrics && cat /tmp/whereis.gadgets.metrics
 ```
 
 ## GadgetSetAnalyzer : 
 
 ```
-python GSA.py --output_metrics --output_addresses ./samples/CHISEL/date/date-8.21 "{'Aggressive':'./samples/CHISEL/date/date-8.21.reduced'}"
+nano src/static_analyzer/GadgetSet.py 
+# /gality/bin/
+python3 src/GSA.py --output_metrics --output_addresses ./samples/CHISEL/date/date-8.21.origin ./samples/CHISEL/date/date-8.21.reduced 
 ```
 
 ## gRPC Server & Client Example
