@@ -40,6 +40,11 @@ RUN wget https://apt.llvm.org/llvm.sh && \
 ENV LLVM_HOME "/usr/lib/llvm-10"
 ENV PATH "$LLVM_HOME/bin:/bin:/usr/bin:/usr/local/bin:/occam/utils/FileCheck_trusty:$GOPATH/bin:$PATH"
 
+WORKDIR /
+RUN apt-get install -y python3 python3-pip python3-dev libfreetype* libmysqlclient-dev
+RUN pip3 install grpcio-tools numpy pandas keras bokeh umap networkx labm8 sklearn jinja2 absl-py tensorflow-gpu tensorflow torch torchvision ast2json uuid alive-progress gym wget werkzeug
+RUN git clone https://github.com/lahiri-phdworks/ncc.git ncc
+
 RUN rm -rf /occam
 RUN mkdir occam
 COPY ./ /occam
@@ -59,7 +64,7 @@ RUN make test
 RUN mkdir /metrics
 
 RUN apt-get install -y python3-dev libffi-dev build-essential virtualenvwrapper default-jre default-jdk
-RUN pip install capstone ropgadget
+RUN pip install capstone ropgadget wllvm
 
 RUN javac --help
 WORKDIR /
@@ -71,4 +76,25 @@ WORKDIR /
 RUN git clone https://github.com/lahiri-phdworks/GadgetSetAnalyzer.git GadgetSetAnalyzer
 RUN git clone https://github.com/lahiri-phdworks/ROPgadget.git ROPgadget
 
-WORKDIR /metrics
+WORKDIR /
+
+FROM debian:buster
+
+RUN apt-get update && apt-get install -y software-properties-common wget gnupg
+RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
+RUN apt-add-repository "deb http://apt.llvm.org/buster/ llvm-toolchain-buster-8 main" && apt-get update
+RUN apt-get install -y clang-8 libclang-8-dev llvm-8-dev cmake git wget
+RUN apt-get install -y libspdlog-dev nlohmann-json-dev
+RUN apt-get install -y libmlpack-dev
+RUN ln -s /usr/bin/clang-8 /usr/bin/clang && ln -s /usr/bin/llvm-config-8 /usr/bin/llvm-config
+
+RUN git clone https://github.com/aspire-project/chisel
+RUN git clone https://github.com/aspire-project/chiselbench
+
+RUN mkdir -p chisel/build && cd chisel/build && CXX=clang cmake .. && make
+
+ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/chisel/build/bin
+ENV CC clang
+ENV CHISEL_BENCHMARK_HOME /chiselbench
+
+WORKDIR /occam

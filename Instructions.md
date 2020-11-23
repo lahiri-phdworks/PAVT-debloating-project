@@ -8,12 +8,39 @@ python3 train_inst2vec.py --embeddings_file published_results/emb.p --vocabulary
 
 ## Building Dockers
 
-From ```build``` folder. 
+### `OCCAM`
+
+Clone the occam tool. 
+
+- [https://github.com/lahiri-phdworks/OCCAM](https://github.com/lahiri-phdworks/OCCAM)
+- [https://github.com/lahiri-phdworks/OCCAM-Benchmarks](https://github.com/lahiri-phdworks/OCCAM-Benchmarks)
+
+```
+sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/debloater:bionic -f occam.Dockerfile .
+```
+
+```
+sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/occam10:latest -f occam.Dockerfile .
+```
+
+## Gadgets Analysis 
 
 ```
 sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/gadgets-metrics:latest -f metric-gadgets.Dockerfile .
 ```
-### `ncc` : 
+
+### `Chisel`
+
+Clone the chisel tool. 
+
+- [https://github.com/lahiri-phdworks/chisel](https://github.com/lahiri-phdworks/chisel)
+- [https://github.com/lahiri-phdworks/chisel-bench](https://github.com/lahiri-phdworks/chisel-bench)
+
+```
+sudo docker build -t prodrelworks/chisel-tool:latest -f chisel.Dockerfile .
+```
+
+### `ncc` : inst2vec 
 
 ```
 sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/ncc:latest -f inst2vec.Dockerfile .
