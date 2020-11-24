@@ -53,3 +53,6 @@ RUN cd /gality && javac -d ./bin/ ./src/gality/Program.java
 RUN apt-get install -y nano
 RUN cd / && git clone https://github.com/lahiri-phdworks/GadgetSetAnalyzer.git
 RUN cd / && git clone https://github.com/lahiri-phdworks/ROPgadget.git
+
+RUN apt-get install -yqq parallel
+RUN pip3 install grpcio-tools regex 

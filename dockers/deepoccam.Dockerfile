@@ -94,3 +94,6 @@ RUN pip3 install angr
 RUN cd / && git clone https://github.com/lahiri-phdworks/GadgetSetAnalyzer.git
 RUN cd / && git clone https://github.com/lahiri-phdworks/ROPgadget.git
 RUN cd / && git clone https://github.com/lahiri-phdworks/ncc.git
+
+RUN apt-get install -yqq parallel
+RUN pip3 install grpcio-tools regex 
