@@ -1,0 +1,11 @@
+[23/11/2020 19:18:51] STARTED runbench
+[23/11/2020 19:18:51] RUN make on tree
+Running slash with options ['./build.sh', '--disable-inlining', '--enable-config-prime']
+[23/11/2020 19:18:53] RUN ./build.sh --disable-inlining --enable-config-prime on tree
+[23/11/2020 19:18:55] FINISHED runbench
+
+
+Program Reduction: (B:before and A:after OCCAM with --disable-inlining --enable-config-prime)
+
+Program    B Fun   A Fun   % Fun Red   B Ins   A Ins   % Ins Red   B Mem Ins   A Mem Ins   % Mem Ins Red
+tree          52      32          38    7442    4110          44        1658         810              51

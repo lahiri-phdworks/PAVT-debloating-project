@@ -1,0 +1,4238 @@
+>> /usr/local/bin/slash --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce --no-strip --stats --disable-inlining --enable-config-prime --work-dir=slash readelf.manifest.constraints
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmpI1vaZV
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmpI1vaZV WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -Pcmdline-spec -Pcmdline-spec-input arguments
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -Pcmdline-spec -Pcmdline-spec-input arguments WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc -O1 -Pconfig-prime -Pconfig-prime-unknown-args=1
+
+ConfigPrime: creating an interpreter instance.
+ConfigPrime: collecting all addresses from global initializers.
+Collecting addresses from global initializer for pattern.
+Allocated 8 bytes: [0x11606e0,0x11606e8]
+Collecting addresses from global initializer for ipattern.
+Allocated 8 bytes: [0x11e82e0,0x11e82e8]
+Collecting addresses from global initializer for host.
+Allocated 8 bytes: [0x1079fe0,0x1079fe8]
+Collecting addresses from global initializer for title.
+Allocated 8 bytes: [0x117cde0,0x117cde8]
+Collecting addresses from global initializer for .str.
+Allocated 15 bytes: [0x116ca10,0x116ca1f]
+Collecting addresses from global initializer for sp.
+Allocated 8 bytes: [0x1093500,0x1093508]
+Collecting addresses from global initializer for .str.1.
+Allocated 2 bytes: [0x122ad90,0x122ad92]
+Collecting addresses from global initializer for _nl.
+Allocated 8 bytes: [0x11f1520,0x11f1528]
+Collecting addresses from global initializer for .str.2.
+Allocated 2 bytes: [0x11f2590,0x11f2592]
+Collecting addresses from global initializer for timefmt.
+Allocated 8 bytes: [0x11f6ee0,0x11f6ee8]
+Collecting addresses from global initializer for charset.
+Allocated 8 bytes: [0x11d96f0,0x11d96f8]
+Collecting addresses from global initializer for listdir.
+Allocated 8 bytes: [0xfecf20,0xfecf28]
+Collecting addresses from global initializer for cmpfunc.
+Allocated 8 bytes: [0x117de00,0x117de08]
+Collecting addresses from global initializer for dirsfirst.
+Allocated 4 bytes: [0x10fa6f0,0x10fa6f4]
+Collecting addresses from global initializer for reverse.
+Allocated 4 bytes: [0xf64bd0,0xf64bd4]
+Collecting addresses from global initializer for outfilename.
+Allocated 8 bytes: [0x105f750,0x105f758]
+Collecting addresses from global initializer for ifmt.
+Allocated 32 bytes: [0x104ece0,0x104ed00]
+Collecting addresses from global initializer for fmt.
+Allocated 9 bytes: [0x120dc10,0x120dc19]
+Collecting addresses from global initializer for ftype.
+Allocated 8 bytes: [0x119ed80,0x119ed88]
+Allocated 8 bytes: [0x119ed88,0x119ed90]
+Allocated 8 bytes: [0x119ed90,0x119ed98]
+Allocated 8 bytes: [0x119ed98,0x119eda0]
+Allocated 8 bytes: [0x119eda0,0x119eda8]
+Allocated 8 bytes: [0x119eda8,0x119edb0]
+Allocated 8 bytes: [0x119edb0,0x119edb8]
+Allocated 8 bytes: [0x119edb8,0x119edc0]
+Allocated 8 bytes: [0x119edc0,0x119edc8]
+Collecting addresses from global initializer for .str.3.
+Allocated 5 bytes: [0x1170700,0x1170705]
+Collecting addresses from global initializer for .str.4.
+Allocated 10 bytes: [0xed40a0,0xed40aa]
+Collecting addresses from global initializer for .str.5.
+Allocated 5 bytes: [0x11ff520,0x11ff525]
+Collecting addresses from global initializer for .str.6.
+Allocated 5 bytes: [0x11f6690,0x11f6695]
+Collecting addresses from global initializer for .str.7.
+Allocated 6 bytes: [0x116c680,0x116c686]
+Collecting addresses from global initializer for .str.8.
+Allocated 7 bytes: [0x113c900,0x113c907]
+Collecting addresses from global initializer for .str.9.
+Allocated 5 bytes: [0x11bc800,0x11bc805]
+Collecting addresses from global initializer for .str.10.
+Allocated 8 bytes: [0xefbb30,0xefbb38]
+Collecting addresses from global initializer for sorts.
+Allocated 8 bytes: [0x11ec970,0x11ec978]
+Allocated 8 bytes: [0x11ec978,0x11ec980]
+Allocated 8 bytes: [0x11ec980,0x11ec988]
+Allocated 8 bytes: [0x11ec988,0x11ec990]
+Allocated 8 bytes: [0x11ec990,0x11ec998]
+Allocated 8 bytes: [0x11ec998,0x11ec9a0]
+Allocated 8 bytes: [0x11ec9a0,0x11ec9a8]
+Allocated 8 bytes: [0x11ec9a8,0x11ec9b0]
+Allocated 8 bytes: [0x11ec9b0,0x11ec9b8]
+Allocated 8 bytes: [0x11ec9b8,0x11ec9c0]
+Allocated 16 bytes: [0x11ec9c0,0x11ec9d0]
+Collecting addresses from global initializer for .str.11.
+Allocated 5 bytes: [0x10934c0,0x10934c5]
+Collecting addresses from global initializer for .str.12.
+Allocated 8 bytes: [0x1012870,0x1012878]
+Collecting addresses from global initializer for .str.13.
+Allocated 5 bytes: [0xfb22d0,0xfb22d5]
+Collecting addresses from global initializer for .str.14.
+Allocated 6 bytes: [0xe82f60,0xe82f66]
+Collecting addresses from global initializer for .str.15.
+Allocated 6 bytes: [0x1166190,0x1166196]
+Collecting addresses from global initializer for gflag.
+Allocated 4 bytes: [0xf52370,0xf52374]
+Collecting addresses from global initializer for uflag.
+Allocated 4 bytes: [0x10efbf0,0x10efbf4]
+Collecting addresses from global initializer for Fflag.
+Allocated 4 bytes: [0xfac5f0,0xfac5f4]
+Collecting addresses from global initializer for sflag.
+Allocated 4 bytes: [0x1157120,0x1157124]
+Collecting addresses from global initializer for pflag.
+Allocated 4 bytes: [0x11c2850,0x11c2854]
+Collecting addresses from global initializer for lflag.
+Allocated 4 bytes: [0x1079420,0x1079424]
+Collecting addresses from global initializer for fflag.
+Allocated 4 bytes: [0x11d4a40,0x11d4a44]
+Collecting addresses from global initializer for dflag.
+Allocated 4 bytes: [0x1161550,0x1161554]
+Collecting addresses from global initializer for aflag.
+Allocated 4 bytes: [0x11a0650,0x11a0654]
+Collecting addresses from global initializer for cflag.
+Allocated 4 bytes: [0x11c1b10,0x11c1b14]
+Collecting addresses from global initializer for siflag.
+Allocated 4 bytes: [0xf93090,0xf93094]
+Collecting addresses from global initializer for Hflag.
+Allocated 4 bytes: [0x1152d30,0x1152d34]
+Collecting addresses from global initializer for hflag.
+Allocated 4 bytes: [0x1079160,0x1079164]
+Collecting addresses from global initializer for Rflag.
+Allocated 4 bytes: [0x1217b60,0x1217b64]
+Collecting addresses from global initializer for Qflag.
+Allocated 4 bytes: [0x1137e90,0x1137e94]
+Collecting addresses from global initializer for Nflag.
+Allocated 4 bytes: [0x1079580,0x1079584]
+Collecting addresses from global initializer for qflag.
+Allocated 4 bytes: [0x11bcc20,0x11bcc24]
+Collecting addresses from global initializer for Dflag.
+Allocated 4 bytes: [0xefa8d0,0xefa8d4]
+Collecting addresses from global initializer for nolinks.
+Allocated 4 bytes: [0xf1bc10,0xf1bc14]
+Collecting addresses from global initializer for noreport.
+Allocated 4 bytes: [0x1079e50,0x1079e54]
+Collecting addresses from global initializer for xdev.
+Allocated 4 bytes: [0x1179470,0x1179474]
+Collecting addresses from global initializer for nocolor.
+Allocated 4 bytes: [0x1160150,0x1160154]
+Collecting addresses from global initializer for force_color.
+Allocated 4 bytes: [0x11bceb0,0x11bceb4]
+Collecting addresses from global initializer for noindent.
+Allocated 4 bytes: [0x11cb050,0x11cb054]
+Collecting addresses from global initializer for Jflag.
+Allocated 4 bytes: [0xed3f80,0xed3f84]
+Collecting addresses from global initializer for Xflag.
+Allocated 4 bytes: [0x11d9bc0,0x11d9bc4]
+Collecting addresses from global initializer for devflag.
+Allocated 4 bytes: [0x1088a30,0x1088a34]
+Collecting addresses from global initializer for inodeflag.
+Allocated 4 bytes: [0x115ed00,0x115ed04]
+Collecting addresses from global initializer for matchdirs.
+Allocated 4 bytes: [0x117d930,0x117d934]
+Collecting addresses from global initializer for ignorecase.
+Allocated 4 bytes: [0x11f6620,0x11f6624]
+Collecting addresses from global initializer for pruneflag.
+Allocated 4 bytes: [0xf62350,0xf62354]
+Collecting addresses from global initializer for duflag.
+Allocated 4 bytes: [0x121d1b0,0x121d1b4]
+Collecting addresses from global initializer for flimit.
+Allocated 4 bytes: [0xf66250,0xf66254]
+Collecting addresses from global initializer for maxdirs.
+Allocated 4 bytes: [0x119ed30,0x119ed34]
+Collecting addresses from global initializer for dirs.
+Allocated 8 bytes: [0x11609f0,0x11609f8]
+Collecting addresses from global initializer for Level.
+Allocated 4 bytes: [0x1151d70,0x1151d74]
+Collecting addresses from global initializer for mb_cur_max.
+Allocated 4 bytes: [0x107a060,0x107a064]
+Collecting addresses from global initializer for sLevel.
+Allocated 8 bytes: [0xf64970,0xf64978]
+Collecting addresses from global initializer for outfile.
+Allocated 8 bytes: [0xf64a20,0xf64a28]
+Collecting addresses from global initializer for curdir.
+Allocated 8 bytes: [0x11f27a0,0x11f27a8]
+Collecting addresses from global initializer for .str.111.
+Allocated 33 bytes: [0x11bd0f0,0x11bd111]
+Collecting addresses from global initializer for .str.16.
+Allocated 1 bytes: [0xf66650,0xf66651]
+Collecting addresses from global initializer for .str.17.
+Allocated 6 bytes: [0xf66680,0xf66686]
+Collecting addresses from global initializer for .str.18.
+Allocated 38 bytes: [0x115c010,0x115c036]
+Collecting addresses from global initializer for .str.19.
+Allocated 38 bytes: [0x115c4d0,0x115c4f6]
+Collecting addresses from global initializer for .str.20.
+Allocated 7 bytes: [0x12001b0,0x12001b7]
+Collecting addresses from global initializer for .str.21.
+Allocated 38 bytes: [0x119f610,0x119f636]
+Collecting addresses from global initializer for .str.22.
+Allocated 7 bytes: [0x1203690,0x1203697]
+Collecting addresses from global initializer for .str.23.
+Allocated 38 bytes: [0x1039100,0x1039126]
+Collecting addresses from global initializer for .str.24.
+Allocated 38 bytes: [0x1085f50,0x1085f76]
+Collecting addresses from global initializer for .str.25.
+Allocated 46 bytes: [0x117ca70,0x117ca9e]
+Collecting addresses from global initializer for .str.26.
+Allocated 38 bytes: [0x10473b0,0x10473d6]
+Collecting addresses from global initializer for .str.27.
+Allocated 3 bytes: [0x1093f70,0x1093f73]
+Collecting addresses from global initializer for .str.28.
+Allocated 7 bytes: [0x119b320,0x119b327]
+Collecting addresses from global initializer for .str.29.
+Allocated 10 bytes: [0xf1bd50,0xf1bd5a]
+Collecting addresses from global initializer for .str.30.
+Allocated 6 bytes: [0xf4eb50,0xf4eb56]
+Collecting addresses from global initializer for .str.139.
+Allocated 120 bytes: [0xf94120,0xf94198]
+Collecting addresses from global initializer for .str.31.
+Allocated 9 bytes: [0x115d1e0,0x115d1e9]
+Collecting addresses from global initializer for .str.32.
+Allocated 9 bytes: [0x11caf10,0x11caf19]
+Collecting addresses from global initializer for .str.33.
+Allocated 11 bytes: [0xefa070,0xefa07b]
+Collecting addresses from global initializer for .str.34.
+Allocated 10 bytes: [0x11eb5a0,0x11eb5aa]
+Collecting addresses from global initializer for .str.35.
+Allocated 12 bytes: [0x1079c80,0x1079c8c]
+Collecting addresses from global initializer for .str.36.
+Allocated 12 bytes: [0xf55150,0xf5515c]
+Collecting addresses from global initializer for .str.37.
+Allocated 39 bytes: [0x11d4e00,0x11d4e27]
+Collecting addresses from global initializer for .str.38.
+Allocated 10 bytes: [0xf68600,0xf6860a]
+Collecting addresses from global initializer for .str.39.
+Allocated 5 bytes: [0xed41e0,0xed41e5]
+Collecting addresses from global initializer for .str.40.
+Allocated 5 bytes: [0xed4210,0xed4215]
+Collecting addresses from global initializer for .str.41.
+Allocated 8 bytes: [0x11f6de0,0x11f6de8]
+Collecting addresses from global initializer for .str.42.
+Allocated 10 bytes: [0x10a2380,0x10a238a]
+Collecting addresses from global initializer for .str.43.
+Allocated 37 bytes: [0xf941e0,0xf94205]
+Collecting addresses from global initializer for .str.44.
+Allocated 14 bytes: [0x1039470,0x103947e]
+Collecting addresses from global initializer for .str.45.
+Allocated 12 bytes: [0xf65940,0xf6594c]
+Collecting addresses from global initializer for .str.46.
+Allocated 7 bytes: [0xe82ec0,0xe82ec7]
+Collecting addresses from global initializer for .str.47.
+Allocated 35 bytes: [0x102ae60,0x102ae83]
+Collecting addresses from global initializer for .str.48.
+Allocated 34 bytes: [0xf943a0,0xf943c2]
+Collecting addresses from global initializer for .str.49.
+Allocated 51 bytes: [0x117c750,0x117c783]
+Collecting addresses from global initializer for .str.50.
+Allocated 5 bytes: [0x115a1c0,0x115a1c5]
+Collecting addresses from global initializer for .str.51.
+Allocated 31 bytes: [0x107c900,0x107c91f]
+Collecting addresses from global initializer for .str.52.
+Allocated 2 bytes: [0x10794b0,0x10794b2]
+Collecting addresses from global initializer for .str.53.
+Allocated 29 bytes: [0x107d4c0,0x107d4dd]
+Collecting addresses from global initializer for .str.54.
+Allocated 23 bytes: [0x10350a0,0x10350b7]
+Collecting addresses from global initializer for .str.56.
+Allocated 33 bytes: [0xf657b0,0xf657d1]
+Collecting addresses from global initializer for .str.57.
+Allocated 20 bytes: [0x1154fd0,0x1154fe4]
+Collecting addresses from global initializer for .str.58.
+Allocated 20 bytes: [0x1155010,0x1155024]
+Collecting addresses from global initializer for .str.59.
+Allocated 15 bytes: [0x1180e60,0x1180e6f]
+Collecting addresses from global initializer for .str.60.
+Allocated 13 bytes: [0x11f3380,0x11f338d]
+Collecting addresses from global initializer for switch.table.main.
+Allocated 48 bytes: [0x1183b80,0x1183bb0]
+Collecting addresses from global initializer for switch.table.prot.
+Allocated 96 bytes: [0xf4eb90,0xf4ebf0]
+Collecting addresses from global initializer for .str.62.
+Allocated 3 bytes: [0x115e9e0,0x115e9e3]
+Collecting addresses from global initializer for .str.61.
+Allocated 17 bytes: [0x115ea10,0x115ea21]
+Collecting addresses from global initializer for .str.65.
+Allocated 4 bytes: [0xf68150,0xf68154]
+Collecting addresses from global initializer for .str.64.
+Allocated 40 bytes: [0x11e7120,0x11e7148]
+Collecting addresses from global initializer for .str.66.
+Allocated 24 bytes: [0xf59610,0xf59628]
+Collecting addresses from global initializer for .str.67.
+Allocated 2 bytes: [0xf59650,0xf59652]
+Collecting addresses from global initializer for .str.68.
+Allocated 9 bytes: [0x1160b00,0x1160b09]
+Collecting addresses from global initializer for .str.69.
+Allocated 5 bytes: [0x11b2d30,0x11b2d35]
+Collecting addresses from global initializer for .str.70.
+Allocated 23 bytes: [0x1183b00,0x1183b17]
+Collecting addresses from global initializer for .str.71.
+Allocated 45 bytes: [0xefa910,0xefa93d]
+Collecting addresses from global initializer for .str.72.
+Allocated 17 bytes: [0x119a980,0x119a991]
+Collecting addresses from global initializer for .str.73.
+Allocated 22 bytes: [0x119a9c0,0x119a9d6]
+Collecting addresses from global initializer for .str.74.
+Allocated 13 bytes: [0xed43f0,0xed43fd]
+Collecting addresses from global initializer for .str.76.
+Allocated 5 bytes: [0x11d4860,0x11d4865]
+Collecting addresses from global initializer for .str.75.
+Allocated 22 bytes: [0xf838b0,0xf838c6]
+Collecting addresses from global initializer for .str.77.
+Allocated 34 bytes: [0x122aba0,0x122abc2]
+Collecting addresses from global initializer for .str.78.
+Allocated 22 bytes: [0xf838f0,0xf83906]
+Collecting addresses from global initializer for .str.79.
+Allocated 14 bytes: [0xf1bcf0,0xf1bcfe]
+Collecting addresses from global initializer for .str.80.
+Allocated 20 bytes: [0x120b2b0,0x120b2c4]
+Collecting addresses from global initializer for .str.81.
+Allocated 13 bytes: [0x117fcb0,0x117fcbd]
+Collecting addresses from global initializer for .str.82.
+Allocated 18 bytes: [0x11c0290,0x11c02a2]
+Collecting addresses from global initializer for .str.83.
+Allocated 12 bytes: [0x119edf0,0x119edfc]
+Collecting addresses from global initializer for .str.86.
+Allocated 7 bytes: [0x120b310,0x120b317]
+Collecting addresses from global initializer for .str.85.
+Allocated 15 bytes: [0xf64c70,0xf64c7f]
+Collecting addresses from global initializer for .str.88.
+Allocated 2 bytes: [0x11c02f0,0x11c02f2]
+Collecting addresses from global initializer for .str.89.
+Allocated 4 bytes: [0x117fd10,0x117fd14]
+Collecting addresses from global initializer for .str.87.
+Allocated 15 bytes: [0x1182fd0,0x1182fdf]
+Collecting addresses from global initializer for .str.91.
+Allocated 2 bytes: [0x119aff0,0x119aff2]
+Collecting addresses from global initializer for .str.90.
+Allocated 26 bytes: [0xf0ebc0,0xf0ebda]
+Collecting addresses from global initializer for .str.92.
+Allocated 17 bytes: [0xf0ec10,0xf0ec21]
+Collecting addresses from global initializer for .str.93.
+Allocated 7 bytes: [0xf67900,0xf67907]
+Collecting addresses from global initializer for .str.94.
+Allocated 22 bytes: [0xf67950,0xf67966]
+Collecting addresses from global initializer for .str.140.
+Allocated 254 bytes: [0x11d95c0,0x11d96be]
+Collecting addresses from global initializer for .str.95.
+Allocated 7 bytes: [0x11d2b60,0x11d2b67]
+Collecting addresses from global initializer for .str.96.
+Allocated 9 bytes: [0xefa990,0xefa999]
+Collecting addresses from global initializer for .str.97.
+Allocated 9 bytes: [0x11d8ff0,0x11d8ff9]
+Collecting addresses from global initializer for .str.98.
+Allocated 9 bytes: [0x11b3440,0x11b3449]
+Collecting addresses from global initializer for .str.99.
+Allocated 5 bytes: [0x11d9050,0x11d9055]
+Collecting addresses from global initializer for .str.130.
+Allocated 10 bytes: [0x121d3f0,0x121d3fa]
+Collecting addresses from global initializer for .str.129.
+Allocated 10 bytes: [0xf92fb0,0xf92fba]
+Collecting addresses from global initializer for .str.131.
+Allocated 5 bytes: [0xf92ff0,0xf92ff5]
+Collecting addresses from global initializer for .str.132.
+Allocated 9 bytes: [0xf66160,0xf66169]
+Collecting addresses from global initializer for .str.133.
+Allocated 9 bytes: [0xf4f310,0xf4f319]
+Collecting addresses from global initializer for .str.134.
+Allocated 8 bytes: [0xf4f350,0xf4f358]
+Collecting addresses from global initializer for .str.125.
+Allocated 5 bytes: [0x11b7d90,0x11b7d95]
+Collecting addresses from global initializer for .str.126.
+Allocated 4 bytes: [0x11b7df0,0x11b7df4]
+Collecting addresses from global initializer for .str.127.
+Allocated 6 bytes: [0x1207660,0x1207666]
+Collecting addresses from global initializer for .str.128.
+Allocated 8 bytes: [0x1151e20,0x1151e28]
+Collecting addresses from global initializer for .str.100.
+Allocated 347 bytes: [0x119ad60,0x119aebb]
+Collecting addresses from global initializer for .str.101.
+Allocated 3022 bytes: [0x11fc010,0x11fcbde]
+Collecting addresses from global initializer for read_dir.path.
+Allocated 8 bytes: [0x11fcc40,0x11fcc48]
+Collecting addresses from global initializer for read_dir.lbufsize.
+Allocated 8 bytes: [0x116cde0,0x116cde8]
+Collecting addresses from global initializer for read_dir.pathsize.
+Allocated 8 bytes: [0x1203bc0,0x1203bc8]
+Collecting addresses from global initializer for read_dir.lbuf.
+Allocated 8 bytes: [0x11f2cb0,0x11f2cb8]
+Collecting addresses from global initializer for .str.102.
+Allocated 3 bytes: [0x11f2d10,0x11f2d13]
+Collecting addresses from global initializer for .str.103.
+Allocated 12 bytes: [0x11e8bd0,0x11e8bdc]
+Collecting addresses from global initializer for .str.104.
+Allocated 6 bytes: [0x1160640,0x1160646]
+Collecting addresses from global initializer for .str.105.
+Allocated 42 bytes: [0x12045c0,0x12045ea]
+Collecting addresses from global initializer for .str.106.
+Allocated 18 bytes: [0x119f8c0,0x119f8d2]
+Collecting addresses from global initializer for .str.107.
+Allocated 46 bytes: [0xf1a930,0xf1a95e]
+Collecting addresses from global initializer for .str.108.
+Allocated 24 bytes: [0x11839f0,0x1183a08]
+Collecting addresses from global initializer for .str.109.
+Allocated 2 bytes: [0x1183a60,0x1183a62]
+Collecting addresses from global initializer for .str.110.
+Allocated 5 bytes: [0x11f2ad0,0x11f2ad5]
+Collecting addresses from global initializer for .str.112.
+Allocated 4 bytes: [0x117d630,0x117d634]
+Collecting addresses from global initializer for .str.113.
+Allocated 5 bytes: [0x117d690,0x117d695]
+Collecting addresses from global initializer for .str.114.
+Allocated 5 bytes: [0xf1a740,0xf1a745]
+Collecting addresses from global initializer for .str.115.
+Allocated 5 bytes: [0x11959c0,0x11959c5]
+Collecting addresses from global initializer for .str.116.
+Allocated 4 bytes: [0x1195a20,0x1195a24]
+Collecting addresses from global initializer for .str.120.
+Allocated 4 bytes: [0x11c04d0,0x11c04d4]
+Collecting addresses from global initializer for .str.119.
+Allocated 19 bytes: [0x119f520,0x119f533]
+Collecting addresses from global initializer for .str.118.
+Allocated 4 bytes: [0x119f590,0x119f594]
+Collecting addresses from global initializer for prot.buf.
+Allocated 11 bytes: [0x113b030,0x113b03b]
+Collecting addresses from global initializer for do_date.buf.
+Allocated 256 bytes: [0x1073d30,0x1073e30]
+Collecting addresses from global initializer for month.
+Allocated 8 bytes: [0x10394c0,0x10394c8]
+Allocated 8 bytes: [0x10394c8,0x10394d0]
+Allocated 8 bytes: [0x10394d0,0x10394d8]
+Allocated 8 bytes: [0x10394d8,0x10394e0]
+Allocated 8 bytes: [0x10394e0,0x10394e8]
+Allocated 8 bytes: [0x10394e8,0x10394f0]
+Allocated 8 bytes: [0x10394f0,0x10394f8]
+Allocated 8 bytes: [0x10394f8,0x1039500]
+Allocated 8 bytes: [0x1039500,0x1039508]
+Allocated 8 bytes: [0x1039508,0x1039510]
+Allocated 8 bytes: [0x1039510,0x1039518]
+Allocated 8 bytes: [0x1039518,0x1039520]
+Collecting addresses from global initializer for .str.122.
+Allocated 7 bytes: [0x11f6f80,0x11f6f87]
+Collecting addresses from global initializer for .str.123.
+Allocated 6 bytes: [0x10f9920,0x10f9926]
+Collecting addresses from global initializer for .str.124.
+Allocated 10 bytes: [0x10f9980,0x10f998a]
+Collecting addresses from global initializer for .str.121.
+Allocated 13 bytes: [0x1193930,0x119393d]
+Collecting addresses from global initializer for .str.141.
+Allocated 4 bytes: [0xf18bc0,0xf18bc4]
+Collecting addresses from global initializer for .str.142.
+Allocated 4 bytes: [0xf18c20,0xf18c24]
+Collecting addresses from global initializer for .str.143.
+Allocated 4 bytes: [0x1172d80,0x1172d84]
+Collecting addresses from global initializer for .str.144.
+Allocated 4 bytes: [0xf18cc0,0xf18cc4]
+Collecting addresses from global initializer for .str.145.
+Allocated 4 bytes: [0xf18d20,0xf18d24]
+Collecting addresses from global initializer for .str.146.
+Allocated 4 bytes: [0x11c03a0,0x11c03a4]
+Collecting addresses from global initializer for .str.147.
+Allocated 4 bytes: [0x1158590,0x1158594]
+Collecting addresses from global initializer for .str.148.
+Allocated 4 bytes: [0x11585f0,0x11585f4]
+Collecting addresses from global initializer for .str.149.
+Allocated 4 bytes: [0x11d5790,0x11d5794]
+Collecting addresses from global initializer for .str.150.
+Allocated 4 bytes: [0x117fbe0,0x117fbe4]
+Collecting addresses from global initializer for .str.151.
+Allocated 4 bytes: [0x117fc40,0x117fc44]
+Collecting addresses from global initializer for .str.152.
+Allocated 4 bytes: [0x11cb100,0x11cb104]
+Collecting addresses from global initializer for .str.135.
+Allocated 6 bytes: [0x1159db0,0x1159db6]
+Collecting addresses from global initializer for .str.136.
+Allocated 5 bytes: [0x1159e10,0x1159e15]
+Collecting addresses from global initializer for .str.137.
+Allocated 4 bytes: [0x11723d0,0x11723d4]
+Collecting addresses from global initializer for .str.138.
+Allocated 9 bytes: [0x117d060,0x117d069]
+Collecting addresses from global initializer for .str.55.
+Allocated 22 bytes: [0x120d470,0x120d486]
+Collecting addresses from global initializer for .str.1.56.
+Allocated 50 bytes: [0x11c0050,0x11c0082]
+Collecting addresses from global initializer for .str.3.57.
+Allocated 6 bytes: [0x120d4b0,0x120d4b6]
+Collecting addresses from global initializer for .str.4.58.
+Allocated 2 bytes: [0x1170ab0,0x1170ab2]
+Collecting addresses from global initializer for .str.5.59.
+Allocated 5 bytes: [0x1170b10,0x1170b15]
+Collecting addresses from global initializer for .str.6.60.
+Allocated 6 bytes: [0x1158c40,0x1158c46]
+Collecting addresses from global initializer for .str.8.61.
+Allocated 5 bytes: [0x1156c10,0x1156c15]
+Collecting addresses from global initializer for .str.9.62.
+Allocated 28 bytes: [0x11b3770,0x11b378c]
+Collecting addresses from global initializer for .str.10.65.
+Allocated 6 bytes: [0x11b37c0,0x11b37c6]
+Collecting addresses from global initializer for .str.1.68.
+Allocated 11 bytes: [0x11aa2a0,0x11aa2ab]
+Collecting addresses from global initializer for .str.84.
+Allocated 1690 bytes: [0x121e490,0x121eb2a]
+Collecting addresses from global initializer for .str.2.87.
+Allocated 6 bytes: [0x11e8cd0,0x11e8cd6]
+Collecting addresses from global initializer for .str.3.88.
+Allocated 26 bytes: [0x116ee50,0x116ee6a]
+Collecting addresses from global initializer for .str.4.89.
+Allocated 54 bytes: [0x11a02f0,0x11a0326]
+Collecting addresses from global initializer for .str.7.90.
+Allocated 6 bytes: [0x116eea0,0x116eea6]
+Collecting addresses from global initializer for .str.8.91.
+Allocated 2 bytes: [0x11acf50,0x11acf52]
+Collecting addresses from global initializer for .str.9.92.
+Allocated 5 bytes: [0x11eb350,0x11eb355]
+Collecting addresses from global initializer for .str.10.93.
+Allocated 6 bytes: [0x11eb3b0,0x11eb3b6]
+Collecting addresses from global initializer for .str.11.94.
+Allocated 12 bytes: [0x11acdc0,0x11acdcc]
+Collecting addresses from global initializer for .str.32.95.
+Allocated 7 bytes: [0x11799e0,0x11799e7]
+Collecting addresses from global initializer for .str.30.96.
+Allocated 6 bytes: [0x1179a40,0x1179a46]
+Collecting addresses from global initializer for .str.6.97.
+Allocated 3 bytes: [0x113d5a0,0x113d5a3]
+Collecting addresses from global initializer for .str.12.98.
+Allocated 15 bytes: [0x115f2b0,0x115f2bf]
+Collecting addresses from global initializer for .str.13.99.
+Allocated 10 bytes: [0x11974e0,0x11974ea]
+Collecting addresses from global initializer for .str.14.100.
+Allocated 8 bytes: [0x1197520,0x1197528]
+Collecting addresses from global initializer for .str.15.101.
+Allocated 23 bytes: [0x120d540,0x120d557]
+Collecting addresses from global initializer for .str.16.102.
+Allocated 56 bytes: [0x11f10d0,0x11f1108]
+Collecting addresses from global initializer for .str.22.103.
+Allocated 5 bytes: [0x11f1130,0x11f1135]
+Collecting addresses from global initializer for .str.21.104.
+Allocated 5 bytes: [0x11ccbf0,0x11ccbf5]
+Collecting addresses from global initializer for .str.18.105.
+Allocated 4 bytes: [0x1143330,0x1143334]
+Collecting addresses from global initializer for .str.19.106.
+Allocated 5 bytes: [0x1143390,0x1143395]
+Collecting addresses from global initializer for .str.20.107.
+Allocated 5 bytes: [0x120b1c0,0x120b1c5]
+Collecting addresses from global initializer for .str.17.108.
+Allocated 21 bytes: [0x1158690,0x11586a5]
+Collecting addresses from global initializer for .str.24.109.
+Allocated 1 bytes: [0x1158700,0x1158701]
+Collecting addresses from global initializer for .str.23.110.
+Allocated 38 bytes: [0x113ec10,0x113ec36]
+Collecting addresses from global initializer for .str.25.111.
+Allocated 5 bytes: [0x11c0620,0x11c0625]
+Collecting addresses from global initializer for .str.26.112.
+Allocated 5 bytes: [0x11b36a0,0x11b36a5]
+Collecting addresses from global initializer for .str.27.113.
+Allocated 28 bytes: [0x1217760,0x121777c]
+Collecting addresses from global initializer for .str.28.114.
+Allocated 5 bytes: [0x12177b0,0x12177b5]
+Collecting addresses from global initializer for .str.29.115.
+Allocated 5 bytes: [0x120dcc0,0x120dcc5]
+Collecting addresses from global initializer for .str.31.116.
+Allocated 7 bytes: [0xefa480,0xefa487]
+Collecting addresses from global initializer for .str.153.
+Allocated 28 bytes: [0xefa4e0,0xefa4fc]
+Collecting addresses from global initializer for .str.3.154.
+Allocated 2 bytes: [0x11f36f0,0x11f36f2]
+Collecting addresses from global initializer for .str.2.155.
+Allocated 1 bytes: [0x1196bd0,0x1196bd1]
+Collecting addresses from global initializer for .str.1.156.
+Allocated 63 bytes: [0xf55330,0xf5536f]
+Collecting addresses from global initializer for .str.16.157.
+Allocated 5 bytes: [0x117ce10,0x117ce15]
+Collecting addresses from global initializer for .str.17.158.
+Allocated 3 bytes: [0x117ce70,0x117ce73]
+Collecting addresses from global initializer for .str.4.159.
+Allocated 4 bytes: [0x121f540,0x121f544]
+Collecting addresses from global initializer for .str.5.160.
+Allocated 2 bytes: [0x1145570,0x1145572]
+Collecting addresses from global initializer for .str.6.161.
+Allocated 5 bytes: [0x11455d0,0x11455d5]
+Collecting addresses from global initializer for .str.7.162.
+Allocated 6 bytes: [0x116cca0,0x116cca6]
+Collecting addresses from global initializer for .str.9.163.
+Allocated 8 bytes: [0x116cd00,0x116cd08]
+Collecting addresses from global initializer for .str.10.164.
+Allocated 10 bytes: [0xed4010,0xed401a]
+Collecting addresses from global initializer for .str.11.165.
+Allocated 39 bytes: [0xed4260,0xed4287]
+Collecting addresses from global initializer for .str.12.166.
+Allocated 8 bytes: [0xed42e0,0xed42e8]
+Collecting addresses from global initializer for .str.18.167.
+Allocated 13 bytes: [0x116c980,0x116c98d]
+Collecting addresses from global initializer for .str.19.168.
+Allocated 10 bytes: [0x11c17f0,0x11c17fa]
+Collecting addresses from global initializer for .str.20.169.
+Allocated 23 bytes: [0x11c1860,0x11c1877]
+Collecting addresses from global initializer for .str.21.170.
+Allocated 11 bytes: [0x12079a0,0x12079ab]
+Collecting addresses from global initializer for .str.22.171.
+Allocated 12 bytes: [0x11b3130,0x11b313c]
+Collecting addresses from global initializer for .str.23.172.
+Allocated 13 bytes: [0x11b31a0,0x11b31ad]
+Collecting addresses from global initializer for .str.24.173.
+Allocated 11 bytes: [0x117cd00,0x117cd0b]
+Collecting addresses from global initializer for .str.13.176.
+Allocated 3 bytes: [0x1172a80,0x1172a83]
+Collecting addresses from global initializer for .str.14.177.
+Allocated 18 bytes: [0x1172ae0,0x1172af2]
+Collecting addresses from global initializer for .str.15.178.
+Allocated 7 bytes: [0x10efd30,0x10efd37]
+Collecting addresses from global initializer for .str.2.181.
+Allocated 2 bytes: [0x10efd90,0x10efd92]
+Collecting addresses from global initializer for .str.1.182.
+Allocated 1 bytes: [0xfecfb0,0xfecfb1]
+Collecting addresses from global initializer for .str.183.
+Allocated 27 bytes: [0x1079d40,0x1079d5b]
+Collecting addresses from global initializer for .str.3.184.
+Allocated 60 bytes: [0x121d200,0x121d23c]
+Collecting addresses from global initializer for .str.17.185.
+Allocated 5 bytes: [0x1079dc0,0x1079dc5]
+Collecting addresses from global initializer for .str.18.186.
+Allocated 3 bytes: [0x117e3e0,0x117e3e3]
+Collecting addresses from global initializer for .str.4.187.
+Allocated 13 bytes: [0x10a0e80,0x10a0e8d]
+Collecting addresses from global initializer for .str.5.188.
+Allocated 2 bytes: [0x10a0ec0,0x10a0ec2]
+Collecting addresses from global initializer for .str.6.189.
+Allocated 5 bytes: [0x1221a20,0x1221a25]
+Collecting addresses from global initializer for .str.7.190.
+Allocated 6 bytes: [0x1221a80,0x1221a86]
+Collecting addresses from global initializer for .str.9.191.
+Allocated 10 bytes: [0x11b1b40,0x11b1b4a]
+Collecting addresses from global initializer for .str.10.192.
+Allocated 12 bytes: [0x11b1bb0,0x11b1bbc]
+Collecting addresses from global initializer for .str.11.193.
+Allocated 14 bytes: [0x11fd3f0,0x11fd3fe]
+Collecting addresses from global initializer for .str.12.194.
+Allocated 36 bytes: [0xf64ad0,0xf64af4]
+Collecting addresses from global initializer for .str.13.195.
+Allocated 3 bytes: [0xf64b50,0xf64b53]
+Collecting addresses from global initializer for .str.19.196.
+Allocated 13 bytes: [0x11a0150,0x11a015d]
+Collecting addresses from global initializer for .str.20.197.
+Allocated 10 bytes: [0x11f2610,0x11f261a]
+Collecting addresses from global initializer for .str.21.198.
+Allocated 27 bytes: [0x11f2650,0x11f266b]
+Collecting addresses from global initializer for .str.22.199.
+Allocated 13 bytes: [0xf43840,0xf4384d]
+Collecting addresses from global initializer for .str.23.200.
+Allocated 14 bytes: [0xf438b0,0xf438be]
+Collecting addresses from global initializer for .str.24.201.
+Allocated 13 bytes: [0x11eb4a0,0x11eb4ad]
+Collecting addresses from global initializer for .str.25.202.
+Allocated 13 bytes: [0x11eb510,0x11eb51d]
+Collecting addresses from global initializer for .str.14.205.
+Allocated 3 bytes: [0xf1bb00,0xf1bb03]
+Collecting addresses from global initializer for .str.15.206.
+Allocated 14 bytes: [0xf1bb60,0xf1bb6e]
+Collecting addresses from global initializer for .str.16.207.
+Allocated 6 bytes: [0x107a160,0x107a166]
+Collecting addresses from global initializer for utable.
+Allocated 2048 bytes: [0x115c840,0x115d040]
+Collecting addresses from global initializer for gtable.
+Allocated 2048 bytes: [0xf64e30,0xf65630]
+Collecting addresses from global initializer for itable.
+Allocated 2048 bytes: [0x12208d0,0x12210d0]
+Collecting addresses from global initializer for .str.216.
+Allocated 3 bytes: [0x115d070,0x115d073]
+Collecting addresses from global initializer for colorize.
+Allocated 4 bytes: [0xf65660,0xf65664]
+Collecting addresses from global initializer for ansilines.
+Allocated 4 bytes: [0xf656c0,0xf656c4]
+Collecting addresses from global initializer for linktargetcolor.
+Allocated 4 bytes: [0x1221130,0x1221134]
+Collecting addresses from global initializer for termmatch.
+Allocated 1 bytes: [0x1217590,0x1217591]
+Collecting addresses from global initializer for leftcode.
+Allocated 8 bytes: [0x12175f0,0x12175f8]
+Collecting addresses from global initializer for rightcode.
+Allocated 8 bytes: [0x1217650,0x1217658]
+Collecting addresses from global initializer for endcode.
+Allocated 8 bytes: [0xf4f440,0xf4f448]
+Collecting addresses from global initializer for norm_flgs.
+Allocated 8 bytes: [0xf4f470,0xf4f478]
+Collecting addresses from global initializer for file_flgs.
+Allocated 8 bytes: [0xf4f4d0,0xf4f4d8]
+Collecting addresses from global initializer for dir_flgs.
+Allocated 8 bytes: [0x119f3d0,0x119f3d8]
+Collecting addresses from global initializer for link_flgs.
+Allocated 8 bytes: [0x119f430,0x119f438]
+Collecting addresses from global initializer for fifo_flgs.
+Allocated 8 bytes: [0x121d270,0x121d278]
+Collecting addresses from global initializer for door_flgs.
+Allocated 8 bytes: [0x121d2d0,0x121d2d8]
+Collecting addresses from global initializer for block_flgs.
+Allocated 8 bytes: [0x121d330,0x121d338]
+Collecting addresses from global initializer for char_flgs.
+Allocated 8 bytes: [0x11b2790,0x11b2798]
+Collecting addresses from global initializer for orphan_flgs.
+Allocated 8 bytes: [0x11b27f0,0x11b27f8]
+Collecting addresses from global initializer for sock_flgs.
+Allocated 8 bytes: [0x11b3300,0x11b3308]
+Collecting addresses from global initializer for suid_flgs.
+Allocated 8 bytes: [0x11b3360,0x11b3368]
+Collecting addresses from global initializer for sgid_flgs.
+Allocated 8 bytes: [0x11b33c0,0x11b33c8]
+Collecting addresses from global initializer for stickyow_flgs.
+Allocated 8 bytes: [0x11951b0,0x11951b8]
+Collecting addresses from global initializer for otherwr_flgs.
+Allocated 8 bytes: [0x1195210,0x1195218]
+Collecting addresses from global initializer for sticky_flgs.
+Allocated 8 bytes: [0x1079eb0,0x1079eb8]
+Collecting addresses from global initializer for exec_flgs.
+Allocated 8 bytes: [0x1079f10,0x1079f18]
+Collecting addresses from global initializer for missing_flgs.
+Allocated 8 bytes: [0x1079f70,0x1079f78]
+Collecting addresses from global initializer for vgacolor.
+Allocated 8 bytes: [0xf662a0,0xf662a8]
+Allocated 8 bytes: [0xf662a8,0xf662b0]
+Allocated 8 bytes: [0xf662b0,0xf662b8]
+Allocated 8 bytes: [0xf662b8,0xf662c0]
+Allocated 8 bytes: [0xf662c0,0xf662c8]
+Allocated 8 bytes: [0xf662c8,0xf662d0]
+Allocated 8 bytes: [0xf662d0,0xf662d8]
+Allocated 8 bytes: [0xf662d8,0xf662e0]
+Allocated 8 bytes: [0xf662e0,0xf662e8]
+Allocated 8 bytes: [0xf662e8,0xf662f0]
+Allocated 8 bytes: [0xf662f0,0xf662f8]
+Allocated 8 bytes: [0xf662f8,0xf66300]
+Allocated 8 bytes: [0xf66300,0xf66308]
+Allocated 8 bytes: [0xf66308,0xf66310]
+Allocated 8 bytes: [0xf66310,0xf66318]
+Allocated 8 bytes: [0xf66318,0xf66320]
+Allocated 8 bytes: [0xf66320,0xf66328]
+Allocated 8 bytes: [0xf66328,0xf66330]
+Collecting addresses from global initializer for .str.231.
+Allocated 6 bytes: [0xf1a880,0xf1a886]
+Collecting addresses from global initializer for .str.1.232.
+Allocated 4 bytes: [0xf1a8e0,0xf1a8e4]
+Collecting addresses from global initializer for .str.2.233.
+Allocated 6 bytes: [0x11b3560,0x11b3566]
+Collecting addresses from global initializer for .str.3.234.
+Allocated 7 bytes: [0x11b35c0,0x11b35c7]
+Collecting addresses from global initializer for .str.4.235.
+Allocated 5 bytes: [0x11e6fe0,0x11e6fe5]
+Collecting addresses from global initializer for .str.5.236.
+Allocated 8 bytes: [0x11e7040,0x11e7048]
+Collecting addresses from global initializer for .str.6.237.
+Allocated 5 bytes: [0x11e70a0,0x11e70a5]
+Collecting addresses from global initializer for .str.7.238.
+Allocated 6 bytes: [0x120cc30,0x120cc36]
+Collecting addresses from global initializer for .str.8.239.
+Allocated 12 bytes: [0x120cc90,0x120cc9c]
+Collecting addresses from global initializer for ext.
+Allocated 8 bytes: [0x120cd00,0x120cd08]
+Collecting addresses from global initializer for linedraw.
+Allocated 8 bytes: [0x121f6e0,0x121f6e8]
+Collecting addresses from global initializer for term.
+Allocated 8 bytes: [0x121f740,0x121f748]
+Collecting addresses from global initializer for istty.
+Allocated 1 bytes: [0x121f770,0x121f771]
+Collecting addresses from global initializer for colortable.
+Allocated 352 bytes: [0x11e86a0,0x11e8800]
+Collecting addresses from global initializer for .str.9.244.
+Allocated 5 bytes: [0x117c3c0,0x117c3c5]
+Collecting addresses from global initializer for .str.10.245.
+Allocated 12 bytes: [0x117c420,0x117c42c]
+Collecting addresses from global initializer for .str.11.246.
+Allocated 10 bytes: [0x1197130,0x119713a]
+Collecting addresses from global initializer for .str.12.247.
+Allocated 947 bytes: [0x11ef8f0,0x11efca3]
+Collecting addresses from global initializer for .str.13.248.
+Allocated 2 bytes: [0x11971d0,0x11971d2]
+Collecting addresses from global initializer for .str.14.249.
+Allocated 2 bytes: [0xf683f0,0xf683f2]
+Collecting addresses from global initializer for .str.21.250.
+Allocated 3 bytes: [0xf68450,0xf68453]
+Collecting addresses from global initializer for cmd.cmds.
+Allocated 8 bytes: [0xf7e730,0xf7e738]
+Allocated 1 bytes: [0xf7e738,0xf7e739]
+Allocated 8 bytes: [0xf7e740,0xf7e748]
+Allocated 1 bytes: [0xf7e748,0xf7e749]
+Allocated 8 bytes: [0xf7e750,0xf7e758]
+Allocated 1 bytes: [0xf7e758,0xf7e759]
+Allocated 8 bytes: [0xf7e760,0xf7e768]
+Allocated 1 bytes: [0xf7e768,0xf7e769]
+Allocated 8 bytes: [0xf7e770,0xf7e778]
+Allocated 1 bytes: [0xf7e778,0xf7e779]
+Allocated 8 bytes: [0xf7e780,0xf7e788]
+Allocated 1 bytes: [0xf7e788,0xf7e789]
+Allocated 8 bytes: [0xf7e790,0xf7e798]
+Allocated 1 bytes: [0xf7e798,0xf7e799]
+Allocated 8 bytes: [0xf7e7a0,0xf7e7a8]
+Allocated 1 bytes: [0xf7e7a8,0xf7e7a9]
+Allocated 8 bytes: [0xf7e7b0,0xf7e7b8]
+Allocated 1 bytes: [0xf7e7b8,0xf7e7b9]
+Allocated 8 bytes: [0xf7e7c0,0xf7e7c8]
+Allocated 1 bytes: [0xf7e7c8,0xf7e7c9]
+Allocated 8 bytes: [0xf7e7d0,0xf7e7d8]
+Allocated 1 bytes: [0xf7e7d8,0xf7e7d9]
+Allocated 8 bytes: [0xf7e7e0,0xf7e7e8]
+Allocated 1 bytes: [0xf7e7e8,0xf7e7e9]
+Allocated 8 bytes: [0xf7e7f0,0xf7e7f8]
+Allocated 1 bytes: [0xf7e7f8,0xf7e7f9]
+Allocated 8 bytes: [0xf7e800,0xf7e808]
+Allocated 1 bytes: [0xf7e808,0xf7e809]
+Allocated 8 bytes: [0xf7e810,0xf7e818]
+Allocated 1 bytes: [0xf7e818,0xf7e819]
+Allocated 8 bytes: [0xf7e820,0xf7e828]
+Allocated 1 bytes: [0xf7e828,0xf7e829]
+Allocated 8 bytes: [0xf7e830,0xf7e838]
+Allocated 1 bytes: [0xf7e838,0xf7e839]
+Allocated 8 bytes: [0xf7e840,0xf7e848]
+Allocated 1 bytes: [0xf7e848,0xf7e849]
+Allocated 8 bytes: [0xf7e850,0xf7e858]
+Allocated 1 bytes: [0xf7e858,0xf7e859]
+Allocated 8 bytes: [0xf7e860,0xf7e868]
+Allocated 1 bytes: [0xf7e868,0xf7e869]
+Allocated 16 bytes: [0xf7e870,0xf7e880]
+Collecting addresses from global initializer for .str.15.251.
+Allocated 7 bytes: [0x11bc680,0x11bc687]
+Collecting addresses from global initializer for .str.16.252.
+Allocated 6 bytes: [0x11bc6e0,0x11bc6e6]
+Collecting addresses from global initializer for .str.17.253.
+Allocated 3 bytes: [0x11bc740,0x11bc743]
+Collecting addresses from global initializer for .str.19.254.
+Allocated 3 bytes: [0x1196e30,0x1196e33]
+Collecting addresses from global initializer for .str.20.255.
+Allocated 7 bytes: [0x1196e90,0x1196e97]
+Collecting addresses from global initializer for .str.22.256.
+Allocated 3 bytes: [0x1196ef0,0x1196ef3]
+Collecting addresses from global initializer for .str.23.257.
+Allocated 3 bytes: [0x11ed7b0,0x11ed7b3]
+Collecting addresses from global initializer for .str.24.258.
+Allocated 3 bytes: [0x11ed810,0x11ed813]
+Collecting addresses from global initializer for .str.25.259.
+Allocated 3 bytes: [0x11ed870,0x11ed873]
+Collecting addresses from global initializer for .str.26.260.
+Allocated 3 bytes: [0x1047490,0x1047493]
+Collecting addresses from global initializer for .str.27.261.
+Allocated 3 bytes: [0x10474f0,0x10474f3]
+Collecting addresses from global initializer for .str.28.262.
+Allocated 3 bytes: [0x1047550,0x1047553]
+Collecting addresses from global initializer for .str.29.263.
+Allocated 3 bytes: [0xed3e20,0xed3e23]
+Collecting addresses from global initializer for .str.30.264.
+Allocated 3 bytes: [0xed3e80,0xed3e83]
+Collecting addresses from global initializer for .str.31.265.
+Allocated 3 bytes: [0xed3ee0,0xed3ee3]
+Collecting addresses from global initializer for .str.32.266.
+Allocated 3 bytes: [0x11d8a30,0x11d8a33]
+Collecting addresses from global initializer for .str.33.267.
+Allocated 3 bytes: [0x11d8a90,0x11d8a93]
+Collecting addresses from global initializer for .str.34.268.
+Allocated 3 bytes: [0x11d8af0,0x11d8af3]
+Collecting addresses from global initializer for .str.35.269.
+Allocated 3 bytes: [0x1166600,0x1166603]
+Collecting addresses from global initializer for .str.36.270.
+Allocated 3 bytes: [0x1166660,0x1166663]
+Collecting addresses from global initializer for .str.37.271.
+Allocated 3 bytes: [0x11666c0,0x11666c3]
+Collecting addresses from global initializer for .str.38.272.
+Allocated 3 bytes: [0x117d6f0,0x117d6f3]
+Collecting addresses from global initializer for .str.39.273.
+Allocated 3 bytes: [0x117d750,0x117d753]
+Collecting addresses from global initializer for .str.40.274.
+Allocated 3 bytes: [0x117d7b0,0x117d7b3]
+Collecting addresses from global initializer for .str.41.279.
+Allocated 13 bytes: [0x119eef0,0x119eefd]
+Collecting addresses from global initializer for .str.187.
+Allocated 62 bytes: [0x121f830,0x121f86e]
+Collecting addresses from global initializer for initlinedraw.cstable.
+Allocated 8 bytes: [0x121f260,0x121f268]
+Allocated 8 bytes: [0x121f268,0x121f270]
+Allocated 8 bytes: [0x121f270,0x121f278]
+Allocated 8 bytes: [0x121f278,0x121f280]
+Allocated 8 bytes: [0x121f280,0x121f288]
+Allocated 8 bytes: [0x121f288,0x121f290]
+Allocated 8 bytes: [0x121f290,0x121f298]
+Allocated 8 bytes: [0x121f298,0x121f2a0]
+Allocated 8 bytes: [0x121f2a0,0x121f2a8]
+Allocated 8 bytes: [0x121f2a8,0x121f2b0]
+Allocated 8 bytes: [0x121f2b0,0x121f2b8]
+Allocated 8 bytes: [0x121f2b8,0x121f2c0]
+Allocated 8 bytes: [0x121f2c0,0x121f2c8]
+Allocated 8 bytes: [0x121f2c8,0x121f2d0]
+Allocated 8 bytes: [0x121f2d0,0x121f2d8]
+Allocated 8 bytes: [0x121f2d8,0x121f2e0]
+Allocated 8 bytes: [0x121f2e0,0x121f2e8]
+Allocated 8 bytes: [0x121f2e8,0x121f2f0]
+Allocated 8 bytes: [0x121f2f0,0x121f2f8]
+Allocated 8 bytes: [0x121f2f8,0x121f300]
+Allocated 8 bytes: [0x121f300,0x121f308]
+Allocated 8 bytes: [0x121f308,0x121f310]
+Allocated 8 bytes: [0x121f310,0x121f318]
+Allocated 8 bytes: [0x121f318,0x121f320]
+Allocated 8 bytes: [0x121f320,0x121f328]
+Allocated 8 bytes: [0x121f328,0x121f330]
+Allocated 8 bytes: [0x121f330,0x121f338]
+Allocated 8 bytes: [0x121f338,0x121f340]
+Allocated 8 bytes: [0x121f340,0x121f348]
+Allocated 8 bytes: [0x121f348,0x121f350]
+Allocated 8 bytes: [0x121f350,0x121f358]
+Allocated 8 bytes: [0x121f358,0x121f360]
+Allocated 8 bytes: [0x121f360,0x121f368]
+Allocated 8 bytes: [0x121f368,0x121f370]
+Allocated 8 bytes: [0x121f370,0x121f378]
+Allocated 8 bytes: [0x121f378,0x121f380]
+Allocated 8 bytes: [0x121f380,0x121f388]
+Allocated 8 bytes: [0x121f388,0x121f390]
+Allocated 8 bytes: [0x121f390,0x121f398]
+Allocated 8 bytes: [0x121f398,0x121f3a0]
+Allocated 8 bytes: [0x121f3a0,0x121f3a8]
+Allocated 8 bytes: [0x121f3a8,0x121f3b0]
+Allocated 8 bytes: [0x121f3b0,0x121f3b8]
+Allocated 8 bytes: [0x121f3b8,0x121f3c0]
+Allocated 8 bytes: [0x121f3c0,0x121f3c8]
+Allocated 8 bytes: [0x121f3c8,0x121f3d0]
+Allocated 8 bytes: [0x121f3d0,0x121f3d8]
+Allocated 8 bytes: [0x121f3d8,0x121f3e0]
+Allocated 8 bytes: [0x121f3e0,0x121f3e8]
+Allocated 8 bytes: [0x121f3e8,0x121f3f0]
+Allocated 8 bytes: [0x121f3f0,0x121f3f8]
+Allocated 8 bytes: [0x121f3f8,0x121f400]
+Allocated 8 bytes: [0x121f400,0x121f408]
+Allocated 8 bytes: [0x121f408,0x121f410]
+Allocated 8 bytes: [0x121f410,0x121f418]
+Allocated 8 bytes: [0x121f418,0x121f420]
+Allocated 8 bytes: [0x121f420,0x121f428]
+Allocated 8 bytes: [0x121f428,0x121f430]
+Allocated 8 bytes: [0x121f430,0x121f438]
+Allocated 8 bytes: [0x121f438,0x121f440]
+Allocated 8 bytes: [0x121f440,0x121f448]
+Allocated 8 bytes: [0x121f448,0x121f450]
+Allocated 8 bytes: [0x121f450,0x121f458]
+Allocated 8 bytes: [0x121f458,0x121f460]
+Allocated 8 bytes: [0x121f460,0x121f468]
+Allocated 8 bytes: [0x121f468,0x121f470]
+Allocated 8 bytes: [0x121f470,0x121f478]
+Allocated 8 bytes: [0x121f478,0x121f480]
+Allocated 8 bytes: [0x121f480,0x121f488]
+Allocated 8 bytes: [0x121f488,0x121f490]
+Allocated 8 bytes: [0x121f490,0x121f498]
+Allocated 8 bytes: [0x121f498,0x121f4a0]
+Allocated 8 bytes: [0x121f4a0,0x121f4a8]
+Allocated 8 bytes: [0x121f4a8,0x121f4b0]
+Allocated 8 bytes: [0x121f4b0,0x121f4b8]
+Allocated 8 bytes: [0x121f4b8,0x121f4c0]
+Allocated 8 bytes: [0x121f4c0,0x121f4c8]
+Allocated 8 bytes: [0x121f4c8,0x121f4d0]
+Allocated 8 bytes: [0x121f4d0,0x121f4d8]
+Allocated 8 bytes: [0x121f4d8,0x121f4e0]
+Collecting addresses from global initializer for initlinedraw.latin1_3.
+Allocated 8 bytes: [0x115f6f0,0x115f6f8]
+Allocated 8 bytes: [0x115f6f8,0x115f700]
+Allocated 8 bytes: [0x115f700,0x115f708]
+Allocated 8 bytes: [0x115f708,0x115f710]
+Allocated 8 bytes: [0x115f710,0x115f718]
+Allocated 8 bytes: [0x115f718,0x115f720]
+Allocated 8 bytes: [0x115f720,0x115f728]
+Allocated 8 bytes: [0x115f728,0x115f730]
+Allocated 8 bytes: [0x115f730,0x115f738]
+Allocated 8 bytes: [0x115f738,0x115f740]
+Allocated 8 bytes: [0x115f740,0x115f748]
+Allocated 8 bytes: [0x115f748,0x115f750]
+Allocated 8 bytes: [0x115f750,0x115f758]
+Allocated 8 bytes: [0x115f758,0x115f760]
+Allocated 8 bytes: [0x115f760,0x115f768]
+Collecting addresses from global initializer for .str.188.
+Allocated 6 bytes: [0xf65e20,0xf65e26]
+Collecting addresses from global initializer for .str.42.282.
+Allocated 11 bytes: [0xf65e80,0xf65e8b]
+Collecting addresses from global initializer for .str.43.283.
+Allocated 16 bytes: [0xf65ef0,0xf65f00]
+Collecting addresses from global initializer for .str.44.284.
+Allocated 11 bytes: [0x11ff690,0x11ff69b]
+Collecting addresses from global initializer for .str.45.285.
+Allocated 7 bytes: [0x11ff700,0x11ff707]
+Collecting addresses from global initializer for .str.46.286.
+Allocated 3 bytes: [0x11ff760,0x11ff763]
+Collecting addresses from global initializer for .str.47.287.
+Allocated 7 bytes: [0x11f5230,0x11f5237]
+Collecting addresses from global initializer for .str.48.288.
+Allocated 6 bytes: [0x11f5290,0x11f5296]
+Collecting addresses from global initializer for .str.49.289.
+Allocated 12 bytes: [0x11f52f0,0x11f52fc]
+Collecting addresses from global initializer for .str.50.290.
+Allocated 11 bytes: [0x1183be0,0x1183beb]
+Collecting addresses from global initializer for .str.51.291.
+Allocated 16 bytes: [0x1183c50,0x1183c60]
+Collecting addresses from global initializer for .str.52.292.
+Allocated 11 bytes: [0x1183cc0,0x1183ccb]
+Collecting addresses from global initializer for .str.53.293.
+Allocated 7 bytes: [0x1151f30,0x1151f37]
+Collecting addresses from global initializer for .str.54.294.
+Allocated 3 bytes: [0x1151f90,0x1151f93]
+Collecting addresses from global initializer for .str.55.295.
+Allocated 12 bytes: [0x1151ff0,0x1151ffc]
+Collecting addresses from global initializer for .str.148.296.
+Allocated 4 bytes: [0x1152060,0x1152064]
+Collecting addresses from global initializer for .str.149.297.
+Allocated 4 bytes: [0x119ac10,0x119ac14]
+Collecting addresses from global initializer for .str.150.298.
+Allocated 11 bytes: [0x119ac70,0x119ac7b]
+Collecting addresses from global initializer for .str.151.299.
+Allocated 7 bytes: [0x119ace0,0x119ace7]
+Collecting addresses from global initializer for initlinedraw.iso8859_789.
+Allocated 8 bytes: [0x11f2bb0,0x11f2bb8]
+Allocated 8 bytes: [0x11f2bb8,0x11f2bc0]
+Allocated 8 bytes: [0x11f2bc0,0x11f2bc8]
+Allocated 8 bytes: [0x11f2bc8,0x11f2bd0]
+Allocated 8 bytes: [0x11f2bd0,0x11f2bd8]
+Allocated 8 bytes: [0x11f2bd8,0x11f2be0]
+Allocated 8 bytes: [0x11f2be0,0x11f2be8]
+Allocated 8 bytes: [0x11f2be8,0x11f2bf0]
+Allocated 8 bytes: [0x11f2bf0,0x11f2bf8]
+Allocated 8 bytes: [0x11f2bf8,0x11f2c00]
+Allocated 8 bytes: [0x11f2c00,0x11f2c08]
+Allocated 8 bytes: [0x11f2c08,0x11f2c10]
+Allocated 8 bytes: [0x11f2c10,0x11f2c18]
+Allocated 8 bytes: [0x11f2c18,0x11f2c20]
+Allocated 8 bytes: [0x11f2c20,0x11f2c28]
+Allocated 8 bytes: [0x11f2c28,0x11f2c30]
+Allocated 8 bytes: [0x11f2c30,0x11f2c38]
+Allocated 8 bytes: [0x11f2c38,0x11f2c40]
+Allocated 8 bytes: [0x11f2c40,0x11f2c48]
+Allocated 8 bytes: [0x11f2c48,0x11f2c50]
+Allocated 8 bytes: [0x11f2c50,0x11f2c58]
+Allocated 8 bytes: [0x11f2c58,0x11f2c60]
+Collecting addresses from global initializer for .str.152.300.
+Allocated 4 bytes: [0x10603d0,0x10603d4]
+Collecting addresses from global initializer for initlinedraw.shift_jis.
+Allocated 8 bytes: [0x1060470,0x1060478]
+Allocated 8 bytes: [0x1060478,0x1060480]
+Allocated 8 bytes: [0x1060480,0x1060488]
+Allocated 8 bytes: [0x1060488,0x1060490]
+Collecting addresses from global initializer for .str.153.301.
+Allocated 4 bytes: [0x10604f0,0x10604f4]
+Collecting addresses from global initializer for .str.154.
+Allocated 3 bytes: [0x113b140,0x113b143]
+Collecting addresses from global initializer for .str.155.
+Allocated 3 bytes: [0x113b1a0,0x113b1a3]
+Collecting addresses from global initializer for initlinedraw.euc_jp.
+Allocated 8 bytes: [0x113b200,0x113b208]
+Allocated 8 bytes: [0x113b208,0x113b210]
+Allocated 8 bytes: [0x113b210,0x113b218]
+Allocated 8 bytes: [0x113b218,0x113b220]
+Collecting addresses from global initializer for .str.156.
+Allocated 4 bytes: [0x1196fe0,0x1196fe4]
+Collecting addresses from global initializer for .str.157.
+Allocated 3 bytes: [0x1197040,0x1197043]
+Collecting addresses from global initializer for .str.158.
+Allocated 3 bytes: [0x11970a0,0x11970a3]
+Collecting addresses from global initializer for initlinedraw.euc_kr.
+Allocated 8 bytes: [0x117de50,0x117de58]
+Allocated 8 bytes: [0x117de58,0x117de60]
+Allocated 8 bytes: [0x117de60,0x117de68]
+Collecting addresses from global initializer for .str.159.
+Allocated 4 bytes: [0x117dec0,0x117dec4]
+Collecting addresses from global initializer for .str.160.
+Allocated 3 bytes: [0x117df20,0x117df23]
+Collecting addresses from global initializer for .str.161.
+Allocated 3 bytes: [0x117df80,0x117df83]
+Collecting addresses from global initializer for initlinedraw.iso2022jp.
+Allocated 8 bytes: [0x11b9b10,0x11b9b18]
+Allocated 8 bytes: [0x11b9b18,0x11b9b20]
+Allocated 8 bytes: [0x11b9b20,0x11b9b28]
+Allocated 8 bytes: [0x11b9b28,0x11b9b30]
+Allocated 8 bytes: [0x11b9b30,0x11b9b38]
+Collecting addresses from global initializer for .str.162.
+Allocated 10 bytes: [0x11b9b90,0x11b9b9a]
+Collecting addresses from global initializer for .str.163.
+Allocated 9 bytes: [0x11b9c00,0x11b9c09]
+Collecting addresses from global initializer for .str.164.
+Allocated 9 bytes: [0xfed1c0,0xfed1c9]
+Collecting addresses from global initializer for initlinedraw.ibm_pc.
+Allocated 8 bytes: [0xeb3630,0xeb3638]
+Allocated 8 bytes: [0xeb3638,0xeb3640]
+Allocated 8 bytes: [0xeb3640,0xeb3648]
+Allocated 8 bytes: [0xeb3648,0xeb3650]
+Allocated 8 bytes: [0xeb3650,0xeb3658]
+Allocated 8 bytes: [0xeb3658,0xeb3660]
+Allocated 8 bytes: [0xeb3660,0xeb3668]
+Allocated 8 bytes: [0xeb3668,0xeb3670]
+Allocated 8 bytes: [0xeb3670,0xeb3678]
+Allocated 8 bytes: [0xeb3678,0xeb3680]
+Allocated 8 bytes: [0xeb3680,0xeb3688]
+Allocated 8 bytes: [0xeb3688,0xeb3690]
+Allocated 8 bytes: [0xeb3690,0xeb3698]
+Allocated 8 bytes: [0xeb3698,0xeb36a0]
+Allocated 8 bytes: [0xeb36a0,0xeb36a8]
+Allocated 8 bytes: [0xeb36a8,0xeb36b0]
+Allocated 8 bytes: [0xeb36b0,0xeb36b8]
+Allocated 8 bytes: [0xeb36b8,0xeb36c0]
+Allocated 8 bytes: [0xeb36c0,0xeb36c8]
+Allocated 8 bytes: [0xeb36c8,0xeb36d0]
+Allocated 8 bytes: [0xeb36d0,0xeb36d8]
+Allocated 8 bytes: [0xeb36d8,0xeb36e0]
+Allocated 8 bytes: [0xeb36e0,0xeb36e8]
+Allocated 8 bytes: [0xeb36e8,0xeb36f0]
+Allocated 8 bytes: [0xeb36f0,0xeb36f8]
+Collecting addresses from global initializer for .str.165.
+Allocated 4 bytes: [0xfed260,0xfed264]
+Collecting addresses from global initializer for .str.166.
+Allocated 4 bytes: [0xfed2c0,0xfed2c4]
+Collecting addresses from global initializer for .str.167.
+Allocated 4 bytes: [0x115eac0,0x115eac4]
+Collecting addresses from global initializer for initlinedraw.ibm_ps2.
+Allocated 8 bytes: [0x115eb20,0x115eb28]
+Allocated 8 bytes: [0x115eb28,0x115eb30]
+Allocated 8 bytes: [0x115eb30,0x115eb38]
+Allocated 8 bytes: [0x115eb38,0x115eb40]
+Allocated 8 bytes: [0x115eb40,0x115eb48]
+Allocated 8 bytes: [0x115eb48,0x115eb50]
+Allocated 8 bytes: [0x115eb50,0x115eb58]
+Allocated 8 bytes: [0x115eb58,0x115eb60]
+Allocated 8 bytes: [0x115eb60,0x115eb68]
+Collecting addresses from global initializer for .str.168.
+Allocated 2 bytes: [0x115ebc0,0x115ebc2]
+Collecting addresses from global initializer for initlinedraw.ibm_gr.
+Allocated 8 bytes: [0x1047730,0x1047738]
+Allocated 8 bytes: [0x1047738,0x1047740]
+Allocated 8 bytes: [0x1047740,0x1047748]
+Allocated 8 bytes: [0x1047748,0x1047750]
+Allocated 8 bytes: [0x1047750,0x1047758]
+Allocated 8 bytes: [0x1047758,0x1047760]
+Collecting addresses from global initializer for .str.169.
+Allocated 2 bytes: [0x10477c0,0x10477c2]
+Collecting addresses from global initializer for initlinedraw.gb.
+Allocated 8 bytes: [0x1047820,0x1047828]
+Allocated 8 bytes: [0x1047828,0x1047830]
+Allocated 8 bytes: [0x1047830,0x1047838]
+Collecting addresses from global initializer for .str.170.
+Allocated 4 bytes: [0xf554b0,0xf554b4]
+Collecting addresses from global initializer for .str.171.
+Allocated 3 bytes: [0xf55510,0xf55513]
+Collecting addresses from global initializer for .str.172.
+Allocated 3 bytes: [0xf55570,0xf55573]
+Collecting addresses from global initializer for initlinedraw.utf8.
+Allocated 8 bytes: [0x1061540,0x1061548]
+Allocated 8 bytes: [0x1061548,0x1061550]
+Allocated 8 bytes: [0x1061550,0x1061558]
+Collecting addresses from global initializer for .str.173.
+Allocated 8 bytes: [0x10615b0,0x10615b8]
+Collecting addresses from global initializer for .str.174.
+Allocated 10 bytes: [0x1061610,0x106161a]
+Collecting addresses from global initializer for .str.175.
+Allocated 10 bytes: [0x1061680,0x106168a]
+Collecting addresses from global initializer for .str.176.
+Allocated 3 bytes: [0x11d4320,0x11d4323]
+Collecting addresses from global initializer for initlinedraw.big5.
+Allocated 8 bytes: [0x11d4380,0x11d4388]
+Allocated 8 bytes: [0x11d4388,0x11d4390]
+Allocated 8 bytes: [0x11d4390,0x11d4398]
+Collecting addresses from global initializer for .str.177.
+Allocated 4 bytes: [0x11d43f0,0x11d43f4]
+Collecting addresses from global initializer for .str.178.
+Allocated 3 bytes: [0x116c710,0x116c713]
+Collecting addresses from global initializer for .str.179.
+Allocated 3 bytes: [0x116c770,0x116c773]
+Collecting addresses from global initializer for initlinedraw.viscii.
+Allocated 8 bytes: [0x116c7d0,0x116c7d8]
+Allocated 8 bytes: [0x116c7d8,0x116c7e0]
+Allocated 8 bytes: [0x116c7e0,0x116c7e8]
+Collecting addresses from global initializer for .str.180.
+Allocated 4 bytes: [0x116c840,0x116c844]
+Collecting addresses from global initializer for .str.181.
+Allocated 2 bytes: [0x10fa750,0x10fa752]
+Collecting addresses from global initializer for initlinedraw.koi8ru.
+Allocated 8 bytes: [0x10fa7b0,0x10fa7b8]
+Allocated 8 bytes: [0x10fa7b8,0x10fa7c0]
+Allocated 8 bytes: [0x10fa7c0,0x10fa7c8]
+Allocated 8 bytes: [0x10fa7c8,0x10fa7d0]
+Collecting addresses from global initializer for .str.182.
+Allocated 4 bytes: [0x10fa830,0x10fa834]
+Collecting addresses from global initializer for .str.183.302.
+Allocated 4 bytes: [0x10fa890,0x10fa894]
+Collecting addresses from global initializer for .str.184.
+Allocated 4 bytes: [0x113b930,0x113b934]
+Collecting addresses from global initializer for .str.185.
+Allocated 2 bytes: [0x113b990,0x113b992]
+Collecting addresses from global initializer for initlinedraw.windows.
+Allocated 8 bytes: [0x11e8ae0,0x11e8ae8]
+Allocated 8 bytes: [0x11e8ae8,0x11e8af0]
+Allocated 8 bytes: [0x11e8af0,0x11e8af8]
+Allocated 8 bytes: [0x11e8af8,0x11e8b00]
+Allocated 8 bytes: [0x11e8b00,0x11e8b08]
+Allocated 8 bytes: [0x11e8b08,0x11e8b10]
+Allocated 8 bytes: [0x11e8b10,0x11e8b18]
+Allocated 8 bytes: [0x11e8b18,0x11e8b20]
+Allocated 8 bytes: [0x11e8b20,0x11e8b28]
+Allocated 8 bytes: [0x11e8b28,0x11e8b30]
+Allocated 8 bytes: [0x11e8b30,0x11e8b38]
+Allocated 8 bytes: [0x11e8b38,0x11e8b40]
+Allocated 8 bytes: [0x11e8b40,0x11e8b48]
+Collecting addresses from global initializer for .str.186.
+Allocated 2 bytes: [0x113ba20,0x113ba22]
+Collecting addresses from global initializer for .str.137.303.
+Allocated 31 bytes: [0x113ba80,0x113ba9f]
+Collecting addresses from global initializer for .str.138.304.
+Allocated 18 bytes: [0x117cb00,0x117cb12]
+Collecting addresses from global initializer for .str.139.305.
+Allocated 27 bytes: [0x117cb70,0x117cb8b]
+Collecting addresses from global initializer for .str.140.306.
+Allocated 18 bytes: [0x117cbf0,0x117cc02]
+Collecting addresses from global initializer for .str.141.307.
+Allocated 13 bytes: [0x120ada0,0x120adad]
+Collecting addresses from global initializer for .str.142.308.
+Allocated 13 bytes: [0x120ae10,0x120ae1d]
+Collecting addresses from global initializer for .str.143.309.
+Allocated 13 bytes: [0x120ae80,0x120ae8d]
+Collecting addresses from global initializer for .str.144.310.
+Allocated 13 bytes: [0x120aef0,0x120aefd]
+Collecting addresses from global initializer for .str.145.311.
+Allocated 13 bytes: [0xf66360,0xf6636d]
+Collecting addresses from global initializer for .str.146.312.
+Allocated 13 bytes: [0xf663d0,0xf663dd]
+Collecting addresses from global initializer for .str.147.313.
+Allocated 13 bytes: [0xf66440,0xf6644d]
+Collecting addresses from global initializer for .str.134.314.
+Allocated 7 bytes: [0xf664b0,0xf664b7]
+Collecting addresses from global initializer for .str.135.315.
+Allocated 8 bytes: [0xf6f7f0,0xf6f7f8]
+Collecting addresses from global initializer for .str.136.316.
+Allocated 7 bytes: [0xf6f850,0xf6f857]
+Collecting addresses from global initializer for .str.132.317.
+Allocated 7 bytes: [0xf6f8b0,0xf6f8b7]
+Collecting addresses from global initializer for .str.133.318.
+Allocated 9 bytes: [0xf6f910,0xf6f919]
+Collecting addresses from global initializer for .str.130.319.
+Allocated 5 bytes: [0xf6f980,0xf6f985]
+Collecting addresses from global initializer for .str.131.320.
+Allocated 7 bytes: [0x12217f0,0x12217f7]
+Collecting addresses from global initializer for .str.128.321.
+Allocated 6 bytes: [0x1221850,0x1221856]
+Collecting addresses from global initializer for .str.129.322.
+Allocated 5 bytes: [0x12218b0,0x12218b5]
+Collecting addresses from global initializer for .str.126.323.
+Allocated 7 bytes: [0x1221910,0x1221917]
+Collecting addresses from global initializer for .str.127.324.
+Allocated 9 bytes: [0x115f470,0x115f479]
+Collecting addresses from global initializer for .str.121.325.
+Allocated 7 bytes: [0x115f4b0,0x115f4b7]
+Collecting addresses from global initializer for .str.122.326.
+Allocated 6 bytes: [0x115f510,0x115f516]
+Collecting addresses from global initializer for .str.123.327.
+Allocated 4 bytes: [0x115f570,0x115f574]
+Collecting addresses from global initializer for .str.124.328.
+Allocated 6 bytes: [0x115f5d0,0x115f5d6]
+Collecting addresses from global initializer for .str.125.329.
+Allocated 9 bytes: [0xf18dc0,0xf18dc9]
+Collecting addresses from global initializer for .str.113.330.
+Allocated 7 bytes: [0xf18e30,0xf18e37]
+Collecting addresses from global initializer for .str.114.331.
+Allocated 6 bytes: [0xf18e90,0xf18e96]
+Collecting addresses from global initializer for .str.115.332.
+Allocated 4 bytes: [0xf18ef0,0xf18ef4]
+Collecting addresses from global initializer for .str.116.333.
+Allocated 20 bytes: [0xf18f50,0xf18f64]
+Collecting addresses from global initializer for .str.117.
+Allocated 9 bytes: [0x11c1900,0x11c1909]
+Collecting addresses from global initializer for .str.118.334.
+Allocated 11 bytes: [0x11c1970,0x11c197b]
+Collecting addresses from global initializer for .str.119.335.
+Allocated 8 bytes: [0x11c19e0,0x11c19e8]
+Collecting addresses from global initializer for .str.120.336.
+Allocated 25 bytes: [0x11c1a40,0x11c1a59]
+Collecting addresses from global initializer for .str.89.337.
+Allocated 7 bytes: [0x119b140,0x119b147]
+Collecting addresses from global initializer for .str.90.338.
+Allocated 6 bytes: [0x119b1a0,0x119b1a6]
+Collecting addresses from global initializer for .str.91.339.
+Allocated 4 bytes: [0x119b200,0x119b204]
+Collecting addresses from global initializer for .str.92.340.
+Allocated 17 bytes: [0x119b260,0x119b271]
+Collecting addresses from global initializer for .str.93.341.
+Allocated 7 bytes: [0x119b2d0,0x119b2d7]
+Collecting addresses from global initializer for .str.94.342.
+Allocated 6 bytes: [0xf1d880,0xf1d886]
+Collecting addresses from global initializer for .str.95.343.
+Allocated 4 bytes: [0xf1d8e0,0xf1d8e4]
+Collecting addresses from global initializer for .str.96.344.
+Allocated 9 bytes: [0xf1d940,0xf1d949]
+Collecting addresses from global initializer for .str.97.345.
+Allocated 7 bytes: [0xf1d9b0,0xf1d9b7]
+Collecting addresses from global initializer for .str.98.346.
+Allocated 6 bytes: [0xf1da10,0xf1da16]
+Collecting addresses from global initializer for .str.99.347.
+Allocated 4 bytes: [0x117e080,0x117e084]
+Collecting addresses from global initializer for .str.100.348.
+Allocated 9 bytes: [0x117e0e0,0x117e0e9]
+Collecting addresses from global initializer for .str.101.349.
+Allocated 7 bytes: [0x117e150,0x117e157]
+Collecting addresses from global initializer for .str.102.350.
+Allocated 6 bytes: [0x117e1b0,0x117e1b6]
+Collecting addresses from global initializer for .str.103.351.
+Allocated 4 bytes: [0x117e210,0x117e214]
+Collecting addresses from global initializer for .str.104.352.
+Allocated 9 bytes: [0x1198b30,0x1198b39]
+Collecting addresses from global initializer for .str.105.353.
+Allocated 7 bytes: [0x1198ba0,0x1198ba7]
+Collecting addresses from global initializer for .str.106.354.
+Allocated 6 bytes: [0x1198c00,0x1198c06]
+Collecting addresses from global initializer for .str.107.355.
+Allocated 4 bytes: [0x1198c60,0x1198c64]
+Collecting addresses from global initializer for .str.108.356.
+Allocated 9 bytes: [0x1198cc0,0x1198cc9]
+Collecting addresses from global initializer for .str.109.357.
+Allocated 7 bytes: [0x12041e0,0x12041e7]
+Collecting addresses from global initializer for .str.110.358.
+Allocated 6 bytes: [0x1204240,0x1204246]
+Collecting addresses from global initializer for .str.111.359.
+Allocated 4 bytes: [0x12042a0,0x12042a4]
+Collecting addresses from global initializer for .str.112.360.
+Allocated 9 bytes: [0x1204300,0x1204309]
+Collecting addresses from global initializer for .str.85.361.
+Allocated 12 bytes: [0x1204370,0x120437c]
+Collecting addresses from global initializer for .str.86.362.
+Allocated 12 bytes: [0xefa240,0xefa24c]
+Collecting addresses from global initializer for .str.87.363.
+Allocated 14 bytes: [0xefa2b0,0xefa2be]
+Collecting addresses from global initializer for .str.88.364.
+Allocated 13 bytes: [0xefa320,0xefa32d]
+Collecting addresses from global initializer for .str.83.365.
+Allocated 7 bytes: [0xefa390,0xefa397]
+Collecting addresses from global initializer for .str.84.366.
+Allocated 8 bytes: [0xefa3f0,0xefa3f8]
+Collecting addresses from global initializer for .str.80.367.
+Allocated 7 bytes: [0x121ebd0,0x121ebd7]
+Collecting addresses from global initializer for .str.81.368.
+Allocated 46 bytes: [0x121ec30,0x121ec5e]
+Collecting addresses from global initializer for .str.82.369.
+Allocated 20 bytes: [0x121ecc0,0x121ecd4]
+Collecting addresses from global initializer for .str.77.370.
+Allocated 10 bytes: [0x121ed30,0x121ed3a]
+Collecting addresses from global initializer for .str.78.371.
+Allocated 9 bytes: [0x119b840,0x119b849]
+Collecting addresses from global initializer for .str.79.372.
+Allocated 11 bytes: [0x119b8b0,0x119b8bb]
+Collecting addresses from global initializer for .str.56.373.
+Allocated 11 bytes: [0x119b920,0x119b92b]
+Collecting addresses from global initializer for .str.57.374.
+Allocated 16 bytes: [0x119b990,0x119b9a0]
+Collecting addresses from global initializer for .str.58.375.
+Allocated 11 bytes: [0x119ba00,0x119ba0b]
+Collecting addresses from global initializer for .str.59.376.
+Allocated 9 bytes: [0x10391e0,0x10391e9]
+Collecting addresses from global initializer for .str.60.377.
+Allocated 9 bytes: [0x1039250,0x1039259]
+Collecting addresses from global initializer for .str.61.378.
+Allocated 6 bytes: [0x10392c0,0x10392c6]
+Collecting addresses from global initializer for .str.62.379.
+Allocated 7 bytes: [0x1039320,0x1039327]
+Collecting addresses from global initializer for .str.63.
+Allocated 16 bytes: [0x1039380,0x1039390]
+Collecting addresses from global initializer for .str.64.380.
+Allocated 11 bytes: [0x1183760,0x118376b]
+Collecting addresses from global initializer for .str.65.381.
+Allocated 16 bytes: [0x11837d0,0x11837e0]
+Collecting addresses from global initializer for .str.66.382.
+Allocated 11 bytes: [0x1183840,0x118384b]
+Collecting addresses from global initializer for .str.67.383.
+Allocated 11 bytes: [0x11838b0,0x11838bb]
+Collecting addresses from global initializer for .str.68.384.
+Allocated 7 bytes: [0x1183920,0x1183927]
+Collecting addresses from global initializer for .str.69.385.
+Allocated 17 bytes: [0xf92cd0,0xf92ce1]
+Collecting addresses from global initializer for .str.70.386.
+Allocated 11 bytes: [0xf92d40,0xf92d4b]
+Collecting addresses from global initializer for .str.71.387.
+Allocated 16 bytes: [0xf92db0,0xf92dc0]
+Collecting addresses from global initializer for .str.72.388.
+Allocated 11 bytes: [0xf92e20,0xf92e2b]
+Collecting addresses from global initializer for .str.73.389.
+Allocated 11 bytes: [0xf92e90,0xf92e9b]
+Collecting addresses from global initializer for .str.74.390.
+Allocated 7 bytes: [0x11e8430,0x11e8437]
+Collecting addresses from global initializer for .str.75.391.
+Allocated 3 bytes: [0x11e8490,0x11e8493]
+Collecting addresses from global initializer for .str.76.392.
+Allocated 12 bytes: [0x11e84f0,0x11e84fc]
+Collecting addresses from global initializer for strverscmp.next_state.
+Allocated 64 bytes: [0x11e8560,0x11e85a0]
+Collecting addresses from global initializer for strverscmp.result_type.
+Allocated 240 bytes: [0x115d0c0,0x115d1b0]
+Collecting addresses from global initializer for new_argv.
+Allocated 5 bytes: [0x11e8630,0x11e8635]
+Collecting addresses from global initializer for new_argv.1.
+Allocated 3 bytes: [0x11e6d90,0x11e6d93]
+Collecting addresses from global initializer for new_argv.2.
+Allocated 3 bytes: [0x11e6df0,0x11e6df3]
+Processing
+Allocated 8 bytes: [0x1172b00,0x1172b08]
+Allocated 1 bytes: [0x117cd50,0x117cd51]
+Allocated 8 bytes: [0x1172b08,0x1172b10]
+About to interpret:   %2 = alloca i32, align 4
+Marked main::entry as visited
+Allocated 4 bytes: [0x12079f0,0x12079f4]
+Allocated stack Type: i32 (4 bytes) x 1 (Total: 4) at 0x12079f0
+About to interpret:   %3 = alloca i32, align 4
+Allocated 4 bytes: [0x116c9d0,0x116c9d4]
+Allocated stack Type: i32 (4 bytes) x 1 (Total: 4) at 0x116c9d0
+About to interpret:   %4 = alloca %struct.stat, align 8
+Allocated 144 bytes: [0x1160930,0x11609c0]
+Allocated stack Type: %struct.stat = type { i64, i64, i64, i32, i32, i32, i32, i64, i64, i64, i64, %struct.timespec, %struct.timespec, %struct.timespec, [3 x i64] } (144 bytes) x 1 (Total: 144) at 0x1160930
+About to interpret:   %5 = alloca [64 x i8], align 16
+Allocated 64 bytes: [0x1183980,0x11839c0]
+Allocated stack Type: [64 x i8] (64 bytes) x 1 (Total: 64) at 0x1183980
+About to interpret:   %6 = icmp eq i32 %0, 2
+	Val=True
+About to interpret:   br i1 %6, label %entry1, label %incorrect_argc
+About to interpret:   %malloccall = tail call dereferenceable_or_null(40) i8* @malloc(i64 40)
+Marked main::entry1 as visited
+Allocated heap memory: 40 at 18717104
+Allocated 40 bytes: [0x11d99b0,0x11d99d8]
+About to interpret:   %7 = bitcast i8* %malloccall to i8**
+	Val=0x11d99b0
+About to interpret:   store i8* getelementptr inbounds ([5 x i8], [5 x i8]* @new_argv, i64 0, i64 0), i8** %7, align 8
+GEP Index 0 bytes.
+About to interpret:   %8 = getelementptr i8, i8* %malloccall, i64 8
+GEP Index 8 bytes.
+	Val=0x11d99b8
+About to interpret:   %9 = bitcast i8* %8 to i8**
+	Val=0x11d99b8
+About to interpret:   store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @new_argv.1, i64 0, i64 0), i8** %9, align 8
+GEP Index 0 bytes.
+About to interpret:   %10 = getelementptr i8, i8* %malloccall, i64 16
+GEP Index 16 bytes.
+	Val=0x11d99c0
+About to interpret:   %11 = bitcast i8* %10 to i8**
+	Val=0x11d99c0
+About to interpret:   store i8* getelementptr inbounds ([3 x i8], [3 x i8]* @new_argv.2, i64 0, i64 0), i8** %11, align 8
+GEP Index 0 bytes.
+About to interpret:   %12 = getelementptr inbounds i8, i8* %malloccall, i64 32
+GEP Index 32 bytes.
+	Val=0x11d99d0
+About to interpret:   %13 = bitcast i8* %12 to i8**
+	Val=0x11d99d0
+About to interpret:   store i8* null, i8** %13, align 8
+About to interpret:   %14 = getelementptr inbounds i8, i8* %malloccall, i64 24
+GEP Index 24 bytes.
+	Val=0x11d99c8
+About to interpret:   %15 = getelementptr inbounds i8*, i8** %1, i64 1
+GEP Index 8 bytes.
+	Val=0x1172b08
+About to interpret:   %16 = bitcast i8** %15 to i64*
+	Val=0x1172b08
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc -O1 -Pconfig-prime -Pconfig-prime-unknown-args=1 WHICH RETURNED 0
+
+About to interpret:   %17 = load i64, i64* %16, align 8
+	Val=0
+About to interpret:   %18 = bitcast i8* %14 to i64*
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc -o=/dev/null -Pinterface -Pinterface-output tree.01.iface
+
+	Val=0x11d99c8
+About to interpret:   store i64 %17, i64* %18, align 8
+About to interpret:   %19 = bitcast i32* %2 to i8*
+	Val=0x12079f0
+About to interpret:   call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %19) #16
+About to interpret:   %20 = bitcast i32* %3 to i8*
+	Val=0x116c9d0
+About to interpret:   call void @llvm.lifetime.start.p0i8(i64 4, i8* nonnull %20) #16
+About to interpret:   %21 = bitcast %struct.stat* %4 to i8*
+	Val=0x1160930
+About to interpret:   call void @llvm.lifetime.start.p0i8(i64 144, i8* nonnull %21) #16
+About to interpret:   %22 = getelementptr inbounds [64 x i8], [64 x i8]* %5, i64 0, i64 0
+GEP Index 0 bytes.
+	Val=0x1183980
+About to interpret:   call void @llvm.lifetime.start.p0i8(i64 64, i8* nonnull %22) #16
+About to interpret:   store i32 0, i32* %3, align 4, !tbaa !2
+About to interpret:   store i32 0, i32* %2, align 4, !tbaa !2
+About to interpret:   store i32 0, i32* @gflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @uflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Fflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @sflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @pflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @lflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @fflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @dflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @aflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @cflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @siflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Hflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @hflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Rflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Qflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Nflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @qflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Dflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @reverse, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @nolinks, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @noreport, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @xdev, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @nocolor, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @force_color, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @noindent, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Jflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Xflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @devflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @inodeflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @dirsfirst, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @matchdirs, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @ignorecase, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @pruneflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @duflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @flimit, align 4, !tbaa !6
+About to interpret:   store i32 4096, i32* @maxdirs, align 4, !tbaa !2
+About to interpret:   %23 = call noalias dereferenceable_or_null(16384) i8* @malloc(i64 16384) #16
+Allocated heap memory: 16384 at 18366624
+Allocated 16384 bytes: [0x11840a0,0x11880a0]
+About to interpret:   %24 = icmp eq i8* %23, null
+	Val=False
+About to interpret:   br i1 %24, label %25, label %28
+About to interpret:   store i8* %23, i8** bitcast (i32** @dirs to i8**), align 8, !tbaa !7
+Marked main:: as visited
+About to interpret:   call void @llvm.memset.p0i8.i64(i8* nonnull align 4 dereferenceable(16384) %23, i8 0, i64 16384, i1 false) #16
+About to interpret:   %29 = call i8* @memset(i8* %23, i32 0, i64 16384)
+ConfigPrime: recognized external call: memset
+About to interpret:   store i32 -1, i32* @Level, align 4, !tbaa !2
+About to interpret:   %30 = call i8* @setlocale(i32 0, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)) #16
+GEP Index 0 bytes.
+ConfigPrime: not recognized external call: setlocale
+Invoking FFI on setlocale
+About to interpret:   %31 = call i8* @setlocale(i32 3, i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)) #16
+GEP Index 0 bytes.
+ConfigPrime: not recognized external call: setlocale
+Invoking FFI on setlocale
+About to interpret:   %32 = call i8* @getcharset() #16
+About to interpret:   %1 = tail call i8* @getenv(i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.41.279, i64 0, i64 0)) #16
+Marked getcharset:: as visited
+GEP Index 0 bytes.
+ConfigPrime: not recognized external call: getenv
+Invoking FFI on getenv
+About to interpret:   ret i8* %1
+About to interpret:   store i8* %32, i8** @charset, align 8, !tbaa !7
+About to interpret:   %33 = icmp eq i8* %32, null
+	Val=True
+About to interpret:   br i1 %33, label %34, label %39
+About to interpret:   %35 = call i8* @nl_langinfo(i32 14) #16
+Marked main:: as visited
+ConfigPrime: not recognized external call: nl_langinfo
+Invoking FFI on nl_langinfo
+About to interpret:   %36 = call i32 @strcmp(i8* nonnull dereferenceable(1) %35, i8* nonnull dereferenceable(6) getelementptr inbounds ([6 x i8], [6 x i8]* @.str.17, i64 0, i64 0)) #19
+GEP Index 0 bytes.
+ConfigPrime: not recognized external call: strcmp
+Invoking FFI on strcmp
+About to interpret:   %37 = icmp eq i32 %36, 0
+	Val=False
+About to interpret:   br i1 %37, label %38, label %39
+About to interpret:   store i32 1, i32* @mb_cur_max, align 4, !tbaa !2
+Marked main:: as visited
+About to interpret:   call void @llvm.memset.p0i8.i64(i8* nonnull align 16 dereferenceable(2048) bitcast ([256 x %struct.xtable*]* @utable to i8*), i8 0, i64 2048, i1 false) #16
+About to interpret:   %40 = call i8* @memset(i8* bitcast ([256 x %struct.xtable*]* @utable to i8*), i32 0, i64 2048)
+About to interpret:   call void @llvm.memset.p0i8.i64(i8* nonnull align 16 dereferenceable(2048) bitcast ([256 x %struct.xtable*]* @gtable to i8*), i8 0, i64 2048, i1 false) #16
+About to interpret:   %41 = call i8* @memset(i8* bitcast ([256 x %struct.xtable*]* @gtable to i8*), i32 0, i64 2048)
+About to interpret:   call void @llvm.memset.p0i8.i64(i8* nonnull align 16 dereferenceable(2048) bitcast ([256 x %struct.inotable*]* @itable to i8*), i8 0, i64 2048, i1 false) #16
+About to interpret:   %42 = call i8* @memset(i8* bitcast ([256 x %struct.inotable*]* @itable to i8*), i32 0, i64 2048)
+About to interpret:   br label %43
+About to interpret:   %50 = add nsw i32 %49, 1
+Marked main:: as visited
+	Val=2
+About to interpret:   %51 = icmp eq i32 %48, 0
+	Val=False
+About to interpret:   br i1 %51, label %451, label %52
+About to interpret:   %53 = sext i32 %49 to i64
+Marked main:: as visited
+	Val=1
+About to interpret:   %54 = getelementptr inbounds i8*, i8** %7, i64 %53
+GEP Index 8 bytes.
+	Val=0x11d99b8
+About to interpret:   %55 = load i8*, i8** %54, align 8, !tbaa !7
+	Val=0x11e6d90
+About to interpret:   %56 = load i8, i8* %55, align 1, !tbaa !6
+	Val=45
+About to interpret:   %57 = icmp eq i8 %56, 45
+	Val=True
+About to interpret:   br i1 %57, label %58, label %451
+About to interpret:   %59 = getelementptr inbounds i8, i8* %55, i64 1
+Marked main:: as visited
+GEP Index 1 bytes.
+	Val=0x11e6d91
+About to interpret:   %60 = load i8, i8* %59, align 1, !tbaa !6
+	Val=74
+About to interpret:   %61 = icmp eq i8 %60, 0
+	Val=False
+About to interpret:   br i1 %61, label %451, label %.preheader41
+About to interpret:   %62 = getelementptr inbounds i8, i8* %55, i64 6
+Marked main::.preheader41 as visited
+GEP Index 6 bytes.
+	Val=0x11e6d96
+About to interpret:   %63 = getelementptr inbounds i8, i8* %55, i64 7
+GEP Index 7 bytes.
+	Val=0x11e6d97
+About to interpret:   %64 = getelementptr inbounds i8, i8* %55, i64 9
+GEP Index 9 bytes.
+	Val=0x11e6d99
+About to interpret:   %65 = getelementptr inbounds i8, i8* %55, i64 10
+GEP Index 10 bytes.
+	Val=0x11e6d9a
+About to interpret:   %66 = getelementptr inbounds i8, i8* %55, i64 9
+GEP Index 9 bytes.
+	Val=0x11e6d99
+About to interpret:   %67 = getelementptr inbounds i8, i8* %55, i64 10
+GEP Index 10 bytes.
+	Val=0x11e6d9a
+About to interpret:   %68 = getelementptr inbounds i8, i8* %55, i64 11
+GEP Index 11 bytes.
+	Val=0x11e6d9b
+About to interpret:   %69 = getelementptr inbounds i8, i8* %55, i64 12
+GEP Index 12 bytes.
+	Val=0x11e6d9c
+About to interpret:   br label %70
+About to interpret:   %75 = sext i8 %71 to i32
+Marked main:: as visited
+	Val=74
+About to interpret:   switch i32 %75, label %439 [
+    i32 78, label %76
+    i32 113, label %77
+    i32 81, label %78
+    i32 100, label %79
+    i32 108, label %80
+    i32 115, label %81
+    i32 104, label %82
+    i32 117, label %83
+    i32 103, label %84
+    i32 102, label %85
+    i32 70, label %86
+    i32 97, label %87
+    i32 112, label %88
+    i32 105, label %89
+    i32 67, label %90
+    i32 110, label %91
+    i32 120, label %92
+    i32 80, label %93
+    i32 73, label %103
+    i32 65, label %113
+    i32 83, label %114
+    i32 68, label %115
+    i32 116, label %116
+    i32 99, label %117
+    i32 114, label %118
+    i32 118, label %119
+    i32 85, label %120
+    i32 88, label %121
+    i32 74, label %129
+    i32 72, label %137
+    i32 84, label %155
+    i32 82, label %165
+    i32 76, label %166
+    i32 111, label %183
+    i32 45, label %193
+  ]
+About to interpret:   %130 = load i32, i32* @Xflag, align 4, !tbaa !6
+Marked main:: as visited
+	Val=0
+About to interpret:   %131 = load i32, i32* @Hflag, align 4
+	Val=0
+About to interpret:   %132 = or i32 %131, %130
+	Val=0
+About to interpret:   %133 = load i32, i32* @Jflag, align 4
+	Val=0
+About to interpret:   %134 = or i32 %132, %133
+	Val=0
+About to interpret:   %135 = icmp eq i32 %134, 0
+	Val=True
+About to interpret:   br i1 %135, label %136, label %442
+About to interpret:   store i32 1, i32* @Jflag, align 4, !tbaa !6
+Marked main:: as visited
+About to interpret:   store i32 0, i32* @Xflag, align 4, !tbaa !6
+About to interpret:   store i32 0, i32* @Hflag, align 4, !tbaa !6
+About to interpret:   br label %442
+About to interpret:   %446 = add nsw i32 %445, 1
+Marked main:: as visited
+	Val=2
+About to interpret:   %447 = sext i32 %446 to i64
+	Val=2
+About to interpret:   %448 = getelementptr inbounds i8, i8* %55, i64 %447
+GEP Index 2 bytes.
+	Val=0x11e6d92
+About to interpret:   %449 = load i8, i8* %448, align 1, !tbaa !6
+	Val=0
+About to interpret:   %450 = icmp eq i8 %449, 0
+	Val=True
+About to interpret:   br i1 %450, label %.loopexit43, label %70
+About to interpret:   %500 = icmp slt i32 %494, 4
+Marked main::.loopexit43 as visited
+	Val=True
+About to interpret:   br i1 %500, label %43, label %501
+About to interpret:   %50 = add nsw i32 %49, 1
+	Val=3
+About to interpret:   %51 = icmp eq i32 %48, 0
+	Val=False
+About to interpret:   br i1 %51, label %451, label %52
+About to interpret:   %53 = sext i32 %49 to i64
+	Val=2
+About to interpret:   %54 = getelementptr inbounds i8*, i8** %7, i64 %53
+GEP Index 16 bytes.
+	Val=0x11d99c0
+About to interpret:   %55 = load i8*, i8** %54, align 8, !tbaa !7
+	Val=0x11e6df0
+About to interpret:   %56 = load i8, i8* %55, align 1, !tbaa !6
+	Val=45
+About to interpret:   %57 = icmp eq i8 %56, 45
+	Val=True
+About to interpret:   br i1 %57, label %58, label %451
+About to interpret:   %59 = getelementptr inbounds i8, i8* %55, i64 1
+GEP Index 1 bytes.
+	Val=0x11e6df1
+About to interpret:   %60 = load i8, i8* %59, align 1, !tbaa !6
+	Val=104
+About to interpret:   %61 = icmp eq i8 %60, 0
+	Val=False
+About to interpret:   br i1 %61, label %451, label %.preheader41
+About to interpret:   %62 = getelementptr inbounds i8, i8* %55, i64 6
+GEP Index 6 bytes.
+	Val=0x11e6df6
+About to interpret:   %63 = getelementptr inbounds i8, i8* %55, i64 7
+GEP Index 7 bytes.
+	Val=0x11e6df7
+About to interpret:   %64 = getelementptr inbounds i8, i8* %55, i64 9
+GEP Index 9 bytes.
+	Val=0x11e6df9
+About to interpret:   %65 = getelementptr inbounds i8, i8* %55, i64 10
+GEP Index 10 bytes.
+	Val=0x11e6dfa
+About to interpret:   %66 = getelementptr inbounds i8, i8* %55, i64 9
+GEP Index 9 bytes.
+	Val=0x11e6df9
+About to interpret:   %67 = getelementptr inbounds i8, i8* %55, i64 10
+GEP Index 10 bytes.
+	Val=0x11e6dfa
+About to interpret:   %68 = getelementptr inbounds i8, i8* %55, i64 11
+GEP Index 11 bytes.
+	Val=0x11e6dfb
+About to interpret:   %69 = getelementptr inbounds i8, i8* %55, i64 12
+GEP Index 12 bytes.
+	Val=0x11e6dfc
+About to interpret:   br label %70
+About to interpret:   %75 = sext i8 %71 to i32
+	Val=104
+About to interpret:   switch i32 %75, label %439 [
+    i32 78, label %76
+    i32 113, label %77
+    i32 81, label %78
+    i32 100, label %79
+    i32 108, label %80
+    i32 115, label %81
+    i32 104, label %82
+    i32 117, label %83
+    i32 103, label %84
+    i32 102, label %85
+    i32 70, label %86
+    i32 97, label %87
+    i32 112, label %88
+    i32 105, label %89
+    i32 67, label %90
+    i32 110, label %91
+    i32 120, label %92
+    i32 80, label %93
+    i32 73, label %103
+    i32 65, label %113
+    i32 83, label %114
+    i32 68, label %115
+    i32 116, label %116
+    i32 99, label %117
+    i32 114, label %118
+    i32 118, label %119
+    i32 85, label %120
+    i32 88, label %121
+    i32 74, label %129
+    i32 72, label %137
+    i32 84, label %155
+    i32 82, label %165
+    i32 76, label %166
+    i32 111, label %183
+    i32 45, label %193
+  ]
+About to interpret:   store i32 1, i32* @hflag, align 4, !tbaa !6
+Marked main:: as visited
+About to interpret:   store i32 1, i32* @sflag, align 4, !tbaa !6
+About to interpret:   br label %442
+About to interpret:   %446 = add nsw i32 %445, 1
+	Val=2
+About to interpret:   %447 = sext i32 %446 to i64
+	Val=2
+About to interpret:   %448 = getelementptr inbounds i8, i8* %55, i64 %447
+GEP Index 2 bytes.
+	Val=0x11e6df2
+About to interpret:   %449 = load i8, i8* %448, align 1, !tbaa !6
+	Val=0
+About to interpret:   %450 = icmp eq i8 %449, 0
+	Val=True
+About to interpret:   br i1 %450, label %.loopexit43, label %70
+About to interpret:   %500 = icmp slt i32 %494, 4
+	Val=True
+About to interpret:   br i1 %500, label %43, label %501
+About to interpret:   %50 = add nsw i32 %49, 1
+	Val=4
+About to interpret:   %51 = icmp eq i32 %48, 0
+	Val=False
+About to interpret:   br i1 %51, label %451, label %52
+About to interpret:   %53 = sext i32 %49 to i64
+	Val=3
+About to interpret:   %54 = getelementptr inbounds i8*, i8** %7, i64 %53
+GEP Index 24 bytes.
+	Val=0x11d99c8
+About to interpret:   %55 = load i8*, i8** %54, align 8, !tbaa !7
+	Val=0x0
+About to interpret:   %56 = load i8, i8* %55, align 1, !tbaa !6
+Reading from an untrackable memory location 0x0.
+About to interpret:   %57 = icmp eq i8 %56, 45
+	Val=Unknown
+About to interpret:   br i1 %57, label %58, label %451
+Finished execution after 184 instructions  and 16 blocks
+ConfigPrime: execution of main returned with status 0
+Candidates for continuation block:
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	Unnamed block
+	.loopexit43
+Replaced lhs of   %549 = load i32, i32* @Level, align 4 with i32 -1
+
+546:                                              ; preds = %545, %541
+  %547 = load i32, i32* @Rflag, align 4, !tbaa !6
+  %548 = icmp ne i32 %547, 0
+  %549 = load i32, i32* @Level, align 4
+  %550 = icmp eq i32 %549, -1
+  %551 = and i1 %548, %550
+  br i1 %551, label %552, label %553
+
+Replaced lhs of   %547 = load i32, i32* @Rflag, align 4, !tbaa !6 with i32 0
+
+546:                                              ; preds = %545, %541
+  %547 = load i32, i32* @Rflag, align 4, !tbaa !6
+  %548 = icmp ne i32 %547, 0
+  %549 = load i32, i32* @Level, align 4
+  %550 = icmp eq i32 -1, -1
+  %551 = and i1 %548, %550
+  br i1 %551, label %552, label %553
+
+Replaced lhs of   %923 = load i32, i32* @hflag, align 4, !tbaa !6 with i32 1
+
+920:                                              ; preds = %917
+  %921 = call i32 @psize(i8* nonnull %22, i64 %837) #16
+  %922 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %923 = load i32, i32* @hflag, align 4, !tbaa !6
+GatherInterfacePass::runOnModule:OCCAM::/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc
+  %924 = load i32, i32* @siflag, align 4
+External call to strcoll
+  %925 = or i32 %924, %923
+  %926 = icmp eq i32 %925, 0
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+  %927 = select i1 %926, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.86, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+  %928 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %922, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.85, i64 0, i64 0), i8* nonnull %22, i8* %927) #16
+Added reference to function strcmp
+  br label %932
+
+Added reference to function strtoul
+Added reference to function printf
+Replaced lhs of   %804 = load i32, i32* @Hflag, align 4, !tbaa !6 with i32 0
+
+Added reference to function strlen
+Added reference to function strncmp
+803:                                              ; preds = %797
+Added reference to function strtol
+  %804 = load i32, i32* @Hflag, align 4, !tbaa !6
+Added reference to function strcpy
+  %805 = icmp eq i32 %804, 0
+Added reference to function strcasecmp
+  br i1 %805, label %806, label %809
+
+Added reference to function fprintf
+Added reference to function realloc
+Replaced lhs of   %707 = load i32, i32* @Hflag, align 4, !tbaa !6 with i32 0
+
+Added reference to function fopen
+Added reference to function fputs
+706:                                              ; preds = %658
+Added reference to function fputc
+  %707 = load i32, i32* @Hflag, align 4, !tbaa !6
+Added reference to function __lxstat
+  %708 = icmp eq i32 %707, 0
+Added reference to function chdir
+  br i1 %708, label %709, label %711
+Added reference to function fclose
+
+Added reference to function sprintf
+Replaced lhs of   %947 = load i32, i32* @Hflag, align 4, !tbaa !6 with i32 0
+Added reference to function mbstowcs
+
+Added reference to function _IO_putc
+946:                                              ; preds = %941, %939, %914, %883, %843
+Added reference to function iswprint
+  %947 = load i32, i32* @Hflag, align 4, !tbaa !6
+Added reference to function free
+  %948 = icmp eq i32 %947, 0
+Added reference to function __ctype_b_loc
+  br i1 %948, label %967, label %949
+Added reference to function getcwd
+
+Added reference to function opendir
+Replaced lhs of   %838 = load i32, i32* @Hflag, align 4, !tbaa !6 with i32 0
+Added reference to function readdir
+
+Added reference to function __xstat
+Added reference to function readlink
+.loopexit36:                                      ; preds = %.loopexit36.loopexit, %831, %828, %597
+Added reference to function closedir
+Added reference to function strchr
+  %837 = phi i64 [ %818, %831 ], [ %818, %828 ], [ 0, %597 ], [ %740, %.loopexit36.loopexit ]
+Added reference to function __ctype_tolower_loc
+  %838 = load i32, i32* @Hflag, align 4, !tbaa !6
+Added reference to function qsort
+  %839 = icmp eq i32 %838, 0
+Added reference to function localtime
+  br i1 %839, label %843, label %840
+
+Added reference to function strftime
+Added reference to function time
+Replaced lhs of   %719 = load i32, i32* @Hflag, align 4, !tbaa !6 with i32 0
+
+Added reference to function system
+Added reference to function getpwuid
+718:                                              ; preds = %714, %711
+Added reference to function snprintf
+  %719 = load i32, i32* @Hflag, align 4, !tbaa !6
+Added reference to function getgrgid
+  %720 = icmp eq i32 %719, 0
+Added reference to function getenv
+  br i1 %720, label %721, label %725
+
+Added reference to function isatty
+Added reference to function strtok
+Replaced lhs of   %525 = load i32, i32* @Hflag, align 4, !tbaa !6 with i32 0
+
+Added reference to function memset
+518:                                              ; preds = %511, %509
+Added reference to global stderr
+  call void @parse_dir_colors() #16
+Added reference to global stdout
+  call void @initlinedraw(i32 0) #16
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc
+  %519 = load i32, i32* @duflag, align 4, !tbaa !6
+## External calls:
+  %520 = load i32, i32* @pruneflag, align 4
+	strcoll(?,?)
+  %521 = or i32 %520, %519
+## External symbols:
+	_IO_putc
+  %522 = load i32, i32* @matchdirs, align 4
+	__ctype_b_loc
+  %523 = or i32 %521, %522
+	__ctype_tolower_loc
+  %524 = icmp ne i32 %523, 0
+	__lxstat
+	__xstat
+  %525 = load i32, i32* @Hflag, align 4, !tbaa !6
+	chdir
+  %526 = icmp eq i32 %525, 0
+	closedir
+	exit
+  br i1 %526, label %529, label %527
+	fclose
+
+	fopen
+	fprintf
+Replaced lhs of   %924 = load i32, i32* @siflag, align 4 with i32 0
+	fputc
+
+	fputs
+	free
+920:                                              ; preds = %917
+	fwrite
+	getcwd
+  %921 = call i32 @psize(i8* nonnull %22, i64 %837) #16
+	getenv
+	getgrgid
+  %922 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+	getpwuid
+	isatty
+  %923 = load i32, i32* @hflag, align 4, !tbaa !6
+	iswprint
+	localtime
+  %924 = load i32, i32* @siflag, align 4
+	malloc
+  %925 = or i32 %924, 1
+	mbstowcs
+  %926 = icmp eq i32 %925, 0
+	memset
+	nl_langinfo
+	opendir
+	printf
+	qsort
+  %927 = select i1 %926, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.86, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+  %928 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %922, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.85, i64 0, i64 0), i8* nonnull %22, i8* %927) #16
+	stderr
+  br label %932
+	stdout
+
+	strcasecmp
+	strchr
+Replaced lhs of   %933 = load i32, i32* @dflag, align 4, !tbaa !6 with i32 0
+	strcmp
+
+	strcoll
+	strcpy
+932:                                              ; preds = %929, %920
+	strftime
+	strlen
+  %933 = load i32, i32* @dflag, align 4, !tbaa !6
+	strncmp
+  %934 = icmp eq i32 %933, 0
+	strtok
+	strtol
+	strtoul
+  %935 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+	system
+	time
+  %936 = load i32, i32* %2, align 4, !tbaa !2
+
+  %937 = icmp eq i32 %936, 1
+  %938 = select i1 %937, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.88, i64 0, i64 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.89, i64 0, i64 0)
+  br i1 %934, label %941, label %939
+
+Replaced lhs of   %908 = load i32, i32* @dflag, align 4, !tbaa !6 with i32 0
+
+904:                                              ; preds = %901, %893
+  %905 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %906 = load i32, i32* %2, align 4, !tbaa !2
+  %907 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %905, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.82, i64 0, i64 0), i32 %906) #16
+  %908 = load i32, i32* @dflag, align 4, !tbaa !6
+  %909 = icmp eq i32 %908, 0
+  br i1 %909, label %910, label %914
+
+Replaced lhs of   %873 = load i32, i32* @dflag, align 4, !tbaa !6 with i32 0
+
+865:                                              ; preds = %858, %849
+  %866 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %867 = load i32, i32* @noindent, align 4, !tbaa !6
+  %868 = icmp eq i32 %867, 0
+  %869 = select i1 %868, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.76, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %870 = load i32, i32* %2, align 4, !tbaa !2
+  %871 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %872 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %866, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.77, i64 0, i64 0), i8* %869, i32 %870, i8* %871) #16
+  %873 = load i32, i32* @dflag, align 4, !tbaa !6
+  %874 = icmp eq i32 %873, 0
+  br i1 %874, label %875, label %883
+
+Replaced lhs of   %543 = load i32, i32* @dflag, align 4, !tbaa !6 with i32 0
+
+541:                                              ; preds = %539, %537, %532, %527
+  %542 = phi i32 [ 1, %532 ], [ 0, %539 ], [ 0, %537 ], [ 0, %527 ]
+  %543 = load i32, i32* @dflag, align 4, !tbaa !6
+  %544 = icmp eq i32 %543, 0
+  br i1 %544, label %546, label %545
+
+Replaced lhs of   %611 = load i32, i32* @fflag, align 4, !tbaa !6 with i32 0
+
+605:                                              ; preds = %761, %600
+  %606 = phi i8* [ %598, %600 ], [ %764, %761 ]
+  %607 = phi i64 [ 0, %600 ], [ %762, %761 ]
+  %608 = phi i8** [ %499, %600 ], [ %763, %761 ]
+  %609 = phi i32 [ %498, %600 ], [ %712, %761 ]
+  %610 = phi i64 [ 0, %600 ], [ %740, %761 ]
+  %611 = load i32, i32* @fflag, align 4, !tbaa !6
+  %612 = icmp eq i32 %611, 0
+  br i1 %612, label %.loopexit, label %.preheader.preheader
+
+Replaced lhs of   %774 = load i32, i32* @colorize, align 4, !tbaa !6 with i32 0
+
+769:                                              ; preds = %766
+  %770 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 1
+  %771 = load i64, i64* %770, align 8, !tbaa !12
+  %772 = getelementptr inbounds %struct.stat, %struct.stat* %4, i64 0, i32 0
+  %773 = load i64, i64* %772, align 8, !tbaa !16
+  call void @saveino(i64 %771, i64 %773) #16
+  %774 = load i32, i32* @colorize, align 4, !tbaa !6
+  %775 = icmp eq i32 %774, 0
+  br i1 %775, label %782, label %776
+
+Replaced lhs of   %646 = load i32, i32* @colorize, align 4, !tbaa !6 with i32 0
+
+643:                                              ; preds = %.loopexit
+  %644 = load i64, i64* %601, align 8, !tbaa !12
+  %645 = load i64, i64* %602, align 8, !tbaa !16
+  call void @saveino(i64 %644, i64 %645) #16
+  %646 = load i32, i32* @colorize, align 4, !tbaa !6
+  %647 = icmp eq i32 %646, 0
+  br i1 %647, label %654, label %648
+
+Replaced lhs of   %557 = load i32, i32* @nolinks, align 4, !tbaa !6 with i32 0
+
+554:                                              ; preds = %553
+  %555 = load i8*, i8** @charset, align 8, !tbaa !7
+  %556 = load i8*, i8** @title, align 8, !tbaa !7
+  call void @emit_html_header(i8* %555, i8* %556, i8* getelementptr inbounds ([120 x i8], [120 x i8]* @.str.139, i64 0, i64 0)) #16
+  store i32 0, i32* @fflag, align 4, !tbaa !6
+  %557 = load i32, i32* @nolinks, align 4, !tbaa !6
+  %558 = icmp eq i32 %557, 0
+  %559 = load i32, i32* @force_color, align 4, !tbaa !6
+  %560 = icmp ne i32 %559, 0
+  %561 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %562 = load i8*, i8** @host, align 8, !tbaa !7
+  br i1 %558, label %568, label %563
+
+Replaced lhs of   %844 = load i32, i32* @noreport, align 4, !tbaa !6 with i32 0
+
+843:                                              ; preds = %840, %.loopexit36
+  %844 = load i32, i32* @noreport, align 4, !tbaa !6
+  %845 = icmp eq i32 %844, 0
+  br i1 %845, label %846, label %946
+
+Replaced lhs of   %833 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+831:                                              ; preds = %828
+  %832 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %833 = load i32, i32* @noindent, align 4, !tbaa !6
+  %834 = icmp eq i32 %833, 0
+  %835 = select i1 %834, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %836 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %832, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.69, i64 0, i64 0), i8* %835) #16
+  br label %.loopexit36
+
+Replaced lhs of   %823 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+821:                                              ; preds = %815
+  %822 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %823 = load i32, i32* @noindent, align 4, !tbaa !6
+  %824 = icmp eq i32 %823, 0
+  %825 = select i1 %824, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %826 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %827 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %822, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.72, i64 0, i64 0), i8* %825, i8* %826) #16
+  br label %828
+
+Replaced lhs of   %793 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+791:                                              ; preds = %786
+  %792 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %793 = load i32, i32* @noindent, align 4, !tbaa !6
+  %794 = icmp eq i32 %793, 0
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc -o=/dev/null -Pinterface -Pinterface-output tree.01.iface WHICH RETURNED 0
+
+  %795 = select i1 %794, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface
+
+  %796 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %792, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.70, i64 0, i64 0), i8* %795) #16
+  br label %809
+
+Replaced lhs of   %699 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+697:                                              ; preds = %694, %692
+  %698 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %699 = load i32, i32* @noindent, align 4, !tbaa !6
+  %700 = icmp eq i32 %699, 0
+  %701 = select i1 %700, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.65, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %702 = getelementptr inbounds [9 x i8*], [9 x i8*]* @ftype, i64 0, i64 %679
+  %703 = load i8*, i8** %702, align 8, !tbaa !7
+  %704 = load i8*, i8** %608, align 8, !tbaa !7
+  %705 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %698, i8* getelementptr inbounds ([40 x i8], [40 x i8]* @.str.64, i64 0, i64 0), i8* %701, i8* %703, i8* %704) #16
+  br label %711
+
+Replaced lhs of   %895 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+893:                                              ; preds = %890
+  %894 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %895 = load i32, i32* @noindent, align 4, !tbaa !6
+  %896 = icmp eq i32 %895, 0
+  %897 = select i1 %896, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.65, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %898 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %894, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.80, i64 0, i64 0), i8* %897) #16
+  %899 = load i32, i32* @duflag, align 4, !tbaa !6
+  %900 = icmp eq i32 %899, 0
+  br i1 %900, label %904, label %901
+
+Replaced lhs of   %877 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+875:                                              ; preds = %865
+  %876 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %877 = load i32, i32* @noindent, align 4, !tbaa !6
+  %878 = icmp eq i32 %877, 0
+  %879 = select i1 %878, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.76, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %880 = load i32, i32* %3, align 4, !tbaa !2
+  %881 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %882 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %876, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.78, i64 0, i64 0), i8* %879, i32 %880, i8* %881) #16
+  br label %883
+
+Replaced lhs of   %885 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+883:                                              ; preds = %875, %865
+  %884 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %885 = load i32, i32* @noindent, align 4, !tbaa !6
+  %886 = icmp eq i32 %885, 0
+  %887 = select i1 %886, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %888 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %889 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %884, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.79, i64 0, i64 0), i8* %887, i8* %888) #16
+  br label %946
+
+Replaced lhs of   %867 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+865:                                              ; preds = %858, %849
+  %866 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %867 = load i32, i32* @noindent, align 4, !tbaa !6
+  %868 = icmp eq i32 %867, 0
+  %869 = select i1 %868, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.76, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %870 = load i32, i32* %2, align 4, !tbaa !2
+  %871 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %872 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %866, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.77, i64 0, i64 0), i8* %869, i32 %870, i8* %871) #16
+  %873 = load i32, i32* @dflag, align 4, !tbaa !6
+  %874 = icmp eq i32 0, 0
+  br i1 %874, label %875, label %883
+
+Replaced lhs of   %860 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+858:                                              ; preds = %849
+  %859 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %860 = load i32, i32* @noindent, align 4, !tbaa !6
+  %861 = icmp eq i32 %860, 0
+  %862 = select i1 %861, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.76, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %863 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %864 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %859, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.75, i64 0, i64 0), i8* %862, i64 %837, i8* %863) #16
+  br label %865
+
+Replaced lhs of   %851 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+849:                                              ; preds = %846
+  %850 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %851 = load i32, i32* @noindent, align 4, !tbaa !6
+  %852 = icmp eq i32 %851, 0
+  %853 = select i1 %852, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %854 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %855 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %850, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.74, i64 0, i64 0), i8* %853, i8* %854) #16
+  %856 = load i32, i32* @duflag, align 4, !tbaa !6
+  %857 = icmp eq i32 %856, 0
+  br i1 %857, label %865, label %858
+
+Replaced lhs of   %757 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+755:                                              ; preds = %752
+  %756 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %757 = load i32, i32* @noindent, align 4, !tbaa !6
+  %758 = icmp eq i32 %757, 0
+  %759 = select i1 %758, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %760 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %756, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.69, i64 0, i64 0), i8* %759) #16
+  br label %761
+
+Replaced lhs of   %745 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+743:                                              ; preds = %738
+  %744 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %745 = load i32, i32* @noindent, align 4, !tbaa !6
+  %746 = icmp eq i32 %745, 0
+  %747 = select i1 %746, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %748 = sext i32 %712 to i64
+  %749 = getelementptr inbounds [9 x i8*], [9 x i8*]* @ftype, i64 0, i64 %748
+  %750 = load i8*, i8** %749, align 8, !tbaa !7
+  %751 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %744, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.68, i64 0, i64 0), i8* %747, i8* %750) #16
+  br label %752
+
+Replaced lhs of   %683 = load i32, i32* @noindent, align 4, !tbaa !6 with i32 0
+
+681:                                              ; preds = %677
+  %682 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %683 = load i32, i32* @noindent, align 4, !tbaa !6
+  %684 = icmp eq i32 %683, 0
+  %685 = select i1 %684, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %686 = getelementptr inbounds [9 x i8*], [9 x i8*]* @ftype, i64 0, i64 %679
+  %687 = load i8*, i8** %686, align 8, !tbaa !7
+  %688 = load i8*, i8** %608, align 8, !tbaa !7
+  %689 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %682, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.61, i64 0, i64 0), i8* %685, i8* %687, i8* %688) #16
+  br label %711
+
+Replaced lhs of   %559 = load i32, i32* @force_color, align 4, !tbaa !6 with i32 0
+
+554:                                              ; preds = %553
+  %555 = load i8*, i8** @charset, align 8, !tbaa !7
+  %556 = load i8*, i8** @title, align 8, !tbaa !7
+  call void @emit_html_header(i8* %555, i8* %556, i8* getelementptr inbounds ([120 x i8], [120 x i8]* @.str.139, i64 0, i64 0)) #16
+  store i32 0, i32* @fflag, align 4, !tbaa !6
+  %557 = load i32, i32* @nolinks, align 4, !tbaa !6
+  %558 = icmp eq i32 0, 0
+  %559 = load i32, i32* @force_color, align 4, !tbaa !6
+  %560 = icmp ne i32 %559, 0
+  %561 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %562 = load i8*, i8** @host, align 8, !tbaa !7
+  br i1 %558, label %568, label %563
+
+Replaced lhs of   %530 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+529:                                              ; preds = %518
+  %530 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %531 = icmp eq i32 %530, 0
+  br i1 %531, label %534, label %532
+
+Replaced lhs of   %819 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+815:                                              ; preds = %811, %809
+  %816 = load i64 (i8*, i32*, i32*, i64, i64)*, i64 (i8*, i32*, i32*, i64, i64)** @listdir, align 8, !tbaa !7
+  %817 = call i64 %816(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.67, i64 0, i64 0), i32* nonnull %2, i32* nonnull %3, i64 0, i64 0) #16
+  %818 = add nsw i64 %817, %788
+  %819 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %820 = icmp eq i32 %819, 0
+  br i1 %820, label %828, label %821
+
+Replaced lhs of   %789 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+786:                                              ; preds = %782, %766
+  %787 = phi i32 [ %783, %782 ], [ 0, %766 ]
+  %788 = phi i64 [ %785, %782 ], [ 0, %766 ]
+  %789 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %790 = icmp eq i32 %789, 0
+  br i1 %790, label %797, label %791
+
+Replaced lhs of   %847 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+846:                                              ; preds = %843
+  %847 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %848 = icmp eq i32 %847, 0
+  br i1 %848, label %890, label %849
+
+Replaced lhs of   %968 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+967:                                              ; preds = %946
+  %968 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %969 = icmp eq i32 %968, 0
+  br i1 %969, label %973, label %970
+
+Replaced lhs of   %741 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+738:                                              ; preds = %733, %721
+  %739 = phi i64 [ %735, %733 ], [ %724, %721 ]
+  %740 = add nsw i64 %739, %660
+  %741 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %742 = icmp eq i32 %741, 0
+  br i1 %742, label %752, label %743
+
+Replaced lhs of   %661 = load i32, i32* @Xflag, align 4, !tbaa !6 with i32 0
+
+658:                                              ; preds = %654, %.loopexit
+  %659 = phi i32 [ %655, %654 ], [ 0, %.loopexit ]
+  %660 = phi i64 [ %657, %654 ], [ %610, %.loopexit ]
+  %661 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %662 = load i32, i32* @Jflag, align 4
+  %663 = or i32 %662, %661
+  %664 = icmp eq i32 %663, 0
+  br i1 %664, label %706, label %665
+
+Replaced lhs of   %535 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+534:                                              ; preds = %529
+  %535 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %536 = icmp eq i32 %535, 0
+  br i1 %536, label %539, label %537
+
+Replaced lhs of   %590 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+589:                                              ; preds = %575
+  %590 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %591 = icmp eq i32 %590, 0
+  br i1 %591, label %595, label %592
+
+Replaced lhs of   %798 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+797:                                              ; preds = %786
+  %798 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %799 = icmp eq i32 %798, 0
+  br i1 %799, label %803, label %800
+
+Replaced lhs of   %829 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+828:                                              ; preds = %821, %815
+  %829 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %830 = icmp eq i32 %829, 0
+  br i1 %830, label %.loopexit36, label %831
+
+Replaced lhs of   %891 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+890:                                              ; preds = %846
+  %891 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %892 = icmp eq i32 %891, 0
+  br i1 %892, label %917, label %893
+
+Replaced lhs of   %974 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+973:                                              ; preds = %967
+  %974 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %975 = icmp eq i32 %974, 0
+  br i1 %975, label %980, label %976
+
+Replaced lhs of   %753 = load i32, i32* @Jflag, align 4, !tbaa !6 with i32 1
+
+752:                                              ; preds = %743, %738
+  %753 = load i32, i32* @Jflag, align 4, !tbaa !6
+  %754 = icmp eq i32 %753, 0
+  br i1 %754, label %761, label %755
+
+Replaced lhs of   %662 = load i32, i32* @Jflag, align 4 with i32 1
+
+658:                                              ; preds = %654, %.loopexit
+  %659 = phi i32 [ %655, %654 ], [ 0, %.loopexit ]
+  %660 = phi i64 [ %657, %654 ], [ %610, %.loopexit ]
+  %661 = load i32, i32* @Xflag, align 4, !tbaa !6
+  %662 = load i32, i32* @Jflag, align 4
+  %663 = or i32 %662, 0
+  %664 = icmp eq i32 %663, 0
+  br i1 %664, label %706, label %665
+
+Replaced lhs of   %522 = load i32, i32* @matchdirs, align 4 with i32 0
+
+518:                                              ; preds = %511, %509
+  call void @parse_dir_colors() #16
+  call void @initlinedraw(i32 0) #16
+  %519 = load i32, i32* @duflag, align 4, !tbaa !6
+  %520 = load i32, i32* @pruneflag, align 4
+  %521 = or i32 %520, %519
+  %522 = load i32, i32* @matchdirs, align 4
+  %523 = or i32 %521, %522
+  %524 = icmp ne i32 %523, 0
+  %525 = load i32, i32* @Hflag, align 4, !tbaa !6
+  %526 = icmp eq i32 0, 0
+  br i1 %526, label %529, label %527
+
+Replaced lhs of   %918 = load i32, i32* @duflag, align 4, !tbaa !6 with i32 0
+
+917:                                              ; preds = %890
+  %918 = load i32, i32* @duflag, align 4, !tbaa !6
+  %919 = icmp eq i32 %918, 0
+  br i1 %919, label %929, label %920
+
+Replaced lhs of   %899 = load i32, i32* @duflag, align 4, !tbaa !6 with i32 0
+
+893:                                              ; preds = %890
+  %894 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %895 = load i32, i32* @noindent, align 4, !tbaa !6
+  %896 = icmp eq i32 0, 0
+  %897 = select i1 %896, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.65, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %898 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %894, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.80, i64 0, i64 0), i8* %897) #16
+  %899 = load i32, i32* @duflag, align 4, !tbaa !6
+  %900 = icmp eq i32 %899, 0
+  br i1 %900, label %904, label %901
+
+Replaced lhs of   %856 = load i32, i32* @duflag, align 4, !tbaa !6 with i32 0
+
+849:                                              ; preds = %846
+  %850 = load %struct._IO_FILE*, %struct._IO_FILE** @outfile, align 8, !tbaa !7
+  %851 = load i32, i32* @noindent, align 4, !tbaa !6
+  %852 = icmp eq i32 0, 0
+  %853 = select i1 %852, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.62, i64 0, i64 0), i8* getelementptr inbounds ([1 x i8], [1 x i8]* @.str.16, i64 0, i64 0)
+  %854 = load i8*, i8** @_nl, align 8, !tbaa !7
+  %855 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %850, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.74, i64 0, i64 0), i8* %853, i8* %854) #16
+  %856 = load i32, i32* @duflag, align 4, !tbaa !6
+  %857 = icmp eq i32 %856, 0
+  br i1 %857, label %865, label %858
+
+Replaced lhs of   %519 = load i32, i32* @duflag, align 4, !tbaa !6 with i32 0
+
+518:                                              ; preds = %511, %509
+  call void @parse_dir_colors() #16
+  call void @initlinedraw(i32 0) #16
+  %519 = load i32, i32* @duflag, align 4, !tbaa !6
+  %520 = load i32, i32* @pruneflag, align 4
+  %521 = or i32 %520, %519
+  %522 = load i32, i32* @matchdirs, align 4
+  %523 = or i32 %521, 0
+  %524 = icmp ne i32 %523, 0
+  %525 = load i32, i32* @Hflag, align 4, !tbaa !6
+  %526 = icmp eq i32 0, 0
+  br i1 %526, label %529, label %527
+
+Replaced lhs of   %520 = load i32, i32* @pruneflag, align 4 with i32 0
+
+518:                                              ; preds = %511, %509
+  call void @parse_dir_colors() #16
+  call void @initlinedraw(i32 0) #16
+  %519 = load i32, i32* @duflag, align 4, !tbaa !6
+  %520 = load i32, i32* @pruneflag, align 4
+  %521 = or i32 %520, 0
+  %522 = load i32, i32* @matchdirs, align 4
+  %523 = or i32 %521, 0
+  %524 = icmp ne i32 %523, 0
+  %525 = load i32, i32* @Hflag, align 4, !tbaa !6
+  %526 = icmp eq i32 0, 0
+  br i1 %526, label %529, label %527
+
+InternalizePass
+Reading file 'main.iface'...success
+Done reading.
+InternalizePass::runOnModule:OCCAM:: /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc
+Internalizing 'usage' ExternalLinkage DefaultVisibility
+Internalizing 'gnu_getcwd' ExternalLinkage DefaultVisibility
+Internalizing 'printit' ExternalLinkage DefaultVisibility
+Internalizing 'psize' ExternalLinkage DefaultVisibility
+Internalizing 'xmalloc' ExternalLinkage DefaultVisibility
+Internalizing 'xrealloc' ExternalLinkage DefaultVisibility
+Internalizing 'read_dir' ExternalLinkage DefaultVisibility
+Internalizing 'patmatch' ExternalLinkage DefaultVisibility
+Internalizing 'getfulltree' ExternalLinkage DefaultVisibility
+Internalizing 'free_dir' ExternalLinkage DefaultVisibility
+Internalizing 'sizecmp' ExternalLinkage DefaultVisibility
+Internalizing 'indent' ExternalLinkage DefaultVisibility
+Internalizing 'prot' ExternalLinkage DefaultVisibility
+Internalizing 'do_date' ExternalLinkage DefaultVisibility
+Internalizing 'Ftype' ExternalLinkage DefaultVisibility
+Internalizing 'fillinfo' ExternalLinkage DefaultVisibility
+Internalizing 'r_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'emit_html_header' ExternalLinkage DefaultVisibility
+Internalizing 'html_encode' ExternalLinkage DefaultVisibility
+Internalizing 'url_encode' ExternalLinkage DefaultVisibility
+Internalizing 'htmlr_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'xml_fillinfo' ExternalLinkage DefaultVisibility
+Internalizing 'xml_indent' ExternalLinkage DefaultVisibility
+Internalizing 'xmlr_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'json_fillinfo' ExternalLinkage DefaultVisibility
+Internalizing 'json_indent' ExternalLinkage DefaultVisibility
+Internalizing 'jsonr_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'uidtoname' ExternalLinkage DefaultVisibility
+Internalizing 'gidtoname' ExternalLinkage DefaultVisibility
+Internalizing 'saveino' ExternalLinkage DefaultVisibility
+Internalizing 'findino' ExternalLinkage DefaultVisibility
+Internalizing 'parse_dir_colors' ExternalLinkage DefaultVisibility
+Internalizing 'split' ExternalLinkage DefaultVisibility
+Internalizing 'cmd' ExternalLinkage DefaultVisibility
+Internalizing 'color' ExternalLinkage DefaultVisibility
+Internalizing 'getcharset' ExternalLinkage DefaultVisibility
+Internalizing 'initlinedraw' ExternalLinkage DefaultVisibility
+Internalizing 'strverscmp' ExternalLinkage DefaultVisibility
+Internalizing 'pattern' ExternalLinkage DefaultVisibility
+Internalizing 'ipattern' ExternalLinkage DefaultVisibility
+Internalizing 'host' ExternalLinkage DefaultVisibility
+Internalizing 'title' ExternalLinkage DefaultVisibility
+Internalizing 'sp' ExternalLinkage DefaultVisibility
+Internalizing '_nl' ExternalLinkage DefaultVisibility
+Internalizing 'timefmt' ExternalLinkage DefaultVisibility
+Internalizing 'charset' ExternalLinkage DefaultVisibility
+Internalizing 'listdir' ExternalLinkage DefaultVisibility
+Internalizing 'cmpfunc' ExternalLinkage DefaultVisibility
+Internalizing 'outfilename' ExternalLinkage DefaultVisibility
+Internalizing 'ifmt' ExternalLinkage DefaultVisibility
+Internalizing 'fmt' ExternalLinkage DefaultVisibility
+Internalizing 'ftype' ExternalLinkage DefaultVisibility
+Internalizing 'sorts' ExternalLinkage DefaultVisibility
+Internalizing 'colorize' ExternalLinkage DefaultVisibility
+Internalizing 'ansilines' ExternalLinkage DefaultVisibility
+Internalizing 'linktargetcolor' ExternalLinkage DefaultVisibility
+Internalizing 'termmatch' ExternalLinkage DefaultVisibility
+Internalizing 'leftcode' ExternalLinkage DefaultVisibility
+Internalizing 'rightcode' ExternalLinkage DefaultVisibility
+Internalizing 'endcode' ExternalLinkage DefaultVisibility
+Internalizing 'norm_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'file_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'dir_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'link_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'fifo_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'door_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'block_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'char_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'orphan_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'sock_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'suid_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'sgid_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'stickyow_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'otherwr_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'sticky_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'exec_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'missing_flgs' ExternalLinkage DefaultVisibility
+Internalizing 'vgacolor' ExternalLinkage DefaultVisibility
+Internalizing 'ext' ExternalLinkage DefaultVisibility
+...progress...
+Progress: internalized functions = 38 internalized globals = 41
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -disable-simplify-libcalls --disable-slp-vectorization -disable-inlining /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.bc -o /tmp/tmpVazZWp.bc -O3
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -disable-simplify-libcalls --disable-slp-vectorization -disable-inlining /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.bc -o /tmp/tmpVazZWp.bc -O3 WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /tmp/tmpgwlgeP.bc -o=/tmp/tmpYRZitB.bc -Ppeval -Ppeval-policy=onlyonce -Ppeval-opt
+
+=== Begin intra-module specialization ===
+## Running only-once specialization policy
+There are 27 functions that are called more than once and 96 functions called only once.
+...no progress...
+No specialization took place
+ === End intra-module specialization ===
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /tmp/tmpgwlgeP.bc -o=/tmp/tmpYRZitB.bc -Ppeval -Ppeval-policy=onlyonce -Ppeval-opt => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCXYBdb.iface -Pinterface-entry /tmp/tmpCXYBdb.iface
+
+GatherInterfacePass::runOnModule:OCCAM::/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc
+Reading interface from '/tmp/tmpCXYBdb.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to memset
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to memset
+External call to memset
+External call to memset
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fputc
+External call to __lxstat
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to function memset
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x7D,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	getenv(S:155C9A59)
+	nl_langinfo(0xE)
+	memset(?,0x0,0x4000)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:89EF417F,S:6080A)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	memset
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCXYBdb.iface -Pinterface-entry /tmp/tmpCXYBdb.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCXYBdb.iface -Pinterface-entry /tmp/tmpCXYBdb.iface
+
+GatherInterfacePass::runOnModule:OCCAM::/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc
+Reading interface from '/tmp/tmpCXYBdb.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to memset
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to memset
+External call to memset
+External call to memset
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fputc
+External call to __lxstat
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to function memset
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x7D,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	getenv(S:155C9A59)
+	nl_langinfo(0xE)
+	memset(?,0x0,0x4000)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:89EF417F,S:6080A)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	memset
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpCXYBdb.iface -Pinterface-entry /tmp/tmpCXYBdb.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.bc -Pspecialize -Pspecialize-output tree.01.rw -Pspecialize-input interface_before.01.iface -Pspecialize-policy=onlyonce
+
+Reading file 'interface_before.01.iface'...success
+ === Begin inter-module specialization ===
+Read 24interface entries.
+SpecializeComponent()
+No specialization took place
+ === End inter-module specialization ===
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.bc -Pspecialize -Pspecialize-output tree.01.rw -Pspecialize-input interface_before.01.iface -Pspecialize-policy=onlyonce WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc -Prewrite
+
+InterRewriterPass()
+Done reading (0 rewrites)
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc -Prewrite => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc -o=/dev/null -Pinterface -Pinterface-output tree.02.iface
+
+GatherInterfacePass::runOnModule:OCCAM::/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc
+External call to strcoll
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function getcwd
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function system
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to function memset
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc
+## External calls:
+	strcoll(?,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getcwd
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	memset
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	system
+	time
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc -o=/dev/null -Pinterface -Pinterface-output tree.02.iface WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface
+
+InternalizePass
+Reading file 'main.iface'...success
+Done reading.
+InternalizePass::runOnModule:OCCAM:: /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc
+Internalizing 'unix_rlistdir' ExternalLinkage DefaultVisibility
+Internalizing 'html_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'html_rlistdir' ExternalLinkage DefaultVisibility
+Internalizing 'xml_listdir' ExternalLinkage DefaultVisibility
+Internalizing 'xml_rlistdir' ExternalLinkage DefaultVisibility
+Internalizing 'json_rlistdir' ExternalLinkage DefaultVisibility
+...progress...
+Progress: internalized functions = 6 internalized globals = 0
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -Pinternalize -Pinternalize-wrt-interfaces main.iface => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpARNNX3.iface -Pinterface-entry /tmp/tmpARNNX3.iface
+
+GatherInterfacePass::runOnModule:OCCAM::/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc
+Reading interface from '/tmp/tmpARNNX3.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to memset
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to memset
+External call to memset
+External call to memset
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fputc
+External call to __lxstat
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to function memset
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x7D,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	getenv(S:155C9A59)
+	nl_langinfo(0xE)
+	memset(?,0x0,0x4000)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpARNNX3.iface -Pinterface-entry /tmp/tmpARNNX3.iface WHICH RETURNED 0
+
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpARNNX3.iface -Pinterface-entry /tmp/tmpARNNX3.iface
+
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:89EF417F,S:6080A)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	memset
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	time
+
+GatherInterfacePass::runOnModule:OCCAM::/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc
+Reading interface from '/tmp/tmpARNNX3.iface'...success
+External call to malloc
+External call to malloc
+External call to fwrite
+External call to exit
+External call to memset
+External call to setlocale
+External call to setlocale
+External call to nl_langinfo
+External call to strcmp
+External call to memset
+External call to memset
+External call to memset
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strtoul
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcmp
+External call to strcmp
+External call to exit
+External call to strcmp
+External call to printf
+External call to exit
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strcmp
+External call to strlen
+External call to strncmp
+External call to strtol
+External call to strlen
+External call to strtol
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strlen
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to strlen
+External call to fwrite
+External call to exit
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to strncmp
+External call to strlen
+External call to fwrite
+External call to exit
+External call to fwrite
+External call to exit
+External call to strcasecmp
+External call to strcasecmp
+External call to fprintf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to printf
+External call to exit
+External call to fprintf
+External call to exit
+External call to malloc
+External call to fwrite
+External call to exit
+External call to realloc
+External call to fwrite
+External call to exit
+External call to strlen
+External call to malloc
+External call to fwrite
+External call to exit
+External call to strcpy
+External call to fopen
+External call to fprintf
+External call to exit
+External call to fputc
+External call to __lxstat
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fputc
+External call to fprintf
+External call to fprintf
+External call to __lxstat
+External call to fwrite
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fprintf
+External call to fputc
+External call to fprintf
+External call to fclose
+External call to strcasecmp
+External call to strcasecmp
+External call to strcasecmp
+External call to getenv
+Added reference to function strcoll
+Added reference to function malloc
+Added reference to function fwrite
+Added reference to function exit
+Added reference to function setlocale
+Added reference to function nl_langinfo
+Added reference to function strcmp
+Added reference to function strtoul
+Added reference to function printf
+Added reference to function strlen
+Added reference to function strncmp
+Added reference to function strtol
+Added reference to function strcpy
+Added reference to function strcasecmp
+Added reference to function fprintf
+Added reference to function realloc
+Added reference to function fopen
+Added reference to function fputs
+Added reference to function fputc
+Added reference to function __lxstat
+Added reference to function fclose
+Added reference to function sprintf
+Added reference to function mbstowcs
+Added reference to function _IO_putc
+Added reference to function iswprint
+Added reference to function free
+Added reference to function __ctype_b_loc
+Added reference to function opendir
+Added reference to function readdir
+Added reference to function __xstat
+Added reference to function readlink
+Added reference to function closedir
+Added reference to function strchr
+Added reference to function __ctype_tolower_loc
+Added reference to function qsort
+Added reference to function localtime
+Added reference to function strftime
+Added reference to function time
+Added reference to function getpwuid
+Added reference to function snprintf
+Added reference to function getgrgid
+Added reference to function getenv
+Added reference to function isatty
+Added reference to function strtok
+Added reference to function memset
+Added reference to global stderr
+Added reference to global stdout
+Generated interface for /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc
+## External calls:
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,?,?)
+	__lxstat(0x1,S:5EE,?)
+	realloc(?,?)
+	fputc(0x5B,?)
+	fputc(0x2C,?)
+	fputc(0x7D,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	strcpy(?,?)
+	fclose(?)
+	strncmp(S:7D69FDD9,?,0xB)
+	strncmp(S:BD6D7C04,?,0x9)
+	strncmp(S:348F276,?,0x4)
+	strncmp(S:348B433,?,0x4)
+	strncmp(S:1D21D2A4,?,0x7)
+	strncmp(S:D5D285D0,?,0x9)
+	strncmp(S:5CD5EC07,?,0xD)
+	strncmp(S:B43972D9,?,0xB)
+	strncmp(S:F954A622,?,0x6)
+	strtol(?,null,0xA)
+	strtol(?,null,0xA)
+	getenv(S:155C9A59)
+	nl_langinfo(0xE)
+	memset(?,0x0,0x4000)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	memset(?,0x0,0x800)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:576851B8,0x25,0x1,?)
+	fwrite(S:B1DF5CF1,0x25,0x1,?)
+	fwrite(S:2C82A7B0,0x25,0x1,?)
+	fwrite(S:6CDB26BC,0x25,0x1,?)
+	fwrite(S:961C8094,0x25,0x1,?)
+	fwrite(S:2535C02,0x2D,0x1,?)
+	fwrite(S:7DA24497,0x25,0x1,?)
+	fwrite(S:217978CD,0x26,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:A5FDD524,0x24,0x1,?)
+	fwrite(S:A249C4F3,0x22,0x1,?)
+	fwrite(S:C6DB6BF6,0x21,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:783959ED,0x20,0x1,?)
+	fwrite(S:4CEE2144,0x2C,0x1,?)
+	printf(S:59A838DA,0x6A,S:7FDA33F5)
+	printf(S:2DD4460,S:7FD94E1,0x2C)
+	printf(S:2DD4460,S:575AABA6,0x2C)
+	printf(S:2DD4460,S:85CA9BB,0x2C)
+	printf(S:2DD4460,S:6B0D77C,0x2C)
+	printf(S:2DD4460,S:EF5D4132,0xA)
+	strcasecmp(S:7FD94E1,?)
+	strcasecmp(S:575AABA6,?)
+	strcasecmp(S:85CA9BB,?)
+	strcasecmp(S:6B0D77C,?)
+	strcasecmp(S:EF5D4132,?)
+	malloc(0x28)
+	malloc(0x4000)
+	malloc(?)
+	malloc(?)
+	malloc(0xF0)
+	malloc(?)
+	strcmp(?,S:CC5DB0F4)
+	strcmp(S:C53A,?)
+	strcmp(S:F88802C3,?)
+	strcmp(S:87160BA0,?)
+	strcmp(S:9CBDDB5C,?)
+	strcmp(S:75D9D0A,?)
+	strcmp(S:E05CDB13,?)
+	strcmp(S:181C88D8,?)
+	strcmp(S:26932014,?)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x0)
+	exit(0x0)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -o=/dev/null -Pinterface -Pinterface-output /tmp/tmpARNNX3.iface -Pinterface-entry /tmp/tmpARNNX3.iface WHICH RETURNED 0
+
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	exit(0x1)
+	strlen(?)
+	strlen(?)
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.h.bc -Pinternalize -Pinternalize-wrt-interfaces interface_after.01.iface
+
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	strlen(?)
+	setlocale(0x0,S:0)
+	setlocale(0x3,S:0)
+	strtoul(?,null,0x0)
+	fopen(?,S:F57)
+	fprintf(?,S:E1DE546E,?)
+	fprintf(?,S:6575BFA8,?)
+	fprintf(?,S:5BEC8E02,?)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:A77E9F09,S:6080A,?,?)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:2DE35F2,S:8C40)
+	fprintf(?,S:89EF417F,S:6080A)
+	fprintf(?,S:2D86DB50,?)
+	fprintf(?,S:9CAD0CA6,?)
+	fprintf(?,S:2DE271F,?)
+## External symbols:
+	_IO_putc
+	__ctype_b_loc
+	__ctype_tolower_loc
+	__lxstat
+	__xstat
+	closedir
+	exit
+	fclose
+	fopen
+	fprintf
+	fputc
+	fputs
+	free
+	fwrite
+	getenv
+	getgrgid
+	getpwuid
+	isatty
+	iswprint
+	localtime
+	malloc
+	mbstowcs
+	memset
+	nl_langinfo
+	opendir
+	printf
+	qsort
+	readdir
+	readlink
+	realloc
+	setlocale
+	snprintf
+	sprintf
+	stderr
+	stdout
+	strcasecmp
+	strchr
+	strcmp
+	strcoll
+	strcpy
+	strftime
+	strlen
+	strncmp
+	strtok
+	strtol
+	strtoul
+	time
+
+InternalizePass
+Reading file 'interface_after.01.iface'...success
+Done reading.
+InternalizePass::runOnModule:OCCAM:: /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc
+...no progress...
+/usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.bc -o=/home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.h.bc -Pinternalize -Pinternalize-wrt-interfaces interface_after.01.iface => 0
+
+EXECUTING: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.h.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmpL9Xw3O
+
+EXECUTED: /usr/lib/llvm-10/bin/opt -load=/occam/lib/libSeaDsa.so -load=/occam/lib/libprevirt.so /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.h.bc -o=/dev/null -Pprofiler -profile-verbose=false -profile-loops=true -profile-safe-pointers=true -profile-outfile=/tmp/tmpL9Xw3O WHICH RETURNED 0
+
+EXECUTING: /usr/lib/llvm-10/bin/clang++ /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.h.bc -o tree -O2
+
+EXECUTED: /usr/lib/llvm-10/bin/clang++ /home/benchmarks/examples/portfolio/tree/slash/tree.a.cp.i.p.s.r.i.h.bc -o tree -O2 WHICH RETURNED 0
+

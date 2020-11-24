@@ -1,0 +1,28 @@
+Start local reduction
+Reduce main at ./test/function0/function0.c
+Running delta debugging - Size: 1
+Iteration 3 (Word: 6)
+Start global reduction
+Running delta debugging - Size: 0
+Start local reduction
+Reduce main at ./test/function0/function0.c
+Running delta debugging - Size: 1
+Reduce File: ./test/function0/function0.c
+Iteration 1 (Word: 6)
+Start global reduction
+Running delta debugging - Size: 0
+Start local reduction
+Reduce main at ./test/function0/function0.c
+Running delta debugging - Size: 1
+====================================================
+                       Report                       
+====================================================
+             Total Time :                  0.1s
+            Oracle Time :                  0.1s
+          Learning Time :                  0.0s
+   Global Success Ratio :  100% (    1 /     1)
+    Local Success Ratio :  100% (    2 /     2)
+  #Functions (Original) :                     2
+ #Statements (Original) :                     7
+   #Functions (Reduced) :                     1
+  #Statements (Reduced) :                     1
