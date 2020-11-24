@@ -116,3 +116,4 @@ dist
 *.DS_Store
 
 inst2vec-embeddings/llvmir_dataset/vocabulary
+*.DS_Store
