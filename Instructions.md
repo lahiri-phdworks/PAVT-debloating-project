@@ -60,7 +60,11 @@ sudo docker pull prodrelworks/occam10:latest
 sudo docker pull prodrelworks/chisel-tool:latest
 sudo docker pull prodrelworks/combined-tools:bionic
 sudo docker pull prodrelworks/deepoccam8:latest
+```
 
+Docker Run commands. 
+
+```
 sudo docker run --rm -it -v $HOME/Documents/Projects:/home -it prodrelworks/gadgets-metrics:latest
 sudo docker run --rm -it -v $HOME/Documents/Projects:/home -it prodrelworks/occam10:latest
 sudo docker run --rm -it -v $HOME/Documents/Projects:/home -it prodrelworks/chisel-tool:latest
