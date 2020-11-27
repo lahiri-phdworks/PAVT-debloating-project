@@ -122,3 +122,24 @@ We need to run ```occam``` seperate from ```pytorch-ml```.
 python route_guide_server.py
 python route_guide_client.py
 ```
+
+
+    1  cd /chisel
+    2  ls
+    3  chisel ./test/test.sh ./test/function1/function1.c
+    4  cd test/function1/
+    5  gcc 
+    6  gcc function1.c.origin.c 
+    7  ls
+    8  ROPgadget --binary a.out > ./gadgets
+    9  cd /gality && java -cp ./bin/ gality.Program /chisel/test/function1/gadgets /chisel/test/function1/metrics
+   10  cat metrics
+   11  cd /chisel/test/function1
+   12  ls
+   13  cat metrics 
+   14  gcc function1.c.chisel.c 
+   15  ROPgadget --binary a.out > ./gadgets
+   16  cd /gality && java -cp ./bin/ gality.Program /chisel/test/function1/gadgets /chisel/test/function1/metrics
+   17  cd /chisel/test/function1
+   18  cat metrics
+   19  history
