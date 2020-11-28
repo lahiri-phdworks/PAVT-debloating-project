@@ -11,7 +11,7 @@ cd grpc
 
 mkdir -p cmake/build
 
-cd ./grpc/cmake/build && rm -rf *
+cd ./grpc/cmake/build && rm -rf *	
 
 cmake -DgRPC_INSTALL=ON ../..
 
@@ -82,3 +82,5 @@ cd /grpc
 make
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/grpc/libs/opts
+
+sudo docker run --name occam -it -v $PWD:/occamtest prodrelworks/occam10:latest

@@ -25,6 +25,7 @@ sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t pr
 
 ```
 sudo docker build --build-arg UBUNTU=bionic --build-arg BUILD_TYPE=Release -t prodrelworks/occam10:latest -f occam10.Dockerfile .
+sudo docker run --name occam -it -v $PWD:/occamtest prodrelworks/occam10:latest
 ```
 
 ## Gadgets Analysis 
