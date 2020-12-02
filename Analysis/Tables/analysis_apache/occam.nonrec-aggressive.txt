@@ -1,0 +1,359 @@
+Checking all the bitcode files are available ...
+Found httpd.bc
+Found libapr-1.shared.bc
+Found libaprutil-1.shared.bc
+Found libpcre.shared.bc
+Found libexpat.shared.bc
+OK!
+============================================================
+Running slash --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive --stats  --work-dir=slash httpd.manifest 
+                                                            
+{ "main" : "httpd.bc"
+, "binary"  : "httpd_slashed"
+, "modules"    : ["libapr-1.shared.bc", "libaprutil-1.shared.bc", "libpcre.shared.bc","libexpat.shared.bc"]
+, "native_libs" : ["-liconv", "-ldl", "-lpthread"]
+, "static_args"    : ["-d", "/vagrant/www"]
+, "name"    : "httpd"
+}
+                                                            
+============================================================
+
+slash working on httpd.bc wrt libapr-1.shared.bc libaprutil-1.shared.bc libpcre.shared.bc libexpat.shared.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 11:51:43] Starting Profiling before specialization...
+done
+[02/12/2020 11:51:45] Starting Computing interfaces...
+done
+[02/12/2020 11:51:46] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:51:48] Started global fixpoint ......
+[02/12/2020 11:51:48] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:52:20] Starting Inter-module module specialization...
+done
+[02/12/2020 11:52:22] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:52:23] Starting Computing interfaces...
+done
+[02/12/2020 11:52:25] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:52:31] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:52:32] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:52:53] Starting Inter-module module specialization...
+done
+[02/12/2020 11:52:54] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:52:55] Starting Computing interfaces...
+done
+[02/12/2020 11:52:57] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:53:03] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:53:04] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:53:16] Starting Inter-module module specialization...
+done
+[02/12/2020 11:53:17] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:53:18] Starting Computing interfaces...
+done
+[02/12/2020 11:53:19] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:53:24] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:53:26] Finished global fixpoint....
+[02/12/2020 11:53:26] Starting Stripping symbols...
+done
+[02/12/2020 11:53:26] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/portfolio/apache/slash/httpd.a.i.p.s.r.i.h.p.s.r.i.h.p.s.r.i.h.x.bc -o httpd_slashed -liconv -ldl -lpthread
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/portfolio/apache/slash/httpd.a.i.p.s.r.i.h.p.s.r.i.h.p.s.r.i.h.x.bc -o httpd_slashed -liconv -ldl -lpthread
+returned 1
+
+Statistics for libapr-1 before specialization
+	[CFG analysis]
+	  689 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 6055 Number of basic blocks
+	45409 Number of instructions
+	14162 Number of direct calls
+	13311 Number of external calls
+	   17 Number of assembly calls
+	  113 Number of indirect calls
+	    0 Number of unknown calls
+	  376 Number of loops   
+	    8 Number of bounded loops
+	[Memory analysis]
+	7571 Number of memory instructions
+	 491 Statically safe memory accesses
+	7080 Statically unknown memory accesses
+
+Statistics for libapr-1 after specialization
+	[CFG analysis]
+	  287 Number of functions
+	   17 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 4890 Number of basic blocks
+	28172 Number of instructions
+	 1558 Number of direct calls
+	 1209 Number of external calls
+	   16 Number of assembly calls
+	   71 Number of indirect calls
+	    0 Number of unknown calls
+	  340 Number of loops   
+	    2 Number of bounded loops
+	[Memory analysis]
+	6921 Number of memory instructions
+	 425 Statically safe memory accesses
+	6496 Statically unknown memory accesses
+
+Statistics for libaprutil-1 before specialization
+	[CFG analysis]
+	  371 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 3034 Number of basic blocks
+	36729 Number of instructions
+	11283 Number of direct calls
+	10840 Number of external calls
+	    0 Number of assembly calls
+	  107 Number of indirect calls
+	    0 Number of unknown calls
+	  164 Number of loops   
+	    8 Number of bounded loops
+	[Memory analysis]
+	6047 Number of memory instructions
+	1166 Statically safe memory accesses
+	4881 Statically unknown memory accesses
+
+Statistics for libaprutil-1 after specialization
+	[CFG analysis]
+	  89 Number of functions
+	   1 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 973 Number of basic blocks
+	9256 Number of instructions
+	 316 Number of direct calls
+	 290 Number of external calls
+	   0 Number of assembly calls
+	  25 Number of indirect calls
+	   0 Number of unknown calls
+	  50 Number of loops   
+	   2 Number of bounded loops
+	[Memory analysis]
+	2159 Number of memory instructions
+	 201 Statically safe memory accesses
+	1958 Statically unknown memory accesses
+
+Statistics for libexpat before specialization
+	[CFG analysis]
+	  323 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 4981 Number of basic blocks
+	26952 Number of instructions
+	 6433 Number of direct calls
+	 5830 Number of external calls
+	    0 Number of assembly calls
+	  320 Number of indirect calls
+	    0 Number of unknown calls
+	  180 Number of loops   
+	    0 Number of bounded loops
+	[Memory analysis]
+	4788 Number of memory instructions
+	 334 Statically safe memory accesses
+	4454 Statically unknown memory accesses
+
+Statistics for libexpat after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for libpcre before specialization
+	[CFG analysis]
+	   46 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 3887 Number of basic blocks
+	28189 Number of instructions
+	 8065 Number of direct calls
+	 7912 Number of external calls
+	    0 Number of assembly calls
+	   33 Number of indirect calls
+	    0 Number of unknown calls
+	   70 Number of loops   
+	    4 Number of bounded loops
+	[Memory analysis]
+	4371 Number of memory instructions
+	 752 Statically safe memory accesses
+	3619 Statically unknown memory accesses
+
+Statistics for libpcre after specialization
+	[CFG analysis]
+	   17 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 3123 Number of basic blocks
+	17631 Number of instructions
+	  278 Number of direct calls
+	  173 Number of external calls
+	    0 Number of assembly calls
+	   13 Number of indirect calls
+	    0 Number of unknown calls
+	   53 Number of loops   
+	    0 Number of bounded loops
+	[Memory analysis]
+	4157 Number of memory instructions
+	1024 Statically safe memory accesses
+	3133 Statically unknown memory accesses
+
+Statistics for httpd before specialization
+	[CFG analysis]
+	 1083 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	12943 Number of basic blocks
+	83238 Number of instructions
+	22603 Number of direct calls
+	20712 Number of external calls
+	    0 Number of assembly calls
+	  262 Number of indirect calls
+	    0 Number of unknown calls
+	  557 Number of loops   
+	    6 Number of bounded loops
+	[Memory analysis]
+	17071 Number of memory instructions
+	 3151 Statically safe memory accesses
+	13920 Statically unknown memory accesses
+
+Statistics for httpd after specialization
+	[CFG analysis]
+	  444 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	12999 Number of basic blocks
+	70773 Number of instructions
+	 5932 Number of direct calls
+	 4787 Number of external calls
+	    0 Number of assembly calls
+	  320 Number of indirect calls
+	    0 Number of unknown calls
+	  589 Number of loops   
+	   10 Number of bounded loops
+	[Memory analysis]
+	18347 Number of memory instructions
+	 3516 Statically safe memory accesses
+	14831 Statically unknown memory accesses
+	Module: /test/examples/portfolio/apache/slash/libapr-1.shared.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libaprutil-1.shared.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libexpat.shared.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libpcre.shared.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/httpd.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libapr-1.shared.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libaprutil-1.shared.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libexpat.shared.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libpcre.shared.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/httpd.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libapr-1.shared.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libaprutil-1.shared.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libexpat.shared.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/libpcre.shared.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/apache/slash/httpd.a.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+cp: cannot stat 'slash/httpd_slashed': No such file or directory

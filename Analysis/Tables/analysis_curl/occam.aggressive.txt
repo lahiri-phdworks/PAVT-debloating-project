@@ -1,0 +1,26 @@
+Found curl.bc
+Found libcurl.so.bc
+============================================================
+Running httpd with dynamic libraries 
+slash options --inter-spec-policy=aggressive --intra-spec-policy=aggressive --stats 
+============================================================
+Traceback (most recent call last):
+  File "/usr/local/bin/slash", line 6, in <module>
+    from pkg_resources import load_entry_point
+  File "/usr/local/lib/python2.7/dist-packages/pkg_resources/__init__.py", line 33, in <module>
+    import platform
+  File "/usr/lib/python2.7/platform.py", line 1375, in <module>
+    r'([\w.+]+)\s*'  # "version<space>"
+  File "/usr/lib/python2.7/re.py", line 194, in compile
+    return _compile(pattern, flags)
+  File "/usr/lib/python2.7/re.py", line 249, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 576, in compile
+    code = _code(p, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 561, in _code
+    _compile(code, p.data, flags)
+  File "/usr/lib/python2.7/sre_compile.py", line 124, in _compile
+    elif _simple(av) and op is not REPEAT:
+  File "/usr/lib/python2.7/sre_compile.py", line 431, in _simple
+    return lo == hi == 1 and av[2][0][0] != SUBPATTERN
+KeyboardInterrupt

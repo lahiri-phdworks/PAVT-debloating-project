@@ -1,0 +1,87 @@
+Found curl.bc
+Found libcurl.so.bc
+============================================================
+Running httpd with dynamic libraries 
+slash options --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive --stats 
+============================================================
+
+slash working on curl.bc wrt libcurl.so.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 11:53:57] Starting Profiling before specialization...
+done
+[02/12/2020 11:53:57] Starting Computing interfaces...
+done
+[02/12/2020 11:53:58] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:53:58] Started global fixpoint ......
+[02/12/2020 11:53:58] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:54:12] Starting Inter-module module specialization...
+done
+[02/12/2020 11:54:12] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:54:13] Starting Computing interfaces...
+done
+[02/12/2020 11:54:13] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:54:15] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:54:15] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:54:31] Starting Inter-module module specialization...
+done
+[02/12/2020 11:54:31] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:54:32] Starting Computing interfaces...
+done
+[02/12/2020 11:54:32] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:54:34] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:54:34] Finished global fixpoint....
+[02/12/2020 11:54:34] Starting Stripping symbols...
+done
+[02/12/2020 11:54:34] Starting Profiling after specialization...
+done
+	Module: /test/examples/portfolio/curl/slash_specialized/libcurl.so.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/curl/slash_specialized/curl.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/curl/slash_specialized/libcurl.so.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/curl/slash_specialized/curl.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+Traceback (most recent call last):
+  File "/usr/local/bin/slash", line 11, in <module>
+    load_entry_point('razor==1.1.0', 'console_scripts', 'slash')()
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 109, in entrypoint
+    return Slash(sys.argv).run() if utils.checkOccamLib() else 1
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 645, in run
+    native_lib_flags, ldflags)
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 627, in link
+    driver.run('llvm-link', amalargs)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+razor.driver.ReturnCode: /usr/lib/llvm-10/bin/llvm-link -override /test/examples/portfolio/curl/slash_specialized/curl.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o /test/examples/portfolio/curl/slash_specialized/amalgamation.bc
+returned 1

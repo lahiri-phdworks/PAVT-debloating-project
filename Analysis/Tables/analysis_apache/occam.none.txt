@@ -1,0 +1,271 @@
+Checking all the bitcode files are available ...
+Found httpd.bc
+Found libapr-1.shared.bc
+Found libaprutil-1.shared.bc
+Found libpcre.shared.bc
+Found libexpat.shared.bc
+OK!
+============================================================
+Running slash --inter-spec-policy=none --intra-spec-policy=none --stats  --work-dir=slash httpd.manifest 
+                                                            
+{ "main" : "httpd.bc"
+, "binary"  : "httpd_slashed"
+, "modules"    : ["libapr-1.shared.bc", "libaprutil-1.shared.bc", "libpcre.shared.bc","libexpat.shared.bc"]
+, "native_libs" : ["-liconv", "-ldl", "-lpthread"]
+, "static_args"    : ["-d", "/vagrant/www"]
+, "name"    : "httpd"
+}
+                                                            
+============================================================
+
+slash working on httpd.bc wrt libapr-1.shared.bc libaprutil-1.shared.bc libpcre.shared.bc libexpat.shared.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 11:49:55] Starting Profiling before specialization...
+done
+[02/12/2020 11:49:57] Starting Computing interfaces...
+done
+[02/12/2020 11:49:58] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:49:59] Started global fixpoint ......
+[02/12/2020 11:49:59] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra module optimization finished succesfully
+	intra module optimization finished succesfully
+	intra module optimization finished succesfully
+	intra module optimization finished succesfully
+done
+[02/12/2020 11:50:14] Starting Computing interfaces...
+done
+[02/12/2020 11:50:15] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:50:21] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:50:22] Finished global fixpoint....
+[02/12/2020 11:50:22] Starting Stripping symbols...
+done
+[02/12/2020 11:50:22] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/portfolio/apache/slash/httpd.a.i.p.i.h.x.bc -o httpd_slashed -liconv -ldl -lpthread
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/portfolio/apache/slash/httpd.a.i.p.i.h.x.bc -o httpd_slashed -liconv -ldl -lpthread
+returned 1
+
+Statistics for libapr-1 before specialization
+	[CFG analysis]
+	  689 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 6055 Number of basic blocks
+	45409 Number of instructions
+	14162 Number of direct calls
+	13311 Number of external calls
+	   17 Number of assembly calls
+	  113 Number of indirect calls
+	    0 Number of unknown calls
+	  376 Number of loops   
+	    8 Number of bounded loops
+	[Memory analysis]
+	7571 Number of memory instructions
+	 491 Statically safe memory accesses
+	7080 Statically unknown memory accesses
+
+Statistics for libapr-1 after specialization
+	[CFG analysis]
+	  281 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 4453 Number of basic blocks
+	25373 Number of instructions
+	 1437 Number of direct calls
+	 1108 Number of external calls
+	   11 Number of assembly calls
+	   69 Number of indirect calls
+	    0 Number of unknown calls
+	  313 Number of loops   
+	    2 Number of bounded loops
+	[Memory analysis]
+	6217 Number of memory instructions
+	 391 Statically safe memory accesses
+	5826 Statically unknown memory accesses
+
+Statistics for libaprutil-1 before specialization
+	[CFG analysis]
+	  371 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 3034 Number of basic blocks
+	36729 Number of instructions
+	11283 Number of direct calls
+	10840 Number of external calls
+	    0 Number of assembly calls
+	  107 Number of indirect calls
+	    0 Number of unknown calls
+	  164 Number of loops   
+	    8 Number of bounded loops
+	[Memory analysis]
+	6047 Number of memory instructions
+	1166 Statically safe memory accesses
+	4881 Statically unknown memory accesses
+
+Statistics for libaprutil-1 after specialization
+	[CFG analysis]
+	  92 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 908 Number of basic blocks
+	8794 Number of instructions
+	 312 Number of direct calls
+	 278 Number of external calls
+	   0 Number of assembly calls
+	  25 Number of indirect calls
+	   0 Number of unknown calls
+	  44 Number of loops   
+	   2 Number of bounded loops
+	[Memory analysis]
+	2040 Number of memory instructions
+	 184 Statically safe memory accesses
+	1856 Statically unknown memory accesses
+
+Statistics for libexpat before specialization
+	[CFG analysis]
+	  323 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 4981 Number of basic blocks
+	26952 Number of instructions
+	 6433 Number of direct calls
+	 5830 Number of external calls
+	    0 Number of assembly calls
+	  320 Number of indirect calls
+	    0 Number of unknown calls
+	  180 Number of loops   
+	    0 Number of bounded loops
+	[Memory analysis]
+	4788 Number of memory instructions
+	 334 Statically safe memory accesses
+	4454 Statically unknown memory accesses
+
+Statistics for libexpat after specialization
+	[CFG analysis]
+	  252 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 4693 Number of basic blocks
+	19860 Number of instructions
+	  644 Number of direct calls
+	  120 Number of external calls
+	    0 Number of assembly calls
+	  296 Number of indirect calls
+	    0 Number of unknown calls
+	  169 Number of loops   
+	    0 Number of bounded loops
+	[Memory analysis]
+	4447 Number of memory instructions
+	 343 Statically safe memory accesses
+	4104 Statically unknown memory accesses
+
+Statistics for libpcre before specialization
+	[CFG analysis]
+	   46 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 3887 Number of basic blocks
+	28189 Number of instructions
+	 8065 Number of direct calls
+	 7912 Number of external calls
+	    0 Number of assembly calls
+	   33 Number of indirect calls
+	    0 Number of unknown calls
+	   70 Number of loops   
+	    4 Number of bounded loops
+	[Memory analysis]
+	4371 Number of memory instructions
+	 752 Statically safe memory accesses
+	3619 Statically unknown memory accesses
+
+Statistics for libpcre after specialization
+	[CFG analysis]
+	   16 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2966 Number of basic blocks
+	16938 Number of instructions
+	  279 Number of direct calls
+	  173 Number of external calls
+	    0 Number of assembly calls
+	   13 Number of indirect calls
+	    0 Number of unknown calls
+	   56 Number of loops   
+	    0 Number of bounded loops
+	[Memory analysis]
+	4108 Number of memory instructions
+	1116 Statically safe memory accesses
+	2992 Statically unknown memory accesses
+
+Statistics for httpd before specialization
+	[CFG analysis]
+	 1083 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	12943 Number of basic blocks
+	83238 Number of instructions
+	22603 Number of direct calls
+	20712 Number of external calls
+	    0 Number of assembly calls
+	  262 Number of indirect calls
+	    0 Number of unknown calls
+	  557 Number of loops   
+	    6 Number of bounded loops
+	[Memory analysis]
+	17071 Number of memory instructions
+	 3151 Statically safe memory accesses
+	13920 Statically unknown memory accesses
+
+Statistics for httpd after specialization
+	[CFG analysis]
+	  477 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	11615 Number of basic blocks
+	62428 Number of instructions
+	 5279 Number of direct calls
+	 4152 Number of external calls
+	    0 Number of assembly calls
+	  295 Number of indirect calls
+	    0 Number of unknown calls
+	  514 Number of loops   
+	    6 Number of bounded loops
+	[Memory analysis]
+	16334 Number of memory instructions
+	 3144 Statically safe memory accesses
+	13190 Statically unknown memory accesses
+	Module: /test/examples/portfolio/apache/slash/libapr-1.shared.i.bc
+	Intra-specialization policy=none
+	skipped intra-module specialization
+	Module: /test/examples/portfolio/apache/slash/libaprutil-1.shared.i.bc
+	Intra-specialization policy=none
+	skipped intra-module specialization
+	Module: /test/examples/portfolio/apache/slash/libexpat.shared.i.bc
+	Intra-specialization policy=none
+	skipped intra-module specialization
+	Module: /test/examples/portfolio/apache/slash/libpcre.shared.i.bc
+	Intra-specialization policy=none
+	skipped intra-module specialization
+	Module: /test/examples/portfolio/apache/slash/httpd.a.i.bc
+	Intra-specialization policy=none
+	skipped intra-module specialization
+Skipped inter-module specialization
+cp: cannot stat 'slash/httpd_slashed': No such file or directory

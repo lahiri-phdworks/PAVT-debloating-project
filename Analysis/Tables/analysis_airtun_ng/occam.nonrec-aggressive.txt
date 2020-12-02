@@ -1,0 +1,539 @@
+Found airtun_ng-airtun-ng.o.bc
+Found libaclib_la-crypto.o.bc
+Found libaircrack_util_la-common.o.bc
+Found libaircrack_osdep_la-osdep.o.bc
+Found libaircrack_osdep_la-network.o.bc
+Found libaircrack_osdep_la-file.o.bc
+Found libaircrack_osdep_la-linux.o.bc
+Found libaircrack_osdep_la-linux_tap.o.bc
+Found libaircrack_osdep_la-common.o.bc
+Found radiotap.o.bc
+============================================================
+Running httpd with dynamic libraries 
+slash options --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive --stats 
+============================================================
+
+slash working on airtun_ng-airtun-ng.o.bc wrt libaclib_la-crypto.o.bc libaircrack_util_la-common.o.bc libaircrack_osdep_la-osdep.o.bc libaircrack_osdep_la-network.o.bc libaircrack_osdep_la-file.o.bc libaircrack_osdep_la-linux.o.bc libaircrack_osdep_la-linux_tap.o.bc libaircrack_osdep_la-common.o.bc radiotap.o.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 14:40:18] Starting Profiling before specialization...
+done
+[02/12/2020 14:40:18] Starting Computing interfaces...
+done
+[02/12/2020 14:40:18] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:40:18] Started global fixpoint ......
+[02/12/2020 14:40:18] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:40:20] Starting Inter-module module specialization...
+done
+[02/12/2020 14:40:20] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:40:20] Starting Computing interfaces...
+done
+[02/12/2020 14:40:21] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:40:22] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:40:22] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:40:23] Starting Inter-module module specialization...
+done
+[02/12/2020 14:40:23] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:40:24] Starting Computing interfaces...
+done
+[02/12/2020 14:40:24] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:40:25] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:40:25] Finished global fixpoint....
+[02/12/2020 14:40:25] Starting Stripping symbols...
+done
+[02/12/2020 14:40:25] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o aircrack_ng_slashed -lm -lcrypto -ldl -lnl-3 -lnl-genl-3
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o aircrack_ng_slashed -lm -lcrypto -ldl -lnl-3 -lnl-genl-3
+returned 1
+
+Statistics for libaircrack_osdep_la-linux before specialization
+	[CFG analysis]
+	  25 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 493 Number of basic blocks
+	2660 Number of instructions
+	 759 Number of direct calls
+	 740 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	   8 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	403 Number of memory instructions
+	127 Statically safe memory accesses
+	276 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-linux after specialization
+	[CFG analysis]
+	  20 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 449 Number of basic blocks
+	2409 Number of instructions
+	 712 Number of direct calls
+	 670 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	   4 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	363 Number of memory instructions
+	105 Statically safe memory accesses
+	258 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-linux_tap before specialization
+	[CFG analysis]
+	 10 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 21 Number of basic blocks
+	157 Number of instructions
+	 44 Number of direct calls
+	 44 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	31 Number of memory instructions
+	 1 Statically safe memory accesses
+	30 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-linux_tap after specialization
+	[CFG analysis]
+	 10 Number of functions
+	  1 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 21 Number of basic blocks
+	155 Number of instructions
+	 44 Number of direct calls
+	 44 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	31 Number of memory instructions
+	 1 Statically safe memory accesses
+	30 Statically unknown memory accesses
+
+Statistics for libaircrack_util_la-common before specialization
+	[CFG analysis]
+	 16 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	136 Number of basic blocks
+	629 Number of instructions
+	 83 Number of direct calls
+	 79 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	 11 Number of loops   
+	  1 Number of bounded loops
+	[Memory analysis]
+	80 Number of memory instructions
+	 9 Statically safe memory accesses
+	71 Statically unknown memory accesses
+
+Statistics for libaircrack_util_la-common after specialization
+	[CFG analysis]
+	  2 Number of functions
+	  2 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 24 Number of basic blocks
+	133 Number of instructions
+	 23 Number of direct calls
+	 23 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	17 Number of memory instructions
+	 6 Statically safe memory accesses
+	11 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-common before specialization
+	[CFG analysis]
+	 2 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	10 Number of basic blocks
+	31 Number of instructions
+	 0 Number of direct calls
+	 0 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	1 Number of memory instructions
+	0 Statically safe memory accesses
+	1 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-common after specialization
+	[CFG analysis]
+	 2 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	10 Number of basic blocks
+	31 Number of instructions
+	 0 Number of direct calls
+	 0 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	1 Number of memory instructions
+	0 Statically safe memory accesses
+	1 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-file before specialization
+	[CFG analysis]
+	 11 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 52 Number of basic blocks
+	254 Number of instructions
+	 41 Number of direct calls
+	 41 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	50 Number of memory instructions
+	21 Statically safe memory accesses
+	29 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-file after specialization
+	[CFG analysis]
+	 11 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 52 Number of basic blocks
+	254 Number of instructions
+	 41 Number of direct calls
+	 41 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	50 Number of memory instructions
+	21 Statically safe memory accesses
+	29 Statically unknown memory accesses
+
+Statistics for libaclib_la-crypto before specialization
+	[CFG analysis]
+	  39 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 289 Number of basic blocks
+	4627 Number of instructions
+	 223 Number of direct calls
+	 214 Number of external calls
+	   1 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  24 Number of loops   
+	   4 Number of bounded loops
+	[Memory analysis]
+	978 Number of memory instructions
+	267 Statically safe memory accesses
+	711 Statically unknown memory accesses
+
+Statistics for libaclib_la-crypto after specialization
+	[CFG analysis]
+	   9 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 110 Number of basic blocks
+	1722 Number of instructions
+	 100 Number of direct calls
+	 100 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  11 Number of loops   
+	   3 Number of bounded loops
+	[Memory analysis]
+	412 Number of memory instructions
+	121 Statically safe memory accesses
+	291 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-network before specialization
+	[CFG analysis]
+	 15 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	138 Number of basic blocks
+	721 Number of instructions
+	151 Number of direct calls
+	134 Number of external calls
+	 13 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  5 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	138 Number of memory instructions
+	 50 Statically safe memory accesses
+	 88 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-network after specialization
+	[CFG analysis]
+	 13 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	164 Number of basic blocks
+	802 Number of instructions
+	179 Number of direct calls
+	169 Number of external calls
+	 19 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	 10 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	149 Number of memory instructions
+	 62 Statically safe memory accesses
+	 87 Statically unknown memory accesses
+
+Statistics for radiotap before specialization
+	[CFG analysis]
+	  2 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 45 Number of basic blocks
+	262 Number of instructions
+	  0 Number of direct calls
+	  0 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	66 Number of memory instructions
+	 0 Statically safe memory accesses
+	66 Statically unknown memory accesses
+
+Statistics for radiotap after specialization
+	[CFG analysis]
+	  2 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 45 Number of basic blocks
+	264 Number of instructions
+	  0 Number of direct calls
+	  0 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	66 Number of memory instructions
+	 0 Statically safe memory accesses
+	66 Statically unknown memory accesses
+
+Statistics for airtun_ng-airtun-ng before specialization
+	[CFG analysis]
+	   4 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 451 Number of basic blocks
+	2521 Number of instructions
+	 328 Number of direct calls
+	 322 Number of external calls
+	   1 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  11 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	671 Number of memory instructions
+	105 Statically safe memory accesses
+	566 Statically unknown memory accesses
+
+Statistics for airtun_ng-airtun-ng after specialization
+	[CFG analysis]
+	   3 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 450 Number of basic blocks
+	2523 Number of instructions
+	 330 Number of direct calls
+	 326 Number of external calls
+	   1 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  12 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	672 Number of memory instructions
+	136 Statically safe memory accesses
+	536 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-osdep before specialization
+	[CFG analysis]
+	 31 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 96 Number of basic blocks
+	269 Number of instructions
+	 35 Number of direct calls
+	 35 Number of external calls
+	  0 Number of assembly calls
+	 25 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	35 Number of memory instructions
+	 2 Statically safe memory accesses
+	33 Statically unknown memory accesses
+
+Statistics for libaircrack_osdep_la-osdep after specialization
+	[CFG analysis]
+	 18 Number of functions
+	  7 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 61 Number of basic blocks
+	181 Number of instructions
+	 26 Number of direct calls
+	 26 Number of external calls
+	  0 Number of assembly calls
+	 10 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	26 Number of memory instructions
+	 4 Statically safe memory accesses
+	22 Statically unknown memory accesses
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux_tap.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_util_la-common.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-common.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-file.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaclib_la-crypto.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-network.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/radiotap.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-osdep.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux_tap.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_util_la-common.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-common.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-file.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaclib_la-crypto.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-network.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/radiotap.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-osdep.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+cp: cannot stat './slash_specialized/knockd_slashed': No such file or directory

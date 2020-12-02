@@ -1,0 +1,20 @@
+make: Nothing to be done for 'all'.
+ERROR:Error reading the .llvm_bc section of ELF file main.o.
+ERROR:Error reading the .llvm_bc section of ELF file library.o.
+
+slash working on main.o.bc wrt library.o.bc with lib_spec  ...
+
+slash main_spec   ...
+Traceback (most recent call last):
+  File "/usr/local/bin/slash", line 11, in <module>
+    load_entry_point('razor==1.1.0', 'console_scripts', 'slash')()
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 109, in entrypoint
+    return Slash(sys.argv).run() if utils.checkOccamLib() else 1
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 315, in run
+    module, libs, lib_spec, main_spec, self.work_dir)
+  File "/usr/local/lib/python2.7/dist-packages/razor/utils.py", line 253, in populate_work_dir
+    shutil.copyfile(x, target)
+  File "/usr/lib/python2.7/shutil.py", line 96, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'main.o.bc'
+cp: cannot stat 'slash/main': No such file or directory

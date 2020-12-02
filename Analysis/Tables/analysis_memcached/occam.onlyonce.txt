@@ -1,0 +1,157 @@
+Found memcached.bc
+Found libevent.a.bc
+============================================================
+Running memcacched with libevent library
+slash options --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce --no-strip --stats 
+============================================================
+
+slash working on memcached.bc wrt libevent.a.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 11:54:42] Starting Profiling before specialization...
+done
+[02/12/2020 11:54:43] Starting Computing interfaces...
+done
+[02/12/2020 11:54:43] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:54:44] Started global fixpoint ......
+[02/12/2020 11:54:44] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:54:48] Starting Inter-module module specialization...
+done
+[02/12/2020 11:54:49] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:54:49] Starting Computing interfaces...
+done
+[02/12/2020 11:54:49] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:54:50] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:54:50] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:54:52] Starting Inter-module module specialization...
+done
+[02/12/2020 11:54:52] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:54:52] Starting Computing interfaces...
+done
+[02/12/2020 11:54:52] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:54:53] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 11:54:53] Finished global fixpoint....
+[02/12/2020 11:54:53] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/portfolio/memcached/slash/memcached.a.i.p.s.r.i.h.p.s.r.i.h.bc -o memcached -lpthread -O2
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/portfolio/memcached/slash/memcached.a.i.p.s.r.i.h.p.s.r.i.h.bc -o memcached -lpthread -O2
+returned 1
+
+Statistics for memcached before specialization
+	[CFG analysis]
+	  138 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2716 Number of basic blocks
+	18670 Number of instructions
+	 5687 Number of direct calls
+	 5052 Number of external calls
+	   16 Number of assembly calls
+	   57 Number of indirect calls
+	    0 Number of unknown calls
+	   60 Number of loops   
+	   12 Number of bounded loops
+	[Memory analysis]
+	3741 Number of memory instructions
+	 437 Statically safe memory accesses
+	3304 Statically unknown memory accesses
+
+Statistics for memcached after specialization
+	[CFG analysis]
+	   70 Number of functions
+	    1 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2827 Number of basic blocks
+	23498 Number of instructions
+	 7969 Number of direct calls
+	 7514 Number of external calls
+	   16 Number of assembly calls
+	   43 Number of indirect calls
+	    0 Number of unknown calls
+	   52 Number of loops   
+	   10 Number of bounded loops
+	[Memory analysis]
+	4548 Number of memory instructions
+	 512 Statically safe memory accesses
+	4036 Statically unknown memory accesses
+
+Statistics for libevent before specialization
+	[CFG analysis]
+	  681 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 7990 Number of basic blocks
+	48498 Number of instructions
+	13025 Number of direct calls
+	10619 Number of external calls
+	   63 Number of assembly calls
+	  733 Number of indirect calls
+	    0 Number of unknown calls
+	  330 Number of loops   
+	    6 Number of bounded loops
+	[Memory analysis]
+	8540 Number of memory instructions
+	1462 Statically safe memory accesses
+	7078 Statically unknown memory accesses
+
+Statistics for libevent after specialization
+	[CFG analysis]
+	  48 Number of functions
+	   1 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 858 Number of basic blocks
+	5882 Number of instructions
+	1533 Number of direct calls
+	1398 Number of external calls
+	   0 Number of assembly calls
+	  10 Number of indirect calls
+	   0 Number of unknown calls
+	  27 Number of loops   
+	   1 Number of bounded loops
+	[Memory analysis]
+	1151 Number of memory instructions
+	 150 Statically safe memory accesses
+	1001 Statically unknown memory accesses
+	Module: /test/examples/portfolio/memcached/slash/memcached.a.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/portfolio/memcached/slash/libevent.a.i.bc
+	Intra-specialization policy=onlyonce
+	Inter-specialization policy=onlyonce
+	Module: /test/examples/portfolio/memcached/slash/memcached.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/portfolio/memcached/slash/libevent.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Inter-specialization policy=onlyonce
+cp: cannot stat 'slash/memcached': No such file or directory

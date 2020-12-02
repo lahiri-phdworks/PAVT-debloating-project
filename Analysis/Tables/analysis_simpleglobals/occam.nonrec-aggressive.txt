@@ -1,0 +1,79 @@
+
+slash working on main.bc wrt  with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 15:00:33] Starting Profiling before specialization...
+done
+[02/12/2020 15:00:33] Starting Computing interfaces...
+done
+[02/12/2020 15:00:33] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 15:00:33] Started global fixpoint ......
+[02/12/2020 15:00:33] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	ipdse finished succesfully
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 15:00:33] Starting Inter-module module specialization...
+done
+[02/12/2020 15:00:33] Starting Inter-module module rewriting...
+done
+[02/12/2020 15:00:33] Starting Computing interfaces...
+done
+[02/12/2020 15:00:33] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 15:00:33] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 15:00:33] Finished global fixpoint....
+[02/12/2020 15:00:33] Starting Stripping symbols...
+done
+[02/12/2020 15:00:33] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/globals/slash/main.a.i.p.s.r.i.h.x.bc -o main 
+
+done.
+
+Statistics for main before specialization
+	[CFG analysis]
+	 3 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	 9 Number of basic blocks
+	30 Number of instructions
+	 5 Number of direct calls
+	 3 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	10 Number of memory instructions
+	 3 Statically safe memory accesses
+	 7 Statically unknown memory accesses
+
+Statistics for main after specialization
+	[CFG analysis]
+	 3 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	11 Number of basic blocks
+	32 Number of instructions
+	 6 Number of direct calls
+	 4 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	7 Number of memory instructions
+	2 Statically safe memory accesses
+	5 Statically unknown memory accesses
+	Module: /test/examples/globals/slash/main.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive

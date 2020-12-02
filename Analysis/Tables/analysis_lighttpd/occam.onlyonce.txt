@@ -1,0 +1,72 @@
+Install directory already exists. Skipped compilation ...
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.server.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.response.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.connections.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.configfile.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.configparser.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.request.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.proc_open.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.buffer.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.log.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.keyvalue.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.chunk.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.http_chunk.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.stream.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.stat_cache.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.plugin.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.joblist.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.etag.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.array.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.data_string.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.data_count.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.data_array.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.data_integer.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.md5.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.data_fastcgi.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent_select.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent_linux_rtsig.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent_poll.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent_linux_sysepoll.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent_solaris_devpoll.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.fdevent_freebsd_kqueue.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.data_config.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.bitset.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.inet_ntop_cache.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.crc32.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.connections-glue.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.configfile-glue.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.http-header-glue.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network_write.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network_linux_sendfile.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network_freebsd_sendfile.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network_writev.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network_solaris_sendfilev.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.network_openssl.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.splaytree.o.bc
+WARNING:Failed to find the file /test/examples/linux/lighttpd/lighttpd-1.4.13/src/.status_counter.o.bc
+llvm-link: error: Could not open input file: No such file or directory
+llvm-link: error:  loading file ''
+ERROR:There was an error linking input files into /test/examples/linux/lighttpd/install/sbin/lighttpd.bc because exit status 1.
+mv: cannot stat '/test/examples/linux/lighttpd/install/sbin/lighttpd.bc': No such file or directory
+==================================================================================
+ Running "slash" --inter-spec-policy=none --intra-spec-policy=none --no-strip --stats  --work-dir=slash lhttpd.manifest 
+==================================================================================
+
+slash working on lighttpd.bc wrt  with lib_spec  ...
+
+slash main_spec   ...
+Traceback (most recent call last):
+  File "/usr/local/bin/slash", line 11, in <module>
+    load_entry_point('razor==1.1.0', 'console_scripts', 'slash')()
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 109, in entrypoint
+    return Slash(sys.argv).run() if utils.checkOccamLib() else 1
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 315, in run
+    module, libs, lib_spec, main_spec, self.work_dir)
+  File "/usr/local/lib/python2.7/dist-packages/razor/utils.py", line 253, in populate_work_dir
+    shutil.copyfile(x, target)
+  File "/usr/lib/python2.7/shutil.py", line 96, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: u'lighttpd.bc'
+Something failed while running slash
