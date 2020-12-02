@@ -84,3 +84,5 @@ make
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/grpc/libs/opts
 
 sudo docker run --name occam -it -v $PWD:/occamtest prodrelworks/occam10:latest
+
+https://github.com/cxreet/razor/wiki/A-Simple-Demo-With-Heuristics
