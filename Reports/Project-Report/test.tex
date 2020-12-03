@@ -1,0 +1,31 @@
+\documentclass[10pt]{report}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+ \usepackage{graphicx}
+
+
+\begin{document}
+
+
+
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllllllll}
+\multicolumn{1}{c}{}                                     & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{basic blocks}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{direct   calls}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\
+\multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Libraries}}} & \textbf{Before}                & \textbf{After}               & \textbf{Before}                 & \textbf{After}                 & \textbf{Before}                 & \textbf{After}                 & \textbf{Before}                  & \textbf{After}                  & \textbf{Before}                      & \textbf{After}                     \\
+{\color[HTML]{24292E} libaircrack\_util\_la-common}      & 16                             & 2                            & 136                             & 24                             & 629                             & 133                            & 83                               & 23                              & 80                                   & 17                                 \\
+{\color[HTML]{24292E} libaclib\_la-crypto}               & 39                             & 9                            & 289                             & 110                            & 4627                            & 1722                           & 223                              & 100                             & 978                                  & 412                                \\
+{\color[HTML]{24292E} bzip2}                             & 31                             & 1                            & 683                             & 3                              & 4087                            & 9                              & 602                              & 3                               & 982                                  & 2                                  \\
+{\color[HTML]{24292E} netperf}                           & 90                             & 77                           & 750                             & 671                            & 4874                            & 4441                           & 427                              & 385                             & 2160                                 & 1991                              
+\end{tabular}%
+}
+\end{table}
+
+
+
+
+
+
+
+\end{document}
