@@ -1,0 +1,546 @@
+Checking all the bitcode files are available ...
+Found httpd.bc
+Found libapr-1.shared.bc
+Found libaprutil-1.shared.bc
+Found libpcre.shared.bc
+Found libexpat.shared.bc
+OK!
+============================================================
+Running slash --inter-spec-policy=aggressive --intra-spec-policy=aggressive --stats  --work-dir=slash httpd.manifest 
+                                                            
+{ "main" : "httpd.bc"
+, "binary"  : "httpd_slashed"
+, "modules"    : ["libapr-1.shared.bc", "libaprutil-1.shared.bc", "libpcre.shared.bc","libexpat.shared.bc"]
+, "native_libs" : ["-liconv", "-ldl", "-lpthread"]
+, "static_args"    : ["-d", "/vagrant/www"]
+, "name"    : "httpd"
+}
+                                                            
+============================================================
+
+slash working on httpd.bc wrt libapr-1.shared.bc libaprutil-1.shared.bc libpcre.shared.bc libexpat.shared.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 09:50:04] Starting Profiling before specialization...
+done
+[02/12/2020 09:50:05] Starting Computing interfaces...
+done
+[02/12/2020 09:50:06] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 09:50:08] Started global fixpoint ......
+[02/12/2020 09:50:08] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/pool.py", line 82, in rf
+    result[i] = f(args[i])
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 517, in intra
+    log=open(fn, 'w'))
+  File "/usr/local/lib/python2.7/dist-packages/razor/passes.py", line 391, in peval
+    force_inline(tmp.name, done.name, False, force_inline_spec)
+  File "/usr/local/lib/python2.7/dist-packages/razor/passes.py", line 153, in force_inline
+    shutil.copy(input_file, output_file)
+  File "/usr/lib/python2.7/shutil.py", line 139, in copy
+    copyfile(src, dst)
+  File "/usr/lib/python2.7/shutil.py", line 96, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: '/tmp/tmpggJk4g.bc'
+	Module: /test/examples/portfolio/apache/slash/libapr-1.shared.i.bc
+	Intra-specialization policy=aggressive
+	Module: /test/examples/portfolio/apache/slash/libaprutil-1.shared.i.bc
+	Intra-specialization policy=aggressive
+	Module: /test/examples/portfolio/apache/slash/libexpat.shared.i.bc
+	Intra-specialization policy=aggressive
+	Module: /test/examples/portfolio/apache/slash/libpcre.shared.i.bc
+	Intra-specialization policy=aggressive
+Exception in worker for Intra-module specialization/optimization:
+------------------------------------------------------------
+------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/bin/slash", line 11, in <module>
+    load_entry_point('razor==1.1.0', 'console_scripts', 'slash')()
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 109, in entrypoint
+    return Slash(sys.argv).run() if utils.checkOccamLib() else 1
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 519, in run
+    pool.InParallel(intra, files.values(), self.pool)
+  File "/usr/local/lib/python2.7/dist-packages/razor/pool.py", line 113, in InParallel
+    result = pool.map(f, args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/pool.py", line 96, in map
+    sem.acquire(True)
+  File "/usr/lib/python2.7/threading.py", line 468, in acquire
+    self.__cond.wait()
+  File "/usr/lib/python2.7/threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt

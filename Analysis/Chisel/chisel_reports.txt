@@ -1,0 +1,14 @@
+====================================================
+                       Report                       
+====================================================
+             Total Time :                706.4s
+            Oracle Time :                703.7s
+   Global Success Ratio :   81% (   52 /    64)
+    Local Success Ratio :   15% (  172 /  1108)
+  #Functions (Original) :                    43
+ #Statements (Original) :                  1804
+   #Functions (Reduced) :                    13
+  #Statements (Reduced) :                   159
+
+Unique gadgets found: 2492
+Unique gadgets found: 260

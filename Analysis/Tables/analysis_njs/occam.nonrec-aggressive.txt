@@ -1,0 +1,140 @@
+Found njs.bc
+Found libnjs.a.bc
+============================================================
+Running njs with libraries
+slash options --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive --stats  
+============================================================
+
+slash working on njs.bc wrt libnjs.a.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 12:02:51] Starting Profiling before specialization...
+done
+[02/12/2020 12:02:52] Starting Computing interfaces...
+done
+[02/12/2020 12:02:52] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:02:53] Started global fixpoint ......
+[02/12/2020 12:02:53] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 12:03:35] Starting Inter-module module specialization...
+done
+[02/12/2020 12:03:36] Starting Inter-module module rewriting...
+done
+[02/12/2020 12:03:38] Starting Computing interfaces...
+done
+[02/12/2020 12:03:40] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:03:45] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 12:03:47] Finished global fixpoint....
+[02/12/2020 12:03:47] Starting Stripping symbols...
+done
+[02/12/2020 12:03:48] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/portfolio/njs/slash/njs.a.i.p.s.r.i.h.x.bc -o njs_slashed -lpcre -lreadline
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/portfolio/njs/slash/njs.a.i.p.s.r.i.h.x.bc -o njs_slashed -lpcre -lreadline
+returned 1
+
+Statistics for njs before specialization
+	[CFG analysis]
+	  24 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 278 Number of basic blocks
+	1763 Number of instructions
+	 506 Number of direct calls
+	 489 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  13 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	306 Number of memory instructions
+	135 Statically safe memory accesses
+	171 Statically unknown memory accesses
+
+Statistics for njs after specialization
+	[CFG analysis]
+	  17 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 282 Number of basic blocks
+	1532 Number of instructions
+	 202 Number of direct calls
+	 193 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  13 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	311 Number of memory instructions
+	129 Statically safe memory accesses
+	182 Statically unknown memory accesses
+
+Statistics for libnjs before specialization
+	[CFG analysis]
+	  1142 Number of functions
+	     0 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 15006 Number of basic blocks
+	119219 Number of instructions
+	 33677 Number of direct calls
+	 28836 Number of external calls
+	     3 Number of assembly calls
+	    90 Number of indirect calls
+	     0 Number of unknown calls
+	   517 Number of loops   
+	    20 Number of bounded loops
+	[Memory analysis]
+	19021 Number of memory instructions
+	 2702 Statically safe memory accesses
+	16319 Statically unknown memory accesses
+
+Statistics for libnjs after specialization
+	[CFG analysis]
+	   717 Number of functions
+	     0 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 29175 Number of basic blocks
+	219465 Number of instructions
+	 13196 Number of direct calls
+	  7106 Number of external calls
+	    13 Number of assembly calls
+	   142 Number of indirect calls
+	     0 Number of unknown calls
+	  1227 Number of loops   
+	    10 Number of bounded loops
+	[Memory analysis]
+	50156 Number of memory instructions
+	 5949 Statically safe memory accesses
+	44207 Statically unknown memory accesses
+	Module: /test/examples/portfolio/njs/slash/njs.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/njs/slash/libnjs.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+cp: cannot stat 'slash/njs_slashed': No such file or directory

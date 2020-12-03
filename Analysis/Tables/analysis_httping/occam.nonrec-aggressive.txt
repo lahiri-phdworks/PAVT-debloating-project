@@ -1,0 +1,721 @@
+Found httping_modules/gen.o.bc
+Found httping_modules/http.o.bc
+Found httping_modules/io.o.bc
+Found httping_modules/error.o.bc
+Found httping_modules/utils.o.bc
+Found httping_modules/main.o.bc
+Found httping_modules/tcp.o.bc
+Found httping_modules/res.o.bc
+Found httping_modules/socks5.o.bc
+Found httping_modules/kalman.o.bc
+Found httping_modules/cookies.o.bc
+Found httping_modules/help.o.bc
+Found httping_modules/colors.o.bc
+Found httping_modules/mssl.o.bc
+============================================================
+Running httpd with dynamic libraries 
+slash options --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive --stats 
+============================================================
+
+slash working on httping_modules/main.o.bc wrt httping_modules/gen.o.bc httping_modules/http.o.bc httping_modules/io.o.bc httping_modules/error.o.bc httping_modules/utils.o.bc httping_modules/tcp.o.bc httping_modules/res.o.bc httping_modules/socks5.o.bc httping_modules/kalman.o.bc httping_modules/cookies.o.bc httping_modules/help.o.bc httping_modules/colors.o.bc httping_modules/mssl.o.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 14:41:58] Starting Profiling before specialization...
+done
+[02/12/2020 14:41:58] Starting Computing interfaces...
+done
+[02/12/2020 14:41:59] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:41:59] Started global fixpoint ......
+[02/12/2020 14:41:59] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:42:01] Starting Inter-module module specialization...
+done
+[02/12/2020 14:42:01] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:42:02] Starting Computing interfaces...
+done
+[02/12/2020 14:42:02] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:42:04] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:42:04] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:42:06] Starting Inter-module module specialization...
+done
+[02/12/2020 14:42:07] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:42:07] Starting Computing interfaces...
+done
+[02/12/2020 14:42:07] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:42:09] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:42:09] Finished global fixpoint....
+[02/12/2020 14:42:09] Starting Stripping symbols...
+done
+[02/12/2020 14:42:09] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/linux/httping/slash_specialized/httping_modules_main.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o httping_slashed -lm -lssl -lcrypto
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/httping/slash_specialized/httping_modules_main.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o httping_slashed -lm -lssl -lcrypto
+returned 1
+
+Statistics for httping_modules_mssl before specialization
+	[CFG analysis]
+	  8 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	143 Number of basic blocks
+	983 Number of instructions
+	193 Number of direct calls
+	193 Number of external calls
+	  5 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  9 Number of loops   
+	  5 Number of bounded loops
+	[Memory analysis]
+	335 Number of memory instructions
+	288 Statically safe memory accesses
+	 47 Statically unknown memory accesses
+
+Statistics for httping_modules_mssl after specialization
+	[CFG analysis]
+	  7 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	111 Number of basic blocks
+	709 Number of instructions
+	 93 Number of direct calls
+	 93 Number of external calls
+	  3 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  3 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	270 Number of memory instructions
+	234 Statically safe memory accesses
+	 36 Statically unknown memory accesses
+
+Statistics for httping_modules_cookies before specialization
+	[CFG analysis]
+	  4 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 49 Number of basic blocks
+	354 Number of instructions
+	 59 Number of direct calls
+	 57 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  4 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	158 Number of memory instructions
+	127 Statically safe memory accesses
+	 31 Statically unknown memory accesses
+
+Statistics for httping_modules_cookies after specialization
+	[CFG analysis]
+	  3 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 45 Number of basic blocks
+	270 Number of instructions
+	 27 Number of direct calls
+	 25 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  3 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	128 Number of memory instructions
+	106 Statically safe memory accesses
+	 22 Statically unknown memory accesses
+
+Statistics for httping_modules_io before specialization
+	[CFG analysis]
+	  5 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 76 Number of basic blocks
+	447 Number of instructions
+	 77 Number of direct calls
+	 77 Number of external calls
+	  3 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  3 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	144 Number of memory instructions
+	118 Statically safe memory accesses
+	 26 Statically unknown memory accesses
+
+Statistics for httping_modules_io after specialization
+	[CFG analysis]
+	  8 Number of functions
+	  4 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	152 Number of basic blocks
+	802 Number of instructions
+	 82 Number of direct calls
+	 82 Number of external calls
+	  6 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  6 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	274 Number of memory instructions
+	226 Statically safe memory accesses
+	 48 Statically unknown memory accesses
+
+Statistics for httping_modules_main before specialization
+	[CFG analysis]
+	  27 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 954 Number of basic blocks
+	5350 Number of instructions
+	 980 Number of direct calls
+	 934 Number of external calls
+	   1 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  10 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	2047 Number of memory instructions
+	1752 Statically safe memory accesses
+	 295 Statically unknown memory accesses
+
+Statistics for httping_modules_main after specialization
+	[CFG analysis]
+	  26 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 742 Number of basic blocks
+	4176 Number of instructions
+	 706 Number of direct calls
+	 660 Number of external calls
+	   1 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  10 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	1276 Number of memory instructions
+	 991 Statically safe memory accesses
+	 285 Statically unknown memory accesses
+
+Statistics for httping_modules_error before specialization
+	[CFG analysis]
+	 4 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	 8 Number of basic blocks
+	61 Number of instructions
+	20 Number of direct calls
+	19 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	15 Number of memory instructions
+	11 Statically safe memory accesses
+	 4 Statically unknown memory accesses
+
+Statistics for httping_modules_error after specialization
+	[CFG analysis]
+	 4 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	 8 Number of basic blocks
+	55 Number of instructions
+	14 Number of direct calls
+	13 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	15 Number of memory instructions
+	11 Statically safe memory accesses
+	 4 Statically unknown memory accesses
+
+Statistics for httping_modules_http before specialization
+	[CFG analysis]
+	  2 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 42 Number of basic blocks
+	269 Number of instructions
+	 35 Number of direct calls
+	 35 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	116 Number of memory instructions
+	107 Statically safe memory accesses
+	  9 Statically unknown memory accesses
+
+Statistics for httping_modules_http after specialization
+	[CFG analysis]
+	  2 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 42 Number of basic blocks
+	249 Number of instructions
+	 15 Number of direct calls
+	 15 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	116 Number of memory instructions
+	107 Statically safe memory accesses
+	  9 Statically unknown memory accesses
+
+Statistics for httping_modules_socks5 before specialization
+	[CFG analysis]
+	  1 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 44 Number of basic blocks
+	323 Number of instructions
+	 50 Number of direct calls
+	 50 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	113 Number of memory instructions
+	112 Statically safe memory accesses
+	  1 Statically unknown memory accesses
+
+Statistics for httping_modules_socks5 after specialization
+	[CFG analysis]
+	  1 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 44 Number of basic blocks
+	309 Number of instructions
+	 36 Number of direct calls
+	 36 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	113 Number of memory instructions
+	112 Statically safe memory accesses
+	  1 Statically unknown memory accesses
+
+Statistics for httping_modules_kalman before specialization
+	[CFG analysis]
+	 2 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	 4 Number of basic blocks
+	67 Number of instructions
+	 4 Number of direct calls
+	 4 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	43 Number of memory instructions
+	43 Statically safe memory accesses
+	 0 Statically unknown memory accesses
+
+Statistics for httping_modules_kalman after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for httping_modules_utils before specialization
+	[CFG analysis]
+	  5 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 33 Number of basic blocks
+	269 Number of instructions
+	 46 Number of direct calls
+	 46 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	110 Number of memory instructions
+	 90 Statically safe memory accesses
+	 20 Statically unknown memory accesses
+
+Statistics for httping_modules_utils after specialization
+	[CFG analysis]
+	  6 Number of functions
+	  3 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 40 Number of basic blocks
+	312 Number of instructions
+	 25 Number of direct calls
+	 25 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  3 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	146 Number of memory instructions
+	117 Statically safe memory accesses
+	 29 Statically unknown memory accesses
+
+Statistics for httping_modules_gen before specialization
+	[CFG analysis]
+	  6 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 27 Number of basic blocks
+	256 Number of instructions
+	 18 Number of direct calls
+	 16 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	125 Number of memory instructions
+	 88 Statically safe memory accesses
+	 37 Statically unknown memory accesses
+
+Statistics for httping_modules_gen after specialization
+	[CFG analysis]
+	  5 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 22 Number of basic blocks
+	199 Number of instructions
+	  2 Number of direct calls
+	  0 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	105 Number of memory instructions
+	 74 Statically safe memory accesses
+	 31 Statically unknown memory accesses
+
+Statistics for httping_modules_colors before specialization
+	[CFG analysis]
+	 1 Number of functions
+	 0 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	 4 Number of basic blocks
+	31 Number of instructions
+	 1 Number of direct calls
+	 1 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	24 Number of memory instructions
+	24 Statically safe memory accesses
+	 0 Statically unknown memory accesses
+
+Statistics for httping_modules_colors after specialization
+	[CFG analysis]
+	 2 Number of functions
+	 1 Number of specialized functions
+	 0 Number of bounced functions added by devirt
+	 8 Number of basic blocks
+	60 Number of instructions
+	 0 Number of direct calls
+	 0 Number of external calls
+	 0 Number of assembly calls
+	 0 Number of indirect calls
+	 0 Number of unknown calls
+	 0 Number of loops   
+	 0 Number of bounded loops
+	[Memory analysis]
+	48 Number of memory instructions
+	48 Statically safe memory accesses
+	 0 Statically unknown memory accesses
+
+Statistics for httping_modules_tcp before specialization
+	[CFG analysis]
+	  4 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 78 Number of basic blocks
+	459 Number of instructions
+	118 Number of direct calls
+	117 Number of external calls
+	  1 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	152 Number of memory instructions
+	121 Statically safe memory accesses
+	 31 Statically unknown memory accesses
+
+Statistics for httping_modules_tcp after specialization
+	[CFG analysis]
+	  5 Number of functions
+	  1 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	115 Number of basic blocks
+	634 Number of instructions
+	117 Number of direct calls
+	116 Number of external calls
+	  2 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	228 Number of memory instructions
+	178 Statically safe memory accesses
+	 50 Statically unknown memory accesses
+
+Statistics for httping_modules_help before specialization
+	[CFG analysis]
+	  4 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 61 Number of basic blocks
+	557 Number of instructions
+	250 Number of direct calls
+	181 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	156 Number of memory instructions
+	113 Statically safe memory accesses
+	 43 Statically unknown memory accesses
+
+Statistics for httping_modules_help after specialization
+	[CFG analysis]
+	  4 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 62 Number of basic blocks
+	530 Number of instructions
+	222 Number of direct calls
+	153 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	156 Number of memory instructions
+	113 Statically safe memory accesses
+	 43 Statically unknown memory accesses
+
+Statistics for httping_modules_res before specialization
+	[CFG analysis]
+	  4 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 21 Number of basic blocks
+	166 Number of instructions
+	 26 Number of direct calls
+	 26 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	67 Number of memory instructions
+	52 Statically safe memory accesses
+	15 Statically unknown memory accesses
+
+Statistics for httping_modules_res after specialization
+	[CFG analysis]
+	  4 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 21 Number of basic blocks
+	151 Number of instructions
+	 11 Number of direct calls
+	 11 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  1 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	67 Number of memory instructions
+	52 Statically safe memory accesses
+	15 Statically unknown memory accesses
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_mssl.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_cookies.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_io.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_main.o.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_error.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_http.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_socks5.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_kalman.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_utils.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_gen.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_colors.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_tcp.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_help.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_res.o.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_mssl.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_cookies.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_io.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_main.o.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_error.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_http.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_socks5.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_kalman.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_utils.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_gen.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_colors.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_tcp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_help.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/linux/httping/slash_specialized/httping_modules_res.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+cp: cannot stat './slash_specialized/httping_slashed': No such file or directory

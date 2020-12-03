@@ -1,0 +1,383 @@
+Found bzip2.bc
+Found blocksort.o.bc
+Found huffman.o.bc
+Found crctable.o.bc
+Found randtable.o.bc
+Found compress.o.bc
+Found decompress.o.bc
+Found bzlib.o.bc
+============================================================
+Running httpd with dynamic libraries 
+slash options --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce --stats 
+============================================================
+
+slash working on bzip2.bc wrt compress.o.bc decompress.o.bc huffman.o.bc bzlib.o.bc blocksort.o.bc crctable.o.bc randtable.o.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 14:42:24] Starting Profiling before specialization...
+done
+[02/12/2020 14:42:24] Starting Computing interfaces...
+done
+[02/12/2020 14:42:25] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:42:25] Started global fixpoint ......
+[02/12/2020 14:42:25] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:42:28] Starting Inter-module module specialization...
+done
+[02/12/2020 14:42:28] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:42:29] Starting Computing interfaces...
+done
+[02/12/2020 14:42:29] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:42:30] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:42:30] Finished global fixpoint....
+[02/12/2020 14:42:30] Starting Stripping symbols...
+done
+[02/12/2020 14:42:30] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/linux/bzip2/slash_specialized/bzip2.a.i.p.s.r.i.h.x.bc -o bzip2_slashed 
+
+done.
+
+Statistics for randtable before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for randtable after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for bzlib before specialization
+	[CFG analysis]
+	  31 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 683 Number of basic blocks
+	4087 Number of instructions
+	 602 Number of direct calls
+	 580 Number of external calls
+	   0 Number of assembly calls
+	  54 Number of indirect calls
+	   0 Number of unknown calls
+	  11 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	982 Number of memory instructions
+	143 Statically safe memory accesses
+	839 Statically unknown memory accesses
+
+Statistics for bzlib after specialization
+	[CFG analysis]
+	1 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	3 Number of basic blocks
+	9 Number of instructions
+	3 Number of direct calls
+	3 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	2 Number of memory instructions
+	0 Statically safe memory accesses
+	2 Statically unknown memory accesses
+
+Statistics for blocksort before specialization
+	[CFG analysis]
+	   3 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 360 Number of basic blocks
+	3766 Number of instructions
+	1014 Number of direct calls
+	1010 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  19 Number of loops   
+	   6 Number of bounded loops
+	[Memory analysis]
+	494 Number of memory instructions
+	 10 Statically safe memory accesses
+	484 Statically unknown memory accesses
+
+Statistics for blocksort after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for huffman before specialization
+	[CFG analysis]
+	   3 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 105 Number of basic blocks
+	1027 Number of instructions
+	 203 Number of direct calls
+	 203 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	   9 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	165 Number of memory instructions
+	 13 Statically safe memory accesses
+	152 Statically unknown memory accesses
+
+Statistics for huffman after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for bzip2 before specialization
+	[CFG analysis]
+	   61 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2776 Number of basic blocks
+	24412 Number of instructions
+	 4714 Number of direct calls
+	 4575 Number of external calls
+	    0 Number of assembly calls
+	   57 Number of indirect calls
+	    0 Number of unknown calls
+	  167 Number of loops   
+	   17 Number of bounded loops
+	[Memory analysis]
+	5144 Number of memory instructions
+	 286 Statically safe memory accesses
+	4858 Statically unknown memory accesses
+
+Statistics for bzip2 after specialization
+	[CFG analysis]
+	   35 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2538 Number of basic blocks
+	20540 Number of instructions
+	  621 Number of direct calls
+	  515 Number of external calls
+	    0 Number of assembly calls
+	   31 Number of indirect calls
+	    0 Number of unknown calls
+	  167 Number of loops   
+	   18 Number of bounded loops
+	[Memory analysis]
+	5209 Number of memory instructions
+	 291 Statically safe memory accesses
+	4918 Statically unknown memory accesses
+
+Statistics for decompress before specialization
+	[CFG analysis]
+	   1 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 564 Number of basic blocks
+	5292 Number of instructions
+	 782 Number of direct calls
+	 782 Number of external calls
+	   0 Number of assembly calls
+	   3 Number of indirect calls
+	   0 Number of unknown calls
+	  67 Number of loops   
+	   6 Number of bounded loops
+	[Memory analysis]
+	1132 Number of memory instructions
+	   1 Statically safe memory accesses
+	1131 Statically unknown memory accesses
+
+Statistics for decompress after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for compress before specialization
+	[CFG analysis]
+	   4 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 453 Number of basic blocks
+	6633 Number of instructions
+	 960 Number of direct calls
+	 957 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  40 Number of loops   
+	   5 Number of bounded loops
+	[Memory analysis]
+	1696 Number of memory instructions
+	  37 Statically safe memory accesses
+	1659 Statically unknown memory accesses
+
+Statistics for compress after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for crctable before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for crctable after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+	Module: /test/examples/linux/bzip2/slash_specialized/randtable.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/bzlib.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/blocksort.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/huffman.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/bzip2.a.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/decompress.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/compress.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/bzip2/slash_specialized/crctable.o.i.bc
+	Intra-specialization policy=onlyonce
+	Inter-specialization policy=onlyonce

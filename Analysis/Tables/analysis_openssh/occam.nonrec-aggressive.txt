@@ -1,0 +1,220 @@
+Found ssh.bc
+Found libcrypto.a.bc
+Found libz.a.bc
+============================================================
+Running httpd with dynamic libraries crypto, z
+slash options --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive --stats 
+============================================================
+
+slash working on ssh.bc wrt libcrypto.a.bc libz.a.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 11:58:19] Starting Profiling before specialization...
+done
+[02/12/2020 11:58:20] Starting Computing interfaces...
+done
+[02/12/2020 11:58:22] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 11:58:23] Started global fixpoint ......
+[02/12/2020 11:58:23] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 11:59:51] Starting Inter-module module specialization...
+done
+[02/12/2020 11:59:53] Starting Inter-module module rewriting...
+done
+[02/12/2020 11:59:55] Starting Computing interfaces...
+done
+[02/12/2020 11:59:56] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:00:02] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 12:00:04] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 12:01:08] Starting Inter-module module specialization...
+done
+[02/12/2020 12:01:09] Starting Inter-module module rewriting...
+done
+[02/12/2020 12:01:11] Starting Computing interfaces...
+done
+[02/12/2020 12:01:12] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:01:18] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 12:01:20] Finished global fixpoint....
+[02/12/2020 12:01:20] Starting Stripping symbols...
+done
+[02/12/2020 12:01:21] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/portfolio/openssh/slash/ssh.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o ssh_slashed -ldl -lresolv
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/portfolio/openssh/slash/ssh.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o ssh_slashed -ldl -lresolv
+returned 1
+
+Statistics for libcrypto before specialization
+	[CFG analysis]
+	  4634 Number of functions
+	     0 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 37325 Number of basic blocks
+	214980 Number of instructions
+	 23435 Number of direct calls
+	  4097 Number of external calls
+	     7 Number of assembly calls
+	  1007 Number of indirect calls
+	     0 Number of unknown calls
+	  1282 Number of loops   
+	    17 Number of bounded loops
+	[Memory analysis]
+	36380 Number of memory instructions
+	 4774 Statically safe memory accesses
+	31606 Statically unknown memory accesses
+
+Statistics for libcrypto after specialization
+	[CFG analysis]
+	   891 Number of functions
+	     1 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 42771 Number of basic blocks
+	302829 Number of instructions
+	 13313 Number of direct calls
+	  6944 Number of external calls
+	     0 Number of assembly calls
+	  1680 Number of indirect calls
+	     0 Number of unknown calls
+	  1240 Number of loops   
+	    24 Number of bounded loops
+	[Memory analysis]
+	64974 Number of memory instructions
+	 9278 Statically safe memory accesses
+	55696 Statically unknown memory accesses
+
+Statistics for libz before specialization
+	[CFG analysis]
+	  113 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2727 Number of basic blocks
+	19197 Number of instructions
+	  340 Number of direct calls
+	  132 Number of external calls
+	    0 Number of assembly calls
+	   49 Number of indirect calls
+	    0 Number of unknown calls
+	   87 Number of loops   
+	    4 Number of bounded loops
+	[Memory analysis]
+	4878 Number of memory instructions
+	 215 Statically safe memory accesses
+	4663 Statically unknown memory accesses
+
+Statistics for libz after specialization
+	[CFG analysis]
+	   20 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 1937 Number of basic blocks
+	15873 Number of instructions
+	   88 Number of direct calls
+	   33 Number of external calls
+	    0 Number of assembly calls
+	   16 Number of indirect calls
+	    0 Number of unknown calls
+	   44 Number of loops   
+	    3 Number of bounded loops
+	[Memory analysis]
+	4591 Number of memory instructions
+	 160 Statically safe memory accesses
+	4431 Statically unknown memory accesses
+
+Statistics for ssh before specialization
+	[CFG analysis]
+	 1326 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	13515 Number of basic blocks
+	67138 Number of instructions
+	12394 Number of direct calls
+	 5264 Number of external calls
+	   17 Number of assembly calls
+	   70 Number of indirect calls
+	    0 Number of unknown calls
+	  587 Number of loops   
+	  119 Number of bounded loops
+	[Memory analysis]
+	13061 Number of memory instructions
+	 2842 Statically safe memory accesses
+	10219 Statically unknown memory accesses
+
+Statistics for ssh after specialization
+	[CFG analysis]
+	   514 Number of functions
+	     0 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 34023 Number of basic blocks
+	206563 Number of instructions
+	 25342 Number of direct calls
+	 16974 Number of external calls
+	    18 Number of assembly calls
+	    88 Number of indirect calls
+	     0 Number of unknown calls
+	  1118 Number of loops   
+	    68 Number of bounded loops
+	[Memory analysis]
+	47208 Number of memory instructions
+	18225 Statically safe memory accesses
+	28983 Statically unknown memory accesses
+	Module: /test/examples/portfolio/openssh/slash/libcrypto.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/openssh/slash/libz.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/openssh/slash/ssh.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/openssh/slash/libcrypto.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/openssh/slash/libz.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/openssh/slash/ssh.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+cp: cannot stat './slash/ssh_slashed': No such file or directory

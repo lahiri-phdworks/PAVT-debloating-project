@@ -1,0 +1,10 @@
+{
+    "chisel_tool": 1257,
+    "deepoccam_heuristics": 1850,
+    "deepoccam_inst2vec": 1951,
+    "metric": "JOP gadgets",
+    "no_of_run": 100,
+    "no_of_sampling": 10,
+    "occam_agg": 2774,
+    "occam_mod_trimmer": 1701
+}

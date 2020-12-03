@@ -1,0 +1,216 @@
+Found libMagickCore.bc
+Found libMagickWand.bc
+Found magick.bc
+=======================================================================
+Running magick with libMagickCore, libMagickWand, and libc libraries   
+slash options --inter-spec-policy=nonrec-aggressive --intra-spec-policy=nonrec-aggressive  --no-strip --stats 
+=======================================================================
+
+slash working on magick.bc wrt ./libMagickCore.bc ./libMagickWand.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 12:13:09] Starting Profiling before specialization...
+done
+[02/12/2020 12:13:15] Starting Computing interfaces...
+done
+[02/12/2020 12:13:21] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:13:26] Started global fixpoint ......
+[02/12/2020 12:13:26] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 12:21:01] Starting Inter-module module specialization...
+done
+[02/12/2020 12:21:13] Starting Inter-module module rewriting...
+done
+[02/12/2020 12:21:25] Starting Computing interfaces...
+done
+[02/12/2020 12:21:38] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:22:40] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 12:22:52] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 12:28:28] Starting Inter-module module specialization...
+done
+[02/12/2020 12:28:43] Starting Inter-module module rewriting...
+done
+[02/12/2020 12:28:58] Starting Computing interfaces...
+done
+[02/12/2020 12:29:12] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 12:30:21] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 12:30:36] Finished global fixpoint....
+[02/12/2020 12:30:36] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/portfolio/imagemagick/slash/magick.a.i.p.s.r.i.h.p.s.r.i.h.bc -o magick -O2 -static -nostdlib
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/portfolio/imagemagick/slash/magick.a.i.p.s.r.i.h.p.s.r.i.h.bc -o magick -O2 -static -nostdlib
+returned 1
+
+Statistics for  before specialization
+	[CFG analysis]
+	  2439 Number of functions
+	     0 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 93778 Number of basic blocks
+	737263 Number of instructions
+	242988 Number of direct calls
+	198922 Number of external calls
+	     0 Number of assembly calls
+	   212 Number of indirect calls
+	     0 Number of unknown calls
+	  3348 Number of loops   
+	   108 Number of bounded loops
+	[Memory analysis]
+	114151 Number of memory instructions
+	 28317 Statically safe memory accesses
+	 85834 Statically unknown memory accesses
+
+Statistics for  after specialization
+	[CFG analysis]
+	   2275 Number of functions
+	    517 Number of specialized functions
+	      0 Number of bounced functions added by devirt
+	 221911 Number of basic blocks
+	2117492 Number of instructions
+	 915234 Number of direct calls
+	 867127 Number of external calls
+	      0 Number of assembly calls
+	   1552 Number of indirect calls
+	      0 Number of unknown calls
+	   8148 Number of loops   
+	    102 Number of bounded loops
+	[Memory analysis]
+	281170 Number of memory instructions
+	 68033 Statically safe memory accesses
+	213137 Statically unknown memory accesses
+
+Statistics for  before specialization
+	[CFG analysis]
+	   680 Number of functions
+	     0 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 33973 Number of basic blocks
+	258597 Number of instructions
+	 99654 Number of direct calls
+	 98812 Number of external calls
+	     0 Number of assembly calls
+	     8 Number of indirect calls
+	     0 Number of unknown calls
+	  3817 Number of loops   
+	    10 Number of bounded loops
+	[Memory analysis]
+	52465 Number of memory instructions
+	18566 Statically safe memory accesses
+	33899 Statically unknown memory accesses
+
+Statistics for  after specialization
+	[CFG analysis]
+	    99 Number of functions
+	     3 Number of specialized functions
+	     0 Number of bounced functions added by devirt
+	 26494 Number of basic blocks
+	335921 Number of instructions
+	181771 Number of direct calls
+	181196 Number of external calls
+	     0 Number of assembly calls
+	     3 Number of indirect calls
+	     0 Number of unknown calls
+	  5601 Number of loops   
+	    20 Number of bounded loops
+	[Memory analysis]
+	54146 Number of memory instructions
+	18365 Statically safe memory accesses
+	35781 Statically unknown memory accesses
+
+Statistics for magick before specialization
+	[CFG analysis]
+	  1 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 33 Number of basic blocks
+	210 Number of instructions
+	118 Number of direct calls
+	118 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	9 Number of memory instructions
+	4 Statically safe memory accesses
+	5 Statically unknown memory accesses
+
+Statistics for magick after specialization
+	[CFG analysis]
+	  1 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 34 Number of basic blocks
+	239 Number of instructions
+	119 Number of direct calls
+	119 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	17 Number of memory instructions
+	11 Statically safe memory accesses
+	 6 Statically unknown memory accesses
+	Module: /test/examples/portfolio/imagemagick/slash/._libMagickCore.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/imagemagick/slash/._libMagickWand.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/imagemagick/slash/magick.a.i.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/imagemagick/slash/._libMagickCore.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/imagemagick/slash/._libMagickWand.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Module: /test/examples/portfolio/imagemagick/slash/magick.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=nonrec-aggressive
+	Inter-specialization policy=nonrec-aggressive
+cp: cannot stat '/magick': No such file or directory

@@ -1,0 +1,674 @@
+Found netperf.o.bc
+Found netlib.o.bc
+Found netsh.o.bc
+Found nettest_bsd.o.bc
+Found nettest_dlpi.o.bc
+Found nettest_unix.o.bc
+Found nettest_xti.o.bc
+Found nettest_sctp.o.bc
+Found nettest_sdp.o.bc
+Found nettest_omni.o.bc
+Found net_uuid.o.bc
+Found dscp.o.bc
+Found netcpu_procstat.o.bc
+============================================================
+Running httpd with dynamic libraries 
+slash options --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce  --stats 
+============================================================
+
+slash working on netperf.o.bc wrt netlib.o.bc netsh.o.bc nettest_bsd.o.bc nettest_dlpi.o.bc nettest_unix.o.bc nettest_xti.o.bc nettest_sctp.o.bc nettest_sdp.o.bc nettest_omni.o.bc net_uuid.o.bc dscp.o.bc netcpu_procstat.o.bc with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 14:40:53] Starting Profiling before specialization...
+done
+[02/12/2020 14:40:54] Starting Computing interfaces...
+done
+[02/12/2020 14:40:54] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:40:54] Started global fixpoint ......
+[02/12/2020 14:40:54] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:40:57] Starting Inter-module module specialization...
+done
+[02/12/2020 14:40:57] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:40:57] Starting Computing interfaces...
+done
+[02/12/2020 14:40:58] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:41:00] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:41:00] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[02/12/2020 14:41:03] Starting Inter-module module specialization...
+done
+[02/12/2020 14:41:04] Starting Inter-module module rewriting...
+done
+[02/12/2020 14:41:04] Starting Computing interfaces...
+done
+[02/12/2020 14:41:04] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 14:41:07] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 14:41:07] Finished global fixpoint....
+[02/12/2020 14:41:07] Starting Stripping symbols...
+done
+[02/12/2020 14:41:07] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o netperf_slashed -lm
+
+FAILED. Modify the manifest to add libraries and/or linker flags.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 633, in link
+    driver.linker(final_module, binary, linker_args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 121, in linker
+    return run('clang++', args)
+  File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
+    raise ex
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o netperf_slashed -lm
+returned 1
+
+Statistics for dscp before specialization
+	[CFG analysis]
+	  2 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 26 Number of basic blocks
+	116 Number of instructions
+	  3 Number of direct calls
+	  3 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	45 Number of memory instructions
+	37 Statically safe memory accesses
+	 8 Statically unknown memory accesses
+
+Statistics for dscp after specialization
+	[CFG analysis]
+	  2 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 26 Number of basic blocks
+	116 Number of instructions
+	  3 Number of direct calls
+	  3 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	45 Number of memory instructions
+	37 Statically safe memory accesses
+	 8 Statically unknown memory accesses
+
+Statistics for nettest_omni before specialization
+	[CFG analysis]
+	  59 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	1900 Number of basic blocks
+	9838 Number of instructions
+	 923 Number of direct calls
+	 649 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  33 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	4133 Number of memory instructions
+	2318 Statically safe memory accesses
+	1815 Statically unknown memory accesses
+
+Statistics for nettest_omni after specialization
+	[CFG analysis]
+	  53 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	1662 Number of basic blocks
+	8228 Number of instructions
+	 788 Number of direct calls
+	 528 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  29 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	3347 Number of memory instructions
+	1882 Statically safe memory accesses
+	1465 Statically unknown memory accesses
+
+Statistics for netlib before specialization
+	[CFG analysis]
+	  90 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 750 Number of basic blocks
+	4874 Number of instructions
+	 427 Number of direct calls
+	 356 Number of external calls
+	   3 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  30 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	2160 Number of memory instructions
+	1592 Statically safe memory accesses
+	 568 Statically unknown memory accesses
+
+Statistics for netlib after specialization
+	[CFG analysis]
+	  67 Number of functions
+	   3 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 603 Number of basic blocks
+	4043 Number of instructions
+	 336 Number of direct calls
+	 284 Number of external calls
+	   2 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  22 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	1820 Number of memory instructions
+	1347 Statically safe memory accesses
+	 473 Statically unknown memory accesses
+
+Statistics for netsh before specialization
+	[CFG analysis]
+	  12 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 313 Number of basic blocks
+	1319 Number of instructions
+	 195 Number of direct calls
+	 172 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	   9 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	433 Number of memory instructions
+	318 Statically safe memory accesses
+	115 Statically unknown memory accesses
+
+Statistics for netsh after specialization
+	[CFG analysis]
+	  11 Number of functions
+	   1 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 312 Number of basic blocks
+	1315 Number of instructions
+	 194 Number of direct calls
+	 171 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	   9 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	431 Number of memory instructions
+	317 Statically safe memory accesses
+	114 Statically unknown memory accesses
+
+Statistics for nettest_unix before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_unix after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for netperf before specialization
+	[CFG analysis]
+	  1 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 50 Number of basic blocks
+	124 Number of instructions
+	 38 Number of direct calls
+	 38 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	15 Number of memory instructions
+	 5 Statically safe memory accesses
+	10 Statically unknown memory accesses
+
+Statistics for netperf after specialization
+	[CFG analysis]
+	  1 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 37 Number of basic blocks
+	110 Number of instructions
+	 39 Number of direct calls
+	 39 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  0 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	11 Number of memory instructions
+	 2 Statically safe memory accesses
+	 9 Statically unknown memory accesses
+
+Statistics for net_uuid before specialization
+	[CFG analysis]
+	 10 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 38 Number of basic blocks
+	349 Number of instructions
+	 23 Number of direct calls
+	 12 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  4 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	141 Number of memory instructions
+	118 Statically safe memory accesses
+	 23 Statically unknown memory accesses
+
+Statistics for net_uuid after specialization
+	[CFG analysis]
+	  9 Number of functions
+	  1 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 34 Number of basic blocks
+	304 Number of instructions
+	 20 Number of direct calls
+	  9 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  3 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	128 Number of memory instructions
+	106 Statically safe memory accesses
+	 22 Statically unknown memory accesses
+
+Statistics for nettest_sctp before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_sctp after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_sdp before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_sdp after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_dlpi before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_dlpi after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_xti before specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for nettest_xti after specialization
+	[CFG analysis]
+	0 Number of functions
+	0 Number of specialized functions
+	0 Number of bounced functions added by devirt
+	0 Number of basic blocks
+	0 Number of instructions
+	0 Number of direct calls
+	0 Number of external calls
+	0 Number of assembly calls
+	0 Number of indirect calls
+	0 Number of unknown calls
+	0 Number of loops   
+	0 Number of bounded loops
+	[Memory analysis]
+	0 Number of memory instructions
+	0 Statically safe memory accesses
+	0 Statically unknown memory accesses
+
+Statistics for netcpu_procstat before specialization
+	[CFG analysis]
+	 11 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 75 Number of basic blocks
+	736 Number of instructions
+	 48 Number of direct calls
+	 34 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	301 Number of memory instructions
+	192 Statically safe memory accesses
+	109 Statically unknown memory accesses
+
+Statistics for netcpu_procstat after specialization
+	[CFG analysis]
+	  9 Number of functions
+	  1 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 73 Number of basic blocks
+	731 Number of instructions
+	 46 Number of direct calls
+	 34 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  2 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	300 Number of memory instructions
+	192 Statically safe memory accesses
+	108 Statically unknown memory accesses
+
+Statistics for nettest_bsd before specialization
+	[CFG analysis]
+	  33 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 979 Number of basic blocks
+	6301 Number of instructions
+	 862 Number of direct calls
+	 794 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	  14 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	2859 Number of memory instructions
+	1446 Statically safe memory accesses
+	1413 Statically unknown memory accesses
+
+Statistics for nettest_bsd after specialization
+	[CFG analysis]
+	  24 Number of functions
+	   1 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 573 Number of basic blocks
+	3140 Number of instructions
+	 412 Number of direct calls
+	 377 Number of external calls
+	   0 Number of assembly calls
+	   0 Number of indirect calls
+	   0 Number of unknown calls
+	   7 Number of loops   
+	   0 Number of bounded loops
+	[Memory analysis]
+	1396 Number of memory instructions
+	 747 Statically safe memory accesses
+	 649 Statically unknown memory accesses
+	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.bc
+	Intra-specialization policy=onlyonce
+	Inter-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=onlyonce
+	Inter-specialization policy=onlyonce
+cp: cannot stat './slash_specialized/netperf_slashed': No such file or directory

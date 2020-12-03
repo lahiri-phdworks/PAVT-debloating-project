@@ -1,0 +1,76 @@
+Statistics for memcached before specialization
+	[CFG analysis]
+	  138 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2716 Number of basic blocks
+	18670 Number of instructions
+	 5687 Number of direct calls
+	 5052 Number of external calls
+	   16 Number of assembly calls
+	   57 Number of indirect calls
+	    0 Number of unknown calls
+	   60 Number of loops   
+	   12 Number of bounded loops
+	[Memory analysis]
+	3741 Number of memory instructions
+	 437 Statically safe memory accesses
+	3304 Statically unknown memory accesses
+
+Statistics for memcached after specialization
+	[CFG analysis]
+	   70 Number of functions
+	    1 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 2827 Number of basic blocks
+	23110 Number of instructions
+	 7581 Number of direct calls
+	 7126 Number of external calls
+	   16 Number of assembly calls
+	   43 Number of indirect calls
+	    0 Number of unknown calls
+	   52 Number of loops   
+	   10 Number of bounded loops
+	[Memory analysis]
+	4548 Number of memory instructions
+	 512 Statically safe memory accesses
+	4036 Statically unknown memory accesses
+
+Statistics for libevent before specialization
+	[CFG analysis]
+	  681 Number of functions
+	    0 Number of specialized functions
+	    0 Number of bounced functions added by devirt
+	 7990 Number of basic blocks
+	48498 Number of instructions
+	13025 Number of direct calls
+	10619 Number of external calls
+	   63 Number of assembly calls
+	  733 Number of indirect calls
+	    0 Number of unknown calls
+	  330 Number of loops   
+	    6 Number of bounded loops
+	[Memory analysis]
+	8540 Number of memory instructions
+	1462 Statically safe memory accesses
+	7078 Statically unknown memory accesses
+
+Statistics for libevent after specialization
+	[CFG analysis]
+	  49 Number of functions
+	   0 Number of specialized functions
+	   0 Number of bounced functions added by devirt
+	 880 Number of basic blocks
+	5986 Number of instructions
+	1512 Number of direct calls
+	1374 Number of external calls
+	   0 Number of assembly calls
+	  10 Number of indirect calls
+	   0 Number of unknown calls
+	  28 Number of loops   
+	   2 Number of bounded loops
+	[Memory analysis]
+	1191 Number of memory instructions
+	 150 Statically safe memory accesses
+	1041 Statically unknown memory accesses
+cp: cannot stat 'slash/memcached': No such file or directory

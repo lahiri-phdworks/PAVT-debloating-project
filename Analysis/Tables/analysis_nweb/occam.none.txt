@@ -1,0 +1,74 @@
+
+slash working on nweb.bc wrt  with lib_spec  ...
+
+slash main_spec   ...
+[02/12/2020 15:04:51] Starting Profiling before specialization...
+done
+[02/12/2020 15:04:51] Starting Computing interfaces...
+done
+[02/12/2020 15:04:51] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 15:04:51] Started global fixpoint ......
+[02/12/2020 15:04:51] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	ipdse finished succesfully
+done
+[02/12/2020 15:04:51] Starting Computing interfaces...
+done
+[02/12/2020 15:04:51] Starting Internalizing wrt interfaces...
+done
+[02/12/2020 15:04:51] Starting Hides exported functions that are not referenced from outside the module...
+done
+[02/12/2020 15:04:51] Finished global fixpoint....
+[02/12/2020 15:04:51] Starting Stripping symbols...
+done
+[02/12/2020 15:04:51] Starting Profiling after specialization...
+done
+
+Linking ...
+
+clang++ /test/examples/darwin/nweb/slash/nweb.a.i.p.i.h.x.bc -o nweb -lc -lpthread
+
+done.
+
+Statistics for nweb before specialization
+	[CFG analysis]
+	  3 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	102 Number of basic blocks
+	486 Number of instructions
+	 79 Number of direct calls
+	 64 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  8 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	163 Number of memory instructions
+	133 Statically safe memory accesses
+	 30 Statically unknown memory accesses
+
+Statistics for nweb after specialization
+	[CFG analysis]
+	  3 Number of functions
+	  0 Number of specialized functions
+	  0 Number of bounced functions added by devirt
+	 93 Number of basic blocks
+	555 Number of instructions
+	121 Number of direct calls
+	106 Number of external calls
+	  0 Number of assembly calls
+	  0 Number of indirect calls
+	  0 Number of unknown calls
+	  6 Number of loops   
+	  0 Number of bounded loops
+	[Memory analysis]
+	215 Number of memory instructions
+	202 Statically safe memory accesses
+	 13 Statically unknown memory accesses
+	Module: /test/examples/darwin/nweb/slash/nweb.a.i.bc
+	Intra-specialization policy=none
+	skipped intra-module specialization
+Skipped inter-module specialization
