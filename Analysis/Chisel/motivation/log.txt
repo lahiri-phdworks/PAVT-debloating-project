@@ -1,0 +1,51 @@
+[2020-12-03 14:46:37.973] [Logger] [info] Oracle: test.sh
+[2020-12-03 14:46:37.974] [Logger] [info] Input: test.c
+[2020-12-03 14:46:37.974] [Logger] [info] Output Directory: /pipeline/test/motivation/chisel-out
+[2020-12-03 14:46:37.976] [Logger] [info] Reduce File: test.c
+[2020-12-03 14:46:37.977] [Logger] [info] Iteration 1 (Word: 75)
+[2020-12-03 14:46:37.979] [Logger] [info] Start global reduction
+[2020-12-03 14:46:37.980] [Logger] [info] Running delta debugging - Size: 3
+[2020-12-03 14:46:37.980] [Logger] [info] Start local reduction
+[2020-12-03 14:46:37.981] [Logger] [info] Reduce run at test.c
+[2020-12-03 14:46:37.981] [Logger] [info] Running delta debugging - Size: 1
+[2020-12-03 14:46:38.029] [Logger] [info] Reduced - Size: 0
+[2020-12-03 14:46:38.029] [Logger] [info] Reduce add at test.c
+[2020-12-03 14:46:38.029] [Logger] [info] Running delta debugging - Size: 1
+[2020-12-03 14:46:38.029] [Logger] [info] Reduce sub at test.c
+[2020-12-03 14:46:38.029] [Logger] [info] Running delta debugging - Size: 1
+[2020-12-03 14:46:38.029] [Logger] [info] Reduce main at test.c
+[2020-12-03 14:46:38.029] [Logger] [info] Running delta debugging - Size: 3
+[2020-12-03 14:46:38.077] [Logger] [info] Reduced - Size: 1
+[2020-12-03 14:46:38.078] [Logger] [info] Iteration 2 (Word: 46)
+[2020-12-03 14:46:38.081] [Logger] [info] Start global reduction
+[2020-12-03 14:46:38.082] [Logger] [info] Running delta debugging - Size: 3
+[2020-12-03 14:46:38.147] [Logger] [info] Reduced - Size: 1
+[2020-12-03 14:46:38.199] [Logger] [info] Reduced - Size: 0
+[2020-12-03 14:46:38.199] [Logger] [info] Start local reduction
+[2020-12-03 14:46:38.201] [Logger] [info] Reduce main at test.c
+[2020-12-03 14:46:38.201] [Logger] [info] Running delta debugging - Size: 1
+[2020-12-03 14:46:38.202] [Logger] [info] Iteration 3 (Word: 15)
+[2020-12-03 14:46:38.204] [Logger] [info] Start global reduction
+[2020-12-03 14:46:38.205] [Logger] [info] Running delta debugging - Size: 0
+[2020-12-03 14:46:38.205] [Logger] [info] Start local reduction
+[2020-12-03 14:46:38.206] [Logger] [info] Reduce main at test.c
+[2020-12-03 14:46:38.206] [Logger] [info] Running delta debugging - Size: 1
+[2020-12-03 14:46:38.207] [Logger] [info] Reduce File: test.c
+[2020-12-03 14:46:38.208] [Logger] [info] Iteration 1 (Word: 15)
+[2020-12-03 14:46:38.210] [Logger] [info] Start global reduction
+[2020-12-03 14:46:38.211] [Logger] [info] Running delta debugging - Size: 0
+[2020-12-03 14:46:38.211] [Logger] [info] Start local reduction
+[2020-12-03 14:46:38.212] [Logger] [info] Reduce main at test.c
+[2020-12-03 14:46:38.212] [Logger] [info] Running delta debugging - Size: 1
+[2020-12-03 14:46:38.214] [Logger] [info] ====================================================
+[2020-12-03 14:46:38.214] [Logger] [info]                        Report                       
+[2020-12-03 14:46:38.214] [Logger] [info] ====================================================
+[2020-12-03 14:46:38.214] [Logger] [info]              Total Time :                  0.2s
+[2020-12-03 14:46:38.214] [Logger] [info]             Oracle Time :                  0.2s
+[2020-12-03 14:46:38.214] [Logger] [info]           Learning Time :                  0.0s
+[2020-12-03 14:46:38.214] [Logger] [info]    Global Success Ratio :  100% (    2 /     2)
+[2020-12-03 14:46:38.214] [Logger] [info]     Local Success Ratio :  100% (    2 /     2)
+[2020-12-03 14:46:38.216] [Logger] [info]   #Functions (Original) :                     4
+[2020-12-03 14:46:38.216] [Logger] [info]  #Statements (Original) :                    11
+[2020-12-03 14:46:38.217] [Logger] [info]    #Functions (Reduced) :                     1
+[2020-12-03 14:46:38.217] [Logger] [info]   #Statements (Reduced) :                     2

@@ -14,60 +14,20 @@ Found httping_modules/colors.o.bc
 Found httping_modules/mssl.o.bc
 ============================================================
 Running httpd with dynamic libraries 
-slash options --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce --stats 
+slash options --inter-spec-policy=machinelearning --intra-spec-policy=machinelearning --stats 
 ============================================================
 
 slash working on httping_modules/main.o.bc wrt httping_modules/gen.o.bc httping_modules/http.o.bc httping_modules/io.o.bc httping_modules/error.o.bc httping_modules/utils.o.bc httping_modules/tcp.o.bc httping_modules/res.o.bc httping_modules/socks5.o.bc httping_modules/kalman.o.bc httping_modules/cookies.o.bc httping_modules/help.o.bc httping_modules/colors.o.bc httping_modules/mssl.o.bc with lib_spec  ...
 
 slash main_spec   ...
-[03/12/2020 09:02:40] Starting Profiling before specialization...
+[03/12/2020 09:02:22] Starting Profiling before specialization...
 done
-[03/12/2020 09:02:40] Starting Computing interfaces...
+[03/12/2020 09:02:23] Starting Computing interfaces...
 done
-[03/12/2020 09:02:40] Starting Internalizing wrt interfaces...
+[03/12/2020 09:02:23] Starting Internalizing wrt interfaces...
 done
-[03/12/2020 09:02:41] Started global fixpoint ......
-[03/12/2020 09:02:41] Starting Intra-module specialization/optimization...
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-done
-[03/12/2020 09:02:43] Starting Inter-module module specialization...
-done
-[03/12/2020 09:02:43] Starting Inter-module module rewriting...
-done
-[03/12/2020 09:02:43] Starting Computing interfaces...
-done
-[03/12/2020 09:02:44] Starting Internalizing wrt interfaces...
-done
-[03/12/2020 09:02:45] Starting Hides exported functions that are not referenced from outside the module...
-done
-[03/12/2020 09:02:46] Starting Intra-module specialization/optimization...
+[03/12/2020 09:02:23] Started global fixpoint ......
+[03/12/2020 09:02:23] Starting Intra-module specialization/optimization...
 	intra module optimization finished succesfully
 	intra-module specialization finished
 	intra module optimization finished succesfully
@@ -97,20 +57,60 @@ done
 	intra module optimization finished succesfully
 	intra-module specialization finished
 done
-[03/12/2020 09:02:48] Starting Inter-module module specialization...
+[03/12/2020 09:02:25] Starting Inter-module module specialization...
 done
-[03/12/2020 09:02:48] Starting Inter-module module rewriting...
+[03/12/2020 09:02:25] Starting Inter-module module rewriting...
 done
-[03/12/2020 09:02:48] Starting Computing interfaces...
+[03/12/2020 09:02:26] Starting Computing interfaces...
 done
-[03/12/2020 09:02:49] Starting Internalizing wrt interfaces...
+[03/12/2020 09:02:26] Starting Internalizing wrt interfaces...
 done
-[03/12/2020 09:02:50] Starting Hides exported functions that are not referenced from outside the module...
+[03/12/2020 09:02:28] Starting Hides exported functions that are not referenced from outside the module...
 done
-[03/12/2020 09:02:50] Finished global fixpoint....
-[03/12/2020 09:02:50] Starting Stripping symbols...
+[03/12/2020 09:02:28] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
 done
-[03/12/2020 09:02:51] Starting Profiling after specialization...
+[03/12/2020 09:02:30] Starting Inter-module module specialization...
+done
+[03/12/2020 09:02:30] Starting Inter-module module rewriting...
+done
+[03/12/2020 09:02:31] Starting Computing interfaces...
+done
+[03/12/2020 09:02:31] Starting Internalizing wrt interfaces...
+done
+[03/12/2020 09:02:33] Starting Hides exported functions that are not referenced from outside the module...
+done
+[03/12/2020 09:02:33] Finished global fixpoint....
+[03/12/2020 09:02:33] Starting Stripping symbols...
+done
+[03/12/2020 09:02:33] Starting Profiling after specialization...
 done
 
 Linking ...
@@ -226,22 +226,22 @@ Statistics for httping_modules_io before specialization
 
 Statistics for httping_modules_io after specialization
 	[CFG analysis]
-	  5 Number of functions
-	  0 Number of specialized functions
+	  8 Number of functions
+	  4 Number of specialized functions
 	  0 Number of bounced functions added by devirt
-	 80 Number of basic blocks
-	420 Number of instructions
-	 46 Number of direct calls
-	 46 Number of external calls
-	  3 Number of assembly calls
+	152 Number of basic blocks
+	802 Number of instructions
+	 82 Number of direct calls
+	 82 Number of external calls
+	  6 Number of assembly calls
 	  0 Number of indirect calls
 	  0 Number of unknown calls
-	  3 Number of loops   
+	  6 Number of loops   
 	  0 Number of bounded loops
 	[Memory analysis]
-	144 Number of memory instructions
-	118 Statically safe memory accesses
-	 26 Statically unknown memory accesses
+	274 Number of memory instructions
+	226 Statically safe memory accesses
+	 48 Statically unknown memory accesses
 
 Statistics for httping_modules_main before specialization
 	[CFG analysis]
@@ -454,22 +454,22 @@ Statistics for httping_modules_utils before specialization
 
 Statistics for httping_modules_utils after specialization
 	[CFG analysis]
-	  5 Number of functions
-	  1 Number of specialized functions
+	  6 Number of functions
+	  3 Number of specialized functions
 	  0 Number of bounced functions added by devirt
-	 33 Number of basic blocks
-	242 Number of instructions
-	 19 Number of direct calls
-	 19 Number of external calls
+	 40 Number of basic blocks
+	312 Number of instructions
+	 25 Number of direct calls
+	 25 Number of external calls
 	  0 Number of assembly calls
 	  0 Number of indirect calls
 	  0 Number of unknown calls
-	  2 Number of loops   
+	  3 Number of loops   
 	  0 Number of bounded loops
 	[Memory analysis]
-	110 Number of memory instructions
-	 90 Statically safe memory accesses
-	 20 Statically unknown memory accesses
+	146 Number of memory instructions
+	117 Statically safe memory accesses
+	 29 Statically unknown memory accesses
 
 Statistics for httping_modules_gen before specialization
 	[CFG analysis]
@@ -530,11 +530,11 @@ Statistics for httping_modules_colors before specialization
 
 Statistics for httping_modules_colors after specialization
 	[CFG analysis]
-	 1 Number of functions
-	 0 Number of specialized functions
+	 2 Number of functions
+	 1 Number of specialized functions
 	 0 Number of bounced functions added by devirt
-	 4 Number of basic blocks
-	30 Number of instructions
+	 8 Number of basic blocks
+	60 Number of instructions
 	 0 Number of direct calls
 	 0 Number of external calls
 	 0 Number of assembly calls
@@ -543,8 +543,8 @@ Statistics for httping_modules_colors after specialization
 	 0 Number of loops   
 	 0 Number of bounded loops
 	[Memory analysis]
-	24 Number of memory instructions
-	24 Statically safe memory accesses
+	48 Number of memory instructions
+	48 Statically safe memory accesses
 	 0 Statically unknown memory accesses
 
 Statistics for httping_modules_tcp before specialization
@@ -568,22 +568,22 @@ Statistics for httping_modules_tcp before specialization
 
 Statistics for httping_modules_tcp after specialization
 	[CFG analysis]
-	  4 Number of functions
-	  0 Number of specialized functions
+	  5 Number of functions
+	  1 Number of specialized functions
 	  0 Number of bounced functions added by devirt
-	 78 Number of basic blocks
-	428 Number of instructions
-	 87 Number of direct calls
-	 86 Number of external calls
-	  1 Number of assembly calls
+	115 Number of basic blocks
+	634 Number of instructions
+	117 Number of direct calls
+	116 Number of external calls
+	  2 Number of assembly calls
 	  0 Number of indirect calls
 	  0 Number of unknown calls
 	  0 Number of loops   
 	  0 Number of bounded loops
 	[Memory analysis]
-	152 Number of memory instructions
-	121 Statically safe memory accesses
-	 31 Statically unknown memory accesses
+	228 Number of memory instructions
+	178 Statically safe memory accesses
+	 50 Statically unknown memory accesses
 
 Statistics for httping_modules_help before specialization
 	[CFG analysis]
@@ -661,61 +661,61 @@ Statistics for httping_modules_res after specialization
 	52 Statically safe memory accesses
 	15 Statically unknown memory accesses
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_mssl.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_cookies.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_io.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_main.o.a.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_error.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_http.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_socks5.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_kalman.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_utils.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_gen.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_colors.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_tcp.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_help.o.i.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_res.o.i.bc
-	Intra-specialization policy=onlyonce
-	Inter-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_mssl.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_cookies.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_io.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_main.o.a.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_error.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_http.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_socks5.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_kalman.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_utils.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_gen.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_colors.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_tcp.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_help.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/httping/slash_specialized/httping_modules_res.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Inter-specialization policy=onlyonce
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
 cp: cannot stat './slash_specialized/httping_slashed': No such file or directory

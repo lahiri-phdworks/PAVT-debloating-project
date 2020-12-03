@@ -13,58 +13,20 @@ Found dscp.o.bc
 Found netcpu_procstat.o.bc
 ============================================================
 Running httpd with dynamic libraries 
-slash options --inter-spec-policy=onlyonce --intra-spec-policy=onlyonce  --stats 
+slash options --inter-spec-policy=machinelearning --intra-spec-policy=machinelearning  --stats 
 ============================================================
 
 slash working on netperf.o.bc wrt netlib.o.bc netsh.o.bc nettest_bsd.o.bc nettest_dlpi.o.bc nettest_unix.o.bc nettest_xti.o.bc nettest_sctp.o.bc nettest_sdp.o.bc nettest_omni.o.bc net_uuid.o.bc dscp.o.bc netcpu_procstat.o.bc with lib_spec  ...
 
 slash main_spec   ...
-[03/12/2020 09:01:45] Starting Profiling before specialization...
+[03/12/2020 09:01:17] Starting Profiling before specialization...
 done
-[03/12/2020 09:01:46] Starting Computing interfaces...
+[03/12/2020 09:01:17] Starting Computing interfaces...
 done
-[03/12/2020 09:01:46] Starting Internalizing wrt interfaces...
+[03/12/2020 09:01:17] Starting Internalizing wrt interfaces...
 done
-[03/12/2020 09:01:46] Started global fixpoint ......
-[03/12/2020 09:01:46] Starting Intra-module specialization/optimization...
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-	intra module optimization finished succesfully
-	intra-module specialization finished
-done
-[03/12/2020 09:01:49] Starting Inter-module module specialization...
-done
-[03/12/2020 09:01:49] Starting Inter-module module rewriting...
-done
-[03/12/2020 09:01:50] Starting Computing interfaces...
-done
-[03/12/2020 09:01:50] Starting Internalizing wrt interfaces...
-done
-[03/12/2020 09:01:53] Starting Hides exported functions that are not referenced from outside the module...
-done
-[03/12/2020 09:01:53] Starting Intra-module specialization/optimization...
+[03/12/2020 09:01:18] Started global fixpoint ......
+[03/12/2020 09:01:18] Starting Intra-module specialization/optimization...
 	intra module optimization finished succesfully
 	intra-module specialization finished
 	intra module optimization finished succesfully
@@ -92,25 +54,166 @@ done
 	intra module optimization finished succesfully
 	intra-module specialization finished
 done
-[03/12/2020 09:01:56] Starting Inter-module module specialization...
+[03/12/2020 09:01:20] Starting Inter-module module specialization...
 done
-[03/12/2020 09:01:56] Starting Inter-module module rewriting...
+[03/12/2020 09:01:21] Starting Inter-module module rewriting...
 done
-[03/12/2020 09:01:56] Starting Computing interfaces...
+[03/12/2020 09:01:21] Starting Computing interfaces...
 done
-[03/12/2020 09:01:57] Starting Internalizing wrt interfaces...
+[03/12/2020 09:01:21] Starting Internalizing wrt interfaces...
 done
-[03/12/2020 09:01:59] Starting Hides exported functions that are not referenced from outside the module...
+[03/12/2020 09:01:24] Starting Hides exported functions that are not referenced from outside the module...
 done
-[03/12/2020 09:01:59] Finished global fixpoint....
-[03/12/2020 09:01:59] Starting Stripping symbols...
+[03/12/2020 09:01:24] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
 done
-[03/12/2020 09:02:00] Starting Profiling after specialization...
+[03/12/2020 09:01:27] Starting Inter-module module specialization...
+done
+[03/12/2020 09:01:27] Starting Inter-module module rewriting...
+done
+[03/12/2020 09:01:28] Starting Computing interfaces...
+done
+[03/12/2020 09:01:28] Starting Internalizing wrt interfaces...
+done
+[03/12/2020 09:01:31] Starting Hides exported functions that are not referenced from outside the module...
+done
+[03/12/2020 09:01:31] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.bc
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-sp	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[03/12/2020 09:01:34] Starting Inter-module module specialization...
+done
+[03/12/2020 09:01:34] Starting Inter-module module rewriting...
+done
+[03/12/2020 09:01:34] Starting Computing interfaces...
+done
+[03/12/2020 09:01:35] Starting Internalizing wrt interfaces...
+done
+[03/12/2020 09:01:37] Starting Hides exported functions that are not referenced from outside the module...
+done
+[03/12/2020 09:01:37] Finished global fixpoint....
+[03/12/2020 09:01:37] Starting Stripping symbols...
+done
+[03/12/2020 09:01:38] Starting Profiling after specialization...
 done
 
 Linking ...
 
-clang++ /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o netperf_slashed -lm
+clang++ /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.p.s.r.i.h.x.bc -o netperf_slashed -lm
 
 FAILED. Modify the manifest to add libraries and/or linker flags.
 
@@ -121,7 +224,7 @@ Traceback (most recent call last):
     return run('clang++', args)
   File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
     raise ex
-ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o netperf_slashed -lm
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.p.s.r.i.h.p.s.r.i.h.x.bc -o netperf_slashed -lm
 returned 1
 
 Statistics for dscp before specialization
@@ -221,22 +324,22 @@ Statistics for netlib before specialization
 
 Statistics for netlib after specialization
 	[CFG analysis]
-	  67 Number of functions
-	   3 Number of specialized functions
+	  77 Number of functions
+	  16 Number of specialized functions
 	   0 Number of bounced functions added by devirt
-	 603 Number of basic blocks
-	4043 Number of instructions
-	 336 Number of direct calls
-	 284 Number of external calls
+	 671 Number of basic blocks
+	4441 Number of instructions
+	 385 Number of direct calls
+	 324 Number of external calls
 	   2 Number of assembly calls
 	   0 Number of indirect calls
 	   0 Number of unknown calls
-	  22 Number of loops   
+	  25 Number of loops   
 	   0 Number of bounded loops
 	[Memory analysis]
-	1820 Number of memory instructions
-	1347 Statically safe memory accesses
-	 473 Statically unknown memory accesses
+	1991 Number of memory instructions
+	1458 Statically safe memory accesses
+	 533 Statically unknown memory accesses
 
 Statistics for netsh before specialization
 	[CFG analysis]
@@ -259,22 +362,22 @@ Statistics for netsh before specialization
 
 Statistics for netsh after specialization
 	[CFG analysis]
-	  11 Number of functions
-	   1 Number of specialized functions
+	  13 Number of functions
+	   3 Number of specialized functions
 	   0 Number of bounced functions added by devirt
-	 312 Number of basic blocks
-	1315 Number of instructions
-	 194 Number of direct calls
-	 171 Number of external calls
+	 332 Number of basic blocks
+	1417 Number of instructions
+	 196 Number of direct calls
+	 173 Number of external calls
 	   0 Number of assembly calls
 	   0 Number of indirect calls
 	   0 Number of unknown calls
-	   9 Number of loops   
+	  13 Number of loops   
 	   0 Number of bounded loops
 	[Memory analysis]
-	431 Number of memory instructions
-	317 Statically safe memory accesses
-	114 Statically unknown memory accesses
+	481 Number of memory instructions
+	355 Statically safe memory accesses
+	126 Statically unknown memory accesses
 
 Statistics for nettest_unix before specialization
 	[CFG analysis]
@@ -617,58 +720,20 @@ Statistics for nettest_bsd after specialization
 	1396 Number of memory instructions
 	 747 Statically safe memory accesses
 	 649 Statically unknown memory accesses
-	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.bc
-	Intra-specialization policy=onlyonce
-	Inter-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/dscp.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_omni.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netlib.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netsh.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_unix.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netperf.o.a.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.p.s.r.i.h.bc
-	Intra-specialization policy=onlyonce
-	Inter-specialization policy=onlyonce
+ecialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/net_uuid.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sctp.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_sdp.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_dlpi.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_xti.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/netcpu_procstat.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/netperf/slash_specialized/nettest_bsd.o.i.p.s.r.i.h.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
 cp: cannot stat './slash_specialized/netperf_slashed': No such file or directory

@@ -1,3 +1,4 @@
+MKDIR
 ====================================================
                        Report                       
 ====================================================
@@ -10,5 +11,55 @@
    #Functions (Reduced) :                    13
   #Statements (Reduced) :                   159
 
-Unique gadgets found: 2492
-Unique gadgets found: 260
+DATE
+====================================================
+                       Report                       
+====================================================
+             Total Time :               7774.0s
+            Oracle Time :               7626.1s
+   Global Success Ratio :   63% (   58 /    91)
+    Local Success Ratio :    4% (  608 / 13572)
+  #Functions (Original) :                    78
+ #Statements (Original) :                  4228
+   #Functions (Reduced) :                    33
+  #Statements (Reduced) :                   895
+
+CHOWN
+====================================================
+                       Report                       
+====================================================
+             Total Time :               2847.1s
+            Oracle Time :               2840.2s
+   Global Success Ratio :   34% (   71 /   207)
+    Local Success Ratio :   17% (  535 /  3101)
+  #Functions (Original) :                   122
+ #Statements (Original) :                  3765
+   #Functions (Reduced) :                    35
+  #Statements (Reduced) :                   283
+  
+RM
+====================================================
+                       Report                       
+====================================================
+             Total Time :               2166.2s
+            Oracle Time :               2157.5s
+   Global Success Ratio :   37% (   87 /   229)
+    Local Success Ratio :   15% (  491 /  3091)
+  #Functions (Original) :                   135
+ #Statements (Original) :                  3835
+   #Functions (Reduced) :                    27
+  #Statements (Reduced) :                   219
+
+BZIP2
+====================================================
+                       Report                       
+====================================================
+             Total Time :               7252.5s
+            Oracle Time :               7250.3s
+   Global Success Ratio :  100% (   47 /    47)
+    Local Success Ratio :  100% (  265 /   265)
+  #Functions (Original) :                    97
+ #Statements (Original) :                  6154
+   #Functions (Reduced) :                     1
+  #Statements (Reduced) :                     1
+  

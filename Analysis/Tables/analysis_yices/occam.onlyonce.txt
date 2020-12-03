@@ -1,0 +1,16 @@
+
+Warning: "native-libs" is not a recognized key; ignoring.
+
+slash working on yices_smt2_release_mcsat.bc wrt libpoly.so.bc with lib_spec  ...
+
+slash main_spec   ...
+Traceback (most recent call last):
+  File "/usr/local/bin/slash", line 11, in <module>
+    load_entry_point('razor==1.1.0', 'console_scripts', 'slash')()
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 109, in entrypoint
+    return Slash(sys.argv).run() if utils.checkOccamLib() else 1
+  File "/usr/local/lib/python2.7/dist-packages/razor/slash.py", line 431, in run
+    'arguments')
+  File "/usr/local/lib/python2.7/dist-packages/razor/passes.py", line 453, in specialize_program_args
+    for x in static_args:
+TypeError: 'NoneType' object is not iterable

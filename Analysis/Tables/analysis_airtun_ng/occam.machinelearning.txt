@@ -10,46 +10,98 @@ Found libaircrack_osdep_la-common.o.bc
 Found radiotap.o.bc
 ============================================================
 Running httpd with dynamic libraries 
-slash options --inter-spec-policy=none --intra-spec-policy=none --stats 
+slash options --inter-spec-policy=machinelearning --intra-spec-policy=machinelearning --stats 
 ============================================================
 
 slash working on airtun_ng-airtun-ng.o.bc wrt libaclib_la-crypto.o.bc libaircrack_util_la-common.o.bc libaircrack_osdep_la-osdep.o.bc libaircrack_osdep_la-network.o.bc libaircrack_osdep_la-file.o.bc libaircrack_osdep_la-linux.o.bc libaircrack_osdep_la-linux_tap.o.bc libaircrack_osdep_la-common.o.bc radiotap.o.bc with lib_spec  ...
 
 slash main_spec   ...
-[03/12/2020 09:00:57] Starting Profiling before specialization...
+[03/12/2020 09:00:48] Starting Profiling before specialization...
 done
-[03/12/2020 09:00:57] Starting Computing interfaces...
+[03/12/2020 09:00:48] Starting Computing interfaces...
 done
-[03/12/2020 09:00:57] Starting Internalizing wrt interfaces...
+[03/12/2020 09:00:48] Starting Internalizing wrt interfaces...
 done
-[03/12/2020 09:00:57] Started global fixpoint ......
-[03/12/2020 09:00:57] Starting Intra-module specialization/optimization...
+[03/12/2020 09:00:48] Started global fixpoint ......
+[03/12/2020 09:00:48] Starting Intra-module specialization/optimization...
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
 	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
 done
-[03/12/2020 09:00:59] Starting Computing interfaces...
+[03/12/2020 09:00:50] Starting Inter-module module specialization...
 done
-[03/12/2020 09:00:59] Starting Internalizing wrt interfaces...
+[03/12/2020 09:00:51] Starting Inter-module module rewriting...
 done
-[03/12/2020 09:01:00] Starting Hides exported functions that are not referenced from outside the module...
+[03/12/2020 09:00:51] Starting Computing interfaces...
 done
-[03/12/2020 09:01:00] Finished global fixpoint....
-[03/12/2020 09:01:00] Starting Stripping symbols...
+[03/12/2020 09:00:51] Starting Internalizing wrt interfaces...
 done
-[03/12/2020 09:01:00] Starting Profiling after specialization...
+[03/12/2020 09:00:52] Starting Hides exported functions that are not referenced from outside the module...
+done
+[03/12/2020 09:00:52] Starting Intra-module specialization/optimization...
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+	intra module optimization finished succesfully
+	intra-module specialization finished
+done
+[03/12/2020 09:00:54] Starting Inter-module module specialization...
+done
+[03/12/2020 09:00:54] Starting Inter-module module rewriting...
+done
+[03/12/2020 09:00:55] Starting Computing interfaces...
+done
+[03/12/2020 09:00:55] Starting Internalizing wrt interfaces...
+done
+[03/12/2020 09:00:56] Starting Hides exported functions that are not referenced from outside the module...
+done
+[03/12/2020 09:00:56] Finished global fixpoint....
+[03/12/2020 09:00:56] Starting Stripping symbols...
+done
+[03/12/2020 09:00:56] Starting Profiling after specialization...
 done
 
 Linking ...
 
-clang++ /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.i.h.x.bc -o aircrack_ng_slashed -lm -lcrypto -ldl -lnl-3 -lnl-genl-3
+clang++ /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o aircrack_ng_slashed -lm -lcrypto -ldl -lnl-3 -lnl-genl-3
 
 FAILED. Modify the manifest to add libraries and/or linker flags.
 
@@ -60,7 +112,7 @@ Traceback (most recent call last):
     return run('clang++', args)
   File "/usr/local/lib/python2.7/dist-packages/razor/driver.py", line 177, in run
     raise ex
-ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.i.h.x.bc -o aircrack_ng_slashed -lm -lcrypto -ldl -lnl-3 -lnl-genl-3
+ReturnCode: /usr/lib/llvm-10/bin/clang++ /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.s.r.i.h.p.s.r.i.h.x.bc -o aircrack_ng_slashed -lm -lcrypto -ldl -lnl-3 -lnl-genl-3
 returned 1
 
 Statistics for libaircrack_osdep_la-linux before specialization
@@ -84,22 +136,22 @@ Statistics for libaircrack_osdep_la-linux before specialization
 
 Statistics for libaircrack_osdep_la-linux after specialization
 	[CFG analysis]
-	  21 Number of functions
+	  24 Number of functions
 	   0 Number of specialized functions
 	   0 Number of bounced functions added by devirt
-	 423 Number of basic blocks
-	2326 Number of instructions
-	 687 Number of direct calls
-	 668 Number of external calls
+	 999 Number of basic blocks
+	4709 Number of instructions
+	1517 Number of direct calls
+	1471 Number of external calls
 	   0 Number of assembly calls
 	   0 Number of indirect calls
 	   0 Number of unknown calls
-	   4 Number of loops   
+	  43 Number of loops   
 	   0 Number of bounded loops
 	[Memory analysis]
-	363 Number of memory instructions
-	105 Statically safe memory accesses
-	258 Statically unknown memory accesses
+	441 Number of memory instructions
+	144 Statically safe memory accesses
+	297 Statically unknown memory accesses
 
 Statistics for libaircrack_osdep_la-linux_tap before specialization
 	[CFG analysis]
@@ -123,10 +175,10 @@ Statistics for libaircrack_osdep_la-linux_tap before specialization
 Statistics for libaircrack_osdep_la-linux_tap after specialization
 	[CFG analysis]
 	 10 Number of functions
-	  0 Number of specialized functions
+	  1 Number of specialized functions
 	  0 Number of bounced functions added by devirt
 	 21 Number of basic blocks
-	157 Number of instructions
+	155 Number of instructions
 	 44 Number of direct calls
 	 44 Number of external calls
 	  0 Number of assembly calls
@@ -161,21 +213,21 @@ Statistics for libaircrack_util_la-common before specialization
 Statistics for libaircrack_util_la-common after specialization
 	[CFG analysis]
 	  2 Number of functions
-	  0 Number of specialized functions
+	  2 Number of specialized functions
 	  0 Number of bounced functions added by devirt
-	 40 Number of basic blocks
-	179 Number of instructions
-	 31 Number of direct calls
-	 31 Number of external calls
+	 24 Number of basic blocks
+	133 Number of instructions
+	 23 Number of direct calls
+	 23 Number of external calls
 	  0 Number of assembly calls
 	  0 Number of indirect calls
 	  0 Number of unknown calls
 	  1 Number of loops   
 	  0 Number of bounded loops
 	[Memory analysis]
-	20 Number of memory instructions
+	17 Number of memory instructions
 	 6 Statically safe memory accesses
-	14 Statically unknown memory accesses
+	11 Statically unknown memory accesses
 
 Statistics for libaircrack_osdep_la-common before specialization
 	[CFG analysis]
@@ -312,21 +364,21 @@ Statistics for libaircrack_osdep_la-network before specialization
 
 Statistics for libaircrack_osdep_la-network after specialization
 	[CFG analysis]
-	 14 Number of functions
+	 13 Number of functions
 	  0 Number of specialized functions
 	  0 Number of bounced functions added by devirt
-	131 Number of basic blocks
-	696 Number of instructions
-	147 Number of direct calls
-	130 Number of external calls
-	 13 Number of assembly calls
+	164 Number of basic blocks
+	802 Number of instructions
+	179 Number of direct calls
+	169 Number of external calls
+	 19 Number of assembly calls
 	  0 Number of indirect calls
 	  0 Number of unknown calls
-	  4 Number of loops   
+	 10 Number of loops   
 	  0 Number of bounded loops
 	[Memory analysis]
-	137 Number of memory instructions
-	 50 Statically safe memory accesses
+	149 Number of memory instructions
+	 62 Statically safe memory accesses
 	 87 Statically unknown memory accesses
 
 Statistics for radiotap before specialization
@@ -388,22 +440,22 @@ Statistics for airtun_ng-airtun-ng before specialization
 
 Statistics for airtun_ng-airtun-ng after specialization
 	[CFG analysis]
-	   4 Number of functions
+	   3 Number of functions
 	   0 Number of specialized functions
 	   0 Number of bounced functions added by devirt
-	 445 Number of basic blocks
-	2481 Number of instructions
-	 327 Number of direct calls
-	 321 Number of external calls
+	 450 Number of basic blocks
+	2523 Number of instructions
+	 330 Number of direct calls
+	 326 Number of external calls
 	   1 Number of assembly calls
 	   0 Number of indirect calls
 	   0 Number of unknown calls
-	  11 Number of loops   
+	  12 Number of loops   
 	   0 Number of bounded loops
 	[Memory analysis]
-	658 Number of memory instructions
-	130 Statically safe memory accesses
-	528 Statically unknown memory accesses
+	672 Number of memory instructions
+	136 Statically safe memory accesses
+	536 Statically unknown memory accesses
 
 Statistics for libaircrack_osdep_la-osdep before specialization
 	[CFG analysis]
@@ -426,51 +478,62 @@ Statistics for libaircrack_osdep_la-osdep before specialization
 
 Statistics for libaircrack_osdep_la-osdep after specialization
 	[CFG analysis]
-	 16 Number of functions
-	  0 Number of specialized functions
+	 18 Number of functions
+	  7 Number of specialized functions
 	  0 Number of bounced functions added by devirt
-	 51 Number of basic blocks
-	149 Number of instructions
-	 20 Number of direct calls
-	 20 Number of external calls
+	 61 Number of basic blocks
+	181 Number of instructions
+	 26 Number of direct calls
+	 26 Number of external calls
 	  0 Number of assembly calls
 	 10 Number of indirect calls
 	  0 Number of unknown calls
 	  0 Number of loops   
 	  0 Number of bounded loops
 	[Memory analysis]
-	20 Number of memory instructions
-	 2 Statically safe memory accesses
-	18 Statically unknown memory accesses
+	26 Number of memory instructions
+	 4 Statically safe memory accesses
+	22 Statically unknown memory accesses
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux_tap.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_util_la-common.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-common.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-file.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaclib_la-crypto.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-network.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/radiotap.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
+	Intra-specialization policy=machinelearning
 	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-osdep.o.i.bc
-	Intra-specialization policy=none
-	skipped intra-module specialization
-Skipped inter-module specialization
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-linux_tap.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_util_la-common.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-common.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-file.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaclib_la-crypto.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-network.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/radiotap.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/airtun_ng-airtun-ng.o.a.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Module: /test/examples/linux/airtun_ng/slash_specialized/libaircrack_osdep_la-osdep.o.i.p.s.r.i.h.bc
+	Intra-specialization policy=machinelearning
+	Inter-specialization policy=machinelearning
 cp: cannot stat './slash_specialized/knockd_slashed': No such file or directory
