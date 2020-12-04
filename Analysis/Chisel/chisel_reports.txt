@@ -63,3 +63,120 @@ BZIP2
    #Functions (Reduced) :                     1
   #Statements (Reduced) :                     1
   
+Reduce File: tree.c
+Iteration 1 (Word: 4652)
+Start global reduction
+Running delta debugging - Size: 102
+Reduced - Size: 95
+Reduced - Size: 93
+Reduced - Size: 91
+Reduced - Size: 89
+Reduced - Size: 87
+Reduced - Size: 86
+Reduced - Size: 84
+Reduced - Size: 82
+Reduced - Size: 80
+Reduced - Size: 79
+Reduced - Size: 78
+Reduced - Size: 77
+Reduced - Size: 76
+Start local reduction
+Reduce output_fixed at tree.c
+Running delta debugging - Size: 1
+Reduce main at tree.c
+Running delta debugging - Size: 30
+Reduced - Size: 22
+Reduced - Size: 11
+Reduced - Size: 5
+Reduced - Size: 3
+Reduced - Size: 2
+Invalid location:
+BeginIf: tree.c:504:3
+EndIf: <invalid loc>
+EndCond: tree.c:504:12
+EndThen: tree.c:516:3
+Reduce read_dir at tree.c
+Running delta debugging - Size: 4
+Invalid location:
+BeginIf: tree.c:704:3
+EndIf: tree.c:708:3
+EndCond: <invalid loc>
+EndThen: tree.c:708:3
+Reduce cond_lower at tree.c
+Running delta debugging - Size: 1
+Reduce patmatch at tree.c
+Running delta debugging - Size: 4
+Reduced - Size: 2
+Reduced - Size: 1
+Iteration 2 (Word: 1177)
+Start global reduction
+Running delta debugging - Size: 68
+Reduced - Size: 66
+Reduced - Size: 63
+Reduced - Size: 62
+Reduced - Size: 60
+Reduced - Size: 58
+Reduced - Size: 57
+Reduced - Size: 56
+Reduced - Size: 55
+Reduced - Size: 54
+Reduced - Size: 53
+Reduced - Size: 52
+Reduced - Size: 51
+Start local reduction
+Reduce main at tree.c
+Running delta debugging - Size: 2
+Invalid location:
+BeginIf: tree.c:504:3
+EndIf: <invalid loc>
+EndCond: <invalid loc>
+EndThen: tree.c:516:3
+Iteration 3 (Word: 631)
+Start global reduction
+Running delta debugging - Size: 10
+Reduced - Size: 9
+Start local reduction
+Reduce main at tree.c
+Running delta debugging - Size: 2
+Invalid location:
+BeginIf: tree.c:504:3
+EndIf: <invalid loc>
+EndCond: <invalid loc>
+EndThen: tree.c:516:3
+Iteration 4 (Word: 608)
+Start global reduction
+Running delta debugging - Size: 9
+Start local reduction
+Reduce main at tree.c
+Running delta debugging - Size: 2
+Invalid location:
+BeginIf: tree.c:504:3
+EndIf: <invalid loc>
+EndCond: <invalid loc>
+EndThen: tree.c:516:3
+Reduce File: tree.c
+Iteration 1 (Word: 608)
+Start global reduction
+Running delta debugging - Size: 9
+Start local reduction
+Reduce main at tree.c
+Running delta debugging - Size: 2
+Invalid location:
+BeginIf: tree.c:504:3
+EndIf: <invalid loc>
+EndCond: <invalid loc>
+EndThen: tree.c:516:3
+====================================================
+                       Report                       
+====================================================
+             Total Time :                  1.4s
+            Oracle Time :                  1.2s
+          Learning Time :                  0.0s
+   Global Success Ratio :  100% (   26 /    26)
+    Local Success Ratio :  100% (    7 /     7)
+  #Functions (Original) :                    24
+ #Statements (Original) :                   653
+   #Functions (Reduced) :                     1
+  #Statements (Reduced) :                     6
+
+  
