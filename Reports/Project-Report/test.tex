@@ -6,21 +6,157 @@
 
 
 \begin{document}
-
-
-
+%1
 \begin{table}[]
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{lllllllllll}
-\multicolumn{1}{c}{}                                     & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{basic blocks}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{direct   calls}}} & \multicolumn{2}{l}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\
-\multicolumn{1}{c}{\multirow{-2}{*}{\textbf{Libraries}}} & \textbf{Before}                & \textbf{After}               & \textbf{Before}                 & \textbf{After}                 & \textbf{Before}                 & \textbf{After}                 & \textbf{Before}                  & \textbf{After}                  & \textbf{Before}                      & \textbf{After}                     \\
-{\color[HTML]{24292E} libaircrack\_util\_la-common}      & 16                             & 2                            & 136                             & 24                             & 629                             & 133                            & 83                               & 23                              & 80                                   & 17                                 \\
-{\color[HTML]{24292E} libaclib\_la-crypto}               & 39                             & 9                            & 289                             & 110                            & 4627                            & 1722                           & 223                              & 100                             & 978                                  & 412                                \\
-{\color[HTML]{24292E} bzip2}                             & 31                             & 1                            & 683                             & 3                              & 4087                            & 9                              & 602                              & 3                               & 982                                  & 2                                  \\
-{\color[HTML]{24292E} netperf}                           & 90                             & 77                           & 750                             & 671                            & 4874                            & 4441                           & 427                              & 385                             & 2160                                 & 1991                              
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{\textbf{bzip2-1.0.5}}                       \\ \hline
+                              & \textbf{Before} & \textbf{After} \\ \hline
+\textbf{ROP}                  & 646             & 313            \\ \hline
+\textbf{COP}                  & 97              & 55             \\ \hline
+\textbf{JOP}                  & 6728            & 1562           \\ \hline
+\textbf{Total Unique Gadgets} & 7374            & 1930           \\ \hline
 \end{tabular}%
 }
 \end{table}
+
+
+%2
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{\textbf{date-8.21}}                         \\ \hline
+                              & \textbf{Before} & \textbf{After} \\ \hline
+\textbf{ROP}                  & 408             & 166            \\ \hline
+\textbf{COP}                  & 39              & 8              \\ \hline
+\textbf{JOP}                  & 5214            & 877            \\ \hline
+\textbf{Total Unique Gadgets} & 5626            & 1046           \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+%3
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{\textbf{mkdir-5.2.1}}                       \\ \hline
+                              & \textbf{Before} & \textbf{After} \\ \hline
+\textbf{ROP}                  & 210             & 84             \\ \hline
+\textbf{COP}                  & 7               & 5              \\ \hline
+\textbf{JOP}                  & 2282            & 176            \\ \hline
+\textbf{Total Unique Gadgets} & 2492            & 260            \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+%4
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|}
+\hline
+\multicolumn{3}{|c|}{\textbf{rm-8.4}}                            \\ \hline
+                              & \textbf{Before} & \textbf{After} \\ \hline
+\textbf{ROP}                  & 485             & 111            \\ \hline
+\textbf{COP}                  & 44              & 5              \\ \hline
+\textbf{JOP}                  & 4476            & 190            \\ \hline
+\textbf{Total Unique Gadgets} & 4965            & 301            \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+%5 occam ML
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{}                                       & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{basic   blocks}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{direct calls}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\ \cline{2-11} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Libraries}}}   & \textbf{Before}                & \textbf{After}                & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                      & \textbf{After}                      \\ \hline
+{\color[HTML]{24292E} \textbf{libaircrack\_util\_la-common}} & 16                             & 3                             & 136                               & 26                              & 629                              & 146                            & 83                               & 25                             & 80                                   & 19                                  \\ \hline
+{\color[HTML]{24292E} \textbf{libaclib\_la-crypto}}          & 39                             & 10                            & 289                               & 121                             & 4627                             & 1894                           & 223                              & 110                            & 978                                  & 453                                 \\ \hline
+{\color[HTML]{24292E} \textbf{bzip2}}                        & 31                             & 1                             & 683                               & 3                               & 4087                             & 10                             & 602                              & 3                              & 982                                  & 2                                   \\ \hline
+{\color[HTML]{24292E} \textbf{netperf}}                      & 90                             & 85                            & 750                               & 738                             & 4874                             & 4885                           & 427                              & 424                            & 2160                                 & 2190                                \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+
+
+%6 occam only once
+
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{}                                       & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{basic   blocks}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{direct   calls}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\ \cline{2-11} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Libraries}}}   & \textbf{Before}                & \textbf{After}                & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                      & \textbf{After}                      \\ \hline
+{\color[HTML]{24292E} \textbf{libaircrack\_osdep\_la-osdep}} & 31                             & 16                            & 96                                & 51                              & 269                              & 148                            & 35                                & 20                              & 35                                   & 20                                  \\ \hline
+{\color[HTML]{24292E} \textbf{libapr-1}}                     & 689                            & 276                           & 6055                              & 4504                            & 45409                            & 25742                          & 14162                             & 1432                            & 7571                                 & 6322                                \\ \hline
+{\color[HTML]{24292E} \textbf{libaprutil-1}}                 & 371                            & 89                            & 3034                              & 901                             & 36729                            & 8776                           & 11283                             & 309                             & 6047                                 & 2039                                \\ \hline
+{\color[HTML]{24292E} \textbf{httpd}}                        & 1083                           & 416                           & 12943                             & 11401                           & 83238                            & 61667                          & 22603                             & 5175                            & 17071                                & 16188                               \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+
+%7occam non rec recursive
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{}                                     & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{basic   blocks}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{direct   calls}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\ \cline{2-11} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Libraries}}} & \textbf{Before}                & \textbf{After}                & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                      & \textbf{After}                      \\ \hline
+{\color[HTML]{24292E} \textbf{bzip2}}                      & 61                             & 54                            & 2776                              & 3137                            & 24412                            & 23769                          & 4714                              & 1011                            & 5144                                 & 5989                                \\ \hline
+{\color[HTML]{24292E} \textbf{libapr-1}}                   & 689                            & 287                           & 6055                              & 4809                            & 45409                            & 28172                          & 14162                             & 1558                            & 7571                                 & 6921                                \\ \hline
+{\color[HTML]{24292E} \textbf{libaprutil-1}}               & 371                            & 89                            & 3034                              & 973                             & 36729                            & 9256                           & 11283                             & 316                             & 6047                                 & 2159                                \\ \hline
+{\color[HTML]{24292E} \textbf{httpd}}                      & 1083                           & 444                           & 12943                             & 12999                           & 83238                            & 70773                          & 22603                             & 5932                            & 17071                                & 18347                               \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+
+%8occam none
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{}                                       & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{basic   blocks}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{direct   calls}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\ \cline{2-11} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Libraries}}}   & \textbf{Before}                & \textbf{After}                & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                      & \textbf{After}                      \\ \hline
+{\color[HTML]{24292E} \textbf{libaircrack\_util\_la-common}} & 16                             & 2                             & 136                               & 40                              & 629                              & 179                            & 83                                & 31                              & 80                                   & 20                                  \\ \hline
+{\color[HTML]{24292E} \textbf{libaclib\_la-crypto}}          & 39                             & 9                             & 289                               & 110                             & 4627                             & 1722                           & 223                               & 100                             & 978                                  & 412                                 \\ \hline
+{\color[HTML]{24292E} \textbf{libapr-1}}                     & 689                            & 281                           & 6055                              & 4453                            & 45409                            & 25373                          & 14162                             & 1437                            & 7571                                 & 6217                                \\ \hline
+{\color[HTML]{24292E} \textbf{libaprutil-1}}                 & 371                            & 92                            & 3034                              & 908                             & 36729                            & 8794                           & 11283                             & 312                             & 6047                                 & 2040                                \\ \hline
+{\color[HTML]{24292E} httpd}                                 & 1083                           & 477                           & 12943                             & 11615                           & 83238                            & 62428                          & 22603                             & 5279                            & 17071                                & 16334                               \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+%9occam aggressive
+
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{}                                       & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{functions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{basic blocks}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{instructions}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{direct   calls}}} & \multicolumn{2}{l|}{{\color[HTML]{24292E} \textbf{memory   instructions}}} \\ \cline{2-11} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Libraries}}}   & \textbf{Before}                & \textbf{After}                & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                  & \textbf{After}                 & \textbf{Before}                   & \textbf{After}                  & \textbf{Before}                      & \textbf{After}                      \\ \hline
+{\color[HTML]{24292E} \textbf{libaircrack\_util\_la-common}} & 16                             & 2                             & 136                              & 24                             & 629                              & 133                            & 83                                & 23                              & 80                                   & 17                                  \\ \hline
+{\color[HTML]{24292E} \textbf{libaclib\_la-crypto}}          & 39                             & 9                             & 289                              & 110                            & 4627                             & 1722                           & 223                               & 100                             & 978                                  & 412                                 \\ \hline
+{\color[HTML]{24292E} \textbf{bzip2}}                        & 31                             & 1                             & 683                              & 3                              & 4087                             & 9                              & 602                               & 3                               & 982                                  & 2                                   \\ \hline
+{\color[HTML]{24292E} \textbf{netperf}}                      & 90                             & 77                            & 750                              & 671                            & 4874                             & 4441                           & 427                               & 385                             & 2160                                 & 1991                                \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+
+
+%10
 
 
 
