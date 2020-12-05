@@ -154,15 +154,15 @@
 \let\oldmaketitle\maketitle
 \renewcommand{\maketitle}{
 	\if@langfr
-		\selectlanguage{french}%
-		\sisetup{locale=FR}%
+			\selectlanguage{english}%
+			\sisetup{locale=US}%
 	\else
 		\if@langen
 			\selectlanguage{english}%
 			\sisetup{locale=US}%
 		\else
-			\selectlanguage{brazil}%
-			\sisetup{locale=DE}%
+			\selectlanguage{english}%
+			\sisetup{locale=US}%
 		\fi
 	\fi
 	\oldmaketitle{}
