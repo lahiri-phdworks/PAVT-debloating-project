@@ -278,20 +278,8 @@ rogram debloating techniques. Program deblaoting techniques
 
 \subsection{Overview}%
 \label{Tools}
+TRIMMER tool is used to specialize the target program with respect to the user defined configuration. The configuration contains the usage context of application. Compiler transformation are included in this tool for good debloating.Inter procedural  constant propagation is used in the tool which aggressively removes the unnecessary codes. With the reduction in the unused program codes, the gadget count of the program is also reduced and helps to improve the security performance of the system. 
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
 \begin{table*}[]
 	\begin{tabular}{lccccccc}
 		\hline
@@ -338,19 +326,7 @@ rogram debloating techniques. Program deblaoting techniques
 \subsection{Working Procedure}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+The source code is converted to LLVM IR  and given as an input to the trimmer tool along with the manifest file consisting of user defined configuration. The TRIMMER first performs input specialization with respect to the user defined configuration . The second part is loop unrolling . The loop unrolling becomes important step to make interprocedural constant propagation easier. Constant Propagation is the final stage in the tool. The specialized code processed by the TRIMMER is then given as input to the linker . The linker also reads the linker flags from the manifest file and generates a final specialized binary executable file.
 
 \section{Chisel Tool}%
 \label{Tools}
@@ -372,87 +348,28 @@ rogram debloating techniques. Program deblaoting techniques
 \subsection{Overview}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques	
+CHISEL is a program debloating and optimization tool based on syntax guided hierarchical delta debugging algorithm. The tool ensures that the reduced program are compilable, core functionalities of source program are preserved  and undefined behaviours for non core functionalities does not show up. CHISEL also keeps all the criteria required for the system to work properly in order. The criteria are minimality,naturalness,efficiency,robustness and generality. The probabilistic model is used in CHISEL to accelerate the delta debugging algorithm and Markov Decision Process is used to search a proper policy for learning the machine learning algorithm. Model based Reinforcement algorithm is used to converge to the solution quickly.
 
 \subsection{Working Procedure}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+The input to the \textbf{CHISEL} tool is a C/C++ source file (test.c) which is to be debloated. Along with the source file , we give a specialized script which contains the high level specification of the desired output. The CHISEL tool then generates binary of the source code(test.c.chisel.c). Both the source and debloated program are then compiled by g++ or any other compiler and the binaries generated by the compiler are given to the ROP gadgets or Gadget Set Analyser(GSA) . The ROP gadget outputs the count of the  gadgets before and after debloating respectively.
 
 \subsection{State Encoding}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques	
+Markov Decision Process is used for Delta debugging algorithm. For  delta debugging algorithm two things are required and the tuple of these two things defines the state of the model at any time. The first thing is the pair of the program to be tested and second thing is the number of partitions into which a program is broken. The initial state consist the entire program  represented as a list into two partitions. The program can be broken inti tokens,identifiers ,statements or even a finer granularity is reached to obtain the minimal state.
 
 \subsection{Delta Debugging}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+Delta debugging is an algorithm or technique to remove the unnecessary part of the input which is not responsible for test case failure. DD makes testing easier as it divides input into smaller subsets because smaller  and simplified testcases are easy to handle. Delta debugging algorithm is used till we reach 1-minimal expression. DD is an iterative algorithm.Markov Decision Process for delta debugging is deployed to build a statistical model to get 1-minimal solution with lesser number of iterations than delta debugging alone.
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques	
 
 \subsection{1-minimal Program}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques	
+Suppose we have a testcase T which fails the program P. When T is given as input to P, the entire part of T may not be responsible for causing failure to the program P. Therefore, we are interested in the exact part of T which causes the program to fail. In short, we can say failing test case can have relevant and non-relevant information. To filter out the relevant information from the test case, we use Delta debugging algorithm.If a test case T fails the program P, then the expression T’ derived from T is 1-minimal iff any deviation causes the test case failure to go away.
 
 \section{DeepOCCAM Tool}%
 \label{Tools}
@@ -550,19 +467,10 @@ rogram debloating techniques. Program deblaoting techniques
 \subsection{Inst2Vec Usage}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+Inst2vec  is the technique of processing the source code into the features vector for modeling the Reinforcement Learning. It follows an approach similar to skip-gram model in Natural Language Processing of pre-defined context size. The source code is first compiled into LLVM IR code. The LLVM IR is in the form of a static single assignment.As LLVM IR  is independent of machine or hardware architecture and programming language , it becomes easy to train the program embeddings.The approach is similar to word2vec model.
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques	
+
+With the LLVM IR , the contextual flow graph (XFG)is created. XFG takes into account both the data flow and control flow of the program. With these XFGs generated from LLVM IR , the consecutive statement pairs are made of pre-defined context size . These statement pairs are then  checked for duplication. The XFGs pairs are made by constructing a dual graph with statement as nodes and removing duplicate edges. The process is then followed by removing statements of negligible presence. We get an inst2vec after subsampling of frequent pairs which can be optimized and trained. XFGs ensures that the semantics of statements are preserved.
 
 \section{Project Aim}%
 \label{Tools}
