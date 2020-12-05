@@ -4,12 +4,12 @@
 
 % Declaration for this class
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{relatorio}[2020/04/21 Modelo de Relatório do CEFET em XeLaTeX]
+\ProvidesClass{relatorio}[2020/04/21 Software Debloating Techniques]
 
 % This command has to be defined for every class
 \newcommand{\headlinecolor}{\normalcolor}
 
-\RequirePackage[english,french,brazil]{babel}
+\RequirePackage[english]{babel}
 
 % Base our class on the IEEETran
 \LoadClass[journal,transmag]{IEEEtran}
@@ -22,14 +22,12 @@
 \newif\if@useminted
 
 \DeclareOption{english}{\@langentrue}
-\DeclareOption{french}{\@langfrtrue}
 \DeclareOption{minted}{\@usemintedtrue}
 
 % Processes all options and puts us back into normal mode. \RequirePackage
 % allowed again.
 \ProcessOptions\relax
 
-\RequirePackage{hyperref}
 \RequirePackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \renewcommand{\baselinestretch}{1.5} % Line height of 1.5

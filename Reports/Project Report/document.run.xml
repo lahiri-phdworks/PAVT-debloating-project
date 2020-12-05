@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>document.bcf</file>
@@ -59,16 +59,11 @@
       <file>authoryear-comp.cbx</file>
       <file>abnt.cbx</file>
       <file>biblatex.cfg</file>
-      <file>brazilian.lbx</file>
-      <file>brazilian-abnt.lbx</file>
-      <file>brazil.lbx</file>
-      <file>brazil-abnt.lbx</file>
-      <file>french.lbx</file>
       <file>english.lbx</file>
       <file>english-abnt.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="0">
+  <external package="biblatex" priority="5" active="1">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
@@ -85,9 +80,6 @@
     </provides>
     <requires type="dynamic">
       <file>document.bcf</file>
-    </requires>
-    <requires type="editable">
-      <file>bibliothek.bib</file>
     </requires>
   </external>
 </requests>
