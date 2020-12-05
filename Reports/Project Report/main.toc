@@ -1,0 +1,47 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\babel@toc {english}{}
+\contentsline {section}{\numberline {I}Project Objective}{3}{section.1}%
+\contentsline {section}{\numberline {II}What is Software debloating?}{5}{section.2}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}Software Debloating Tools}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Software Debloating Techniques}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {III}Motivating Examples}{6}{section.3}%
+\contentsline {section}{\numberline {IV}OCCAM Tool}{6}{section.4}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Overview}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}Working Procedure}{7}{subsection.4.2}%
+\contentsline {section}{\numberline {V}Trimmer Tool}{9}{section.5}%
+\contentsline {subsection}{\numberline {\mbox {V-A}}Overview}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {\mbox {V-B}}Working Procedure}{9}{subsection.5.2}%
+\contentsline {section}{\numberline {VI}Chisel Tool}{11}{section.6}%
+\contentsline {subsection}{\numberline {\mbox {VI-A}}Overview}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {\mbox {VI-B}}Working Procedure}{11}{subsection.6.2}%
+\contentsline {subsection}{\numberline {\mbox {VI-C}}State Encoding}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {\mbox {VI-D}}Delta Debugging}{12}{subsection.6.4}%
+\contentsline {subsection}{\numberline {\mbox {VI-E}}1-minimal Program}{13}{subsection.6.5}%
+\contentsline {section}{\numberline {VII}DeepOCCAM Tool}{13}{section.7}%
+\contentsline {subsection}{\numberline {\mbox {VII-A}}Overview}{13}{subsection.7.1}%
+\contentsline {subsection}{\numberline {\mbox {VII-B}}Working Procedure}{14}{subsection.7.2}%
+\contentsline {subsection}{\numberline {\mbox {VII-C}}State Encoding}{14}{subsection.7.3}%
+\contentsline {subsection}{\numberline {\mbox {VII-D}}Inst2Vec Usage}{15}{subsection.7.4}%
+\contentsline {section}{\numberline {VIII}Project Aim}{15}{section.8}%
+\contentsline {section}{\numberline {IX}Implementation}{16}{section.9}%
+\contentsline {section}{\numberline {X}Pipeline Setup}{16}{section.10}%
+\contentsline {subsection}{\numberline {\mbox {X-A}}Chisel Pipeline}{18}{subsection.10.1}%
+\contentsline {subsection}{\numberline {\mbox {X-B}}OCCAM Pipeline}{18}{subsection.10.2}%
+\contentsline {subsection}{\numberline {\mbox {X-C}}DeepOCCAM Pipeline}{19}{subsection.10.3}%
+\contentsline {section}{\numberline {XI}Analysis Metrics}{19}{section.11}%
+\contentsline {subsection}{\numberline {\mbox {XI-A}}Static Analysis}{20}{subsection.11.1}%
+\contentsline {subsection}{\numberline {\mbox {XI-B}}Dynamic Analysis}{20}{subsection.11.2}%
+\contentsline {subsection}{\numberline {\mbox {XI-C}}Gadgets}{20}{subsection.11.3}%
+\contentsline {section}{\numberline {XII}Comparision Metrics}{21}{section.12}%
+\contentsline {subsection}{\numberline {\mbox {XII-A}}Static Analysis}{21}{subsection.12.1}%
+\contentsline {subsection}{\numberline {\mbox {XII-B}}Comparision : Dynamic Analysis}{23}{subsection.12.2}%
+\contentsline {section}{\numberline {XIII}Observations}{24}{section.13}%
+\contentsline {subsection}{\numberline {\mbox {XIII-A}}Insights}{24}{subsection.13.1}%
+\contentsline {section}{\numberline {XIV}Conclusion}{25}{section.14}%
+\contentsline {subsection}{\numberline {\mbox {XIV-A}}But finally, Who Won?}{25}{subsection.14.1}%
+\contentsline {section}{\numberline {XV}Other Tools}{25}{section.15}%
+\contentsline {section}{\numberline {XVI}Project Assets}{26}{section.16}%
+\contentsline {subsection}{\numberline {\mbox {XVI-A}}Docker Images}{26}{subsection.16.1}%
+\contentsline {subsection}{\numberline {\mbox {XVI-B}}GitHub Repositories}{26}{subsection.16.2}%
+\contentsline {section}{References}{27}{section*.17}%
