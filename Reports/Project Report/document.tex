@@ -52,6 +52,34 @@
 \preamble{}
 
 \begin{document}
+\begin{titlepage}
+	\begin{center}
+		\vspace*{2cm}
+		
+		\textbf{Is Software Debloating really effective?}
+		
+		\vspace{0.5cm}
+		Analysis \& Comparison of Modern Software Debloating tools \& Techniques.
+		
+		\vspace{1.5cm} 
+		\textbf{Amit Kumar} \\
+		\texttt{20111012} \\
+		\vspace{1.5cm}
+		\textbf{Sumit Lahiri} \\
+		\texttt{19111274} \\
+		\vfill
+		
+		CS-639A PAVT : Project Report \\
+		\texttt{Group - 1} \\
+		\vspace{0.8cm}
+		
+		\includegraphics[width=0.2\textwidth]{imgs/university.jpg}
+		
+		\Large
+		Indian Institute Of Technology, Kanpur
+		
+	\end{center}
+\end{titlepage}
 	
 	\onecolumn
 	\tableofcontents
@@ -328,13 +356,17 @@ are replaced with constant value (if statically known) and optimization passes b
 
 We detail out a bit more about the OCCAM tool here. Function inlining only replaces the function call by the function definition but PE takes an extra step and evaluates the function before the execution of program using statically known arguments via constant folding or constant propagation in the function body. Static (compile time) analysis is seperate from dynamic (run time) analysis with this algorithm and thus we present details of the tool runs in two sections Static Analysis and Dynamic Analysis.
 
-OCCAM takes two inputs: a source code in C/C++ and a manifest file in JSON format. The debloated binary of the original source code produced by the OCCAM tool is used by the Gadget set Analyser to get the gadgets count. The original source code is also compiled by a compiler and feed to GSA tool. Both debloated and original binaries are then compared for reduction in metric counts. Dead code elimination in OCCAM works in five ways:
+OCCAM takes two inputs: a source code in C/C++ and a manifest file in JSON format. The debloated binary of the original source code produced by the OCCAM tool 
+is used by the Gadget set Analyser to get the gadgets count. The original source code is also compiled by a compiler and feed to GSA tool. Both debloated and original binaries are then compared for reduction in metric counts. Dead code elimination in OCCAM works in five ways:
 
 \begin{itemize}
 	\item Aggressive Non-Recursive DCE.
-	\item Inter-Procedural DCE.(accross function calls/bodies).
-	\item Intra Procedural DCE.(for basic blocks in function body).
-	\item Sparse Conditional Constant Propagation based DCE.(for OCCAM-T, we enable this pass).
+	\item Inter-Procedural DCE.
+(accross function calls/bodies).
+	\item Intra Procedural DCE.
+(for basic blocks in function body).
+	\item Sparse Conditional Constant Propagation based DCE.
+(for OCCAM-T, we enable this pass).
 	\item Abstract Interpretation based DCE. (Seahorn Crab based DCE pass).
 \end{itemize}
 
@@ -445,7 +477,8 @@ Suppose we have a testcase T which fails the program P. When T is given as input
 \section{DeepOCCAM Tool}%
 
 \texttt{DeepOCCAM} is an extension of \texttt{OCCAM} tool with new approach based on machine learning. Both \texttt{OCCAM} and \texttt{DeepOCCAM} are based on the partial evaluation approach.
-The major contribution of PE is to determine if the function specialization decreases the size of residual program. The function specialization increases the codesize of original program but then optimization in the new function  such as constant propagation can be possible after function inlining and static values substitution. So, there is an opportunity for code size reduction in the residual program after partial evaluation process. 
+The major contribution of PE is to determine if the function specialization decreases the size of residual program. The function specialization increases the code
+size of original program but then optimization in the new function  such as constant propagation can be possible after function inlining and static values substitution. So, there is an opportunity for code size reduction in the residual program after partial evaluation process. 
 
 \subsection{Overview}%
 
@@ -461,7 +494,8 @@ We explain the working procedure as per our understanding of the \texttt{DeepOCC
 DeepOCCAM has been implemented with two state modelling schemes. 
 
 \begin{itemize}
-	\item Handcrafted Features \texttt{HF} from counts collected from \texttt{occam.log} file.\\ 
+	\item Handcrafted Features \texttt{HF} from counts collected from \texttt{occam.log} file.
+\\ 
 	\item LLVM IR embedding based feature vectors using Inst2Vec tool. \\
 \end{itemize}
 
