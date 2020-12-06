@@ -4,14 +4,19 @@
 
 \documentclass{relatorio}
 \usepackage[hidelinks]{hyperref}
-\cftsetindents{section}{1em}{2.5em}
-\cftsetindents{subsection}{1em}{5em}
+\cftsetindents{section}{1em}{3em}
+\cftsetindents{subsection}{1em}{4em}
 \usepackage{minted}
 \usepackage{listings}
 \usepackage{color}
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{azure(colorwheel)}{rgb}{0.0, 0.5, 1.0}
+\definecolor{awesome}{rgb}{1.0, 0.13, 0.32}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
 
 \lstdefinelanguage{cpp}{
 	keywords={const, typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, long, int Reduced, Running, delta, debugging},
@@ -562,56 +567,52 @@ We ran multiple instances of the \texttt{docker} containers for \texttt{training
 \subsection{Chisel Pipeline}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We give an overview of what we modified and how we setup the dockers for running the Chisel Tool. The markov model  code implementation in Chisel tool is in ProbabilisticModel.cpp where we added a function to dump a few heuristics.
+We modified the GlobalReduction.cpp \& LocalReduction.cpp code files to dump the before and after chunk sizes for plotting the learning rates. After the .reduced binary produced at each stage when the tests as per \texttt{crash\_inputs} from AFL were executed, we run a \texttt{single\_run()} function of the modified GadgetSetAnalyzer to get the gadgets metric counts and plot them via matplotlib. We installed all dependencies of Chisel and cloned the modified GitHub repository for the runs in a docker container running debian:buster image. We dump the plots from the data collected after the final bianry is produced. The benchmarks already contained the AFL \texttt{crash\_inputs} and other tests, so we used them directly in our runs. 
 
 \subsection{OCCAM Pipeline}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We prepare the benchmarks for the OCCAM run. We modfied and rewrote many of the Makefiles and manifests for proper running of the benchmark examples. Some of the benchmark runs failed for OCCAM amalgamation (pass to combine all the bitcode files) and we only produced the static analysis metrics for these benchmark sets. We were able to run OCCAM for the portfolio benchmark runs used in the Trimmer paper published. We ran the scripts for OCCAM using different settings like --none, --onlyonce, --aggressive, --nonrec-aggressive for both --inter-spec and --intra-spec policy and dumped the metrics accordingly for each run. 
 
-\subsection{Trimmer Runs}%
+The docker base image used for the OCCAM is ubuntu:bionic. We installed all the dependencies and other tools like 
+wllvm, gllvm, golang, llvm-10 etc for the runs. slash is the command line tool name for the python package razor that is uses the occam libraries and binary for debloating action. razor package is wrapper around the occam binary which runs the appropriate passes in occam via llvm-opt tool. It links and runs the tool against the source code and the manifest file supplied. 
+
+We collect the data for each run of the benchmark for the different options of run available in the slash tool against the occam binary. We cloned the modified repository for OCCAM, built it from source and then ran the slash tool after the build via Makefiles and bash scripts (build.sh). We show a sample of the same below. 
+
+\subsection{Trimmer Runs : OCCAM-T}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We didn't have the source code to Trimmer, so we modified OCCAM code to run with argument specialization, LLVM loop unrolling and sparse conditional constant propagation. 
+We make a docker container from the base OCCAM-pipeline docker image of the above. It already has all the tools and libaries needed for the build after the modifications we did to OCCAM source code. We added a LLVM opt pass for bounded loop unrolling, added the LLVM pass for IPSCCP implemeted in LLVM and set all the specialization decisions to true if an argument is constant specializable similar to the case of OCCAM running with Aggressive Poliy for inter and intra specialization passes over each function call sites. 
+
+Simalar to OCCAM, we ran the modified benchmark scripts using --ipdse (for -Pipsccp), --unroll-loop (in passes.py in razor) and dumped along with LLVM the metrics accordingly for each run. The green column in the static analysis tables in for OCCAM-T (we call this modification to OCCAM as OCCAM-T instead of Trimmer).
+
+A word on \textbf{Trimmer}, \textbf{OCCAM} also uses partial evaluation concept like \textbf{Trimmer} for specializing functions at call-sites but it is less aggressive compared to the  \textbf{Trimmer} because it does not include \textbf{\texttt{specialized loop unrolling}} and the modified \textbf{\texttt{constant propagation}} implementation in Trimmer Tool
 
 \subsection{DeepOCCAM Pipeline}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We found a \textbf{\href{https://github.com/nhamlv-55/OCCAM/tree/mlpolicy}{half-implemented code}} repository which belongs to one of the authors for \textbf{DeepOCCAM} paper. The tool doesn't link, build or run on the current platform that we are using. It gave us insights on implementing some of the parts in the code that we are developing as an extension on \textbf{OCCAM} to develop \textbf{DeepOCCAM}.
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+\begin{itemize}
+	\item Modified code in base \textbf{OCCAM} tool to collect \textbf{RL} related features in the \texttt{occam.log} file. 
+	\item Implemented a \textbf{deep reinforcement learning model} from the insights we got from the \textbf{\href{https://github.com/nhamlv-55/OCCAM/tree/mlpolicy}{half-implemented code}}. We were stuck on how to do the rewards implementation and the above repository helped us in implementating the same. 
+	\item We setup a \textbf{docker} based container pipeline to build, run and debloat an example \textbf{\color{blue} code repository}. The \textbf{training} part happened outside the docker, we just saved and extracted the model for later use in container. 
+	\item We had to modify the way the tool was plotting and processing some the feature vectors. We used \textbf{\texttt{Adam Optimization}}, \textbf{\texttt{ReLU}} functions, \textbf{\texttt{Softmax}}, \textbf{\texttt{torch.nn GRU}} neural net for \textbf{\texttt{inst2vec}} \& \textbf{\texttt{Linear fully-connected}} layers etc. for implementing the \textbf{\texttt{ML}} part of \textbf{DeepOCCAM} tool. 
+\end{itemize}
 
 \onecolumn
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=1\linewidth]{imgs/deepoccam-pipeline.png}
+	\includegraphics[width=0.83\linewidth]{imgs/deepoccam-pipeline.png}
 	\caption{\textbf{DeepOCCAM Pipeline}}%
+	\label{fig:plant}
+	\centering
+	\captionsetup{justification=centering}
+	\includegraphics[width=0.83\linewidth]{imgs/deepoccam-pipeline.png}
+	\caption{\textbf{DeepOCCAM : Based on Paper}}%
 	\label{fig:plant}
 \end{figure}
 \twocolumn
@@ -651,7 +652,17 @@ rogram debloating techniques. Program deblaoting techniques
 	\label{fig:plant}
 \end{figure}
 
-\section{Analysis Metrics}%
+\section{Comparision \& Analysis Metrics}%
+\label{Tools}
+
+We divide our analysis and comparision into two parts where the Static Analysis covers all the AST level modifications and reductions done by the tools are measured and comapred via CFG Analysis. The static analysis metrics are already provided by the tools. In some cases we modified it to get as much as details as possible from the static transforamtions that were happening in the tools. The second part is Dynamic Analysis where we compare only the final binary produced by the tools using ROPgadgets tool and GadgetsSetAnalyzer for ROP, JOP, COP, SYS \& Total unique gadgets count. 
+
+\subsection{Comparision : Static Analysis}%
+\label{Tools}
+
+We get static analysis details from the tools after all the reduction and elimination passes have been completed. OCCAM. OCCAM-T (Trimmer) \& DeepOCCAM all implement a final rewrite pass (this is a major part of the OCCAM tool to write the final bitcode) after which they dump the static analysis details  
+
+\subsection{Comparision : Dynamic Analysis}%
 \label{Tools}
 
 Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
@@ -661,15 +672,12 @@ rogram debloating techniques. Program deblaoting techniques
 rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
 rogram debloating techniques. Program deblaoting techniques
 
-\subsection{Static Analysis}%
+\subsection{Why Gadgets Count?}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+\textbf{Call Oriented programming (COP)},\textbf{Jump Oriented programming (JOP)} and \textbf{Return Oriented Programming (ROP)} are \textbf{computer security exploitation} techniques. The hacker uses the binary instructions to combine some sort of short sequences of instructions which are commonly called \textbf{gadgets} using return section code in the stack and make \textbf{unwanted} stack sections directly \textbf{executable}. The gadgets like COP, ROP \& JOP \textbf{hijack} the actual control flow of the program and once the control is disturbed, hacker can make use of this \textbf{opportunity} to attack the system. Therefore, it is necessary to keep these gadgets as minimum as possible. While \textbf{debloating} the program \textbf{reduces} the number of gadgets, it is still not guaranteed that the attack is prevented but it \textbf{minimizes} the attack surface to a certain extent.
+
+It is extremely important to keep track of the metrics of \textbf{gadgets} as these metrics when used to learn a RL policy will help in maximizing the rewards which in turn reduces the \textbf{code attack} surface. So while testing \textbf{DeepOCCAM}, these gadgets counts need to be tracked. We use the \textbf{number} of \textbf{gadgets} we get by running each tool namely \textbf{Chisel}, \textbf{trimmer}, \textbf{OCCAM} or our implementation of \textbf{DeepOCCAM} as a \textbf{\color{ao(english)} reasonably important} metric of comparision.
 
 \begin{table*}[]
 	\begin{tabular}{lccccccc}
@@ -713,46 +721,6 @@ rogram debloating techniques. Program deblaoting techniques
 	\end{tabular}
 	\caption{Comparison of \texttt{DeepOCCAM} with other \texttt{OCCAM} Run settings and \texttt{OCCAM-T Run (Trimmer)}}
 \end{table*}
-
-\subsection{Dynamic Analysis}%
-\label{Tools}
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-\subsection{Gadgets}%
-\label{Tools}
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-\section{Comparision Metrics}%
-\label{Tools}
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-\subsection{Comparision Metric : Dynamic Analysis}%
-\label{Tools}
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
 
 \begin{table*}[]
 	\begin{tabular}{lccccccc}
@@ -845,16 +813,6 @@ rogram debloating techniques. Program deblaoting techniques
 	\label{tab:my-table}
 \end{table*}
 
-\subsection{Comparision Metric : Dynamic Analysis}%
-\label{Tools}
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
 \begin{table*}[]
 	\centering
 	\begin{tabular}{l|lccccc}
@@ -865,7 +823,7 @@ rogram debloating techniques. Program deblaoting techniques
 		JOP Gadgets                                                                             & 6872                         & 1562                                                                                              & 3784                                                                                                    & 3722                                                                                                     & 3848                                                                            & 4585                                                  \\
 		\begin{tabular}[c]{@{}l@{}}Total Unique Gadgets\\ (Excluding SYS \& Chain)\end{tabular} & 7374                         & 1930                                                                                              & 5284                                                                                                    & 5117                                                                                                     & 5185                                                                            & 6345                                                  \\ \hline
 	\end{tabular}
-	\caption{Gadgets count comparision for \color{blue} Bzip2}
+	\caption{Dynamic Binary Analysis : Gadgets Count comparision for \color{blue} Bzip2}
 \end{table*}	
 
 \begin{table*}[]
@@ -878,7 +836,7 @@ rogram debloating techniques. Program deblaoting techniques
 		JOP Gadgets                                                                             & 2126                          & 775                                                                                              & 2774                                                                                                    & 1951                                                                                                     & 1951                                                                            & 2564                                                  \\
 		\begin{tabular}[c]{@{}l@{}}Total Unique Gadgets\\ (Excluding SYS \& Chain)\end{tabular} & 2693                          & 0                                                                                              & 3258                                                                                                    & 2664                                                                                                     & 2664                                                                            & 3162                                                  \\ \hline
 	\end{tabular}
-	\caption{Gadgets count comparision for \color{blue} GNU Tree}
+	\caption{Dynamic Binary Analysis : Gadgets Count comparision for \color{blue} GNU Tree}
 \end{table*}
 
 \section{Observations}%
@@ -931,12 +889,6 @@ rogram debloating techniques. Program deblaoting techniques
 rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
 rogram debloating techniques. Program deblaoting techniques
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
 
 \section{Project Assets}%
 \label{Tools}
@@ -948,46 +900,31 @@ rogram debloating techniques. Program deblaoting techniques
 rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
 rogram debloating techniques. Program deblaoting techniques
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
 \subsection{Docker Images}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+\begin{itemize}
+	\item OCCAM Tool : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM} {https://github.com/lahiri-phdworks/OCCAM}}
+	\item OCCAM Test \& Benchmarks : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM-Benchmarks} {https://github.com/SRI-CSL/OCCAM-Benchmarks}}
+	\item Chisel-Bench : \textbf{\href{https://github.com/lahiri-phdworks/chisel-bench} {https://github.com/lahiri-phdworks/chisel-bench}}
+	\item Chisel Tool : \textbf{\href{https://github.com/lahiri-phdworks/chisel} {https://github.com/lahiri-phdworks/chisel}}
+	\item Inst2Vec : \textbf{\href{https://github.com/lahiri-phdworks/ncc} {https://github.com/lahiri-phdworks/ncc}}
+	\item Binary GSA Testing Tool : \textbf{\href{https://github.com/michaelbrownuc/GadgetSetAnalyzer} {https://github.com/michaelbrownuc/GadgetSetAnalyzer}}
+	\item Docker Images (recent ones) : \textbf{\href{https://hub.docker.com/u/prodrelworks} {https://hub.docker.com/u/prodrelworks}}
+\end{itemize}
 
 \subsection{GitHub Repositories}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+\begin{itemize}
+	\item OCCAM Tool : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM} {https://github.com/lahiri-phdworks/OCCAM}}
+	\item OCCAM Test \& Benchmarks : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM-Benchmarks} {https://github.com/SRI-CSL/OCCAM-Benchmarks}}
+	\item Chisel-Bench : \textbf{\href{https://github.com/lahiri-phdworks/chisel-bench} {https://github.com/lahiri-phdworks/chisel-bench}}
+	\item Chisel Tool : \textbf{\href{https://github.com/lahiri-phdworks/chisel} {https://github.com/lahiri-phdworks/chisel}}
+	\item Inst2Vec : \textbf{\href{https://github.com/lahiri-phdworks/ncc} {https://github.com/lahiri-phdworks/ncc}}
+	\item Binary GSA Testing Tool : \textbf{\href{https://github.com/michaelbrownuc/GadgetSetAnalyzer} {https://github.com/michaelbrownuc/GadgetSetAnalyzer}}
+	\item Docker Images (recent ones) : \textbf{\href{https://hub.docker.com/u/prodrelworks} {https://hub.docker.com/u/prodrelworks}}
+\end{itemize}
 
 \nocite{*}
 \begin{thebibliography}{9}

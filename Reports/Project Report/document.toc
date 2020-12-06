@@ -28,21 +28,18 @@
 \contentsline {section}{\numberline {X}Pipeline Setup}{14}{section.10}%
 \contentsline {subsection}{\numberline {\mbox {X-A}}Chisel Pipeline}{16}{subsection.10.1}%
 \contentsline {subsection}{\numberline {\mbox {X-B}}OCCAM Pipeline}{16}{subsection.10.2}%
-\contentsline {subsection}{\numberline {\mbox {X-C}}Trimmer Runs}{16}{subsection.10.3}%
-\contentsline {subsection}{\numberline {\mbox {X-D}}DeepOCCAM Pipeline}{16}{subsection.10.4}%
-\contentsline {section}{\numberline {XI}Analysis Metrics}{19}{section.11}%
-\contentsline {subsection}{\numberline {\mbox {XI-A}}Static Analysis}{19}{subsection.11.1}%
-\contentsline {subsection}{\numberline {\mbox {XI-B}}Dynamic Analysis}{19}{subsection.11.2}%
-\contentsline {subsection}{\numberline {\mbox {XI-C}}Gadgets}{19}{subsection.11.3}%
-\contentsline {section}{\numberline {XII}Comparision Metrics}{21}{section.12}%
-\contentsline {subsection}{\numberline {\mbox {XII-A}}Comparision Metric : Dynamic Analysis}{21}{subsection.12.1}%
-\contentsline {subsection}{\numberline {\mbox {XII-B}}Comparision Metric : Dynamic Analysis}{21}{subsection.12.2}%
-\contentsline {section}{\numberline {XIII}Observations}{24}{section.13}%
-\contentsline {subsection}{\numberline {\mbox {XIII-A}}Insights}{24}{subsection.13.1}%
-\contentsline {section}{\numberline {XIV}Conclusion}{24}{section.14}%
-\contentsline {subsection}{\numberline {\mbox {XIV-A}}But finally, Who Won?}{25}{subsection.14.1}%
-\contentsline {section}{\numberline {XV}Other Tools}{25}{section.15}%
-\contentsline {section}{\numberline {XVI}Project Assets}{25}{section.16}%
-\contentsline {subsection}{\numberline {\mbox {XVI-A}}Docker Images}{26}{subsection.16.1}%
-\contentsline {subsection}{\numberline {\mbox {XVI-B}}GitHub Repositories}{26}{subsection.16.2}%
+\contentsline {subsection}{\numberline {\mbox {X-C}}Trimmer Runs : OCCAM-T}{16}{subsection.10.3}%
+\contentsline {subsection}{\numberline {\mbox {X-D}}DeepOCCAM Pipeline}{17}{subsection.10.4}%
+\contentsline {section}{\numberline {XI}Comparision \& Analysis Metrics}{20}{section.11}%
+\contentsline {subsection}{\numberline {\mbox {XI-A}}Comparision : Static Analysis}{20}{subsection.11.1}%
+\contentsline {subsection}{\numberline {\mbox {XI-B}}Comparision : Dynamic Analysis}{20}{subsection.11.2}%
+\contentsline {subsection}{\numberline {\mbox {XI-C}}Why Gadgets Count?}{20}{subsection.11.3}%
+\contentsline {section}{\numberline {XII}Observations}{24}{section.12}%
+\contentsline {subsection}{\numberline {\mbox {XII-A}}Insights}{24}{subsection.12.1}%
+\contentsline {section}{\numberline {XIII}Conclusion}{24}{section.13}%
+\contentsline {subsection}{\numberline {\mbox {XIII-A}}But finally, Who Won?}{25}{subsection.13.1}%
+\contentsline {section}{\numberline {XIV}Other Tools}{25}{section.14}%
+\contentsline {section}{\numberline {XV}Project Assets}{25}{section.15}%
+\contentsline {subsection}{\numberline {\mbox {XV-A}}Docker Images}{25}{subsection.15.1}%
+\contentsline {subsection}{\numberline {\mbox {XV-B}}GitHub Repositories}{25}{subsection.15.2}%
 \contentsline {section}{References}{26}{section*.19}%
