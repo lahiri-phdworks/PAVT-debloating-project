@@ -1,0 +1,46 @@
+OCCAM TOOL
+Overview
+	OCCAM is a tool for the implementation of winnowing. Winnowing is a static analysis and code specialization technique based on the partial evaluation algorithm. 
+Partial evaluation is a code optimization technique where all the static inputs computations are processed during compile time. Also, all the function arguments 
+are replaced with constant value and optimizer provided by LLVM is applied. PE helps to achieve the residual program which has runs faster than the original program. 
+Function inlining only replaces the function call by the function definition but PE takes an extra step and evaluate the function before the execution of program. 
+Static (compile time) analysis is separated from dynamic (run time) analysis with this algorithm.
+
+	Partial evaluation works in two steps: (a) Optimization (b) Specialization
+In optimization compile time constants are identified, dead codes are eliminated and the control flow of the program is reduced. In specialization phase, 
+program is effectively specialized across function boundaries.
+
+Working Procedure
+OCCAM takes two inputs: a source code in C/C++ and a manifest file in JSON format. The debloated binary of the original source code produced by the OCCAM tool 
+is used by the Gadget set Analyser to get the gadgets count. The original source code is also compiled by a compiler and feed to GSA. Both debloated and original 
+program are then compared.  OCCAM is an abstract binary interface to abstract binary interface converter.  Dead code elimination in OCCAM works in five ways:
+•	Aggressive Non-Recursive DCE
+•	Inter Procedural DCE
+•	Intra Procedural DCE
+•	Sparse conditional constant propagation based DCE
+•	Abstract Interpretation based DCE
+
+
+DEEPOCCAM
+ 	Overview:
+Deepoccam is an extension of occam tool with new approach based on machine learning. Both occam and Deepoccam are based on the partial evaluation approach.
+The major contribution of PE is to determine if the function specialization decreases the size of residual program. The function specialization increases the code
+size of original program but then optimization in the new function  such as constant propagation can be possible after function inlining and static values substitution.
+So, there is an opportunity for code size reduction in the residual program after partial evaluation process. Weather or not the function specialization reduces the code size is not trivial. 
+This is the problem with occam as it implements "never specialize" or "always specialize" approach. So, it becomes important that we come up an automatic approach. The 
+machine learning model can be considered as a better approach which has been implemented in Deepoccam. The specialization depends on the present state of the program 
+and does not consider the past changes made to the program.It follows Markov Decision process.  Reinforcement learning seems to a best fit for this approach. So, Deepoccam 
+is implemented with policy based RL model.   
+
+	
+	State Encoding:
+Deepoccam have been implemented with two state models:
+1. Handcrafted features
+2.LLVM IR embeddings Inst2vec
+
+In HF, the state contains the details about the caller,callee, compilation unit and call site. The state in this case is a combination of these four features vectors.
+
+In Inst2vec each instruction is converted to a vector using skip gram model . The LLVM IR of the caller,calle and calling context is represented as a list of instructions. 
+Also the arguments at the call site is represented as a bit vector of 0 & 1 where Zero(0) denotes unknown arguments and one(1) denotes the statically known arguments.
+This bitvector alongf with the above three vectors form a tuple of the four 2-D matrices. These tuple represents the state for the RL model. 
+
