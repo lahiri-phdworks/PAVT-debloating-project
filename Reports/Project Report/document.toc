@@ -4,10 +4,10 @@
 \contentsline {section}{\numberline {I}Project Objective}{3}{section.1}%
 \contentsline {section}{\numberline {II}What is Software debloating?}{4}{section.2}%
 \contentsline {subsection}{\numberline {\mbox {II-A}}Software Debloating Tools}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {\mbox {II-B}}Software Debloating Techniques}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Software Debloating Techniques}{5}{subsection.2.2}%
 \contentsline {section}{\numberline {III}Motivating Examples}{5}{section.3}%
 \contentsline {section}{\numberline {IV}OCCAM Tool}{8}{section.4}%
-\contentsline {subsection}{\numberline {\mbox {IV-A}}Overview}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Overview}{9}{subsection.4.1}%
 \contentsline {subsection}{\numberline {\mbox {IV-B}}Working Procedure}{9}{subsection.4.2}%
 \contentsline {section}{\numberline {V}Trimmer Tool}{9}{section.5}%
 \contentsline {subsection}{\numberline {\mbox {V-A}}Overview}{9}{subsection.5.1}%
@@ -28,18 +28,17 @@
 \contentsline {section}{\numberline {X}Pipeline Setup}{14}{section.10}%
 \contentsline {subsection}{\numberline {\mbox {X-A}}Chisel Pipeline}{16}{subsection.10.1}%
 \contentsline {subsection}{\numberline {\mbox {X-B}}OCCAM Pipeline}{16}{subsection.10.2}%
-\contentsline {subsection}{\numberline {\mbox {X-C}}Trimmer Runs : OCCAM-T}{16}{subsection.10.3}%
+\contentsline {subsection}{\numberline {\mbox {X-C}}Trimmer Runs : OCCAM-T Pipeline}{16}{subsection.10.3}%
 \contentsline {subsection}{\numberline {\mbox {X-D}}DeepOCCAM Pipeline}{17}{subsection.10.4}%
 \contentsline {section}{\numberline {XI}Comparision \& Analysis Metrics}{20}{section.11}%
 \contentsline {subsection}{\numberline {\mbox {XI-A}}Comparision : Static Analysis}{20}{subsection.11.1}%
 \contentsline {subsection}{\numberline {\mbox {XI-B}}Comparision : Dynamic Analysis}{20}{subsection.11.2}%
 \contentsline {subsection}{\numberline {\mbox {XI-C}}Why Gadgets Count?}{20}{subsection.11.3}%
-\contentsline {section}{\numberline {XII}Observations}{24}{section.12}%
+\contentsline {section}{\numberline {XII}Observations \& Fails}{24}{section.12}%
 \contentsline {subsection}{\numberline {\mbox {XII-A}}Insights}{24}{subsection.12.1}%
-\contentsline {section}{\numberline {XIII}Conclusion}{24}{section.13}%
-\contentsline {subsection}{\numberline {\mbox {XIII-A}}But finally, Who Won?}{25}{subsection.13.1}%
+\contentsline {section}{\numberline {XIII}Conclusion (Finally, Who won?)}{24}{section.13}%
 \contentsline {section}{\numberline {XIV}Other Tools}{25}{section.14}%
 \contentsline {section}{\numberline {XV}Project Assets}{25}{section.15}%
-\contentsline {subsection}{\numberline {\mbox {XV-A}}Docker Images}{25}{subsection.15.1}%
-\contentsline {subsection}{\numberline {\mbox {XV-B}}GitHub Repositories}{25}{subsection.15.2}%
+\contentsline {subsection}{\numberline {\mbox {XV-A}}GitHub Repositories}{25}{subsection.15.1}%
+\contentsline {subsection}{\numberline {\mbox {XV-B}}Docker Images : Repository Links}{25}{subsection.15.2}%
 \contentsline {section}{References}{26}{section*.19}%

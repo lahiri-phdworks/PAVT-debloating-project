@@ -3,15 +3,16 @@
 
 \IEEEtitleabstractindextext{%
 	\begin{abstract}
-		What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? 
-		What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? 
-		What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? 
-		What is Program Debloating? What is Program Debloating? What is Program Debloating? 
-		What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? 
-		What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? What is Program Debloating? 
+	In this course project we intend to understand, learn, run \& compare some \texttt{state-of-the-art} sofware debloating tools available for debloating large \texttt{C} or \texttt{C++} software project. In our quest to implement the project, we first started with a set of 3 motivating examples which showed where software deblaoting tools shine and why compiler optimization passes alone cannot do the task. 
+	
+	In short we modify, build and run software deblaoting tools on some benchmarks and see their performance in reducing or removing such code parts or instrcutions which may not be useful in the current context of using a particular tool. Knowing what all to remove from the code via automated debloating is a hard task since it will require through modelling of the environemnt and then making a call as to whether a certain piece of code will get executed or not. We can clearly see that it is not a trival problem to solve and thus, automated debloating is quite challenging. 
+	
+	We explore such tools that don't need a through execution environment modelling. These tools under exploration allow us to write a complete and sound specification of the desired properties or features that we want a given tool to be executable on thus eliminating the task of complex execution environment modelling. Now the problem is simplified and it boils down to removing all the undesired parts of the code that will never get executed in the current execution context. We refer to debloating as a iterative process by which these tools can now remove the undesired code sections from the source code or eliminate those instructions and function calls that will never be invoked making the final binary a sleek and trimmer down version instead of a bloated one. 
+	
+	We explore different techniques of software debloating and iterative reductions and see what works best under different functional requirements. Below is a comprehensive report of the work we did and our understanding of techniques adopted by each of the tools under exploration. 
 	\end{abstract}
 	
 	\begin{IEEEkeywords}
-		Software Debloating, Software Engineering, Delta Debugging
+		Software Debloating, Software Engineering, Delta Debugging, Reinforcement Learning, Markov Decision Process. 
 	\end{IEEEkeywords}
 }

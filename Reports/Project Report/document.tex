@@ -326,49 +326,35 @@ are replaced with constant value (if statically known) and optimization passes b
 \subsection{Overview}%
 \label{Tools}
 
-We detail out a bit more about the OCCAM tool here. Function inlining only replaces the function call by the function definition but PE takes an extra step and evaluates the function before the execution of program using statically known arguments via constant folding or constant propagation in the function body. Static (compile time) analysis is seperate from dynamic (run time) analysis with this algorithm 
-and thus we present details of the tool runs in two sections Static Analysis and Dynamic Analysis.
+We detail out a bit more about the OCCAM tool here. Function inlining only replaces the function call by the function definition but PE takes an extra step and evaluates the function before the execution of program using statically known arguments via constant folding or constant propagation in the function body. Static (compile time) analysis is seperate from dynamic (run time) analysis with this algorithm and thus we present details of the tool runs in two sections Static Analysis and Dynamic Analysis.
 
-Partial evaluation works in two steps: (a) Optimization (b) Specialization
-In optimization phase compile time constants are identified, dead codes are eliminated and the control flow of the program is reduced. In specialization phase, program is effectively specialized across function boundaries.
+OCCAM takes two inputs: a source code in C/C++ and a manifest file in JSON format. The debloated binary of the original source code produced by the OCCAM tool is used by the Gadget set Analyser to get the gadgets count. The original source code is also compiled by a compiler and feed to GSA tool. Both debloated and original binaries are then compared for reduction in metric counts. Dead code elimination in OCCAM works in five ways:
 
-OCCAM takes two inputs: a source code in C/C++ and a manifest file in JSON format. The debloated binary of the original source code produced by the OCCAM tool 
-is used by the Gadget set Analyser to get the gadgets count. The original source code is also compiled by a compiler and feed to GSA tool. Both debloated and original binaries are then compared for reduction in metric counts. Dead code elimination in OCCAM works in five ways:\\
-•	Aggressive Non-Recursive DCE.\\
-•	Inter Procedural DCE.(accross function calls) \\
-•	Intra Procedural DCE.(for basic blocks in function body) \\
-•	Sparse Conditional Constant Propagation based DCE.(for Trimmer, we enable this pass) \\
-•	Abstract Interpretation based DCE. (Seahorn Crab based DCE pass) \\
+\begin{itemize}
+	\item Aggressive Non-Recursive DCE.
+	\item Inter-Procedural DCE.(accross function calls/bodies).
+	\item Intra Procedural DCE.(for basic blocks in function body).
+	\item Sparse Conditional Constant Propagation based DCE.(for OCCAM-T, we enable this pass).
+	\item Abstract Interpretation based DCE. (Seahorn Crab based DCE pass).
+\end{itemize}
 
 \subsection{Working Procedure}%
-\label{Tools}
-
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+Partial evaluation works in two steps, first being optimization and second is specialization.
+In optimization phase compile time constants are identified, dead codes are eliminated and the control flow of the program is reduced. In specialization phase, program is effectively specialized across function boundaries.
 
 \section{Trimmer Tool}%
-\label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+\texttt{Trimmer} is a software debloaing tool used to \texttt{specialize} the target function at a call-site with respect to the user defined configurations in-terms of statically known formal arguments.
 
 \subsection{Overview}%
 \label{Tools}
 
-TRIMMER tool is used to specialize the target program with respect to the user defined configuration. The configuration contains the usage context of application. Compiler transformation are included in this tool for good debloating.Inter procedural  constant propagation is used in the tool which aggressively removes the unnecessary codes. With the reduction in the unused program codes, the gadget count of the program is also reduced and helps to improve the security performance of the system. 
+The configuration contains the usage context of application. Compiler transformation are included in this tool for good debloating. Inter-procedural constant propagation is used in the tool which aggressively removes the unnecessary codes. With the reduction in the unused program codes, the gadget count of the program is also reduced and helps to improve the security performance of the system. 
 
 \subsection{Working Procedure}%
 \label{Tools}
 
-The source code is converted to LLVM IR  and given as an input to the trimmer tool along with the manifest file consisting of user defined configuration. The TRIMMER first performs input specialization with respect to the user defined configuration . The second part is loop unrolling . The loop unrolling becomes important step to make interprocedural constant propagation easier. Constant Propagation is the final stage in the tool. The specialized code processed by the TRIMMER is then given as input to the linker . The linker also reads the linker flags from the manifest file and generates a final specialized binary executable file.
+The source code is converted to LLVM IR  and given as an input to the trimmer tool along with the manifest file consisting of user defined configuration. The \texttt{Trimmer} first performs input \texttt{specialization} where is replaces the value of the formal arguments to the program (usually the \texttt{main()} function) with values from the mainfest file. The second part is a \texttt{specialized bounded loop unrolling} based on a \texttt{cost modelling} approach. The loop unrolling becomes an important step to make inter-procedural constant propagation easier. Inter-procedural constant propagation is the final stage in the tool accross the basic blocks of the call-site functions in the \texttt{CFG}. The specialized code processed by the \texttt{Trimmer} is then given as input to the linker. The linker also reads the linker flags from the manifest file and generates a final specialized binary executable file after sucessfull linking.
 
 \section{Chisel Tool}%
 \label{Tools}
@@ -424,7 +410,7 @@ Suppose we have a testcase T which fails the program P. When T is given as input
 	\label{fig:plant}
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=0.65\linewidth]{imgs/chisel_gadgets_yyparse_plot.png}
+	\includegraphics[width=0.65\linewidth]{imgs/chisel_learning_yyparse_plot.png}
 	\caption{Gadgets plot for \color{blue} yyparse}%
 	\label{fig:plant}
 \end{figure}
@@ -457,55 +443,42 @@ Suppose we have a testcase T which fails the program P. When T is given as input
 \end{figure}
 
 \section{DeepOCCAM Tool}%
-\label{Tools}
 
-Deepoccam is an extension of occam tool with new approach based on machine learning. Both occam and Deepoccam are based on the partial evaluation approach.
-The major contribution of PE is to determine if the function specialization decreases the size of residual program. The function specialization increases the code
-size of original program but then optimization in the new function  such as constant propagation can be possible after function inlining and static values substitution.
-So, there is an opportunity for code size reduction in the residual program after partial evaluation process. 
+\texttt{DeepOCCAM} is an extension of \texttt{OCCAM} tool with new approach based on machine learning. Both \texttt{OCCAM} and \texttt{DeepOCCAM} are based on the partial evaluation approach.
+The major contribution of PE is to determine if the function specialization decreases the size of residual program. The function specialization increases the codesize of original program but then optimization in the new function  such as constant propagation can be possible after function inlining and static values substitution. So, there is an opportunity for code size reduction in the residual program after partial evaluation process. 
 
 \subsection{Overview}%
-\label{Tools}
 
-Whether or not the function specialization reduces the code size is not trivial. 
-This is the problem with occam as it implements "never specialize" or "always specialize" approaches only. So, it becomes important that we come up an automatied approach to learn 
-when to specialize. The machine learning model can be considered as a better approach which has been implemented in DeepOCCAM. The specialization depends on the present state of the program 
-and does not consider the past changes made to the program. It follows Markov Decision process. Reinforcement Learning seems to a best fit for this approach where the rewards are reduction 
-in metrics value under consideration. So, DeepOCCAM is implemented with policy-learning based RL model where the rewards are dynamically evaluated and the actions depend on the current encoded state 
-and the metric values.
+The problem of specializing a given function at a call-site is not a trivial and thus \texttt{DeepOCCAM} with it's RL modelling tries to derive to a \texttt{yes/no} answer by learning a policy to decrease a given metric count in the final binary of the source code produced. 
 
 \subsection{Working Procedure}%
-\label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We explain the working procedure as per our understanding of the \texttt{DeepOCCAM} paper, the exact working for our DeepOCCAM implementation is listed in the \texttt{DeepOCCAM} pipeline section of the report. \textbf{DeepOCCAM} starts by developing on top of the \texttt{OCCAM} tool were state modelling and metadata generation happens in the first stage, then once the metadata is  generated, it is used by the RL agent to learn the rewards of \texttt{function specialization} action by metric count measures that come in from the \texttt{GadgetSetAnalyzer}. This loop repeats over and over again for each and every call-site where a function can be specialized. At each episode run the RL agent is asked to decide if specialization of a function at a given call-site is rewarding or not. Based on the \texttt{policy} learned so far and the current \texttt{encoded state}, the RL agent replies with a \texttt{yes/no} answer to the \texttt{specialization} question. The reward to the RL agent is a decrease in the count of the metric under consideration. 
 
 \subsection{State Encoding}%
 \label{Tools}
 
-	State Encoding:
-Deepoccam have been implemented with two state models:
-1. Handcrafted features
-2.LLVM IR embeddings Inst2vec
+DeepOCCAM has been implemented with two state modelling schemes. 
 
-In HF, the state contains the details about the caller,callee, compilation unit and call site. The state in this case is a combination of these four features vectors.
+\begin{itemize}
+	\item Handcrafted Features \texttt{HF} from counts collected from \texttt{occam.log} file.\\ 
+	\item LLVM IR embedding based feature vectors using Inst2Vec tool. \\
+\end{itemize}
 
-In Inst2vec each instruction is converted to a vector using skip gram model . The LLVM IR of the caller,calle and calling context is represented as a list of instructions. 
-Also the arguments at the call site is represented as a bit vector of 0 \& 1 where Zero(0) denotes unknown arguments and one(1) denotes the statically known arguments.
-This bitvector alongf with the above three vectors form a tuple of the four 2-D matrices. These tuple represents the state for the RL model. 
+In \texttt{HF}, the state contains the detail (usage and feature counts) about the \texttt{caller}, \texttt{callee}, \texttt{contexts}, \texttt{loops}, \texttt{arguments to function calls} and other \texttt{call-site} details. The state in this case is a combination of the counts of these features vectors.
 
+In \texttt{Inst2Vec} each instruction is converted to a \texttt{feature vector} using \texttt{skip gram model} similar to word embeddings. The LLVM IR of the caller, callee and calling context represented as a list of instructions are used as part of creating the feature vectors. Also, the arguments at the call site is represented as a 1-bitvector value of \texttt{0} or \texttt{1} where \texttt{Zero(0)} denotes unknown argument and \texttt{One(1)} denotes the statically known argument for the arguments list at the call site.
+This bitvector along with the above three vectors form a tuple of the four 2-D matrices. These tuple represents the state for the RL model. 
 
 \subsection{Inst2Vec Usage}%
 \label{Tools}
 
-Inst2vec  is the technique of processing the source code into the features vector for modeling the Reinforcement Learning. It follows an approach similar to skip-gram model in Natural Language Processing of pre-defined context size. The source code is first compiled into LLVM IR code. The LLVM IR is in the form of a static single assignment.As LLVM IR  is independent of machine or hardware architecture and programming language , it becomes easy to train the program embeddings.The approach is similar to word2vec model.
-
+Inst2vec is a tool of processing the source code into the features vectors that we used for modeling the Reinforcement Learning apart from hand crafted counts collected from \texttt{occam.log} file. It follows an approach similar to skip-gram model in Natural Language Processing of pre-defined context size. The source code is first compiled into LLVM IR code. The LLVM IR is in the form of a static single assignment.As LLVM IR  is independent of machine or hardware architecture and programming language , it becomes easy to train the program embeddings.The approach is similar to word2vec model.
 
 With the LLVM IR , the contextual flow graph (XFG)is created. XFG takes into account both the data flow and control flow of the program. With these XFGs generated from LLVM IR , the consecutive statement pairs are made of pre-defined context size . These statement pairs are then  checked for duplication. The XFGs pairs are made by constructing a dual graph with statement as nodes and removing duplicate edges. The process is then followed by removing statements of negligible presence. We get an inst2vec after subsampling of frequent pairs which can be optimized and trained. XFGs ensures that the semantics of statements are preserved.
+
+We use it as an alternative in the metadata generation stage other then \texttt{HF} heuristics for feature vector
+representation of the state in \texttt{DeepOCCAM} pipeline. 
 
 \section{Project Aim}%
 \label{Tools}
@@ -573,20 +546,19 @@ We modified the GlobalReduction.cpp \& LocalReduction.cpp code files to dump the
 \subsection{OCCAM Pipeline}%
 \label{Tools}
 
-We prepare the benchmarks for the OCCAM run. We modfied and rewrote many of the Makefiles and manifests for proper running of the benchmark examples. Some of the benchmark runs failed for OCCAM amalgamation (pass to combine all the bitcode files) and we only produced the static analysis metrics for these benchmark sets. We were able to run OCCAM for the portfolio benchmark runs used in the Trimmer paper published. We ran the scripts for OCCAM using different settings like --none, --onlyonce, --aggressive, --nonrec-aggressive for both --inter-spec and --intra-spec policy and dumped the metrics accordingly for each run. 
+We prepare the benchmarks for the \texttt{OCCAM} run. We modfied and rewrote many of the \texttt{Makefiles} and \texttt{manifests} for proper running of the benchmark examples. Some of the benchmark runs failed for \texttt{OCCAM} amalgamation (pass to combine all the bitcode files) and we only produced the static analysis metrics for these benchmark sets. We were able to run \texttt{OCCAM} for the \texttt{portfolio} benchmark runs used in the \texttt{Trimmer} paper published. We ran the scripts for \texttt{OCCAM} using different settings like \texttt{--none}, \texttt{--onlyonce}, \texttt{--aggressive}, \texttt{--nonrec-aggressive} for both \texttt{--inter-spec} and \texttt{--intra-spec policy} and dumped the metrics accordingly for each run. 
 
-The docker base image used for the OCCAM is ubuntu:bionic. We installed all the dependencies and other tools like 
-wllvm, gllvm, golang, llvm-10 etc for the runs. slash is the command line tool name for the python package razor that is uses the occam libraries and binary for debloating action. razor package is wrapper around the occam binary which runs the appropriate passes in occam via llvm-opt tool. It links and runs the tool against the source code and the manifest file supplied. 
+The \texttt{docker} base image used for the \texttt{OCCAM} is \texttt{ubuntu:bionic}. We installed all the dependencies and other tools like \texttt{wllvm}, \texttt{gllvm}, \texttt{golang}, \texttt{llvm-10} etc for the runs. \texttt{slash} is the command line tool name for the python package \texttt{razor} that is uses the occam libraries and binary for debloating action. razor package is wrapper around the occam binary which runs the appropriate passes in \texttt{OCCAM} via \texttt{llvm-opt} tool. It links and runs the tool against the source code and the manifest file supplied. 
 
-We collect the data for each run of the benchmark for the different options of run available in the slash tool against the occam binary. We cloned the modified repository for OCCAM, built it from source and then ran the slash tool after the build via Makefiles and bash scripts (build.sh). We show a sample of the same below. 
+We collect the data for each run of the benchmark for the different options of run available in the slash tool against the occam binary. We cloned the modified repository for \texttt{OCCAM}, built it from source and then ran the slash tool after the build via Makefiles and bash scripts (build.sh). We show a sample of the same below. 
 
-\subsection{Trimmer Runs : OCCAM-T}%
+\subsection{Trimmer Runs : OCCAM-T Pipeline}%
 \label{Tools}
 
-We didn't have the source code to Trimmer, so we modified OCCAM code to run with argument specialization, LLVM loop unrolling and sparse conditional constant propagation. 
-We make a docker container from the base OCCAM-pipeline docker image of the above. It already has all the tools and libaries needed for the build after the modifications we did to OCCAM source code. We added a LLVM opt pass for bounded loop unrolling, added the LLVM pass for IPSCCP implemeted in LLVM and set all the specialization decisions to true if an argument is constant specializable similar to the case of OCCAM running with Aggressive Poliy for inter and intra specialization passes over each function call sites. 
+We didn't have the source code to Trimmer, so we modified \texttt{OCCAM} code to run with argument specialization, LLVM loop unrolling and sparse conditional constant propagation. 
+We make a docker container from the base \texttt{OCCAM} pipeline docker image of the above. It already has all the tools and libaries needed for the build after the modifications we did to \texttt{OCCAM} source code. We added a LLVM opt pass for bounded loop unrolling, added the \texttt{LLVM} opt pass for \texttt{IPSCCP} implemeted in LLVM and set all the \texttt{specialization} decisions to true if an argument is constant specializable similar to the case of \texttt{OCCAM} running with Aggressive Poliy for inter and intra specialization passes over each function call sites. 
 
-Simalar to OCCAM, we ran the modified benchmark scripts using --ipdse (for -Pipsccp), --unroll-loop (in passes.py in razor) and dumped along with LLVM the metrics accordingly for each run. The green column in the static analysis tables in for OCCAM-T (we call this modification to OCCAM as OCCAM-T instead of Trimmer).
+Simalar to \texttt{OCCAM}, we ran the modified benchmark scripts using \texttt{--ipdse} (for -Pipsccp), \texttt{--unroll-loop} (in \texttt{passes.py} in razor) and dumped along with \texttt{LLVM} the metrics accordingly for each run. The \texttt{green} column in the static analysis tables in for \texttt{OCCAM-T} (we call this modification to \texttt{OCCAM} as \texttt{OCCAM-T} instead of Trimmer).
 
 A word on \textbf{Trimmer}, \textbf{OCCAM} also uses partial evaluation concept like \textbf{Trimmer} for specializing functions at call-sites but it is less aggressive compared to the  \textbf{Trimmer} because it does not include \textbf{\texttt{specialized loop unrolling}} and the modified \textbf{\texttt{constant propagation}} implementation in Trimmer Tool
 
@@ -599,20 +571,27 @@ We found a \textbf{\href{https://github.com/nhamlv-55/OCCAM/tree/mlpolicy}{half-
 	\item Modified code in base \textbf{OCCAM} tool to collect \textbf{RL} related features in the \texttt{occam.log} file. 
 	\item Implemented a \textbf{deep reinforcement learning model} from the insights we got from the \textbf{\href{https://github.com/nhamlv-55/OCCAM/tree/mlpolicy}{half-implemented code}}. We were stuck on how to do the rewards implementation and the above repository helped us in implementating the same. 
 	\item We setup a \textbf{docker} based container pipeline to build, run and debloat an example \textbf{\color{blue} code repository}. The \textbf{training} part happened outside the docker, we just saved and extracted the model for later use in container. 
-	\item We had to modify the way the tool was plotting and processing some the feature vectors. We used \textbf{\texttt{Adam Optimization}}, \textbf{\texttt{ReLU}} functions, \textbf{\texttt{Softmax}}, \textbf{\texttt{torch.nn GRU}} neural net for \textbf{\texttt{inst2vec}} \& \textbf{\texttt{Linear fully-connected}} layers etc. for implementing the \textbf{\texttt{ML}} part of \textbf{DeepOCCAM} tool. 
+	\item We had to modify the way the tool was plotting and processing some the feature vectors. We used \textbf{\texttt{Adam Optimization}}, \textbf{\texttt{ReLU}} functions, \textbf{\texttt{Softmax}}, \textbf{\texttt{torch.nn GRU}} neural net for \textbf{\texttt{inst2vec}} \& \textbf{\texttt{Linear fully-connected}} layers etc. for implementing the \textbf{\texttt{ML}} part of \textbf{DeepOCCAM} tool.
+	\item Used \texttt{bzip} code \& \texttt{tree} for inst2vec features creation in \textbf{deep reinforcement learning model}. We essentially have two ways to generate and represent the states in this implementation one for handcrafted features from the data in \texttt{occam.log} file and the other from \texttt{inst2vec}. We strore this in \texttt{metadata.json} files for training and evalutation purpose. 
+	\item Generated embeddings for bzip from inst2vec and used the same embeddings for debloating bzip in \texttt{DeepOCCAM} runs. Unlike pretrained embeddings, this new embeddings did work well for bzip run but not for other runs.   
 \end{itemize}
+
+In sumamry, for the RL implementation we first have a \texttt{metadata} generation stage from feature vectors be it either \texttt{HF} or from \texttt{Inst2Vec} tool, then we have a \texttt{learning} \& \texttt{training} episodes stage where we use these features and train a RL agent to follow a policy to decide a \texttt{yes/no} for specialization problem. The learning lags one \texttt{time stage} behind the current \texttt{OCCAM} running stage, since we are not using \texttt{gRPC}.   
+
+Once the training of the \texttt{RL} model is over or we have some considerable number of good episode runs (excluding the broken runs), we use it in evaluation mode where given a state representation from \texttt{OCCAM} it can tell whether to \texttt{specialize} or \texttt{not specialize} the function at the \texttt{call-site}.We next present the \texttt{architecture} digrams for our \texttt{DeepOCCAM} pipeline and the actual \texttt{DeepOCCAM} implementation based on our understanding of the paper. 
+Finally we show the plots for \texttt{DeepOCCAM} learning stages, \texttt{gadget counts} versus \texttt{training cycles} for \texttt{bzip} program from \texttt{OCCAM} benchmark set.
 
 \onecolumn
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=0.83\linewidth]{imgs/deepoccam-pipeline.png}
+	\includegraphics[width=1\linewidth]{imgs/deepoccam-pipeline.png}
 	\caption{\textbf{DeepOCCAM Pipeline}}%
 	\label{fig:plant}
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=0.83\linewidth]{imgs/deepoccam-pipeline.png}
-	\caption{\textbf{DeepOCCAM : Based on Paper}}%
+	\includegraphics[width=1\linewidth]{imgs/DeepOCCAM-Pipeline.png}
+	\caption{\textbf{DeepOCCAM : \color{blue} From our understanding of the Paper}}%
 	\label{fig:plant}
 \end{figure}
 \twocolumn
@@ -655,29 +634,33 @@ We found a \textbf{\href{https://github.com/nhamlv-55/OCCAM/tree/mlpolicy}{half-
 \section{Comparision \& Analysis Metrics}%
 \label{Tools}
 
-We divide our analysis and comparision into two parts where the Static Analysis covers all the AST level modifications and reductions done by the tools are measured and comapred via CFG Analysis. The static analysis metrics are already provided by the tools. In some cases we modified it to get as much as details as possible from the static transforamtions that were happening in the tools. The second part is Dynamic Analysis where we compare only the final binary produced by the tools using ROPgadgets tool and GadgetsSetAnalyzer for ROP, JOP, COP, SYS \& Total unique gadgets count. 
+We divide our analysis and comparision into two parts where the Static Analysis covers all the AST level modifications and reductions done by the tools are measured and comapred via CFG Analysis. The static analysis metrics are already provided by the tools. In some cases we modified it to get as much as details as possible from the static transforamtions that were happening in the tools. The second part is Dynamic Analysis where we compare only the final binary produced by the tools using \texttt{ROPgadgets} tool and \texttt{GadgetsSetAnalyzer} for \texttt{ROP}, \texttt{JOP}, \texttt{COP}, \texttt{SYS} \& \texttt{Total Unique Gadgets} count. 
 
 \subsection{Comparision : Static Analysis}%
 \label{Tools}
 
-We get static analysis details from the tools after all the reduction and elimination passes have been completed. OCCAM. OCCAM-T (Trimmer) \& DeepOCCAM all implement a final rewrite pass (this is a major part of the OCCAM tool to write the final bitcode) after which they dump the static analysis details  
+We get static analysis details from the tools after all the reduction and elimination passes have been completed. \texttt{OCCAM}. \texttt{OCCAM-T (Trimmer)} \& \texttt{DeepOCCAM} all implement a final \texttt{rewrite} pass (this is a major part of the OCCAM tool to write the final bitcode, and these tools have been developed from \texttt{OCCAM}) after which they dump the static analysis details . The metrics against which we show the comparision are \texttt{Function counts}, \texttt{Instruction counts}, \texttt{External call counts}, \texttt{Direct Call counts} etc. 
 
 \subsection{Comparision : Dynamic Analysis}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We use the final binary that we get from the runs of these tools to extract information regarding runtime behaviour and check for metrics that define an active attack surface. These metrics are mainly \texttt{ROP}, \texttt{JOP}, \texttt{COP}, \texttt{SYS} \& \texttt{Total Unique Gadgets} counts. We modified the source code for \texttt{GadgetSetAnalyzer} to enable a easier \texttt{single\_run()} function to get the \texttt{counts} as a \texttt{JSON} dump from the the tool directly. Each of the \texttt{docker} containers used for building the pipeline
+have \texttt{ROPgadgets}, \texttt{gality}, \texttt{angr} \& \texttt{GadgetSetAnalyzer} installed for easy use. A sample dump would look like as below.
+\begin{lstlisting}
+{
+	"COP gadgets": 146,
+	"JOP gadgets": 1951,
+	"ROP gadgets": 567,
+	"Total unique gadgets": 2664
+}
+\end{lstlisting} 
 
 \subsection{Why Gadgets Count?}%
 \label{Tools}
 
 \textbf{Call Oriented programming (COP)},\textbf{Jump Oriented programming (JOP)} and \textbf{Return Oriented Programming (ROP)} are \textbf{computer security exploitation} techniques. The hacker uses the binary instructions to combine some sort of short sequences of instructions which are commonly called \textbf{gadgets} using return section code in the stack and make \textbf{unwanted} stack sections directly \textbf{executable}. The gadgets like COP, ROP \& JOP \textbf{hijack} the actual control flow of the program and once the control is disturbed, hacker can make use of this \textbf{opportunity} to attack the system. Therefore, it is necessary to keep these gadgets as minimum as possible. While \textbf{debloating} the program \textbf{reduces} the number of gadgets, it is still not guaranteed that the attack is prevented but it \textbf{minimizes} the attack surface to a certain extent.
 
-It is extremely important to keep track of the metrics of \textbf{gadgets} as these metrics when used to learn a RL policy will help in maximizing the rewards which in turn reduces the \textbf{code attack} surface. So while testing \textbf{DeepOCCAM}, these gadgets counts need to be tracked. We use the \textbf{number} of \textbf{gadgets} we get by running each tool namely \textbf{Chisel}, \textbf{trimmer}, \textbf{OCCAM} or our implementation of \textbf{DeepOCCAM} as a \textbf{\color{ao(english)} reasonably important} metric of comparision.
+It is extremely important to keep track of the metrics of \textbf{gadgets} as these metrics when used to learn a RL policy will help in maximizing the rewards which in turn reduces the \textbf{code attack} surface. So while testing \textbf{DeepOCCAM}, these gadgets counts need to be tracked. We use the \textbf{number} of \textbf{gadgets} we get by running each tool namely \textbf{Chisel}, \textbf{OCCAM-T (Trimmer)}, \textbf{OCCAM} or our implementation of \textbf{DeepOCCAM} as a \textbf{\color{ao(english)} reasonably important} metric of comparision.
 
 \begin{table*}[]
 	\begin{tabular}{lccccccc}
@@ -834,105 +817,89 @@ It is extremely important to keep track of the metrics of \textbf{gadgets} as th
 		ROP Gadgets                                                                             & 567                           & 405                                                                                               & 483                                                                                                     & 567                                                                                                      & 713                                                                             & 515                                                   \\
 		COP Gadgets                                                                             & 50                            & 9                                                                                               & 19                                                                                                      & 146                                                                                                      & 39                                                                              & 83                                                    \\
 		JOP Gadgets                                                                             & 2126                          & 775                                                                                              & 2774                                                                                                    & 1951                                                                                                     & 1951                                                                            & 2564                                                  \\
-		\begin{tabular}[c]{@{}l@{}}Total Unique Gadgets\\ (Excluding SYS \& Chain)\end{tabular} & 2693                          & 0                                                                                              & 3258                                                                                                    & 2664                                                                                                     & 2664                                                                            & 3162                                                  \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Total Unique Gadgets\\ (Excluding SYS \& Chain)\end{tabular} & 2693                          & 1189                                                                                             & 3258                                                                                                    & 2664                                                                                                     & 2664                                                                            & 3162                                                  \\ \hline
 	\end{tabular}
 	\caption{Dynamic Binary Analysis : Gadgets Count comparision for \color{blue} GNU Tree}
 \end{table*}
 
-\section{Observations}%
+\section{Observations \& Fails}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+For \texttt{DeepOCCAM} tool, using \texttt{bzip} \& \texttt{tree} source code files for generating the \texttt{inst2vec} embeddings worked out well in debloating \texttt{bzip} \& \texttt{tree} but it does defeat the purpose that we can't generate the embeddings in inst2vec first and then use it for feature vector creation in metadata stage, each time that we want to run \texttt{DeepOCCAM}. Using prembedded \texttt{inst2vec} embeddings, we got too many \texttt{broken} runs. 
+
+For some of the tools and libraries, \texttt{OCCAM} or any variant of \texttt{OCCAM} say \texttt{OCCAM-T} or \texttt{DeepOCCAM} did no significant reduction of the attack surface nor did it decrease static analysis metric counts, reason for that could failure in proper specialization of the function at the call-site or rewrite passes failling due to ammalgamation pass not working correctly. The exact reason for this observation is unknown to us. 
 
 \subsection{Insights}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+The way we encode the states heavily depends on the metrics that can directly help in reducing the final comparision metric we are using for comparision of two tools. It is not a trivial task to decide as to whether we should specialize a function at a call-site or not. We ran \texttt{OCCAM} and \texttt{DeepOCCAM} under a random specialization policy where we took the decision to specialize or not at random and found that in some cases, the \texttt{global fixed point} computation took a huge time (1~2) days to terminate. We definitely need a proper understanding of what are the effects of \texttt{specializing} at a call-site and also on what counts to choose for a good \texttt{hand crafted} heuristics based feature vector, \texttt{HF} in short.  
 
-\section{Conclusion}%
+\section{Conclusion (Finally, Who won?)}%
 \label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+It may appear from the data we shared and the plots we showed in the \texttt{Project} that \texttt{Chisel} tool works the best in-terms of deblaoting \texttt{C} or \texttt{C++} based software projects, but it isn't scalable since, it long time for the \texttt{Chisel} tool to run on each benchmark set and debloat it. For \texttt{bzip} it took 14 hours to complete the run with training enabled, however, \texttt{DeepOCCAM} took just 5 hours to finish and reach a stead state on the gadgets count.
 
-\subsection{But finally, Who Won?}%
-\label{Tools}
+Each tool we used in our project shines in some contexts but lags in the other. The \texttt{Chisel} tool has one added advantage over all other tools since it does \texttt{source-to-source} transformation, which can help a developer to identify certain code pieces directly with a tool like \texttt{diff} to know what is \texttt{undesired} in the current execution context and further feature developement or enhancement of that piece of code is no more required in the settings that the end user would use the final tool.
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+Unlike \texttt{OCCAM} tool or it's other variants \texttt{OCCAM-T} or \texttt{DeepOCCAM} which are easy to run and setup for a given \texttt{C} or \texttt{C++} based software projects, \texttt{Chisel} tool requires more work from the developer/end-user since writing the \texttt{test.sh} oracle script that executes the tests for the given project is harder to write compared to a just a \texttt{manifest} file for the former, thus the former tools shine in this aspect. Moreover it may not be possible for developers to write good enough tests for the \texttt{Chisel} tool oracle specification. Using \texttt{fuzzing} or \texttt{EGT based Symbolic Execution} along with \texttt{Chisel} may work out great but that is for future works. 
+
+There is no clear winner amongst \texttt{debloating} tools and it completely depends of the purpose and the intention of the developer as to what all needs to be removed from the code yet guaranteeing soundness and completeness up-to certain extent.  
 
 \section{Other Tools}%
-\label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
+We used many other tools for completing the project especially related to multiple runs, builds and execution of the tools. We list the most important ones below:
+
+\begin{itemize}
+	\item \texttt{GNU Parallels} tool for multiple runs and execution of both \texttt{Chisel} tool and \texttt{OCCAM} in dockers.
+	\item \texttt{gllvm \& wllvm} to generate whole-library LLVM bitcode files from multiple files \texttt{C} or \texttt{C++} source files. 
+	\item \texttt{PyTorch} : For \texttt{DeepOCCAM} RL implementation.
+	\item \texttt{MLPack} : \texttt{Chisel} Probabilistic model code. (Markov Process Modelling).
+\end{itemize}
 
 
 \section{Project Assets}%
-\label{Tools}
 
-Program debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques rogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques 
-rogram debloating techniques. Program deblaoting techniquesrogram debloating techniques. Program deblaoting techniques
-rogram debloating techniques. Program deblaoting techniques
-
-\subsection{Docker Images}%
-\label{Tools}
-
-\begin{itemize}
-	\item OCCAM Tool : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM} {https://github.com/lahiri-phdworks/OCCAM}}
-	\item OCCAM Test \& Benchmarks : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM-Benchmarks} {https://github.com/SRI-CSL/OCCAM-Benchmarks}}
-	\item Chisel-Bench : \textbf{\href{https://github.com/lahiri-phdworks/chisel-bench} {https://github.com/lahiri-phdworks/chisel-bench}}
-	\item Chisel Tool : \textbf{\href{https://github.com/lahiri-phdworks/chisel} {https://github.com/lahiri-phdworks/chisel}}
-	\item Inst2Vec : \textbf{\href{https://github.com/lahiri-phdworks/ncc} {https://github.com/lahiri-phdworks/ncc}}
-	\item Binary GSA Testing Tool : \textbf{\href{https://github.com/michaelbrownuc/GadgetSetAnalyzer} {https://github.com/michaelbrownuc/GadgetSetAnalyzer}}
-	\item Docker Images (recent ones) : \textbf{\href{https://hub.docker.com/u/prodrelworks} {https://hub.docker.com/u/prodrelworks}}
-\end{itemize}
+We share below a list of the \texttt{docker} images and \texttt{GitHub} repositories that we used either directly or used with modification in the source code. 
 
 \subsection{GitHub Repositories}%
-\label{Tools}
 
 \begin{itemize}
-	\item OCCAM Tool : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM} {https://github.com/lahiri-phdworks/OCCAM}}
-	\item OCCAM Test \& Benchmarks : \textbf{\href{https://github.com/lahiri-phdworks/OCCAM-Benchmarks} {https://github.com/SRI-CSL/OCCAM-Benchmarks}}
-	\item Chisel-Bench : \textbf{\href{https://github.com/lahiri-phdworks/chisel-bench} {https://github.com/lahiri-phdworks/chisel-bench}}
-	\item Chisel Tool : \textbf{\href{https://github.com/lahiri-phdworks/chisel} {https://github.com/lahiri-phdworks/chisel}}
-	\item Inst2Vec : \textbf{\href{https://github.com/lahiri-phdworks/ncc} {https://github.com/lahiri-phdworks/ncc}}
-	\item Binary GSA Testing Tool : \textbf{\href{https://github.com/michaelbrownuc/GadgetSetAnalyzer} {https://github.com/michaelbrownuc/GadgetSetAnalyzer}}
-	\item Docker Images (recent ones) : \textbf{\href{https://hub.docker.com/u/prodrelworks} {https://hub.docker.com/u/prodrelworks}}
+	\item OCCAM Tool : \texttt{\href{https://github.com/lahiri-phdworks/OCCAM} {https://github.com/lahiri-phdworks/OCCAM}}
+	\item OCCAM Test \& Benchmarks : \texttt{\href{https://github.com/lahiri-phdworks/OCCAM-Benchmarks} {SRI-CSL OCCAM Benchmarks}}
+	\item Chisel-Bench : \texttt{\href{https://github.com/lahiri-phdworks/chisel-bench} {Modified Chisel Benchmarks}}
+	\item Chisel Tool : \texttt{\href{https://github.com/lahiri-phdworks/chisel} {Chisel Tool}}
+	\item Inst2Vec : \texttt{\href{https://github.com/lahiri-phdworks/ncc} {Modified Inst2Vec tool}}
+	\item Binary GSA Testing Tool : \texttt{\href{https://github.com/michaelbrownuc/GadgetSetAnalyzer} {GadgetSetAnalyzer Repository}}
+	\item DeepOCCAM : \texttt{\href{https://github.com/nhamlv-55/OCCAM/tree/mlpolicy} {DeepOCCAM Implementation which we used to get insights to develop on top of \texttt{OCCAM}}}
 \end{itemize}
+
+\subsection{Docker Images : Repository Links}%
+\begin{itemize}
+	\item Docker Images : \texttt{\href{https://hub.docker.com/u/prodrelworks} {Docker Images [use the recent ones]}}
+\end{itemize}
+
 
 \nocite{*}
 \begin{thebibliography}{9}
-	\bibitem{latexcompanion} 
-	Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
-	\textit{The \LaTeX\ Companion}. 
-	Addison-Wesley, Reading, Massachusetts, 1993.
-	
+	\bibitem{citekey} 
+	Le Van, Nham, Ashish Gehani, Arie Gurfinkel, Susmit Jha, and Jorge A. Navas
+	"Reinforcement Learning Guided Software Debloating"
+	NIPS 2019
+	\bibitem{citekey} 
+	Kihong Heo, Woosuk Lee, Pardis Pashakhanloo, and Mayur Naik
+	"Effective Program Debloating via Reinforcement Learning", In 2018 ACM
+	SIGSAC Conference on Computer and Communications Security (CCS ’18), October
+	15–19, 2018, Toronto, ON, Canada. ACM, New York, NY, USA, 15 pages.
+	\bibitem{citekey}
+	Malecha, G., Gehani, A., \& Shankar, N. (2015, April). Automated software winnowing. In Proceedings of the 30th Annual ACM Symposium on Applied Computing (pp. 1504-1511).
+	\bibitem{citekey}
+	Sharif, Hashim, et al. "TRIMMER: application specialization for code debloating." Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering. 2018.
+	\bibitem{citekey}
+	Redini, Nilo, et al. "B in T rimmer: Towards Static Binary Debloating Through Abstract Interpretation." International Conference on Detection of Intrusions and Malware, and Vulnerability Assessment. Springer, Cham, 2019.
+	\bibitem{citekey}
+	Ben-Nun, T., Jakobovits, A. S., \& Hoefler, T. (2018). Neural code comprehension: A learnable representation of code semantics. Advances in Neural Information Processing Systems, 31, 3585-3597.
+	\bibitem{citekey}
+	Walkowiak, Tomasz, Szymon Datko, and Henryk Maciejewski. "Bag-of-words, bag-of-topics and word-to-vec based subject classification of text documents in polish-a comparative study." International Conference on Dependability and Complex Systems. Springer, Cham, 2018.
 \end{thebibliography}
 \end{document}
 
