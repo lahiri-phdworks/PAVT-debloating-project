@@ -1,0 +1,8 @@
+\frametitle{Chisel Learning}
+	\begin{block}{Plots}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\linewidth]{imgs/chisel_tool_learning.png}
+			\label{fig:plant}
+		\end{figure}
+	\end{block}

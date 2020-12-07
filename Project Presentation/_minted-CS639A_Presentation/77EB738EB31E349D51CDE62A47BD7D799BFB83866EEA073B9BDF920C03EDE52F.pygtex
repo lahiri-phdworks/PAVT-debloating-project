@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+		\PYG{n}{Statistics} \PYG{k}{for}  \PYG{n}{after} \PYG{n}{specialization}
+		\PYG{p}{[}\PYG{n}{CFG} \PYG{n}{analysis}\PYG{p}{]}
+		\PYG{l+m+mi}{2} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{functions}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{specialized} \PYG{n}{functions}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{bounced} \PYG{n}{functions} \PYG{n}{added} \PYG{n}{by} \PYG{n}{devirt}
+		\PYG{l+m+mi}{5} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{basic} \PYG{n}{blocks}
+		\PYG{l+m+mi}{25} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{instructions}
+		\PYG{l+m+mi}{2} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{direct} \PYG{n}{calls}
+		\PYG{l+m+mi}{1} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{external} \PYG{n}{calls}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{assembly} \PYG{n}{calls}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{indirect} \PYG{n}{calls}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{unknown} \PYG{n}{calls}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{loops}
+		\PYG{l+m+mi}{0} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{bounded} \PYG{n}{loops}
+		\PYG{p}{[}\PYG{n}{Memory} \PYG{n}{analysis}\PYG{p}{]}
+		\PYG{l+m+mi}{7} \PYG{n}{Number} \PYG{n}{of} \PYG{n}{memory} \PYG{n}{instructions}
+		\PYG{l+m+mi}{7} \PYG{n}{Statically} \PYG{n}{safe} \PYG{n}{memory} \PYG{n}{accesses}
+		\PYG{l+m+mi}{0} \PYG{n}{Statically} \PYG{n}{unknown} \PYG{n}{memory} \PYG{n}{accesses}
+\end{Verbatim}

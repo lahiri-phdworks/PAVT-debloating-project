@@ -1,0 +1,7 @@
+{ "main" : "test.o.bc"
+, "binary"  : "test"
+, "modules"    : []
+, "native_libs" : []
+, "static_args"    : ["-a", "90"]
+, "name"    : "test"
+}
